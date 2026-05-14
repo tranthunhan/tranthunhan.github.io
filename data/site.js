@@ -1,0 +1,68 @@
+export const siteProfile = {
+  name: "Nhan Dang",
+  initials: "ND",
+  role: "Mechanical Engineering Student",
+  degree: "Mechanical Engineering Student - University of Technology Sydney (UTS)",
+  tagline:
+    "Mechanical Engineering student focused on cobotics, robotics research, CAD, prototyping, and robot hardware development.",
+  brandLogo: "assets/images/profile/thumbnail.png",
+  headshot: "assets/images/profile/nhan-profile.png",
+  focusAreas: [
+    {
+      title: "Cobotics and human-robot interaction",
+      body:
+        "Developing a research direction in cobotics, human-robot collaboration, and physical test platforms for studying robot interaction, end-effector design, and practical hardware behaviour."
+    },
+    {
+      title: "Robot hardware and mechanical design",
+      body:
+        "Hands-on CAD, mechanism design, packaging, fabrication, prototyping, additive manufacturing, and design iteration for robot and autonomous-system hardware."
+    },
+    {
+      title: "Mechatronics systems in development",
+      body:
+        "Actively building broader robotics skills across electronics, PCB design, STM microcontrollers, sensors, encoders, ROS, embedded systems, coding, and control."
+    }
+  ],
+  location: "Sydney, Australia",
+  address: "Sydney, Australia",
+  contactSubheading:
+    "Mechanical Engineering student at UTS aiming to pursue robotics research, especially cobotics and human-robot interaction.",
+  contactEmail: "",
+  mapEmbedUrl: "https://www.google.com/maps?q=Sydney+Australia&output=embed",
+  experienceTimeline: [
+    {
+      title: "UTS Motorsports Autonomous - Mechanical Components",
+      period: "Project work",
+      detail:
+        "Designed and supported fabrication of autonomous vehicle sensor and electronics components under motorsport packaging constraints, with attention to vibration, accessibility, serviceability, and competition requirements."
+    },
+    {
+      title: "Cobotics End-Effector and Physical Test Platform",
+      period: "Capstone-related project",
+      detail:
+        "Developed concepts for a low-cost cobotics prototyping platform and end-effector system, using CAD, modular connector thinking, structured concept selection, and testing documentation to support human-robot collaboration research questions."
+    }
+  ],
+  educationTimeline: [
+    {
+      title: "University of Technology Sydney (UTS)",
+      period: "Current",
+      detail:
+        "Mechanical Engineering student focused on robotics, cobotics, CAD, prototyping, fabrication, robot hardware, and mechatronics fundamentals."
+    }
+  ],
+  certifications: [],
+  socials: [
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/nhandang03" },
+    { label: "GitHub", url: "https://github.com/tranthunhan" }
+  ],
+  links: {
+    github: "https://github.com/tranthunhan",
+    website: "",
+    linkedin: "https://www.linkedin.com/in/nhandang03",
+    cv: "",
+    transcript: "",
+    journal: ""
+  }
+};
