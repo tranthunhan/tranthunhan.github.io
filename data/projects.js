@@ -64,7 +64,7 @@ export const projects = [
       "Human-robot interaction"
     ],
     "links": {
-      "repo": null,
+      "repo": "https://github.com/tranthunhan/kinematic-puppet-cobot-prototyping",
       "article": "https://www.australiancobotics.org/news/kinematic-puppet-at-uts/",
       "cad": null,
       "drawings": null,
@@ -242,7 +242,7 @@ export const projects = [
       "Mechatronic integration"
     ],
     "links": {
-      "repo": null,
+      "repo": "https://github.com/tranthunhan/confined-space-inspection-robot",
       "article": null,
       "cad": null,
       "drawings": null,
@@ -546,7 +546,7 @@ export const projects = [
       "Fabrication"
     ],
     "links": {
-      "repo": null,
+      "repo": "https://github.com/tranthunhan/uts-motorsports-autonomous-components",
       "article": null,
       "cad": null,
       "drawings": null,
@@ -646,7 +646,7 @@ export const projects = [
       "Fabrication"
     ],
     "links": {
-      "repo": null,
+      "repo": "https://github.com/tranthunhan/warman-challenge-robot",
       "article": null,
       "cad": null,
       "drawings": null,
@@ -926,7 +926,7 @@ export const projects = [
       "3D printing"
     ],
     "links": {
-      "repo": null,
+      "repo": "https://github.com/tranthunhan/reverse-engineering-lego-4x2",
       "article": null,
       "cad": null,
       "drawings": null,
@@ -1013,7 +1013,7 @@ export const projects = [
       "3D printing"
     ],
     "links": {
-      "repo": null,
+      "repo": "https://github.com/tranthunhan/additive-manufacturing-plier-project",
       "article": null,
       "cad": null,
       "drawings": null,
@@ -1251,7 +1251,7 @@ export const projects = [
       "Prototyping"
     ],
     "links": {
-      "repo": null,
+      "repo": "https://github.com/tranthunhan/solar-bbq",
       "article": null,
       "cad": null,
       "drawings": "assets/docs/projects/solar-bbq/16-technical-drawings-combined.pdf",
@@ -1423,7 +1423,7 @@ export const projects = [
       "Testing documentation"
     ],
     "links": {
-      "repo": null,
+      "repo": "https://github.com/tranthunhan/pcm-helmet-cooling-system",
       "article": null,
       "cad": null,
       "drawings": null,
@@ -1625,7 +1625,7 @@ export const projects = [
       "Documentation"
     ],
     "links": {
-      "repo": null,
+      "repo": "https://github.com/tranthunhan/space-mission-louver-system",
       "article": null,
       "cad": null,
       "drawings": null,
@@ -1833,7 +1833,7 @@ export const projects = [
       "CAD visuals"
     ],
     "links": {
-      "repo": null,
+      "repo": "https://github.com/tranthunhan/heat-exchanger-design",
       "article": null,
       "cad": null,
       "drawings": null,
@@ -1969,7 +1969,7 @@ export const projects = [
       "Manufacturing documentation"
     ],
     "links": {
-      "repo": null,
+      "repo": "https://github.com/tranthunhan/vertical-axis-wind-turbine",
       "article": null,
       "cad": null,
       "drawings": null,
@@ -2116,7 +2116,7 @@ export const projects = [
       "Report documentation"
     ],
     "links": {
-      "repo": null,
+      "repo": "https://github.com/tranthunhan/wind-powered-vehicle",
       "article": null,
       "cad": null,
       "drawings": "assets/docs/projects/wind-powered-vehicle/09-simple-turbine.pdf",
@@ -2447,7 +2447,7 @@ export const projects = [
       "Testing"
     ],
     "links": {
-      "repo": null,
+      "repo": "https://github.com/tranthunhan/homemade-power-supply",
       "article": null,
       "cad": null,
       "drawings": null,
@@ -2547,7 +2547,7 @@ export const projects = [
       "Documentation"
     ],
     "links": {
-      "repo": null,
+      "repo": "https://github.com/tranthunhan/audio-amplifier",
       "article": null,
       "cad": null,
       "drawings": null,

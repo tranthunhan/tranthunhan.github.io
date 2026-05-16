@@ -4,6 +4,12 @@ Updated: 2026-05-16
 
 ## What Changed
 
+- Added published GitHub repository links to 14 matching project entries in `data/projects.js`.
+- Repository-backed project pages now render GitHub buttons through the existing project-page button system.
+- Left skipped/unpublished project repo links empty for `mpr-rocket`, `printed-pencil-case-servo-storage`, and `interlocking-mechanism-cad-design`.
+- Preserved the Homemade Power Supply YouTube demo link: `https://youtu.be/cSNLx7lfT18`.
+- Preserved the Vertical Axis Wind Turbine YouTube demo link: `https://youtu.be/HkvrupotTRQ`.
+- Preserved the Kinematic Puppet ACC article link: `https://www.australiancobotics.org/news/kinematic-puppet-at-uts/`.
 - Replaced the Vertical Axis Wind Turbine "View Demo / Video" button target with the YouTube demo link: `https://youtu.be/HkvrupotTRQ`.
 - Fixed project resource-button path resolution so local document/drawing links on project pages resolve from `projects/` back to the site root correctly.
 - Audited and simplified the top rotating header badge strip in `assets/js/logo-loop.js`.
@@ -27,25 +33,25 @@ Updated: 2026-05-16
 
 ## Project Structure
 
-| Project | Images | Videos | Docs | Page |
-| --- | --- | --- | --- | --- |
-| Kinematic Puppet / Cobot Prototyping | 15 | 0 | 0 | projects/kinematic-puppet-cobotics.html |
-| Confined-Space Inspection Robot | 36 | 0 | 1 | projects/confined-space-inspection-robot.html |
-| UTS Motorsports Autonomous Hardware CAD | 2 | 0 | 0 | projects/uts-motorsports-autonomous.html |
-| Warman Challenge Robot | 32 | 0 | 0 | projects/warman-challenge-robot.html |
-| Reverse Engineering LEGO 4x2 Brick | 0 | 0 | 0 | projects/reverse-engineering-lego-brick.html |
-| Additive Manufacturing Plier Project | 25 | 0 | 0 | projects/additive-manufacturing-plier-project.html |
-| Collapsible Solar BBQ | 14 | 0 | 2 | projects/solar-bbq.html |
-| PCM Helmet Cooling System | 19 | 0 | 1 | projects/pcm-helmet-cooling-system.html |
-| Space Mission Louver System | 20 | 0 | 1 | projects/space-mission-louver-system.html |
-| Heat Exchanger Design | 8 | 0 | 1 | projects/heat-exchanger-design.html |
-| Vertical Axis Wind Turbine | 9 | 1 | 1 | projects/vertical-axis-wind-turbine.html |
-| Wind-Powered Vehicle | 8 | 0 | 1 | projects/wind-powered-vehicle.html |
-| MPR Rocket | 0 | 0 | 0 | projects/mpr-rocket.html |
-| 3D Printed Pencil Case / Servo Storage Case | 4 | 0 | 0 | projects/printed-pencil-case-servo-storage.html |
-| Homemade Power Supply | 2 | 0 | 0 | projects/homemade-power-supply.html |
-| Audio Amplifier | 2 | 0 | 0 | projects/audio-amplifier.html |
-| Interlocking Mechanism CAD Design | 0 | 0 | 0 | projects/interlocking-mechanism-cad-design.html |
+| Project | Images | Videos | Docs | GitHub Repo | Page |
+| --- | --- | --- | --- | --- | --- |
+| Kinematic Puppet / Cobot Prototyping | 15 | 0 | 0 | https://github.com/tranthunhan/kinematic-puppet-cobot-prototyping | projects/kinematic-puppet-cobotics.html |
+| Confined-Space Inspection Robot | 36 | 0 | 1 | https://github.com/tranthunhan/confined-space-inspection-robot | projects/confined-space-inspection-robot.html |
+| UTS Motorsports Autonomous Hardware CAD | 2 | 0 | 0 | https://github.com/tranthunhan/uts-motorsports-autonomous-components | projects/uts-motorsports-autonomous.html |
+| Warman Challenge Robot | 32 | 0 | 0 | https://github.com/tranthunhan/warman-challenge-robot | projects/warman-challenge-robot.html |
+| Reverse Engineering LEGO 4x2 Brick | 0 | 0 | 0 | https://github.com/tranthunhan/reverse-engineering-lego-4x2 | projects/reverse-engineering-lego-brick.html |
+| Additive Manufacturing Plier Project | 25 | 0 | 0 | https://github.com/tranthunhan/additive-manufacturing-plier-project | projects/additive-manufacturing-plier-project.html |
+| Collapsible Solar BBQ | 14 | 0 | 2 | https://github.com/tranthunhan/solar-bbq | projects/solar-bbq.html |
+| PCM Helmet Cooling System | 19 | 0 | 1 | https://github.com/tranthunhan/pcm-helmet-cooling-system | projects/pcm-helmet-cooling-system.html |
+| Space Mission Louver System | 20 | 0 | 1 | https://github.com/tranthunhan/space-mission-louver-system | projects/space-mission-louver-system.html |
+| Heat Exchanger Design | 8 | 0 | 1 | https://github.com/tranthunhan/heat-exchanger-design | projects/heat-exchanger-design.html |
+| Vertical Axis Wind Turbine | 9 | 1 | 1 | https://github.com/tranthunhan/vertical-axis-wind-turbine | projects/vertical-axis-wind-turbine.html |
+| Wind-Powered Vehicle | 8 | 0 | 1 | https://github.com/tranthunhan/wind-powered-vehicle | projects/wind-powered-vehicle.html |
+| MPR Rocket | 0 | 0 | 0 | Not published / skipped | projects/mpr-rocket.html |
+| 3D Printed Pencil Case / Servo Storage Case | 4 | 0 | 0 | Not published / skipped | projects/printed-pencil-case-servo-storage.html |
+| Homemade Power Supply | 2 | 0 | 0 | https://github.com/tranthunhan/homemade-power-supply | projects/homemade-power-supply.html |
+| Audio Amplifier | 2 | 0 | 0 | https://github.com/tranthunhan/audio-amplifier | projects/audio-amplifier.html |
+| Interlocking Mechanism CAD Design | 0 | 0 | 0 | Not published / skipped | projects/interlocking-mechanism-cad-design.html |
 
 ## Media Totals
 
@@ -79,7 +85,19 @@ Vertical Axis Wind Turbine video:
 
 ## Final Verification
 
-- Homepage, portfolio page, experience page, contact page, and all 17 project pages loaded in local checks.
+- Homepage, portfolio page, and all 17 project pages loaded in local HTTP checks.
+- Headless Edge rendered the homepage, portfolio page, and all 17 project pages successfully from `http://127.0.0.1:4173/`.
+- GitHub buttons appeared only on the 14 projects with real published repositories.
+- Each rendered GitHub button pointed to the expected `https://github.com/tranthunhan/...` repository URL.
+- Skipped projects `mpr-rocket`, `printed-pencil-case-servo-storage`, and `interlocking-mechanism-cad-design` rendered with no GitHub buttons.
+- Homemade Power Supply and Vertical Axis Wind Turbine YouTube links still rendered and returned successful responses.
+- The Kinematic Puppet ACC article link still rendered and returned a successful response.
+- The 14 published GitHub repository URLs returned successful responses.
+- No empty or fake project resource buttons were found in the rendered project pages.
+- No legacy external-profile references were found.
+- No raw CAD/source archive file extensions were found in the website repo.
+- No GitHub repositories were modified, committed, or pushed during this website update.
+- Previous broader site checks: experience page, contact page, certification media, and copied website media loaded successfully.
 - Certification section rendered with 6 certification/recognition cards.
 - Certification PDFs/images and copied website media loaded successfully.
 - Official MATLAB, Simulink, Credly, Homemade Power Supply YouTube, Vertical Axis Wind Turbine YouTube, and ACC article links returned successful responses.

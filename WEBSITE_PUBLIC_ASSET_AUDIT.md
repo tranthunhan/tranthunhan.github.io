@@ -2,6 +2,39 @@
 
 Audit date: 2026-05-16
 
+## GitHub Repository Link Update
+
+Repository links were added in `data/projects.js` only. No GitHub repositories were modified, and no new raw project source files were added to the website repo.
+
+Published repository buttons now render for:
+
+- `kinematic-puppet-cobotics`: `https://github.com/tranthunhan/kinematic-puppet-cobot-prototyping`
+- `confined-space-inspection-robot`: `https://github.com/tranthunhan/confined-space-inspection-robot`
+- `uts-motorsports-autonomous`: `https://github.com/tranthunhan/uts-motorsports-autonomous-components`
+- `warman-challenge-robot`: `https://github.com/tranthunhan/warman-challenge-robot`
+- `reverse-engineering-lego-brick`: `https://github.com/tranthunhan/reverse-engineering-lego-4x2`
+- `additive-manufacturing-plier-project`: `https://github.com/tranthunhan/additive-manufacturing-plier-project`
+- `solar-bbq`: `https://github.com/tranthunhan/solar-bbq`
+- `pcm-helmet-cooling-system`: `https://github.com/tranthunhan/pcm-helmet-cooling-system`
+- `space-mission-louver-system`: `https://github.com/tranthunhan/space-mission-louver-system`
+- `heat-exchanger-design`: `https://github.com/tranthunhan/heat-exchanger-design`
+- `vertical-axis-wind-turbine`: `https://github.com/tranthunhan/vertical-axis-wind-turbine`
+- `wind-powered-vehicle`: `https://github.com/tranthunhan/wind-powered-vehicle`
+- `homemade-power-supply`: `https://github.com/tranthunhan/homemade-power-supply`
+- `audio-amplifier`: `https://github.com/tranthunhan/audio-amplifier`
+
+Skipped/unpublished projects still have no GitHub button:
+
+- `mpr-rocket`
+- `printed-pencil-case-servo-storage`
+- `interlocking-mechanism-cad-design`
+
+Preserved external project links:
+
+- Homemade Power Supply YouTube: `https://youtu.be/cSNLx7lfT18`
+- Vertical Axis Wind Turbine YouTube: `https://youtu.be/HkvrupotTRQ`
+- Kinematic Puppet ACC article: `https://www.australiancobotics.org/news/kinematic-puppet-at-uts/`
+
 ## Files Kept
 
 Certification PDFs kept:
@@ -269,6 +302,12 @@ None found during local verification. Homepage, portfolio, experience, contact, 
 The top rotating badge strip was also checked. It now uses 11 concise Shields.io badges and no longer contains duplicate badges or clickable badge-image links.
 
 Project resource buttons were checked after the Vertical Axis Wind Turbine fix. Local document/drawing buttons now resolve correctly from project pages, and the wind turbine demo button points to YouTube instead of the previous local video URL.
+
+Project repository buttons were checked after the GitHub link update. Headless Edge rendered all 17 project pages; the 14 repository-backed projects showed GitHub buttons with the expected repository URLs, and the three skipped projects showed no GitHub buttons.
+
+The 14 published GitHub repository URLs, both YouTube demo URLs, and the ACC article URL returned successful responses during verification.
+
+No empty/fake project buttons, legacy external-profile references, or raw CAD/source archive file extensions were found in the website repo.
 
 ## Project Pages Needing Better Screenshots/Renders Later
 
