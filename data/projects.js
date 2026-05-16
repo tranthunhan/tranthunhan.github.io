@@ -2249,7 +2249,7 @@ export const projects = [
       "Mechanical design"
     ],
     "links": {
-      "repo": null,
+      "repo": "https://github.com/tranthunhan/mpr-rocket",
       "article": null,
       "cad": null,
       "drawings": null,
@@ -2336,7 +2336,7 @@ export const projects = [
       "Prototyping"
     ],
     "links": {
-      "repo": null,
+      "repo": "https://github.com/tranthunhan/printed-pencil-case-servo-storage",
       "article": null,
       "cad": null,
       "drawings": null,
@@ -2644,7 +2644,7 @@ export const projects = [
       "Mechanism concepts"
     ],
     "links": {
-      "repo": null,
+      "repo": "https://github.com/tranthunhan/interlocking-mechanism-cad-design",
       "article": null,
       "cad": null,
       "drawings": null,
