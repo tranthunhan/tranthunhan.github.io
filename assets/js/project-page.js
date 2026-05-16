@@ -166,7 +166,7 @@ function renderProjectPage(activeProject) {
     intro.querySelector(".project-priority-row")?.remove();
   }
   const actionRow = intro.querySelector(".project-action-row");
-  const topResourceButtons = createResourceButtons(activeProject.links, nonRepoLabels);
+  const topResourceButtons = createResourceButtons(activeProject.links, nonRepoLabels, "../");
   if (topResourceButtons.childElementCount > 0) {
     actionRow.appendChild(topResourceButtons);
   } else {
@@ -196,7 +196,7 @@ function renderGallery(activeProject, galleryItems) {
         &#8249;
       </button>
       <figure class="gallery-stage">
-        <img id="gallery-active-image" src="" alt="" />
+        <div id="gallery-active-media"></div>
         <figcaption id="gallery-active-caption"></figcaption>
       </figure>
       <button class="gallery-nav-btn next" type="button" aria-label="Next image">
@@ -209,7 +209,7 @@ function renderGallery(activeProject, galleryItems) {
     </div>
   `;
 
-  const imageEl = document.getElementById("gallery-active-image");
+  const mediaEl = document.getElementById("gallery-active-media");
   const captionEl = document.getElementById("gallery-active-caption");
   const counterEl = document.getElementById("gallery-counter");
   const dotRow = document.getElementById("gallery-dot-row");
@@ -234,8 +234,12 @@ function renderGallery(activeProject, galleryItems) {
   const syncActiveImage = () => {
     const activeItem = galleryItems[currentIndex];
     const fallbackCaption = `${activeProject.title} image ${currentIndex + 1}`;
-    imageEl.src = resolveProjectAsset(activeItem.src);
-    imageEl.alt = activeItem.alt || fallbackCaption;
+    const resolvedSrc = resolveProjectAsset(activeItem.src);
+    const itemType = activeItem.type || "image";
+    mediaEl.innerHTML =
+      itemType === "video"
+        ? `<video controls preload="metadata"><source src="${resolvedSrc}" type="video/mp4" />Your browser does not support embedded video.</video>`
+        : `<img src="${resolvedSrc}" alt="${activeItem.alt || fallbackCaption}" />`;
     captionEl.textContent = cleanupCaption(
       activeItem.caption || activeItem.alt,
       fallbackCaption
@@ -281,7 +285,7 @@ function renderGallery(activeProject, galleryItems) {
 }
 
 function renderContent(activeProject) {
-  const resourceButtons = createResourceButtons(activeProject.links, projectLinkLabels);
+  const resourceButtons = createResourceButtons(activeProject.links, projectLinkLabels, "../");
   const resourceSection =
     resourceButtons.childElementCount > 0
       ? `

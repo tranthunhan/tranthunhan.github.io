@@ -43,7 +43,7 @@ export function initClickSpark({
   const sparks = [];
   const ease = resolveEasing(easing);
   const keyboardTargetSelector =
-    targetSelector || "a[href], button, [role='button'], .dock-link, .brand, .logo-loop-link";
+    targetSelector || "a[href], button, [role='button'], .dock-link, .brand";
   let animationId = 0;
 
   const resizeCanvas = () => {

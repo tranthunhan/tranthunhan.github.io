@@ -4,16 +4,16 @@ const badgeLogos = [
     src: "https://img.shields.io/badge/SolidWorks-CAD-E2231A?style=flat-square"
   },
   {
+    title: "Fusion 360",
+    src: "https://img.shields.io/badge/Fusion%20360-F58220?style=flat-square&logo=autodesk&logoColor=white"
+  },
+  {
     title: "MATLAB",
     src: "https://img.shields.io/badge/MATLAB-0076A8?style=flat-square"
   },
   {
     title: "ANSYS",
     src: "https://img.shields.io/badge/ANSYS-FFB71B?style=flat-square&logo=ansys&logoColor=black"
-  },
-  {
-    title: "Fusion 360",
-    src: "https://img.shields.io/badge/Fusion%20360-F58220?style=flat-square&logo=autodesk&logoColor=white"
   },
   {
     title: "Arduino",
@@ -25,38 +25,30 @@ const badgeLogos = [
   },
   {
     title: "3D Printing",
-    src: "https://img.shields.io/badge/3D%20printing-2F855A?style=flat-square"
+    src: "https://img.shields.io/badge/3D%20Printing-2F855A?style=flat-square"
   },
   {
-    title: "Python",
-    src: "https://img.shields.io/badge/Python-3670A0?style=flat-square&logo=python&logoColor=ffdd54"
+    title: "Mechanical Design",
+    src: "https://img.shields.io/badge/Mechanical%20Design-4B6B88?style=flat-square"
   },
   {
-    title: "C++",
-    src: "https://img.shields.io/badge/C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white"
+    title: "Prototyping",
+    src: "https://img.shields.io/badge/Prototyping-6B7280?style=flat-square"
+  },
+  {
+    title: "Additive Manufacturing",
+    src: "https://img.shields.io/badge/Additive%20Manufacturing-2F855A?style=flat-square"
   },
   {
     title: "GitHub",
     src: "https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"
-  },
-  {
-    title: "ROS",
-    src: "https://img.shields.io/badge/ROS-developing-22314E?style=flat-square&logo=ros&logoColor=white"
-  },
-  {
-    title: "Blender",
-    src: "https://img.shields.io/badge/Blender-F5792A?style=flat-square&logo=blender&logoColor=white"
   }
 ];
 
-function createBadgeLink(item) {
-  const anchor = document.createElement("a");
-  anchor.className = "logo-loop-link";
-  anchor.href = item.src;
-  anchor.target = "_blank";
-  anchor.rel = "noreferrer";
-  anchor.setAttribute("aria-label", `${item.title} badge`);
-  anchor.title = item.title;
+function createBadge(item) {
+  const badge = document.createElement("span");
+  badge.className = "logo-loop-badge";
+  badge.title = item.title;
 
   const image = document.createElement("img");
   image.src = item.src;
@@ -66,8 +58,8 @@ function createBadgeLink(item) {
   image.draggable = false;
   image.height = 20;
 
-  anchor.appendChild(image);
-  return anchor;
+  badge.appendChild(image);
+  return badge;
 }
 
 export function initLogoLoop() {
@@ -84,7 +76,7 @@ export function initLogoLoop() {
 
   const root = document.createElement("div");
   root.className = "header-logo-loop";
-  root.setAttribute("aria-label", "Tech stack logos");
+  root.setAttribute("aria-label", "Engineering toolkit badges");
 
   const viewport = document.createElement("div");
   viewport.className = "logo-loop-viewport";
@@ -94,7 +86,7 @@ export function initLogoLoop() {
   const primaryList = document.createElement("div");
   primaryList.className = "logo-loop-list";
   badgeLogos.forEach((item) => {
-    primaryList.appendChild(createBadgeLink(item));
+    primaryList.appendChild(createBadge(item));
   });
 
   const mirrorList = primaryList.cloneNode(true);

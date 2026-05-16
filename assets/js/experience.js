@@ -74,18 +74,32 @@ function createCertificationCards(items) {
   return items
     .map((item) => {
       const imagePath = resolveImagePath(item.image);
-      const credential = item.credential ? encodeURI(item.credential) : "";
+      const verification = item.verification ? encodeURI(item.verification) : "";
+      const document = item.document ? encodeURI(resolveImagePath(item.document)) : "";
       return `
         <article class="certification-card">
-          <h3 class="h4 certification-title">${item.title}</h3>
-          <img src="${imagePath}" alt="${item.title} certification" loading="lazy" />
           ${
-            credential
-              ? `<div class="certification-actions">
-                  <a class="button button-resource" href="${credential}" target="_blank" rel="noreferrer">Open Certificate PDF</a>
-                </div>`
+            imagePath
+              ? `<img class="certification-badge" src="${imagePath}" alt="${item.title} certificate thumbnail" loading="lazy" />`
               : ""
           }
+          <div class="certification-copy">
+            <h3 class="h4 certification-title">${item.title}</h3>
+            <p class="certification-issuer">${item.issuer}</p>
+            ${item.year ? `<p class="certification-year">${item.year}</p>` : ""}
+          </div>
+          <div class="certification-actions">
+            ${
+              verification
+                ? `<a class="button button-resource" href="${verification}" target="_blank" rel="noreferrer">Verify Credential</a>`
+                : ""
+            }
+            ${
+              document
+                ? `<a class="button button-resource" href="${document}" target="_blank" rel="noreferrer">Open Certificate PDF</a>`
+                : ""
+            }
+          </div>
         </article>
       `;
     })

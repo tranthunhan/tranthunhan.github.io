@@ -25,37 +25,33 @@ export const siteProfile = {
     }
   ],
   techStackIntro:
-    "Tools and technologies I use or am actively building in support of mechanical design, robot hardware, prototyping, and mechatronic systems.",
+    "A compact snapshot of tools I use across mechanical design, prototyping, robotics projects, documentation, and portfolio development.",
   techStack: [
     {
-      category: "Mechanical Design, CAD & Simulation",
-      level: "Core engineering toolkit",
+      category: "Core Engineering",
+      level: "Core / current",
       items: [
         "SolidWorks",
         "Fusion 360",
         "AutoCAD",
-        "Creo Parametric",
         "ANSYS",
+        "Creo Parametric",
         "MATLAB",
         "Simulink"
       ]
     },
     {
-      category: "Robotics, Embedded Systems & Prototyping",
-      level: "Current hands-on practice",
+      category: "Robotics & Prototyping",
+      level: "Current / hands-on",
       items: [
         "Arduino",
         "Raspberry Pi",
-        "Basic sensor integration",
-        "Soldering",
-        "Circuit prototyping",
-        "3D printing",
-        "Bambu Lab / Bambu Studio",
-        "Mechatronic system integration",
+        "Sensors",
+        "3D Printing",
+        "Bambu Studio",
         "Fabrication",
-        "Prototyping",
-        "Mechanical design",
-        "Additive manufacturing"
+        "Mechatronics",
+        "Prototyping"
       ]
     },
     {
@@ -64,52 +60,41 @@ export const siteProfile = {
       items: [
         "ROS",
         "STM32",
-        "PCB design",
+        "PCB Design",
         "KiCad",
         "Altium Designer",
         "Encoders",
-        "Control systems",
-        "Embedded systems"
+        "Control Systems",
+        "Embedded Systems"
       ]
     },
     {
       category: "Programming & Data",
-      level: "Supporting engineering analysis and tooling",
+      level: "Supporting toolkit",
       items: [
         "Python",
         "C++",
         "C",
-        "C#",
         "JavaScript",
-        "Bash",
-        "PowerShell",
-        "Markdown",
         "Excel",
         "Power BI",
         "NumPy",
-        "Pandas",
-        "Matplotlib",
-        "Plotly"
+        "Pandas"
       ]
     },
     {
-      category: "Web, Git & Development Tools",
-      level: "Project documentation and publishing",
-      items: ["HTML", "CSS", "Git", "GitHub", "VS Code", "Vercel", "Windows Terminal"]
-    },
-    {
-      category: "Creative, Documentation & Design Tools",
-      level: "Visual communication and documentation",
+      category: "Design, Documentation & Web",
+      level: "Documentation / publishing",
       items: [
         "Blender",
         "Canva",
         "Adobe Photoshop",
         "Adobe Premiere Pro",
-        "Adobe After Effects",
-        "Adobe InDesign",
-        "Adobe Lightroom",
-        "Krita",
-        "GIMP"
+        "Git",
+        "GitHub",
+        "HTML",
+        "CSS",
+        "VS Code"
       ]
     }
   ],
@@ -141,7 +126,53 @@ export const siteProfile = {
         "Mechanical Engineering student focused on robotics, cobotics, CAD, prototyping, fabrication, robot hardware, and mechatronics fundamentals."
     }
   ],
-  certifications: [],
+  certifications: [
+    {
+      title: "MATLAB Onramp",
+      issuer: "MathWorks",
+      image: "assets/images/certifications/matlab-onramp-certificate-thumbnail.jpg",
+      verification:
+        "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=faf2ecd0-e302-4974-b8b2-9d33a2f2ef36",
+      document: "assets/docs/certifications/matlab-onramp-certificate.pdf"
+    },
+    {
+      title: "Simulink Onramp",
+      issuer: "MathWorks",
+      image: "assets/images/certifications/simulink-onramp-certificate-thumbnail.jpg",
+      verification:
+        "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=843b2587-d111-4dc6-a1a6-c0fa79c37f7c",
+      document: "assets/docs/certifications/simulink-onramp-certificate.pdf"
+    },
+    {
+      title: "Study Australia Industry Experience Program Certificate of Completion",
+      issuer: "Study Australia / Practera",
+      image: "assets/images/certifications/study-australia-industry-experience-thumbnail.jpg",
+      document:
+        "assets/docs/certifications/study-australia-industry-experience-program-certificate.pdf"
+    },
+    {
+      title: "Student Leadership Recognition Badge / Appreciation Award",
+      issuer: "UTS College",
+      image: "assets/images/certifications/student-leadership-recognition-badge.png",
+      verification:
+        "https://www.credly.com/badges/3e570261-c15d-49ca-b2a3-5d7a365ba5d1/public_url",
+      document:
+        "assets/docs/certifications/student-leadership-recognition-badge-certificate.pdf"
+    },
+    {
+      title: "WIL to Work Certificate of Completion",
+      issuer: "University of Technology Sydney",
+      image: "assets/images/certifications/wil-to-work-badge.png",
+      document: "assets/docs/certifications/wil-to-work-certificate-of-completion.pdf"
+    },
+    {
+      title: "UTS Faculty of Engineering and Information Technology Dean's List",
+      issuer: "University of Technology Sydney / Faculty of Engineering and Information Technology",
+      year: "2025",
+      image: "assets/images/certifications/uts-feit-deans-list-2025-thumbnail.jpg",
+      document: "assets/docs/certifications/uts-feit-deans-list-2025.pdf"
+    }
+  ],
   socials: [
     { label: "LinkedIn", url: "https://www.linkedin.com/in/nhandang03" },
     { label: "GitHub", url: "https://github.com/tranthunhan" }

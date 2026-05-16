@@ -247,7 +247,7 @@ export function sortProjectsByType(projectList) {
     .map((entry) => entry.project);
 }
 
-export function createResourceButtons(links, labels) {
+export function createResourceButtons(links, labels, hrefPrefix = "") {
   const wrap = document.createElement("div");
   wrap.className = "resource-button-row";
 
@@ -259,7 +259,7 @@ export function createResourceButtons(links, labels) {
 
     const anchor = document.createElement("a");
     anchor.className = "button button-resource";
-    anchor.href = href;
+    anchor.href = resolveImagePath(href, hrefPrefix);
     anchor.textContent = label;
     anchor.target = "_blank";
     anchor.rel = "noreferrer";
