@@ -2,210 +2,124 @@ export const projects = [
   {
     slug: "kinematic-puppet-cobotics-end-effector",
     featured: true,
-    title: "Kinematic Puppet / Cobot Prototyping End Effector",
+    title: "Kinematic Puppet for Cobot Prototyping",
     subtitle:
-      "A research-relevant cobotics project exploring a low-cost physical test platform, end-effector concepts, and modular hardware for human-robot collaboration tasks.",
+      "Modular cobot prototyping project exploring low-cost robot-skeleton morphology, end-effector concepts, motion, and human-robot interaction scenarios.",
     year: "2025",
-    status: "Capstone-related concept and prototype development",
+    status: "Portfolio case study",
     projectType: "Project",
-    tags: ["Cobotics", "Human-Robot Interaction", "End Effector", "CAD", "Prototyping"],
-    thumbnail: "",
-    heroImage: "",
+    tags: ["Cobotics", "HRI", "Robot Hardware", "CAD", "Prototyping"],
+    thumbnail: "assets/images/projects/kinematic-puppet/system-diagram.png",
+    heroImage: "assets/images/projects/kinematic-puppet/system-diagram.png",
     summary:
-      "A cobotics and human-robot collaboration project focused on turning early research questions into physical hardware concepts through CAD, structured concept selection, modular connector design, fabrication planning, and testing documentation.",
+      "A UTS project connected to cobot prototyping and human-robot interaction, using modular concepts, CAD, and prototyping to explore robot morphology and end-effector options.",
     overview: [
-      "This project is the strongest link between my hands-on mechanical engineering background and my intended robotics research direction. The work explored a low-cost physical platform for cobotics experimentation, where end-effector behaviour, modular hardware, and human-robot collaboration tasks can be tested without depending on expensive or overly specialised equipment.",
-      "The project focused on early-stage research hardware: concept generation, morphological tables, weighted decision matrices, CAD modelling, quick-switch modular connector thinking, fabrication planning, and documentation. The goal was to make a physical test platform that could support future human-robot interaction work while staying practical to build and modify."
+      "This project explored a low-cost modular robot-skeleton tool for cobot prototyping and human-robot interaction scenarios.",
+      "The public portfolio version uses only selected public-safe diagrams and prototype concept images, plus the public Australian Cobotics Centre article link."
     ],
     problem: [
-      "Human-robot collaboration research often needs physical test rigs, but early prototypes can become too expensive, too rigid, or too difficult to change before the research questions are fully understood.",
-      "The design challenge was to create an end-effector and platform direction that stayed low-cost, modular, and testable while still being mechanically meaningful for cobotics experiments."
+      "Cobot and HRI exploration can need physical robot forms that are quick to change before a final robot morphology is fixed.",
+      "The design challenge was to explore modular robot body and end-effector ideas that could support low-cost prototyping without relying on private project documentation."
     ],
     role: [
-      "Generated end-effector and platform concepts for cobotics testing",
-      "Built morphological tables and weighted decision matrices for concept selection",
-      "Modelled end-effector and modular connector concepts in CAD",
-      "Considered quick-switch hardware for faster prototype changes",
-      "Documented fabrication planning, test direction, and design rationale"
+      "Worked on CAD and physical prototyping concepts for modular cobot hardware",
+      "Explored end-effector and connector ideas for changing interaction setups",
+      "Contributed to design documentation and handover material that remains private",
+      "Helped shape portfolio-safe visual storytelling around modularity and prototyping"
     ],
     process: [
       {
-        title: "Research framing",
+        title: "Public-safe project framing",
         body:
-          "The project was framed around physical human-robot collaboration testing rather than a single finished part. That meant prioritising modularity, repeatability, cost, and the ability to modify the test platform as questions evolve."
+          "The website case study is framed around the visible design problem, modular morphology exploration, and public ACC article rather than internal project files."
       },
       {
-        title: "Concept generation and selection",
+        title: "Morphology and end-effector concepts",
         body:
-          "Morphological tables and weighted decision matrices were used to compare concepts across cost, manufacturability, modularity, usability, and value for cobotics testing."
+          "Selected images show multiple end-effector and base concepts, including gripper, claw, hook, magnet, base, and gear ideas."
       },
       {
-        title: "CAD and modular connector development",
+        title: "CAD and prototype communication",
         body:
-          "CAD work focused on end-effector structure, connector geometry, and quick-switch thinking so the platform could support multiple physical interaction setups."
-      },
-      {
-        title: "Testing and sensing direction",
-        body:
-          "The documented direction leaves room for future force sensing or load-cell integration where real interaction forces need to be measured rather than inferred."
+          "The portfolio gallery focuses on diagrams and visual concept artefacts that explain the project without exposing private ACC, client, group, meeting, or specification files."
       }
     ],
     technicalHighlights: [
       {
-        title: "Low-cost physical test platform",
+        title: "Modular robot morphology",
         body:
-          "The platform direction supports early cobotics experimentation by keeping the hardware buildable, modifiable, and suitable for repeated test setup changes."
+          "The project considered how a prototyping platform could support different robot body and end-effector configurations."
       },
       {
-        title: "End-effector and quick-switch design",
+        title: "End-effector variation",
         body:
-          "The end-effector concept treats the connector as a core design feature, because fast hardware changes are important when testing different human-robot collaboration tasks."
+          "The selected visuals communicate a range of gripping, hooking, magnetic, and base concepts without publishing private raw project material."
       },
       {
-        title: "Research pathway relevance",
+        title: "Cobot research relevance",
         body:
-          "The project connects mechanical design to future MRes or PhD interests by showing how robot hardware can be built to support human-robot interaction experiments."
+          "The work connects mechanical prototyping with human-robot interaction by focusing on physical test hardware."
       }
     ],
     outcome:
-      "Current outcome is a documented capstone-related concept and prototype direction with CAD development, concept-selection evidence, modular connector thinking, and a clear path toward physical cobotics testing.",
+      "The public website outcome is a curated case study with visual evidence and the ACC article link, while private project documents and internal deliverables remain hidden.",
     relevance:
-      "Directly relevant to Pathways@RSS because it shows my intended research direction in cobotics and HRI while grounding that direction in physical robot hardware, prototyping, and experimentally useful mechanical design.",
-    tools: [
-      "SolidWorks",
-      "Creo",
-      "AutoCAD",
-      "Excel",
-      "Mechanical design",
-      "Cobotics",
-      "Human-robot interaction",
-      "Prototyping",
-      "Fabrication planning",
-      "Testing documentation"
-    ],
+      "This is the highest-priority portfolio project because it connects CAD, prototyping, robot morphology, cobotics, and HRI.",
+    tools: ["CAD", "Mechanical design", "Prototyping", "Cobotics", "Human-robot interaction"],
     links: {
       repo: null,
+      article: "https://www.australiancobotics.org/news/kinematic-puppet-at-uts/",
       cad: null,
       drawings: null,
       print: null,
       docs: null,
       media: null
     },
-    gallery: [],
+    gallery: [
+      {
+        src: "assets/images/projects/kinematic-puppet/two-finger-gripper.png",
+        alt: "Two finger gripper concept for the Kinematic Puppet project",
+        caption: "End-effector morphology concept"
+      },
+      {
+        src: "assets/images/projects/kinematic-puppet/claw-end-effector.jpg",
+        alt: "Claw end-effector concept",
+        caption: "Claw-style end-effector option"
+      },
+      {
+        src: "assets/images/projects/kinematic-puppet/hook-end-effector.jpg",
+        alt: "Hook end-effector concept",
+        caption: "Hook-style attachment concept"
+      },
+      {
+        src: "assets/images/projects/kinematic-puppet/magnet-end-effector.jpg",
+        alt: "Magnet end-effector concept",
+        caption: "Magnetic attachment concept"
+      },
+      {
+        src: "assets/images/projects/kinematic-puppet/hex-base-concept.png",
+        alt: "Hex base concept",
+        caption: "Base morphology concept"
+      },
+      {
+        src: "assets/images/projects/kinematic-puppet/revolving-gear-concept.png",
+        alt: "Revolving gear concept",
+        caption: "Rotating mechanism concept"
+      }
+    ],
     lessonsLearned: [
-      "Research hardware needs to stay adaptable when the interaction task is still being defined.",
-      "Mechanical connector design can strongly affect how quickly a cobotics test platform can be reconfigured.",
-      "Structured concept selection makes early research prototypes easier to explain, defend, and improve."
+      "Public portfolio pages for client-connected projects need a strict separation between visible design work and private project material.",
+      "Modular prototyping is useful when the robot interaction task is still being explored.",
+      "A strong case study can be built from public-safe visual evidence without publishing internal documents."
     ],
     futureWork: [
-      "Build and test the selected end-effector concept against defined human-robot collaboration tasks.",
-      "Refine modular connector geometry based on assembly speed, stiffness, and repeatability.",
-      "Explore force sensing or load-cell integration if future testing requires measured interaction forces."
+      "Prepare a public-safe GitHub repository only after manual cleanup.",
+      "Add generated CAD renders if they are confirmed free of private details.",
+      "Keep private ACC/client/group files out of the website."
     ],
     relatedProjects: [
       "confined-space-inspection-robot",
-      "additive-manufacturing-lego-puzzle"
-    ]
-  },
-  {
-    slug: "uts-motorsports-autonomous-vehicle-components",
-    featured: true,
-    title: "UTS Motorsports Autonomous Vehicle Components",
-    subtitle:
-      "Mechanical design and fabrication work for autonomous vehicle sensor and electronics components under motorsport packaging constraints.",
-    year: "2025",
-    status: "Team engineering work",
-    projectType: "Project",
-    tags: ["Autonomous Systems", "Robot Hardware", "Mechanical Design", "Fabrication", "CAD"],
-    thumbnail: "",
-    heroImage: "",
-    summary:
-      "Mechanical support work for UTS Motorsports Autonomous, including mounts and components designed around sensor packaging, vibration, accessibility, and competition requirements.",
-    overview: [
-      "This work involved mechanical design and fabrication of components for UTS Motorsports Autonomous, where autonomous hardware needs to be physically supported in a demanding vehicle environment.",
-      "The project is relevant to robotics because autonomy depends on reliable hardware integration: sensors and electronics need stable mounting, protected packaging, service access, and mechanical designs that survive vibration and competition constraints."
-    ],
-    problem: [
-      "Autonomous vehicle hardware needs stable, accessible mounting, but motorsport environments add tight packaging, vibration, weight, and competition constraints.",
-      "The challenge was to design support components that could integrate with existing vehicle architecture while remaining practical to fabricate, inspect, and maintain."
-    ],
-    role: [
-      "Designed mounts and support components for autonomous vehicle hardware",
-      "Packaged parts around sensors, electronics, neighbouring components, and access constraints",
-      "Considered vibration, stiffness, fastening, serviceability, and fabrication method",
-      "Supported design-for-assembly decisions in a team engineering environment"
-    ],
-    process: [
-      {
-        title: "Vehicle packaging review",
-        body:
-          "Design work started from available vehicle space, neighbouring systems, mounting interfaces, and access requirements so parts would fit the real autonomous vehicle package."
-      },
-      {
-        title: "Mount and support design",
-        body:
-          "Component concepts were developed around sensor stability, electronics protection, fastening, and practical fabrication."
-      },
-      {
-        title: "Build-aware refinement",
-        body:
-          "Design changes were guided by competition requirements, assembly access, vibration concerns, and feedback from the broader vehicle integration context."
-      }
-    ],
-    technicalHighlights: [
-      {
-        title: "Sensor and electronics support",
-        body:
-          "The work focused on physical integration details that affect autonomous-system reliability, including mounting stiffness, access, and packaging."
-      },
-      {
-        title: "Vibration and serviceability",
-        body:
-          "Mounting decisions considered whether parts could survive vehicle conditions while still being inspected, adjusted, or replaced when needed."
-      },
-      {
-        title: "Fabrication-oriented CAD",
-        body:
-          "Models were developed with the manufacturing path in mind so components could move from design to physical use efficiently."
-      }
-    ],
-    outcome:
-      "Current outcome is team-based mechanical design and fabrication contribution for autonomous vehicle components, with emphasis on practical integration rather than standalone demonstration.",
-    relevance:
-      "Shows robotics hardware integration experience: turning autonomous-system requirements into mechanical parts that can be built, mounted, accessed, and used in a real vehicle environment.",
-    tools: [
-      "SolidWorks",
-      "Creo",
-      "AutoCAD",
-      "Mechanical design",
-      "Robot hardware",
-      "Fabrication",
-      "Prototyping",
-      "3D printing",
-      "Excel"
-    ],
-    links: {
-      repo: null,
-      cad: null,
-      drawings: null,
-      print: null,
-      docs: null,
-      media: null
-    },
-    gallery: [],
-    lessonsLearned: [
-      "Autonomous systems depend on mechanical integration quality as much as software and sensing.",
-      "Vehicle packaging decisions need to account for the people who will install and maintain the parts.",
-      "Competition constraints reward simple, inspectable, and buildable components."
-    ],
-    futureWork: [
-      "Continue refining mounts as vehicle packaging and autonomous hardware requirements evolve.",
-      "Document fabrication details and lessons learned for future component revisions.",
-      "Review parts after testing to identify vibration, access, or durability improvements."
-    ],
-    relatedProjects: [
-      "confined-space-inspection-robot",
-      "warman-challenge-robot"
+      "uts-motorsports-autonomous-vehicle-components"
     ]
   },
   {
@@ -213,79 +127,68 @@ export const projects = [
     featured: true,
     title: "Confined-Space Inspection Robot",
     subtitle:
-      "A compact inspection robot concept focused on protected packaging, live video capability, self-righting behaviour, and robust wheel design.",
+      "Capstone robot design focused on compact packaging, inspection use, chassis development, wheel adaptation, camera/controller integration, and manufacturable mechanical parts.",
     year: "2025",
-    status: "Prototype development",
+    status: "Portfolio-only public summary",
     projectType: "Project",
-    tags: ["Robotics", "Mobile Robot", "CAD", "Prototyping", "Robot Hardware"],
-    thumbnail: "",
-    heroImage: "",
+    tags: ["Robotics", "Mobile Robot", "Robot Hardware", "CAD", "Mechatronics"],
+    thumbnail: "assets/images/projects/confined-space-robot/wheel-cad-screenshot.png",
+    heroImage: "assets/images/projects/confined-space-robot/wheel-cad-screenshot.png",
     summary:
-      "A robotic platform designed for confined-space inspection, developed through CAD design, component selection, chassis iteration, motor testing, power system planning, and practical prototype refinement.",
+      "A compact inspection robot case study showing wheel, controller, motor, and electronics packaging screenshots while keeping raw CAD files private.",
     overview: [
-      "The Confined-Space Inspection Robot was developed around the constraints that make small mobile robots difficult in practice: limited space, uncertain orientation, impacts, cable and power routing, visibility, and protection of core components.",
-      "The project brought together mechanical packaging, wheel design, motor selection, chassis development, and live video planning so the robot could move through tight environments while preserving a path for testing and iteration."
+      "This capstone robot project focused on compact mechanical packaging for confined-space inspection.",
+      "The public website version uses screenshots and written summaries only. Raw CAD files are not published unless manually approved later."
     ],
     problem: [
-      "Confined-space inspection can expose people to awkward, unsafe, or inaccessible environments. A small robotic platform can reduce that risk, but only if the design is compact, durable, and able to recover from common failure states.",
-      "The design challenge was to balance protection, manoeuvrability, video capability, power planning, and buildability without letting the robot become too large or fragile for the inspection context."
+      "Inspection robots need to package mobility, electronics, video hardware, power, and protection inside a compact body.",
+      "The design challenge was to make the robot practical to assemble, test, and iterate while keeping the public page free of raw CAD downloads."
     ],
     role: [
-      "Designed the chassis layout and mechanical packaging in CAD",
-      "Selected and arranged components around confined-space constraints",
-      "Tested motors and evaluated drivetrain concepts",
-      "Developed wheel and mechanical protection concepts",
-      "Planned the power-system layout and prototype iteration path"
+      "Developed mechanical packaging and chassis concepts in CAD",
+      "Worked through wheel, motor, controller, and driver packaging decisions",
+      "Prepared public-safe screenshots for the website case study",
+      "Kept raw CAD and collaborator-sensitive material private"
     ],
     process: [
       {
-        title: "Packaging and constraints",
+        title: "Compact package layout",
         body:
-          "The design started by defining space for the chassis, drivetrain, electronics, battery, and video hardware so the robot could remain compact while protecting key components."
+          "The project balanced space for chassis parts, drive components, controller hardware, and motor-driver electronics."
       },
       {
-        title: "Wheel and chassis iteration",
+        title: "Wheel and mobility iteration",
         body:
-          "Wheel concepts and chassis layouts were revised to improve grip, robustness, obstacle interaction, and self-righting behaviour while keeping fabrication realistic."
+          "The selected wheel screenshot supports the mobility story while avoiding public release of the raw wheel CAD."
       },
       {
-        title: "Testing-driven refinement",
+        title: "Electronics integration",
         body:
-          "Motor testing and prototype checks were used to identify packaging conflicts, power concerns, and mechanical features that needed stronger protection or easier access."
+          "Controller and motor-driver screenshots show packaging context for mechatronic integration."
       }
     ],
     technicalHighlights: [
       {
-        title: "Self-righting behaviour",
+        title: "Inspection robot packaging",
         body:
-          "The mechanical form was considered around how the robot behaves when tipped or rotated, reducing the chance that a simple rollover ends the inspection."
+          "The case study focuses on how mechanical layout supports compact inspection use."
       },
       {
-        title: "Protected compact layout",
+        title: "Wheel and motor integration",
         body:
-          "The chassis design prioritised mechanical protection around critical hardware while still preserving access for assembly, troubleshooting, and iteration."
+          "Wheel and motor-bracket images show drivetrain-related design work without exposing source CAD files."
       },
       {
-        title: "Practical drivetrain development",
+        title: "Controller and driver placement",
         body:
-          "Motor and wheel decisions were connected to real movement requirements rather than treated as isolated component choices."
+          "The electronics screenshots help explain Raspberry Pi and motor-driver packaging decisions."
       }
     ],
     outcome:
-      "Current outcome is a prototype-development platform with defined chassis, wheel, motor, video, and power-system directions, ready for further testing and refinement.",
+      "The public outcome is a portfolio-safe visual case study. Raw CAD remains private and should not be linked from the website.",
     relevance:
-      "Demonstrates hands-on mobile robot hardware development: compact packaging, drivetrain thinking, protection, sensing/video accommodation, and practical iteration.",
-    tools: [
-      "SolidWorks",
-      "Creo",
-      "Fusion 360",
-      "Mechanical design",
-      "Motor testing",
-      "Robot hardware",
-      "3D printing",
-      "Prototyping",
-      "Fabrication"
-    ],
+      "Shows mobile robot hardware development, mechatronic packaging, CAD iteration, and practical prototype planning.",
+    tools: ["SolidWorks", "Mechanical design", "Robot hardware", "Mechatronics", "3D printing"],
     links: {
       repo: null,
       cad: null,
@@ -294,16 +197,47 @@ export const projects = [
       docs: null,
       media: null
     },
-    gallery: [],
+    gallery: [
+      {
+        src: "assets/images/projects/confined-space-robot/controller-packaging-screenshot.png",
+        alt: "Controller packaging screenshot for the confined-space inspection robot",
+        caption: "Controller packaging screenshot"
+      },
+      {
+        src: "assets/images/projects/confined-space-robot/motor-bracket-screenshot-01.png",
+        alt: "Motor bracket CAD screenshot",
+        caption: "Motor bracket CAD screenshot"
+      },
+      {
+        src: "assets/images/projects/confined-space-robot/motor-bracket-screenshot-02.png",
+        alt: "Second motor bracket CAD screenshot",
+        caption: "Motor bracket detail"
+      },
+      {
+        src: "assets/images/projects/confined-space-robot/motor-driver-lower.png",
+        alt: "Lower motor driver screenshot",
+        caption: "Motor-driver packaging view"
+      },
+      {
+        src: "assets/images/projects/confined-space-robot/motor-driver-upper.png",
+        alt: "Upper motor driver screenshot",
+        caption: "Motor-driver upper view"
+      },
+      {
+        src: "assets/images/projects/confined-space-robot/raspberry-pi-render.png",
+        alt: "Raspberry Pi render used for controller packaging reference",
+        caption: "Controller model reference"
+      }
+    ],
     lessonsLearned: [
-      "Compact robotics design is mainly a packaging problem before it becomes a performance problem.",
-      "Self-righting and protection features need to be considered early because they influence the whole chassis shape.",
-      "Prototype testing is essential for revealing whether motor, wheel, and power assumptions survive real handling."
+      "Compact robots are strongly shaped by packaging and access constraints.",
+      "Screenshots can communicate design intent without releasing raw CAD publicly.",
+      "Electronics and mechanical layout need to be considered together in robot hardware."
     ],
     futureWork: [
-      "Continue testing drivetrain behaviour in tighter obstacle scenarios.",
-      "Refine the live video and power layout around a more serviceable electronics package.",
-      "Develop a clearer test plan for rollover recovery, impact protection, and inspection usability."
+      "Add approved prototype photos or renders if available.",
+      "Create a no-raw-CAD repository only after manual review.",
+      "Keep source CAD private unless explicitly approved."
     ],
     relatedProjects: [
       "kinematic-puppet-cobotics-end-effector",
@@ -311,81 +245,72 @@ export const projects = [
     ]
   },
   {
-    slug: "warman-challenge-robot",
+    slug: "uts-motorsports-autonomous-vehicle-components",
     featured: true,
-    title: "Warman Challenge Robot",
+    title: "UTS Motorsports Autonomous Hardware CAD",
     subtitle:
-      "A mechanical competition robot focused on ball handling, retention, and release mechanisms through lightweight structures and mechanism iteration.",
+      "Autonomous vehicle hardware CAD work covering packaging templates, DXF fabrication geometry, Percy driver/template visuals, and small chassis design work.",
     year: "2025",
-    status: "Competition robot",
+    status: "Approved public portfolio work",
     projectType: "Project",
-    tags: ["Robotics", "Mechanisms", "CAD", "Lightweight Design", "Testing"],
-    thumbnail: "",
-    heroImage: "",
+    tags: ["Autonomous Systems", "Motorsports", "CAD", "Fabrication", "Robot Hardware"],
+    thumbnail: "assets/images/projects/uts-motorsports-autonomous/percy-template-01.png",
+    heroImage: "assets/images/projects/uts-motorsports-autonomous/percy-template-01.png",
     summary:
-      "A Warman Challenge robot developed through CAD iteration, servo-actuated flap mechanisms, lightweight honeycomb-style structures, mechanism testing, and design changes based on team feedback.",
+      "A public-safe hardware CAD case study from UTS Motorsports Autonomous, focused on packaging templates, driver/template geometry, DXF preparation, and autonomous vehicle hardware integration.",
     overview: [
-      "The Warman Challenge Robot project centred on developing mechanisms for collecting, retaining, and releasing balls within the constraints of a student competition robot.",
-      "For a robotics fellowship audience, this project shows mechanism design under pressure: turning a task into a physical robot subsystem, testing the behaviour, and revising geometry based on feedback."
+      "This project presents approved public work from the organised Motorsports folder.",
+      "The page focuses on relevant visual assets and CAD/fabrication workflow context without inventing competition results, performance claims, or unverified team outcomes."
     ],
     problem: [
-      "Competition robots need mechanisms that are reliable, lightweight, fast to adjust, and simple enough to troubleshoot under time pressure.",
-      "The design challenge was to create a ball handling system that could retain and release objects consistently while fitting within the robot's overall structure and team workflow."
+      "Autonomous vehicle hardware needs to fit around existing vehicle geometry while staying manufacturable and serviceable.",
+      "The design work involved translating packaging and template needs into clean CAD and DXF-related outputs."
     ],
     role: [
-      "Iterated CAD designs for ball handling and retention mechanisms",
-      "Developed servo-actuated flap concepts",
-      "Designed lightweight honeycomb-style mechanical structures",
-      "Tested mechanism behaviour and updated designs based on team feedback"
+      "Prepared CAD geometry and templates for autonomous vehicle hardware work",
+      "Worked with DXF-related fabrication outputs",
+      "Used CAD to support vehicle packaging and template development",
+      "Prepared public-facing visuals from approved personal work"
     ],
     process: [
       {
-        title: "Mechanism concept development",
+        title: "Packaging and template work",
         body:
-          "Ball handling and release ideas were explored through CAD and physical reasoning before being narrowed into servo-actuated flap concepts."
+          "The project included internal cross-section and cockpit-opening style template geometry for autonomous hardware packaging."
       },
       {
-        title: "Lightweight structure iteration",
+        title: "DXF-related fabrication geometry",
         body:
-          "Honeycomb-style forms and material-saving geometry were considered to keep parts light while preserving enough stiffness for the mechanism."
+          "DXF files were part of the workflow for translating CAD geometry into fabrication-ready shapes."
       },
       {
-        title: "Team feedback and testing",
+        title: "Visual documentation",
         body:
-          "Mechanism behaviour was revised after testing and team review, with updates focused on reliability, simplicity, and integration with the rest of the robot."
+          "The current website includes available template images and leaves room for future clean CAD renders exported from the approved files."
       }
     ],
     technicalHighlights: [
       {
-        title: "Servo-actuated flap mechanism",
+        title: "Vehicle packaging constraints",
         body:
-          "The release system used controlled flap motion to manage ball retention and release in a compact competition robot package."
+          "The work required CAD geometry that responds to existing vehicle and driver/template boundaries."
       },
       {
-        title: "Lightweight mechanical structure",
+        title: "Fabrication-aware outputs",
         body:
-          "Honeycomb-style design language helped reduce mass while keeping the mechanism visually and structurally purposeful."
+          "DXF-related files support a workflow from digital geometry to physical templates or cut parts."
       },
       {
-        title: "Iteration from feedback",
+        title: "Autonomous hardware context",
         body:
-          "Team input and testing outcomes directly informed geometry changes rather than leaving the CAD model fixed after the first concept."
+          "The project connects mechanical CAD work with autonomous vehicle hardware integration."
       }
     ],
     outcome:
-      "Current outcome is a competition robot subsystem developed through CAD, physical mechanism reasoning, team review, and iterative refinement.",
+      "The public website version shows approved visuals and describes the CAD/fabrication workflow. A GitHub repository can be prepared later with selected approved files.",
     relevance:
-      "Shows practical robot mechanism development: actuation, lightweight structure, object handling, testing, and mechanical iteration in a team environment.",
-    tools: [
-      "SolidWorks",
-      "Creo",
-      "Fusion 360",
-      "Mechanical design",
-      "3D printing",
-      "Prototyping",
-      "Fabrication",
-      "Testing"
-    ],
+      "Shows autonomous-system hardware packaging, fabrication-aware CAD, and applied mechanical design in a vehicle context.",
+    tools: ["SolidWorks", "DXF preparation", "Mechanical design", "CAD", "Fabrication"],
     links: {
       repo: null,
       cad: null,
@@ -394,16 +319,139 @@ export const projects = [
       docs: null,
       media: null
     },
-    gallery: [],
+    gallery: [
+      {
+        src: "assets/images/projects/uts-motorsports-autonomous/percy-template-02.png",
+        alt: "Second Percy template visual",
+        caption: "Percy template visual"
+      }
+    ],
     lessonsLearned: [
-      "Simple mechanisms are easier to test, repair, and improve during competition-style development.",
-      "Lightweight geometry still needs to be judged against stiffness, assembly, and reliability.",
-      "Team feedback is most useful when it leads to specific design changes."
+      "Autonomous vehicle hardware depends on careful mechanical packaging.",
+      "DXF and CAD outputs need to stay clean enough for fabrication workflows.",
+      "Public portfolio content should avoid unverified team or competition claims."
     ],
     futureWork: [
-      "Refine retention and release geometry with more controlled repeatability testing.",
-      "Compare lightweight structure options against stiffness and fabrication effort.",
-      "Document final mechanism behaviour and the design changes that improved it."
+      "Export clean renders from the approved CAD/DXF files.",
+      "Prepare a GitHub repository after selecting only relevant approved files.",
+      "Keep unrelated archives out of the public page."
+    ],
+    relatedProjects: [
+      "confined-space-inspection-robot",
+      "warman-challenge-robot"
+    ]
+  },
+  {
+    slug: "warman-challenge-robot",
+    featured: true,
+    title: "Warman Challenge Ball Retainer Robot Subsystem",
+    subtitle:
+      "Robot mechanism design project focused on a ball retention and deposit subsystem with servo-actuated gates, CAD iteration, and prototype visuals.",
+    year: "2025",
+    status: "Portfolio case study",
+    projectType: "Project",
+    tags: ["Robotics", "Mechanisms", "CAD", "Prototyping", "Testing"],
+    thumbnail: "assets/images/projects/warman-challenge/ball-retainer-right-isometric.png",
+    heroImage: "assets/images/projects/warman-challenge/ball-retainer-right-isometric.png",
+    summary:
+      "A Warman Challenge subsystem case study focused on ball retention, release, servo-actuated gate geometry, CAD iteration, and prototype/testing visuals.",
+    overview: [
+      "This page focuses on the ball retainer and deposit subsystem rather than publishing full group reports or assessment submissions.",
+      "The public assets are CAD screenshots and selected prototype visuals that communicate the mechanism design process."
+    ],
+    problem: [
+      "The robot needed a compact mechanism for retaining and releasing balls reliably within competition-style constraints.",
+      "The public case study needs to explain the mechanism without exposing group reports, assessment documents, feedback, or student details."
+    ],
+    role: [
+      "Designed and iterated ball retainer and gate geometry",
+      "Worked on servo-actuated flap concepts and CAD assemblies",
+      "Prepared safe visual assets for the public case study",
+      "Kept full group documentation and assessment material hidden"
+    ],
+    process: [
+      {
+        title: "Subsystem definition",
+        body:
+          "The public story is narrowed to the retainer/deposit subsystem so the contribution is clear and not overstated."
+      },
+      {
+        title: "CAD iteration",
+        body:
+          "Assembly screenshots show right-side, left-side, sheetmetal, and deposit mechanism development."
+      },
+      {
+        title: "Prototype and testing visuals",
+        body:
+          "Selected photos support the build/testing story after checking that they do not expose private people or group information."
+      }
+    ],
+    technicalHighlights: [
+      {
+        title: "Servo-actuated gate concept",
+        body:
+          "The retainer subsystem used controlled gate/flap movement to manage object retention and release."
+      },
+      {
+        title: "Mechanism integration",
+        body:
+          "The images show how the retainer subsystem fits into the broader robot and track context."
+      },
+      {
+        title: "Fabrication-aware design",
+        body:
+          "The CAD screenshots communicate sheetmetal and laser-cut style thinking without publishing assessment files."
+      }
+    ],
+    outcome:
+      "The website outcome is a public-safe subsystem case study with selected CAD screenshots and prototype visuals.",
+    relevance:
+      "Shows mechanism design, robot subsystem packaging, CAD iteration, and prototype testing in a team robotics project.",
+    tools: ["SolidWorks", "Mechanical design", "Mechanisms", "Prototyping", "Testing"],
+    links: {
+      repo: null,
+      cad: null,
+      drawings: null,
+      print: null,
+      docs: null,
+      media: null
+    },
+    gallery: [
+      {
+        src: "assets/images/projects/warman-challenge/ball-retainer-left-assembly.png",
+        alt: "Left side ball retainer assembly",
+        caption: "Left side ball retainer assembly"
+      },
+      {
+        src: "assets/images/projects/warman-challenge/ball-retainer-sheetmetal.png",
+        alt: "Ball retainer assembly with sheetmetal",
+        caption: "Ball retainer sheetmetal view"
+      },
+      {
+        src: "assets/images/projects/warman-challenge/track-assembly-exploded.png",
+        alt: "Warman track assembly exploded view",
+        caption: "Robot and track assembly context"
+      },
+      {
+        src: "assets/images/projects/warman-challenge/deposit-mechanism-assembly.png",
+        alt: "Deposit mechanism assembly",
+        caption: "Deposit mechanism assembly"
+      },
+      {
+        src: "assets/images/projects/warman-challenge/prototype-test-photo-01.jpg",
+        alt: "Warman robot prototype test photo",
+        caption: "Prototype/testing visual"
+      }
+    ],
+    lessonsLearned: [
+      "A portfolio page for a group robot should focus on a clearly scoped contribution.",
+      "CAD screenshots are safer than full group submissions for public presentation.",
+      "Prototype photos need a quick privacy check before publishing."
+    ],
+    futureWork: [
+      "Prepare a cleaned subsystem-only GitHub repository.",
+      "Add final cropped prototype images if they are clear of people and identifiers.",
+      "Keep group reports and rubrics out of the public site."
     ],
     relatedProjects: [
       "confined-space-inspection-robot",
@@ -413,79 +461,70 @@ export const projects = [
   {
     slug: "additive-manufacturing-lego-puzzle",
     featured: true,
-    title: "Additive Manufacturing Reverse-Engineered LEGO Puzzle",
+    title: "Additive Manufacturing: LEGO Reverse Engineering and Topology-Optimised Pliers",
     subtitle:
-      "A reverse engineering and additive manufacturing project using photogrammetry, mesh repair, CAD reconstruction, slicing, and 3D printing.",
+      "Scan-to-CAD reverse engineering and design-for-3D-printing work covering mesh repair, topology optimisation, static-study screenshots, and slicer setup.",
     year: "2025",
-    status: "Completed prototype",
+    status: "Portfolio case study",
     projectType: "Project",
-    tags: ["Additive Manufacturing", "Reverse Engineering", "CAD", "3D Printing", "Photogrammetry"],
-    thumbnail: "",
-    heroImage: "",
+    tags: ["Additive Manufacturing", "CAD", "3D Printing", "Topology Optimisation", "Slicing"],
+    thumbnail: "assets/images/projects/additive-manufacturing/plier-final-cad-isometric.png",
+    heroImage: "assets/images/projects/additive-manufacturing/plier-final-cad-isometric.png",
     summary:
-      "A multi-piece 3D printed puzzle based on a reverse-engineered LEGO brick, developed through scanning, mesh repair, CAD reconstruction, puzzle design, slicing, and print iteration.",
+      "A paired additive manufacturing case study showing reverse-engineering workflow and a topology-optimised plier design through sketches, mesh screenshots, final CAD, and slicer evidence.",
     overview: [
-      "This project used a LEGO brick as the starting point for a reverse engineering and additive manufacturing workflow. The process moved from photogrammetry capture through mesh repair and CAD reconstruction before turning the geometry into a multi-piece printable puzzle.",
-      "Although not a robot project, it supports my robotics direction by showing practical skills that transfer directly to robot hardware: scanning, reconstruction, manufacturable CAD, tolerancing, slicing, and print iteration."
+      "This page combines two additive manufacturing projects: LEGO reverse engineering and topology-optimised pliers.",
+      "Only clean visual assets are copied into the website. Raw assessment filenames, heavy simulation backups, and group/private files are left out."
     ],
     problem: [
-      "Raw scan data is rarely ready for fabrication. It often contains noise, missing surfaces, scale issues, and geometry that needs to be rebuilt before it can support a functional printed object.",
-      "The challenge was to turn a reverse-engineered object into a designed puzzle while keeping the final pieces printable, recognisable, and suitable for assembly."
+      "Additive manufacturing workflows require geometry capture, CAD reconstruction, optimisation, slicer preparation, and manufacturability decisions.",
+      "The public page needs to show the workflow without exposing student-number filenames or raw assessment material."
     ],
     role: [
-      "Captured reference geometry with photogrammetry",
-      "Repaired mesh data and used it as CAD reference",
-      "Reconstructed geometry and designed puzzle components",
-      "Prepared slices and produced the parts using 3D printing"
+      "Worked through scan-to-CAD and print preparation steps for the LEGO project",
+      "Prepared concept and topology optimisation evidence for the plier project",
+      "Used CAD and slicer screenshots to communicate the process",
+      "Excluded heavy simulation backups and private/group slicer files from the website"
     ],
     process: [
       {
-        title: "Scan and mesh repair",
+        title: "Reverse engineering workflow",
         body:
-          "Photogrammetry data was captured and repaired so the geometry could become a useful reference instead of a noisy raw mesh."
+          "The LEGO project moved from scan/mesh inputs toward controlled CAD and slicer preparation."
       },
       {
-        title: "CAD reconstruction",
+        title: "Topology optimisation",
         body:
-          "The cleaned scan informed a CAD model that could be controlled, modified, and split into puzzle components."
+          "The plier project uses before/after mesh screenshots to show optimisation-driven geometry development."
       },
       {
-        title: "Slicing and printing",
+        title: "Print preparation",
         body:
-          "Puzzle pieces were prepared for additive manufacturing with attention to print orientation, fit, and final assembly."
+          "Slicer evidence shows how final geometry was prepared for additive manufacturing."
       }
     ],
     technicalHighlights: [
       {
-        title: "Reverse engineering workflow",
+        title: "Mesh and CAD workflow",
         body:
-          "The project connected scanning, mesh cleanup, CAD reconstruction, and printing into one traceable workflow."
+          "The selected visuals show the transition from rough geometry and sketches toward manufacturable CAD."
       },
       {
-        title: "Puzzle geometry",
+        title: "Topology before and after",
         body:
-          "The original brick reference was transformed into a multi-piece puzzle, requiring decisions about split lines, fit, and manufacturability."
+          "Before/after plier mesh images communicate the optimisation story clearly."
       },
       {
-        title: "Additive manufacturing preparation",
+        title: "Slicer setup",
         body:
-          "Slicing and print planning were treated as part of the design process rather than a final export step."
+          "The slicer screenshot supports the print-preparation part of the design workflow."
       }
     ],
     outcome:
-      "Current outcome is a completed 3D printed puzzle prototype produced through reverse engineering, CAD reconstruction, slicing, and additive manufacturing.",
+      "The website outcome is a cleaned visual workflow page. A GitHub repository can be created after filenames and assessment identifiers are cleaned.",
     relevance:
-      "Relevant to robotics hardware development because custom robot parts often require rapid reverse engineering, CAD repair, printability decisions, and iterative physical builds.",
-    tools: [
-      "Photogrammetry",
-      "Mesh repair",
-      "SolidWorks",
-      "Fusion 360",
-      "3D printing",
-      "Additive manufacturing",
-      "Slicing software",
-      "Prototyping"
-    ],
+      "Supports robotics hardware work by showing reverse engineering, CAD repair, optimisation, and 3D-printing preparation skills.",
+    tools: ["SolidWorks", "Mesh repair", "Slicing software", "3D printing", "Additive manufacturing"],
     links: {
       repo: null,
       cad: null,
@@ -494,99 +533,109 @@ export const projects = [
       docs: null,
       media: null
     },
-    gallery: [],
+    gallery: [
+      {
+        src: "assets/images/projects/additive-manufacturing/plier-concept-sketch-01.jpg",
+        alt: "Plier concept sketch",
+        caption: "Concept sketch"
+      },
+      {
+        src: "assets/images/projects/additive-manufacturing/plier-mesh-before-topology.png",
+        alt: "Plier mesh before topology optimisation",
+        caption: "Before topology optimisation"
+      },
+      {
+        src: "assets/images/projects/additive-manufacturing/plier-mesh-after-topology.png",
+        alt: "Plier mesh after topology optimisation",
+        caption: "After topology optimisation"
+      },
+      {
+        src: "assets/images/projects/additive-manufacturing/plier-slicer-result.png",
+        alt: "Slicer result screenshot for plier project",
+        caption: "Slicer result"
+      }
+    ],
     lessonsLearned: [
-      "Reverse engineering requires judgement; scan data is a reference, not a finished model.",
-      "Printability should shape puzzle design from the start.",
-      "Mesh repair, CAD reconstruction, and slicing are connected decisions in an additive manufacturing workflow."
+      "Reverse engineering and additive manufacturing are linked workflows, not isolated steps.",
+      "Topology optimisation needs clear before/after visual evidence to be understandable.",
+      "Public repo cleanup should remove student-number and assessment-specific filenames."
     ],
     futureWork: [
-      "Document print settings and fit adjustments for repeatable puzzle builds.",
-      "Test alternate split patterns and tolerances.",
-      "Add final images of the printed pieces and assembled puzzle when available."
+      "Create a cleaned GitHub repository without heavy backup files.",
+      "Add public-safe LEGO process images if available.",
+      "Keep group/private slicer files out of the public repository."
     ],
     relatedProjects: [
       "kinematic-puppet-cobotics-end-effector",
-      "portable-solar-bbq"
+      "warman-challenge-robot"
     ]
   },
   {
     slug: "portable-solar-bbq",
-    featured: true,
-    title: "Portable Solar BBQ",
+    featured: false,
+    title: "Collapsible Solar BBQ Concept",
     subtitle:
-      "A compact solar cooking system designed around portability, fast assembly, glare safety, stability, and thermal performance.",
+      "Group design concept for a portable solar BBQ using reflector support geometry, plate supports, legs, mounts, and collapsible mechanical packaging.",
     year: "2025",
-    status: "Mechanical design study",
+    status: "Portfolio-only summary",
     projectType: "Project",
-    tags: ["Mechanical Design", "Thermal Design", "Prototyping", "CAD", "Safety"],
+    tags: ["Mechanical Design", "CAD", "Thermal Systems", "Prototyping", "Safety"],
     thumbnail: "",
     heroImage: "",
     summary:
-      "A portable solar cooking concept considering reflector geometry, stainless steel hot plate performance, weight limits, glare safety, stability, and user handling.",
+      "A conservative portfolio summary for a collapsible solar BBQ concept. Raw CAD and private reports are not copied into the public website.",
     overview: [
-      "The Portable Solar BBQ project explored a compact cooking system that could be assembled quickly, handled safely, and packed down for transport while still achieving useful thermal performance.",
-      "It is lower priority for my robotics application than the cobotics and robot hardware projects, but it still demonstrates mechanical engineering judgement around user handling, safety, structure, thermal behaviour, and practical prototyping."
+      "This project involved a group design concept for a portable solar BBQ with reflector/mirror support geometry, plate supports, legs, and mount design.",
+      "The current website page is intentionally text-first because the update rules prohibit copying raw CAD files and the organised folder does not contain clean public image exports for this project."
     ],
     problem: [
-      "Solar cooking systems can become bulky, slow to assemble, or difficult to handle safely if reflector geometry and structure are not designed around real users.",
-      "The challenge was to create a compact solar BBQ concept that balanced thermal performance with portability, stability, glare management, and fast setup."
+      "A portable solar BBQ needs to balance mechanical structure, user handling, reflector support, plate support, safety, and packability.",
+      "The public challenge is to describe the work without publishing group reports, technical drawing PDFs, or raw CAD files."
     ],
     role: [
-      "Developed mechanical concepts for portable assembly",
-      "Considered reflector geometry and hot plate behaviour",
-      "Reviewed safety, stability, glare, weight, and handling constraints",
-      "Iterated the concept around prototype feasibility"
+      "Contributed to mechanical concept development and CAD-related design work",
+      "Considered support geometry, portability, and safe handling at a project level",
+      "Kept group reports and private documents out of the website"
     ],
     process: [
       {
-        title: "User and safety constraints",
+        title: "Mechanical architecture",
         body:
-          "The design was framed around portability, fast setup, glare safety, and stable handling before detailed geometry was refined."
+          "The organised CAD indicates work around reflector supports, plate supports, legs, mounts, and overall assembly."
       },
       {
-        title: "Reflector and hot plate development",
+        title: "Portfolio-safe presentation",
         body:
-          "Reflector geometry and stainless steel hot plate behaviour were considered together so thermal performance and safe handling could be balanced."
+          "No raw CAD files are copied into the public site. Clean CAD renders should be generated later from approved files."
       },
       {
-        title: "Portability refinement",
+        title: "Conservative public summary",
         body:
-          "The concept was reviewed against weight, assembly time, packed form, and user interaction so the design stayed practical."
+          "The page avoids thermal performance claims or detailed report content unless verified from public-safe notes."
       }
     ],
     technicalHighlights: [
       {
-        title: "Reflector geometry",
+        title: "Portable mechanical packaging",
         body:
-          "The reflector concept was treated as a performance and safety feature, influencing heat concentration, glare, and user positioning."
+          "The concept required thinking about how support parts, legs, and mounts fit into a portable assembly."
       },
       {
-        title: "Portable structure",
+        title: "Reflector and plate support",
         body:
-          "The design considered how the BBQ would be assembled, supported, moved, and packed away without adding unnecessary complexity."
+          "The CAD file names indicate mirror/reflector and plate-support design work."
       },
       {
-        title: "Thermal and handling tradeoffs",
+        title: "Public-safe restraint",
         body:
-          "Material choices and hot plate behaviour were considered alongside weight, safety, and usability constraints."
+          "The public page deliberately avoids private group reports and raw technical drawings."
       }
     ],
     outcome:
-      "Current outcome is a mechanical design study for a portable solar cooking concept with documented constraints around thermal performance, stability, glare, and user handling.",
+      "The current public outcome is a summary page. Add clean CAD renders or photos later when public-safe image exports are available.",
     relevance:
-      "Relevant as supporting evidence of mechanical systems thinking: balancing constraints, safety, structure, portability, fabrication, and practical use."
-    ,
-    tools: [
-      "SolidWorks",
-      "Creo",
-      "AutoCAD",
-      "ANSYS",
-      "Mechanical design",
-      "Prototyping",
-      "Fabrication",
-      "Excel"
-    ],
+      "Shows broader mechanical systems design alongside the robotics-focused projects.",
+    tools: ["CAD", "Mechanical design", "Thermal systems", "Prototyping"],
     links: {
       repo: null,
       cad: null,
@@ -597,24 +646,115 @@ export const projects = [
     },
     gallery: [],
     lessonsLearned: [
-      "Portable products need to be designed around assembly and handling, not only function.",
-      "Thermal performance has to be balanced with user safety and glare control.",
-      "Weight, stability, and setup time can determine whether a technically sound design feels usable."
+      "Group project pages should not publish raw reports or assessment files.",
+      "CAD-only projects need clean exported renders before they become visually strong online.",
+      "It is better to leave a project text-first than publish unsafe source files."
     ],
     futureWork: [
-      "Prototype the reflector and support structure for assembly and stability testing.",
-      "Measure hot plate temperature behaviour under different solar conditions.",
-      "Refine glare controls and user handling details."
+      "Generate clean public-safe renders from approved CAD files.",
+      "Add selected photos if they are clear of group/private details.",
+      "Keep reports, product architecture PDFs, and technical drawings hidden."
     ],
     relatedProjects: [
       "additive-manufacturing-lego-puzzle",
-      "kinematic-puppet-cobotics-end-effector"
+      "warman-challenge-robot"
+    ]
+  },
+  {
+    slug: "personal-engineering-projects",
+    featured: false,
+    title: "Personal Engineering Projects",
+    subtitle:
+      "Self-directed mechanical design projects including a 3D printed pencil case, MPR rocket CAD, power supply/audio amplifier notes, and interlocking mechanism concepts.",
+    year: "Ongoing",
+    status: "GitHub-ready after light cleanup",
+    projectType: "Project",
+    tags: ["Personal Projects", "CAD", "3D Printing", "Mechanical Design", "Prototyping"],
+    thumbnail: "",
+    heroImage: "",
+    summary:
+      "A personal project collection with the clearest ownership, suitable for future GitHub repos once clean renders and selected photos are prepared.",
+    overview: [
+      "This project page groups self-directed mechanical projects: a 3D printed pencil case, MPR rocket CAD, audio amplifier and power supply documentation, and interlocking mechanism CAD concepts.",
+      "The current website update does not copy raw CAD files or the raw Word document. It sets up a public-safe page that can be expanded with clean renders and selected extracted photos."
+    ],
+    problem: [
+      "Personal projects are useful portfolio evidence, but raw CAD and notes still need light cleanup before public release.",
+      "The page should communicate ownership and breadth without exposing informal notes or unreviewed document metadata."
+    ],
+    role: [
+      "Designed personal CAD and 3D-printing projects",
+      "Built and documented personal electronics/mechanical projects",
+      "Prepared a public-safe website summary without publishing raw source files yet"
+    ],
+    process: [
+      {
+        title: "3D printed pencil case",
+        body:
+          "The pencil case project can become a compact CAD-to-print story once renders and STL preview images are exported."
+      },
+      {
+        title: "MPR rocket CAD",
+        body:
+          "The rocket CAD files can support a separate page or repository after clean images are generated."
+      },
+      {
+        title: "Mechanism and electronics notes",
+        body:
+          "The interlocking mechanism and electronics projects should use selected public-safe images rather than raw notes."
+      }
+    ],
+    technicalHighlights: [
+      {
+        title: "Clear personal ownership",
+        body:
+          "This is the strongest GitHub candidate because the work is self-directed and easier to clear for public release."
+      },
+      {
+        title: "CAD and print workflow",
+        body:
+          "The pencil case and rocket projects can show direct CAD-to-fabrication skills once rendered."
+      },
+      {
+        title: "Breadth of building",
+        body:
+          "The collection shows interest in mechanical design, 3D printing, mechanisms, and electronics-adjacent builds."
+      }
+    ],
+    outcome:
+      "The current page is a clean placeholder summary. The next step is to add renders/screenshots and create a cleaned GitHub repo.",
+    relevance:
+      "Shows self-directed engineering initiative beyond coursework and group projects.",
+    tools: ["SolidWorks", "3D printing", "Mechanical design", "CAD", "Prototyping"],
+    links: {
+      repo: null,
+      cad: null,
+      drawings: null,
+      print: null,
+      docs: null,
+      media: null
+    },
+    gallery: [],
+    lessonsLearned: [
+      "Personal projects are easier to publish, but still need clean presentation assets.",
+      "Raw documents should be reviewed before any public release.",
+      "Small projects can become strong portfolio cards when the workflow is clearly shown."
+    ],
+    futureWork: [
+      "Export clean renders for pencil case, rocket, and interlocking mechanism CAD.",
+      "Extract only public-safe images from the audio amplifier and power supply document.",
+      "Create a cleaned `personal-mechanical-design-projects` repository."
+    ],
+    relatedProjects: [
+      "additive-manufacturing-lego-puzzle",
+      "confined-space-inspection-robot"
     ]
   }
 ];
 
 export const projectLinkLabels = {
   repo: "View Repository",
+  article: "Read ACC Article",
   cad: "View CAD",
   drawings: "View Drawings",
   print: "View Print Files",

@@ -19,6 +19,8 @@ initClickSpark();
 const experienceList = document.getElementById("experience-list");
 const educationList = document.getElementById("education-list");
 const certificationGrid = document.getElementById("certification-grid");
+const techStackIntro = document.getElementById("tech-stack-intro");
+const techStackGrid = document.getElementById("tech-stack-grid");
 
 function createTimelineItems(items) {
   return items
@@ -40,6 +42,32 @@ if (experienceList) {
 
 if (educationList) {
   educationList.innerHTML = createTimelineItems(siteProfile.educationTimeline || []);
+}
+
+function createTechStackCards(groups) {
+  return groups
+    .map(
+      (group) => `
+        <article class="tech-stack-card">
+          <div class="tech-stack-card-heading">
+            <h3 class="h4">${group.category}</h3>
+            <span>${group.level}</span>
+          </div>
+          <ul class="tech-stack-list">
+            ${group.items.map((item) => `<li>${item}</li>`).join("")}
+          </ul>
+        </article>
+      `
+    )
+    .join("");
+}
+
+if (techStackIntro) {
+  techStackIntro.textContent = siteProfile.techStackIntro || "";
+}
+
+if (techStackGrid) {
+  techStackGrid.innerHTML = createTechStackCards(siteProfile.techStack || []);
 }
 
 function createCertificationCards(items) {

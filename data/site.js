@@ -24,6 +24,95 @@ export const siteProfile = {
         "Actively building broader robotics skills across electronics, PCB design, STM microcontrollers, sensors, encoders, ROS, embedded systems, coding, and control."
     }
   ],
+  techStackIntro:
+    "Tools and technologies I use or am actively building in support of mechanical design, robot hardware, prototyping, and mechatronic systems.",
+  techStack: [
+    {
+      category: "Mechanical Design, CAD & Simulation",
+      level: "Core engineering toolkit",
+      items: [
+        "SolidWorks",
+        "Fusion 360",
+        "AutoCAD",
+        "Creo Parametric",
+        "ANSYS",
+        "MATLAB",
+        "Simulink"
+      ]
+    },
+    {
+      category: "Robotics, Embedded Systems & Prototyping",
+      level: "Current hands-on practice",
+      items: [
+        "Arduino",
+        "Raspberry Pi",
+        "Basic sensor integration",
+        "Soldering",
+        "Circuit prototyping",
+        "3D printing",
+        "Bambu Lab / Bambu Studio",
+        "Mechatronic system integration",
+        "Fabrication",
+        "Prototyping",
+        "Mechanical design",
+        "Additive manufacturing"
+      ]
+    },
+    {
+      category: "Developing Robotics Skills",
+      level: "Actively developing",
+      items: [
+        "ROS",
+        "STM32",
+        "PCB design",
+        "KiCad",
+        "Altium Designer",
+        "Encoders",
+        "Control systems",
+        "Embedded systems"
+      ]
+    },
+    {
+      category: "Programming & Data",
+      level: "Supporting engineering analysis and tooling",
+      items: [
+        "Python",
+        "C++",
+        "C",
+        "C#",
+        "JavaScript",
+        "Bash",
+        "PowerShell",
+        "Markdown",
+        "Excel",
+        "Power BI",
+        "NumPy",
+        "Pandas",
+        "Matplotlib",
+        "Plotly"
+      ]
+    },
+    {
+      category: "Web, Git & Development Tools",
+      level: "Project documentation and publishing",
+      items: ["HTML", "CSS", "Git", "GitHub", "VS Code", "Vercel", "Windows Terminal"]
+    },
+    {
+      category: "Creative, Documentation & Design Tools",
+      level: "Visual communication and documentation",
+      items: [
+        "Blender",
+        "Canva",
+        "Adobe Photoshop",
+        "Adobe Premiere Pro",
+        "Adobe After Effects",
+        "Adobe InDesign",
+        "Adobe Lightroom",
+        "Krita",
+        "GIMP"
+      ]
+    }
+  ],
   location: "Sydney, Australia",
   address: "Sydney, Australia",
   contactSubheading:
@@ -39,9 +128,9 @@ export const siteProfile = {
     },
     {
       title: "Cobotics End-Effector and Physical Test Platform",
-      period: "Capstone-related project",
+      period: "UTS 43019 project",
       detail:
-        "Developed concepts for a low-cost cobotics prototyping platform and end-effector system, using CAD, modular connector thinking, structured concept selection, and testing documentation to support human-robot collaboration research questions."
+        "Developed concepts for a low-cost cobotics prototyping platform and end-effector system, using CAD, modular connector thinking, structured concept selection, and prototype documentation to support human-robot interaction exploration."
     }
   ],
   educationTimeline: [
