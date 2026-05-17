@@ -1,6 +1,6 @@
 # Nhan Dang Portfolio
 
-Static GitHub Pages portfolio for Nhan Dang's robotics fellowship applications, with emphasis on cobotics, human-robot interaction, robot hardware, CAD, prototyping, additive manufacturing, and mechanical engineering case studies.
+Static GitHub Pages portfolio for Nhan Dang's mechanical engineering project work across CAD-led design, robot hardware, prototyping, sensing integration, testing, additive manufacturing, and product-style mechanical systems.
 
 This portfolio reuses an existing static portfolio structure with permission, while adapting the profile, project content, contact surfaces, and README for Nhan Dang.
 
@@ -29,11 +29,11 @@ This portfolio reuses an existing static portfolio structure with permission, wh
 The portfolio currently prioritises case-study entries for:
 
 - Kinematic Puppet / Cobot Prototyping End Effector
-- UTS Motorsports Autonomous Vehicle Components
 - Confined-Space Inspection Robot
+- UTS Motorsports Autonomous Vehicle Components
+- Additive Manufacturing Plier Project
 - Warman Challenge Robot
-- Additive Manufacturing Reverse-Engineered LEGO Puzzle
-- Portable Solar BBQ
+- PCM Helmet Cooling System
 
 ## Editing Profile And Contact
 
@@ -47,7 +47,7 @@ Edit `data/site.js` for:
 - GitHub and LinkedIn links
 - profile image and thumbnail/brand image paths
 
-If GitHub, LinkedIn, CV, transcript, email, or other URLs are not available yet, leave those values blank. The site scripts hide those buttons or sections cleanly instead of showing placeholder links.
+If GitHub, LinkedIn, CV, email, or other public URLs are not available yet, leave those values blank. The site scripts hide those buttons or sections cleanly instead of showing placeholder links.
 
 ## Editing Projects
 
