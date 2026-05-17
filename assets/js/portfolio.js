@@ -20,22 +20,58 @@ const filters = [
   {
     key: "robotics",
     label: "Robotics",
-    terms: ["robot", "robotics", "cobot", "cobotics", "hri", "autonomous", "mobile robot"]
+    terms: [
+      "robot",
+      "robotics",
+      "cobot",
+      "cobotics",
+      "hri",
+      "autonomous",
+      "mobile robot",
+      "robot hardware",
+      "sensing",
+      "mechatronic"
+    ]
   },
   {
     key: "cad",
     label: "CAD",
-    terms: ["cad", "solidworks", "mechanism", "mechanical design", "technical drawings"]
+    terms: [
+      "solidworks",
+      "mechanism",
+      "technical drawings",
+      "packaging",
+      "tolerancing",
+      "serviceability",
+      "dfm",
+      "topology",
+      "dxf",
+      "openrocket",
+      "reverse engineering",
+      "cad-led"
+    ]
   },
   {
     key: "manufacturing",
     label: "Manufacturing",
-    terms: ["manufacturing", "fabrication", "additive", "3d printing", "bambu", "dxf", "prototype"]
+    terms: [
+      "manufacturing",
+      "manufacturability",
+      "fabrication",
+      "additive",
+      "3d printing",
+      "bambu",
+      "dxf",
+      "prototype",
+      "prototyping",
+      "dfm",
+      "slicing"
+    ]
   },
   {
     key: "thermal",
     label: "Thermal",
-    terms: ["thermal", "thermofluids", "heat exchanger", "pcm", "solar"]
+    terms: ["thermal", "thermofluids", "heat exchanger", "pcm", "solar", "ansys", "mesh"]
   },
   {
     key: "personal",
@@ -102,7 +138,7 @@ function summarizeList(items, fallback, maxItems = 3) {
 
 function evidenceSummary(project) {
   const linkLabels = {
-    repo: "Repo",
+    repo: "Public repo",
     article: "Article",
     cad: "CAD",
     drawings: "Drawings",
@@ -116,15 +152,22 @@ function evidenceSummary(project) {
     .map(([key]) => linkLabels[key] || key)
     .slice(0, 3);
 
-  if (linkEvidence.length) {
-    return linkEvidence.join(" / ");
+  const hasVisualEvidence = Boolean(project.gallery?.length || project.thumbnail || project.heroImage);
+  const evidence = [...linkEvidence];
+
+  if (hasVisualEvidence && evidence.length < 3) {
+    evidence.push("Visual build record");
   }
 
-  if (project.gallery?.length || project.thumbnail || project.heroImage) {
-    return "Visual record";
+  if (evidence.length) {
+    return evidence.slice(0, 3).join(" / ");
   }
 
-  return "Project page";
+  if (hasVisualEvidence) {
+    return "Visual build record";
+  }
+
+  return "Project memo";
 }
 
 function renderFilters() {

@@ -2,32 +2,32 @@ export const siteProfile = {
   name: "Nhan Dang",
   initials: "ND",
   siteSubtitle: "MECHANICAL RESEARCH LOGBOOK",
-  role: "Mechanical Engineering Student",
+  role: "Mechanical Engineering Honours Student",
   degree:
     "Bachelor of Engineering (Honours), Mechanical Engineering — University of Technology Sydney",
   tagline:
-    "Mechanical engineering portfolio focused on CAD-led design, robot hardware, prototyping, sensing integration, testing, and product-style mechanical systems.",
+    "Mechanical engineering portfolio focused on research-ready robot hardware, sensing-enabled systems, CAD-led subsystem design, prototyping, testing, public build evidence, and product-style mechanical systems.",
   brandLogo: "assets/images/profile/newthumbnail.png",
   headshot: "assets/images/profile/nhan-profile.png",
   focusAreas: [
     {
       title: "Robot hardware and smart mechanical systems",
       body:
-        "Developing a research direction around robot hardware, sensing, vibration and condition monitoring, digital-twin-informed mechanical systems, and human-centred mechatronic platforms."
+        "Developing a research direction around robot hardware, sensing-enabled mechanical systems, and future work in vibration, condition monitoring, and digital-twin-informed mechanical systems, grounded in human-centred mechatronic platforms."
     },
     {
       title: "Product-style mechanical subsystem design",
       body:
-        "Applying CAD, mechanical design, DFM thinking, tolerancing, prototyping, testing, manufacturability, and design records to product-like mechanical subsystem work."
+        "Applying CAD, mechanical design, DFM thinking, tolerancing awareness, prototyping, testing, manufacturability, serviceability, and design records to product-like mechanical subsystem work."
     },
     {
       title: "Cobotics and human-centred robotics",
       body:
-        "Keeping cobotics and human-robot interaction connected to practical platforms, sensing, fabrication, mechatronic integration, and testable hardware."
+        "Keeping cobotics and human-robot interaction connected to practical platforms, sensing, fabrication, mechatronic integration, public build evidence, and testable hardware."
     }
   ],
   techStackIntro:
-    "A compact snapshot of tools and engineering practices I use across mechanical design, prototyping, robot hardware, testing, documentation, and portfolio development.",
+    "A compact snapshot of tools and engineering practices I use across mechanical design, prototyping, robot hardware, sensing integration, testing, documentation, and portfolio development.",
   techStack: [
     {
       category: "Core Engineering",
@@ -107,7 +107,7 @@ export const siteProfile = {
   location: "Sydney, Australia",
   address: "Sydney, Australia",
   contactSubheading:
-    "Mechanical Engineering student focused on CAD-led design, robot hardware, sensing integration, prototyping, testing, and product-style mechanical systems.",
+    "Mechanical Engineering student focused on CAD-led robot hardware, sensing-enabled systems, prototyping, testing, public build evidence, and product-style mechanical subsystem design.",
   contactEmail: "",
   mapEmbedUrl: "https://www.google.com/maps?q=Sydney+Australia&output=embed",
   experienceTimeline: [
@@ -115,7 +115,7 @@ export const siteProfile = {
       title: "UTS Motorsports Autonomous - Mechanical Components",
       period: "Project work",
       detail:
-        "Designed and supported fabrication of autonomous vehicle sensor and electronics components under motorsport packaging constraints, with attention to vibration, accessibility, serviceability, manufacturability, and competition requirements."
+        "Designed and supported fabrication of autonomous vehicle sensor and electronics components under motorsport packaging constraints, with attention to vibration exposure, accessibility, serviceability, manufacturability, and clear design records."
     },
     {
       title: "Cobotics End-Effector and Physical Test Platform",
@@ -129,7 +129,7 @@ export const siteProfile = {
       title: "University of Technology Sydney (UTS)",
       period: "Final semester",
       detail:
-        "Bachelor of Engineering (Honours) student in Mechanical Engineering focused on CAD, mechanical design, prototyping, fabrication, robot hardware, sensing, testing, mechatronic integration, and design documentation."
+        "Bachelor of Engineering (Honours) student in Mechanical Engineering focused on CAD, mechanical design, prototyping, fabrication, robot hardware, sensing, testing, mechatronic integration, manufacturability, and design documentation."
     }
   ],
   certifications: [

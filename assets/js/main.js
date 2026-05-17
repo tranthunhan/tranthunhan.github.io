@@ -33,16 +33,16 @@ function formatEvidence(project) {
   const evidence = [];
 
   if (project.links?.repo) {
-    evidence.push("repository");
+    evidence.push("public repo");
   }
   if (project.links?.docs) {
     evidence.push("documentation");
   }
   if (project.gallery?.length || project.thumbnail || project.heroImage) {
-    evidence.push("visual record");
+    evidence.push("visual build record");
   }
 
-  return evidence.length ? evidence.join(" + ") : "field note";
+  return evidence.length ? evidence.join(" + ") : "project memo";
 }
 
 function renderBuildIndex() {

@@ -173,7 +173,7 @@ function renderContent(activeProject, evidenceItems) {
     ${renderMemoSection("03", "My Contribution", renderList(activeProject.role))}
     ${renderMemoSection("04", "Design Process", renderProcessList(activeProject.process))}
     ${renderMemoSection("05", "Technical Decisions", renderDecisionList(activeProject.technicalHighlights))}
-    ${renderMemoSection("06", "Build / Prototype Evidence", renderEvidenceGrid(activeProject, evidenceItems))}
+    ${renderMemoSection("06", "Public Build Evidence", renderEvidenceGrid(activeProject, evidenceItems))}
     ${renderMemoSection("07", "Outcome", renderParagraphs([activeProject.outcome, activeProject.relevance]))}
     ${renderMemoSection(
       "08",
@@ -284,7 +284,7 @@ function renderEvidenceGrid(activeProject, evidenceItems) {
 
   return `
     <p class="memo-evidence-note">
-      Selected visual evidence from the public project record. Images are shown as figure plates so CAD screenshots, diagrams, drawings, and build photos remain inspectable.
+      Selected public build evidence from the project record. Images are shown as figure plates so CAD screenshots, diagrams, drawings, and build photos remain inspectable.
     </p>
     <div class="evidence-plate-grid">
       ${visibleEvidenceItems
