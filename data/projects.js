@@ -3,9 +3,9 @@ export const projects = [
     "slug": "kinematic-puppet-cobotics",
     "featured": true,
     "title": "Kinematic Puppet / Cobot Prototyping",
-    "subtitle": "Human-centred robot hardware project using modular cobot prototyping, CAD, end-effector concepts, physical prototyping, and HRI-oriented test-platform thinking.",
+    "subtitle": "Low-cost physical cobot prototyping platform using a modular robot-skeleton concept, end-effector development, CAD iteration, and HRI-oriented design thinking.",
     "year": "2025",
-    "status": "Robotics research project",
+    "status": "Cobotics / HRI project work",
     "projectType": "Project",
     "tags": [
       "Cobotics",
@@ -13,50 +13,60 @@ export const projects = [
       "Robot Hardware",
       "CAD",
       "Prototyping",
-      "Human-Centred"
+      "Human-Centred",
+      "Modular Design"
     ],
     "thumbnail": "assets/images/projects/kinematic-puppet-cobotics/01-diagram.jpg",
     "heroImage": "assets/images/projects/kinematic-puppet-cobotics/01-diagram.jpg",
-    "summary": "A UTS 43019 project connected to Australian Cobotics Centre work, using a low-cost modular robot-skeleton platform to explore cobot morphology, end-effector ideas, and human-centred mechatronic interaction scenarios.",
+    "summary": "A UTS 43019 project connected to Australian Cobotics Centre work, exploring a low-cost modular kinematic puppet as a physical platform for cobot morphology, end-effector concept development, and early HRI design discussion.",
     "overview": [
-      "This project explored the Kinematic Puppet as a modular robot-skeleton tool for cobot prototyping and human-robot interaction scenarios.",
-      "The page frames the work for research review: CAD concepts, modular connector thinking, morphology exploration, and physical prototyping for human-centred mechatronic platforms."
+      "This project explored the Kinematic Puppet as a modular robot-skeleton for cobot prototyping, where physical parts can be reconfigured before a final robot morphology or end-effector is fixed.",
+      "The public case study focuses on the engineering process behind the platform: problem framing, concept generation, morphology exploration, modular connector thinking, iterative CAD, and physical prototype communication for human-centred robotics."
     ],
     "problem": [
-      "Cobot and HRI prototyping benefit from physical forms that can be reconfigured before a final robot morphology or end-effector is fixed.",
-      "The project connects practical mechanical design with research questions about how humans may interact with adaptable robot hardware."
+      "Cobot and HRI ideas are easier to evaluate when designers can handle and rearrange physical robot forms instead of relying only on sketches or CAD renders.",
+      "The design challenge was to propose a low-cost platform that supported modularity, safe interaction, manufacturability, and testable end-effector/morphology concepts at an early project stage."
     ],
     "role": [
-      "Contributed to CAD and physical prototyping concepts",
-      "Explored modular end-effector, connector, and morphology ideas",
-      "Prepared design notes and public-facing visuals around HRI test-platform thinking"
+      "Developed CAD and physical prototyping concepts for modular cobot hardware",
+      "Explored end-effector, connector, base, and morphology options through structured concept development",
+      "Used morph-table and weighted-decision-matrix thinking to compare design directions",
+      "Prepared public-facing visuals and design notes for HRI-oriented platform discussion"
     ],
     "process": [
       {
-        "title": "Concept framing",
-        "body": "The work framed a modular physical platform as a way to explore robot morphology, end-effectors, and human-centred interaction before committing to a final robot form."
+        "title": "Problem framing",
+        "body": "The project framed the kinematic puppet as a low-cost physical tool for exploring how cobot shape, reach, and end-effector choice can affect human-centred interaction scenarios."
       },
       {
-        "title": "Mechanical prototyping",
-        "body": "CAD, connector ideas, and physical prototype visuals show the translation from an HRI concept into tangible robot-hardware test pieces."
+        "title": "Concept generation",
+        "body": "End-effector, connector, and base concepts were explored as modular building blocks, with morphology options treated as configurable combinations rather than one fixed robot layout."
       },
       {
-        "title": "Research continuity",
-        "body": "The project keeps cobotics and HRI connected to practical hardware work, research mentoring themes, and Pathways@RSS 2026 learning."
+        "title": "Concept selection",
+        "body": "Morphological tables and weighted decision-matrix reasoning helped compare concepts against modularity, manufacturability, safe interaction, and practical prototype constraints."
+      },
+      {
+        "title": "Iterative CAD and prototyping",
+        "body": "CAD and prototype visuals translated selected ideas into tangible robot-hardware pieces, keeping the work grounded in fabrication, assembly, and future testability."
       }
     ],
     "technicalHighlights": [
       {
-        "title": "Human-centred platform thinking",
-        "body": "The project shows how a low-cost physical platform can support early investigation of end-effectors, morphology, and human-robot interaction scenarios."
+        "title": "Modular robot-skeleton concept",
+        "body": "The kinematic puppet approach treats the robot body as a configurable skeleton, making morphology changes easier to discuss before committing to a final cobot form."
       },
       {
-        "title": "Research review material",
-        "body": "The public material emphasises traceable design thinking, concise visuals, and clear design notes rather than unpublished raw working files."
+        "title": "End-effector and connector thinking",
+        "body": "The design work compares gripper, hook, claw, clamp, magnet, and base concepts as modular interface options for different interaction and manipulation scenarios."
+      },
+      {
+        "title": "Design-for-prototype constraints",
+        "body": "The project balances safe interaction, manufacturability, modularity, and testability so the platform can support early HRI discussion without overstating completed testing."
       }
     ],
-    "outcome": "A research-facing project page showing modular cobot prototyping, end-effector exploration, and physical prototype work for human-centred mechatronic platform thinking.",
-    "relevance": "Connects to research mentoring themes and Pathways@RSS 2026 learning by showing a practical route from CAD and physical prototyping to cobotics, HRI, and human-centred robot hardware questions.",
+    "outcome": "A public engineering case study showing modular cobot prototyping, end-effector concept development, connector/morphology exploration, and CAD-to-prototype communication for a research-oriented class project.",
+    "relevance": "Relevant to cobotics and HRI research mentoring because it connects human-centred robotics questions to practical mechanical design decisions: modular interfaces, safe physical interaction, manufacturable prototypes, and testable platform concepts.",
     "tools": [
       "SolidWorks",
       "CAD",
@@ -78,100 +88,100 @@ export const projects = [
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/01-diagram.jpg",
         "alt": "Kinematic Puppet / Cobot Prototyping visual 1",
-        "caption": "Diagram"
+        "caption": "Kinematic puppet platform concept"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/02-helppp-me-diagram.jpg",
         "alt": "Kinematic Puppet / Cobot Prototyping visual 2",
-        "caption": "Helppp Me Diagram"
+        "caption": "Problem framing and interaction scenario"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/03-gantt-chart-revised.jpg",
         "alt": "Kinematic Puppet / Cobot Prototyping visual 3",
-        "caption": "Gantt Chart Revised"
+        "caption": "Project planning timeline"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/04-2-finger-gripper.jpg",
         "alt": "Kinematic Puppet / Cobot Prototyping visual 4",
-        "caption": "2 Finger Gripper"
+        "caption": "Two-finger gripper concept"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/05-3-base-lattice.jpg",
         "alt": "Kinematic Puppet / Cobot Prototyping visual 5",
-        "caption": "3 Base Lattice"
+        "caption": "Lattice base concept"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/06-3-star-base.jpg",
         "alt": "Kinematic Puppet / Cobot Prototyping visual 6",
-        "caption": "3 Star Base"
+        "caption": "Star base concept"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/07-clamp.jpg",
         "alt": "Kinematic Puppet / Cobot Prototyping visual 7",
-        "caption": "Clamp"
+        "caption": "Clamp end-effector concept"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/08-claw.jpg",
         "alt": "Kinematic Puppet / Cobot Prototyping visual 8",
-        "caption": "Claw"
+        "caption": "Claw end-effector concept"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/09-hex-base.jpg",
         "alt": "Kinematic Puppet / Cobot Prototyping visual 9",
-        "caption": "Hex Base"
+        "caption": "Hexagonal base concept"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/10-hook.jpg",
         "alt": "Kinematic Puppet / Cobot Prototyping visual 10",
-        "caption": "Hook"
+        "caption": "Hook end-effector concept"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/11-magnet.jpg",
         "alt": "Kinematic Puppet / Cobot Prototyping visual 11",
-        "caption": "Magnet"
+        "caption": "Magnetic end-effector concept"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/12-regtangle-base.jpg",
         "alt": "Kinematic Puppet / Cobot Prototyping visual 12",
-        "caption": "Regtangle Base"
+        "caption": "Rectangular base concept"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/13-revolving-gear.jpg",
         "alt": "Kinematic Puppet / Cobot Prototyping visual 13",
-        "caption": "Revolving Gear"
+        "caption": "Revolving gear concept"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/14-round-base.jpg",
         "alt": "Kinematic Puppet / Cobot Prototyping visual 14",
-        "caption": "Round Base"
+        "caption": "Round base concept"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/15-square-base.jpg",
         "alt": "Kinematic Puppet / Cobot Prototyping visual 15",
-        "caption": "Square Base"
+        "caption": "Square base concept"
       }
     ],
     "lessonsLearned": [
       "Physical prototypes make early HRI and cobotics concepts easier to discuss than abstract CAD alone.",
-      "Research-facing notes need to show the engineering question, the physical platform, and the next testable step."
+      "Structured concept selection helps keep modularity, manufacturability, safe interaction, and testability visible during early robot-hardware design."
     ],
     "futureWork": [
-      "Add clearer rendered screenshots and short notes on how the platform could support future sensing or interaction tests.",
-      "Prepare any raw CAD or print files for public release only after they are cleaned and documented."
+      "Add concise annotations showing how each end-effector or base option supports different HRI and manipulation scenarios.",
+      "Prepare any raw CAD or print files for public release only after privacy, ownership, and documentation checks."
     ],
     "relatedProjects": [
       "confined-space-inspection-robot",
@@ -182,7 +192,7 @@ export const projects = [
     "slug": "confined-space-inspection-robot",
     "featured": true,
     "title": "Confined-Space Inspection Robot",
-    "subtitle": "Capstone robot project focused on compact inspection-robot packaging, chassis/wheel concepts, electronics layout, sensing/camera integration, power, and prototype visuals.",
+    "subtitle": "Compact inspection-robot hardware project covering chassis and wheel packaging, motor/driver/battery layout, camera/controller integration, service access, and prototype iteration.",
     "year": "2025",
     "status": "Capstone robot project",
     "projectType": "Project",
@@ -191,50 +201,60 @@ export const projects = [
       "Mobile Robot",
       "Robot Hardware",
       "Sensing",
-      "System Integration"
+      "System Integration",
+      "Packaging"
     ],
     "thumbnail": "assets/images/projects/confined-space-inspection-robot/01-18650.jpg",
     "heroImage": "assets/images/projects/confined-space-inspection-robot/01-18650.jpg",
-    "summary": "A compact inspection robot project page showing CAD packaging, electronics/power integration, prototype photos, and planning material for a sensing-enabled mechatronic platform while keeping raw CAD private.",
+    "summary": "Compact robot-hardware work showing how chassis geometry, wheel placement, motors, drivers, battery storage, camera/sensing hardware, and Raspberry Pi/controller layout were packaged into a confined-space inspection platform.",
     "overview": [
-      "This capstone project developed a confined-space inspection robot concept around compact packaging, mobility, electronics integration, sensing, and inspection use.",
-      "The public page uses CAD screenshots, renders, previews, selected notes, photos, and prototype visuals while intentionally excluding raw CAD files."
+      "This capstone project developed a confined-space inspection robot concept around compact mechanical packaging, mobility, sensing/camera integration, power layout, and inspection use.",
+      "The public page uses CAD screenshots, component visuals, selected notes, and prototype photos to communicate the design decisions while intentionally excluding raw CAD files."
     ],
     "problem": [
-      "Inspection robots need to fit mobility, control hardware, power, sensing/camera concepts, and protection into a compact platform.",
-      "This makes the project a useful bridge between robot hardware research interests and product-design engineering concerns such as packaging, serviceability, and test planning."
+      "A confined-space inspection robot needs to carry drive hardware, power storage, controller electronics, camera/sensing hardware, and protective structure inside a small mobile platform.",
+      "The mechanical challenge was to balance mobility, robustness, low centre of gravity, serviceability, maintenance access, and component protection without making the chassis too bulky for inspection environments."
     ],
     "role": [
-      "Developed CAD and mechanical packaging concepts",
-      "Worked through wheel, chassis, controller, motor, driver, and power packaging decisions",
-      "Prepared prototype photos and CAD-related visuals to communicate integration and test readiness"
+      "Developed CAD and mechanical packaging concepts for the compact robot chassis",
+      "Worked through wheel, motor, motor-driver, battery, Raspberry Pi/controller, and camera/sensing layout decisions",
+      "Considered low-centre-of-gravity packaging, service access, protection, and maintenance constraints",
+      "Prepared prototype photos and CAD-related visuals to communicate subsystem integration and test-planning intent"
     ],
     "process": [
       {
-        "title": "Packaging constraints",
-        "body": "The design work centred on fitting mobility, power, electronics, and sensing-related elements into a compact robot platform."
+        "title": "Chassis packaging",
+        "body": "The design work centred on fitting the wheelbase, chassis envelope, motors, electronics, and power storage into a compact inspection-robot form factor."
       },
       {
-        "title": "Electronics and sensing integration",
-        "body": "The layout work shows the mechanical decisions needed to support controller, motor-driver, power, and camera/inspection functions."
+        "title": "Drive and power layout",
+        "body": "Motor, driver, battery, and wiring placement were treated as mechanical packaging problems, with attention to centre of gravity, protection, and access for assembly or maintenance."
       },
       {
-        "title": "Public communication",
-        "body": "Raw CAD remains unpublished; the page uses screenshots, photos, and planning material to communicate decisions without exposing working files."
+        "title": "Sensing and controller integration",
+        "body": "The camera/sensing and Raspberry Pi/controller layout needed clear mounting space, cable paths, and protected locations while preserving inspection visibility and mobility."
+      },
+      {
+        "title": "Prototype review and test planning",
+        "body": "Prototype photos and CAD views support review of packaging choices and future test planning without claiming completed performance results."
       }
     ],
     "technicalHighlights": [
       {
-        "title": "Mechanical subsystem integration",
-        "body": "The robot shows packaging trade-offs across chassis geometry, wheel layout, power storage, drivers, embedded hardware, and inspection use."
+        "title": "Compact mechanical architecture",
+        "body": "The project shows trade-offs across chassis geometry, wheel placement, drive components, power storage, controller hardware, and inspection payload space."
       },
       {
-        "title": "Product-design relevance",
-        "body": "Compact packaging, serviceability, protection, and test planning connect this robot hardware work to mechanical subsystem design in product environments."
+        "title": "Serviceability and protection",
+        "body": "Battery, driver, controller, and camera placement were framed around access, maintenance, cable routing, and protection rather than only fitting components into the smallest possible volume."
+      },
+      {
+        "title": "Product-style subsystem thinking",
+        "body": "The robot hardware work connects CAD packaging, prototype iteration, test planning, robustness, and service access into a product-style mechanical subsystem design problem."
       }
     ],
-    "outcome": "A robot-hardware project page showing compact packaging, electronics integration, prototype visuals, and a privacy-conscious public communication approach.",
-    "relevance": "Supports a future research direction in smart mechanical systems through sensing-enabled robot hardware, inspection-platform work, and compact mechatronic system integration, while also showing product-design habits around packaging, testability, serviceability, and mechanical subsystem design records.",
+    "outcome": "Public robot-hardware material showing compact chassis packaging, wheel and drive layout, electronics/power integration, camera/sensing placement, prototype visuals, and test-planning material.",
+    "relevance": "Relevant to mechanical and robot-hardware engineering because it connects CAD-led packaging, sensing integration, serviceability, low-centre-of-gravity layout, robustness, protection, and prototype iteration in a compact mechatronic system.",
     "tools": [
       "SolidWorks",
       "Raspberry Pi",
@@ -256,43 +276,43 @@ export const projects = [
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/01-18650.jpg",
         "alt": "Confined-Space Inspection Robot visual 1",
-        "caption": "18650"
+        "caption": "18650 battery packaging consideration"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/02-ltc-3780-mudule.jpg",
         "alt": "Confined-Space Inspection Robot visual 2",
-        "caption": "Ltc 3780 Mudule"
+        "caption": "LTC3780 power module"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/04-jgb37-520.jpg",
         "alt": "Confined-Space Inspection Robot visual 3",
-        "caption": "Jgb37 520"
+        "caption": "JGB37-520 drive motor"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/05-screenshot-52.jpg",
         "alt": "Confined-Space Inspection Robot visual 4",
-        "caption": "Screenshot 52"
+        "caption": "CAD packaging view"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/06-screenshot-53.jpg",
         "alt": "Confined-Space Inspection Robot visual 5",
-        "caption": "Screenshot 53"
+        "caption": "Chassis packaging view"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/07-iwcudrz5w2npcpwyrjm4qg-970-80.jpg",
         "alt": "Confined-Space Inspection Robot visual 6",
-        "caption": "Iwcudrz5w2npcpwyrjm4qg 970 80"
+        "caption": "Camera module reference"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/08-logo-raspberry.jpg",
         "alt": "Confined-Space Inspection Robot visual 7",
-        "caption": "Logo Raspberry"
+        "caption": "Raspberry Pi controller platform"
       },
       {
         "type": "image",
@@ -304,43 +324,43 @@ export const projects = [
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/10-raspberry-pi-5-dimensions.jpg",
         "alt": "Confined-Space Inspection Robot visual 9",
-        "caption": "Raspberry Pi 5 Dimensions"
+        "caption": "Raspberry Pi 5 package dimensions"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/11-rfft7vtzrrjddftnikbke7-970-80-jpg.jpg",
         "alt": "Confined-Space Inspection Robot visual 10",
-        "caption": "Rfft7vtzrrjddftnikbke7 970 80 Jpg"
+        "caption": "Inspection camera hardware reference"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/12-tuh93aaxhirgzklc3nxce9-970-80.jpg",
         "alt": "Confined-Space Inspection Robot visual 11",
-        "caption": "Tuh93aaxhirgzklc3nxce9 970 80"
+        "caption": "Camera and sensing module reference"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/13-wy4yb6ufo7smhg2p3wnxc7-970-80-jpg.jpg",
         "alt": "Confined-Space Inspection Robot visual 12",
-        "caption": "Wy4yb6ufo7smhg2p3wnxc7 970 80 Jpg"
+        "caption": "Compact camera module reference"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/14-raspberry-pi-2-adny-wygl-d.jpg",
         "alt": "Confined-Space Inspection Robot visual 13",
-        "caption": "Raspberry Pi 2 Adny Wygl D"
+        "caption": "Raspberry Pi 2 layout reference"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/15-raspberry-pi-3-adny-wygl-d.jpg",
         "alt": "Confined-Space Inspection Robot visual 14",
-        "caption": "Raspberry Pi 3 Adny Wygl D"
+        "caption": "Raspberry Pi 3 layout reference"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/16-raspberry-pi-5-adny-wygl-d.jpg",
         "alt": "Confined-Space Inspection Robot visual 15",
-        "caption": "Raspberry Pi 5 Adny Wygl D"
+        "caption": "Raspberry Pi 5 layout reference"
       },
       {
         "type": "image",
@@ -352,130 +372,130 @@ export const projects = [
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/18-raspberry-pi-5-0.jpg",
         "alt": "Confined-Space Inspection Robot visual 17",
-        "caption": "Raspberry Pi 5 0"
+        "caption": "Raspberry Pi 5 mounting reference"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/19-raspberry-pi-5-1.jpg",
         "alt": "Confined-Space Inspection Robot visual 18",
-        "caption": "Raspberry Pi 5 1"
+        "caption": "Raspberry Pi 5 connector-side reference"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/20-raspberry-pi-5-2.jpg",
         "alt": "Confined-Space Inspection Robot visual 19",
-        "caption": "Raspberry Pi 5 2"
+        "caption": "Raspberry Pi 5 board-layout reference"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/21-raspberry-pi-5-3.jpg",
         "alt": "Confined-Space Inspection Robot visual 20",
-        "caption": "Raspberry Pi 5 3"
+        "caption": "Raspberry Pi 5 packaging reference"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/22-raspberry-pi-5-5.jpg",
         "alt": "Confined-Space Inspection Robot visual 21",
-        "caption": "Raspberry Pi 5 5"
+        "caption": "Raspberry Pi 5 hardware reference"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/23-screenshot-2024-12-23-203946.jpg",
         "alt": "Confined-Space Inspection Robot visual 22",
-        "caption": "Screenshot 2024 12 23 203946"
+        "caption": "Mechanical layout screenshot"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/24-tb6612fng-lower.jpg",
         "alt": "Confined-Space Inspection Robot visual 23",
-        "caption": "Tb6612fng Lower"
+        "caption": "TB6612FNG motor driver lower side"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/25-tb6612fng-upper.jpg",
         "alt": "Confined-Space Inspection Robot visual 24",
-        "caption": "Tb6612fng Upper"
+        "caption": "TB6612FNG motor driver upper side"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/26-untitled-18.jpg",
         "alt": "Confined-Space Inspection Robot visual 25",
-        "caption": "Untitled 18"
+        "caption": "Subsystem packaging sketch"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/27-img-3450.jpg",
         "alt": "Confined-Space Inspection Robot visual 26",
-        "caption": "Img 3450"
+        "caption": "Prototype assembly photo 1"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/28-img-3451.jpg",
         "alt": "Confined-Space Inspection Robot visual 27",
-        "caption": "Img 3451"
+        "caption": "Prototype assembly photo 2"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/29-img-3452.jpg",
         "alt": "Confined-Space Inspection Robot visual 28",
-        "caption": "Img 3452"
+        "caption": "Prototype assembly photo 3"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/30-img-3453.jpg",
         "alt": "Confined-Space Inspection Robot visual 29",
-        "caption": "Img 3453"
+        "caption": "Prototype assembly photo 4"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/31-img-3454.jpg",
         "alt": "Confined-Space Inspection Robot visual 30",
-        "caption": "Img 3454"
+        "caption": "Prototype assembly photo 5"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/32-img-3595.jpg",
         "alt": "Confined-Space Inspection Robot visual 31",
-        "caption": "Img 3595"
+        "caption": "Prototype packaging review"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/33-img-3620.jpg",
         "alt": "Confined-Space Inspection Robot visual 32",
-        "caption": "Img 3620"
+        "caption": "Prototype chassis view 1"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/34-img-3622.jpg",
         "alt": "Confined-Space Inspection Robot visual 33",
-        "caption": "Img 3622"
+        "caption": "Prototype chassis view 2"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/35-img-3623.jpg",
         "alt": "Confined-Space Inspection Robot visual 34",
-        "caption": "Img 3623"
+        "caption": "Prototype chassis view 3"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/36-img-3624.jpg",
         "alt": "Confined-Space Inspection Robot visual 35",
-        "caption": "Img 3624"
+        "caption": "Prototype chassis view 4"
       },
       {
         "type": "image",
         "src": "assets/images/projects/confined-space-inspection-robot/37-img-3625.jpg",
         "alt": "Confined-Space Inspection Robot visual 36",
-        "caption": "Img 3625"
+        "caption": "Prototype chassis view 5"
       }
     ],
     "lessonsLearned": [
-      "Mechanical packaging decisions become clearer when CAD views are paired with prototype photos and integration notes.",
-      "Public project notes can show engineering judgement without exposing raw CAD or private working files."
+      "Compact robot design needs electronics, power, drive, and sensing hardware to be treated as mechanical packaging constraints from the start.",
+      "CAD views, prototype photos, and integration notes make serviceability, centre of gravity, protection, and assembly trade-offs easier to review."
     ],
     "futureWork": [
-      "Add clearer rendered screenshots and a concise test-plan summary if suitable public material is available.",
-      "Prepare any raw CAD or source files for public release only after privacy and ownership checks."
+      "Add annotated CAD views showing centre-of-gravity intent, maintenance access, cable paths, and protected component zones if public-safe material is available.",
+      "Add a concise test-plan summary for mobility, camera visibility, service access, and robustness once suitable public notes are prepared."
     ],
     "relatedProjects": [
       "kinematic-puppet-cobotics",
