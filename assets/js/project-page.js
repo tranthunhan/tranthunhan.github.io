@@ -371,8 +371,8 @@ function renderContent(activeProject) {
       activeProject.relevance
         ? `
     <section class="content-section reveal">
-      <p class="eyebrow">Robotics Relevance</p>
-      <h2>Why it matters for my research direction</h2>
+      <p class="eyebrow">Engineering Relevance</p>
+      <h2>Why this project matters</h2>
       <p>${activeProject.relevance}</p>
     </section>
   `

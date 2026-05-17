@@ -2,30 +2,31 @@ export const siteProfile = {
   name: "Nhan Dang",
   initials: "ND",
   role: "Mechanical Engineering Student",
-  degree: "Mechanical Engineering Student - University of Technology Sydney (UTS)",
+  degree:
+    "Bachelor of Engineering (Honours), Mechanical Engineering — University of Technology Sydney",
   tagline:
-    "Mechanical Engineering student focused on cobotics, robotics research, CAD, prototyping, and robot hardware development.",
+    "Mechanical engineering portfolio focused on CAD-led design, robot hardware, prototyping, sensing integration, testing, and product-style mechanical systems.",
   brandLogo: "assets/images/profile/thumbnail.png",
   headshot: "assets/images/profile/nhan-profile.png",
   focusAreas: [
     {
-      title: "Cobotics and human-robot interaction",
+      title: "Robot hardware and smart mechanical systems",
       body:
-        "Developing a research direction in cobotics, human-robot collaboration, and physical test platforms for studying robot interaction, end-effector design, and practical hardware behaviour."
+        "Developing a research direction around robot hardware, sensing, vibration and condition monitoring, digital-twin-informed mechanical systems, and human-centred mechatronic platforms."
     },
     {
-      title: "Robot hardware and mechanical design",
+      title: "Product-style mechanical subsystem design",
       body:
-        "Hands-on CAD, mechanism design, packaging, fabrication, prototyping, additive manufacturing, and design iteration for robot and autonomous-system hardware."
+        "Applying CAD, mechanical design, DFM thinking, tolerancing, prototyping, testing, manufacturability, and design records to product-like mechanical subsystem work."
     },
     {
-      title: "Mechatronics systems in development",
+      title: "Cobotics and human-centred robotics",
       body:
-        "Actively building broader robotics skills across electronics, PCB design, STM microcontrollers, sensors, encoders, ROS, embedded systems, coding, and control."
+        "Keeping cobotics and human-robot interaction connected to practical platforms, sensing, fabrication, mechatronic integration, and testable hardware."
     }
   ],
   techStackIntro:
-    "A compact snapshot of tools I use across mechanical design, prototyping, robotics projects, documentation, and portfolio development.",
+    "A compact snapshot of tools and engineering practices I use across mechanical design, prototyping, robot hardware, testing, documentation, and portfolio development.",
   techStack: [
     {
       category: "Core Engineering",
@@ -37,7 +38,9 @@ export const siteProfile = {
         "ANSYS",
         "Creo Parametric",
         "MATLAB",
-        "Simulink"
+        "Simulink",
+        "DFM",
+        "Tolerancing"
       ]
     },
     {
@@ -51,7 +54,9 @@ export const siteProfile = {
         "Bambu Studio",
         "Fabrication",
         "Mechatronics",
-        "Prototyping"
+        "Prototyping",
+        "Sensing",
+        "Testing"
       ]
     },
     {
@@ -101,7 +106,7 @@ export const siteProfile = {
   location: "Sydney, Australia",
   address: "Sydney, Australia",
   contactSubheading:
-    "Mechanical Engineering student at UTS aiming to pursue robotics research, especially cobotics and human-robot interaction.",
+    "Mechanical Engineering student focused on CAD-led design, robot hardware, sensing integration, prototyping, testing, and product-style mechanical systems.",
   contactEmail: "",
   mapEmbedUrl: "https://www.google.com/maps?q=Sydney+Australia&output=embed",
   experienceTimeline: [
@@ -109,21 +114,21 @@ export const siteProfile = {
       title: "UTS Motorsports Autonomous - Mechanical Components",
       period: "Project work",
       detail:
-        "Designed and supported fabrication of autonomous vehicle sensor and electronics components under motorsport packaging constraints, with attention to vibration, accessibility, serviceability, and competition requirements."
+        "Designed and supported fabrication of autonomous vehicle sensor and electronics components under motorsport packaging constraints, with attention to vibration, accessibility, serviceability, manufacturability, and competition requirements."
     },
     {
       title: "Cobotics End-Effector and Physical Test Platform",
       period: "UTS 43019 project",
       detail:
-        "Developed concepts for a low-cost cobotics prototyping platform and end-effector system, using CAD, modular connector thinking, structured concept selection, and prototype documentation to support human-robot interaction exploration."
+        "Developed concepts for a low-cost cobotics prototyping platform and end-effector system, using CAD, modular connector thinking, structured concept selection, and prototype documentation to support human-centred mechatronic and HRI exploration."
     }
   ],
   educationTimeline: [
     {
       title: "University of Technology Sydney (UTS)",
-      period: "Current",
+      period: "Final semester",
       detail:
-        "Mechanical Engineering student focused on robotics, cobotics, CAD, prototyping, fabrication, robot hardware, and mechatronics fundamentals."
+        "Bachelor of Engineering (Honours) student in Mechanical Engineering focused on CAD, mechanical design, prototyping, fabrication, robot hardware, sensing, testing, mechatronic integration, and design documentation."
     }
   ],
   certifications: [
