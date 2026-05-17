@@ -6,8 +6,6 @@ import {
 } from "../../data/projects.js";
 import { repoImages } from "../../data/repo-images.js";
 import {
-  createProjectCard,
-  createResourceButtons,
   initRevealAnimations,
   populateSharedProfile,
   resolveImagePath
@@ -26,13 +24,7 @@ const relatedRoot = document.getElementById("related-projects");
 
 if (!project) {
   document.title = `Project Not Found | ${siteProfile.name}`;
-  headerRoot.innerHTML = `
-    <article class="empty-state">
-      <h1>Project not found</h1>
-      <p>This page is missing a matching entry in <code>data/projects.js</code>.</p>
-      <a class="button" href="../portfolio.html">Back to project archive</a>
-    </article>
-  `;
+  renderMissingProject();
 } else {
   document.title = `${project.title} | ${siteProfile.name}`;
   renderProjectPage(project);
@@ -40,8 +32,21 @@ if (!project) {
   initRevealAnimations();
 }
 
+function asArray(value) {
+  return Array.isArray(value) ? value.filter(Boolean) : [];
+}
+
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
 function removeFileType(text) {
-  return text.replace(/\.(png|jpe?g|gif|webp|bmp|tiff?)$/i, "");
+  return text.replace(/\.(png|jpe?g|gif|webp|bmp|tiff?|mp4|mov|webm)$/i, "");
 }
 
 function cleanupCaption(rawText, fallback) {
@@ -57,395 +62,402 @@ function cleanupCaption(rawText, fallback) {
     .trim();
 
   const noType = removeFileType(cleaned);
-  if (!noType) {
-    return fallback;
-  }
-
-  return noType.charAt(0).toUpperCase() + noType.slice(1);
+  return noType ? noType.charAt(0).toUpperCase() + noType.slice(1) : fallback;
 }
 
 function resolveProjectAsset(path) {
-  const resolved = resolveImagePath(path, "../");
-  return resolved;
+  return resolveImagePath(path, "../");
 }
 
 function uniqueBySource(items) {
   return items.filter(
     (item, index, allItems) =>
+      item?.src &&
       index === allItems.findIndex((candidate) => candidate.src === item.src)
   );
 }
 
 function collectProjectGalleryItems(activeProject) {
-  const seedItems = [];
+  const customGallery = asArray(activeProject.gallery).filter((item) => item?.src);
+  const importedGallery = asArray(repoImages[activeProject.slug]).filter((item) => item?.src);
 
-  if (activeProject.heroImage) {
-    seedItems.push({
-      src: activeProject.heroImage,
-      alt: `${activeProject.title} hero image`,
-      caption: `${activeProject.title} hero image`
-    });
+  return uniqueBySource([...customGallery, ...importedGallery]);
+}
+
+function renderMissingProject() {
+  if (!headerRoot) {
+    return;
   }
 
-  if (activeProject.thumbnail) {
-    seedItems.push({
-      src: activeProject.thumbnail,
-      alt: `${activeProject.title} thumbnail`,
-      caption: `${activeProject.title} thumbnail`
-    });
-  }
-
-  const customGallery = (activeProject.gallery || []).filter((item) => item?.src);
-  const importedGallery = (repoImages[activeProject.slug] || []).filter(
-    (item) => item?.src
-  );
-
-  return uniqueBySource([...seedItems, ...customGallery, ...importedGallery]);
+  headerRoot.innerHTML = `
+    <article class="empty-state">
+      <h1>Project not found</h1>
+      <p>This page is missing a matching entry in <code>data/projects.js</code>.</p>
+      <a class="button" href="../portfolio.html">Back to Build Index</a>
+    </article>
+  `;
 }
 
 function renderProjectPage(activeProject) {
-  const galleryItems = collectProjectGalleryItems(activeProject);
-  const heroItem = galleryItems[0] || null;
-
-  headerRoot.innerHTML = "";
-
-  const intro = document.createElement("article");
-  intro.className = "project-hero reveal";
-
-  const repoButton = activeProject.links?.repo
-    ? `<a class="button button-repo-primary" href="${activeProject.links.repo}" target="_blank" rel="noreferrer">Open GitHub Repository</a>`
-    : "";
-
-  intro.innerHTML = `
-    <a class="breadcrumb-link" href="../portfolio.html">Back to Project Archive</a>
-    <div class="project-hero-grid">
-      <div class="project-hero-copy">
-        <p class="eyebrow">${activeProject.year} / ${activeProject.status}</p>
-        <h1>${activeProject.title}</h1>
-        <p class="project-subtitle">${activeProject.subtitle}</p>
-        <p class="project-summary">${activeProject.summary}</p>
-        <ul class="tag-list">${activeProject.tags.map((tag) => `<li>${tag}</li>`).join("")}</ul>
-        <div class="project-priority-row">${repoButton}</div>
-        <div class="project-action-row"></div>
-      </div>
-      ${
-        heroItem
-          ? `<figure class="project-hero-media"><img src="${resolveProjectAsset(
-              heroItem.src
-            )}" alt="${heroItem.alt || `${activeProject.title} image`}" /></figure>`
-          : `<figure class="project-hero-media is-empty" aria-hidden="true"></figure>`
-      }
-    </div>
-  `;
-
-  const nonRepoLabels = Object.fromEntries(
-    Object.entries(projectLinkLabels).filter(([key]) => key !== "repo")
-  );
-  if (!activeProject.links?.repo) {
-    intro.querySelector(".project-priority-row")?.remove();
-  }
-  const actionRow = intro.querySelector(".project-action-row");
-  const topResourceButtons = createResourceButtons(activeProject.links, nonRepoLabels, "../");
-  if (topResourceButtons.childElementCount > 0) {
-    actionRow.appendChild(topResourceButtons);
-  } else {
-    actionRow.remove();
-  }
-  headerRoot.appendChild(intro);
-
-  renderGallery(activeProject, galleryItems);
-  renderContent(activeProject);
+  const evidenceItems = collectProjectGalleryItems(activeProject);
+  hideStandaloneGallerySlot();
+  renderHeader(activeProject);
+  renderContent(activeProject, evidenceItems);
   renderSidebar(activeProject);
   renderRelated(activeProject);
 }
 
-function renderGallery(activeProject, galleryItems) {
-  if (!galleryItems.length) {
-    galleryRoot.innerHTML = "";
+function hideStandaloneGallerySlot() {
+  const galleryShell = galleryRoot?.closest(".project-gallery-shell");
+
+  if (galleryShell) {
+    galleryShell.hidden = true;
+  }
+}
+
+function renderHeader(activeProject) {
+  if (!headerRoot) {
     return;
   }
 
-  galleryRoot.innerHTML = `
-    <div class="section-heading reveal">
-      <p class="eyebrow">Gallery</p>
-      <h2>Visual record of the design, analysis, and iteration process.</h2>
-    </div>
-    <article class="gallery-carousel reveal" aria-label="Project image carousel">
-      <button class="gallery-nav-btn prev" type="button" aria-label="Previous image">
-        &#8249;
-      </button>
-      <figure class="gallery-stage">
-        <div id="gallery-active-media"></div>
-        <figcaption id="gallery-active-caption"></figcaption>
-      </figure>
-      <button class="gallery-nav-btn next" type="button" aria-label="Next image">
-        &#8250;
-      </button>
+  const topLinks = createProjectLinks(activeProject.links, { compact: false });
+  const tagList = createInlineList(asArray(activeProject.tags), "memo-tag-list");
+  const toolSummary = asArray(activeProject.tools).slice(0, 4).join(" / ");
+
+  headerRoot.innerHTML = `
+    <article class="memo-title-block">
+      <a class="breadcrumb-link" href="../portfolio.html">Back to Build Index</a>
+      <div class="memo-title-grid">
+        <div>
+          <p class="field-label">Design Review Memo</p>
+          <h1>${escapeHtml(activeProject.title)}</h1>
+          <p class="memo-subtitle">${escapeHtml(activeProject.subtitle || "")}</p>
+          <p class="memo-summary">${escapeHtml(activeProject.summary || "")}</p>
+          ${tagList}
+        </div>
+        <aside class="memo-header-facts" aria-label="Project facts">
+          <dl>
+            <div>
+              <dt>Year</dt>
+              <dd>${escapeHtml(activeProject.year || "Current")}</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>${escapeHtml(activeProject.status || "Project work")}</dd>
+            </div>
+            <div>
+              <dt>Domain</dt>
+              <dd>${escapeHtml(asArray(activeProject.tags).slice(0, 3).join(" / ") || activeProject.projectType || "Project")}</dd>
+            </div>
+            <div>
+              <dt>Tools</dt>
+              <dd>${escapeHtml(toolSummary || "Project tools")}</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+      ${topLinks}
     </article>
-    <div class="gallery-meta-row reveal">
-      <p class="gallery-counter" id="gallery-counter"></p>
-      <div class="gallery-dot-row" id="gallery-dot-row"></div>
-    </div>
   `;
-
-  const mediaEl = document.getElementById("gallery-active-media");
-  const captionEl = document.getElementById("gallery-active-caption");
-  const counterEl = document.getElementById("gallery-counter");
-  const dotRow = document.getElementById("gallery-dot-row");
-  const prevButton = galleryRoot.querySelector(".gallery-nav-btn.prev");
-  const nextButton = galleryRoot.querySelector(".gallery-nav-btn.next");
-
-  let currentIndex = 0;
-
-  const dotButtons = galleryItems.map((item, index) => {
-    const dot = document.createElement("button");
-    dot.type = "button";
-    dot.className = "gallery-dot";
-    dot.setAttribute("aria-label", `Go to image ${index + 1}`);
-    dot.addEventListener("click", () => {
-      currentIndex = index;
-      syncActiveImage();
-    });
-    dotRow.appendChild(dot);
-    return dot;
-  });
-
-  const syncActiveImage = () => {
-    const activeItem = galleryItems[currentIndex];
-    const fallbackCaption = `${activeProject.title} image ${currentIndex + 1}`;
-    const resolvedSrc = resolveProjectAsset(activeItem.src);
-    const itemType = activeItem.type || "image";
-    mediaEl.innerHTML =
-      itemType === "video"
-        ? `<video controls preload="metadata"><source src="${resolvedSrc}" type="video/mp4" />Your browser does not support embedded video.</video>`
-        : `<img src="${resolvedSrc}" alt="${activeItem.alt || fallbackCaption}" />`;
-    captionEl.textContent = cleanupCaption(
-      activeItem.caption || activeItem.alt,
-      fallbackCaption
-    );
-    counterEl.textContent = `${currentIndex + 1} / ${galleryItems.length}`;
-
-    dotButtons.forEach((dot, dotIndex) => {
-      const active = dotIndex === currentIndex;
-      dot.classList.toggle("is-active", active);
-      dot.setAttribute("aria-pressed", String(active));
-    });
-  };
-
-  const stepImage = (direction) => {
-    currentIndex =
-      (currentIndex + direction + galleryItems.length) % galleryItems.length;
-    syncActiveImage();
-  };
-
-  prevButton.addEventListener("click", () => stepImage(-1));
-  nextButton.addEventListener("click", () => stepImage(1));
-
-  if (galleryItems.length <= 1) {
-    prevButton.hidden = true;
-    nextButton.hidden = true;
-  }
-
-  document.addEventListener("keydown", (event) => {
-    const tag = document.activeElement?.tagName?.toLowerCase();
-    if (tag === "input" || tag === "textarea") {
-      return;
-    }
-
-    if (event.key === "ArrowLeft") {
-      stepImage(-1);
-    }
-    if (event.key === "ArrowRight") {
-      stepImage(1);
-    }
-  });
-
-  syncActiveImage();
 }
 
-function renderContent(activeProject) {
-  const resourceButtons = createResourceButtons(activeProject.links, projectLinkLabels, "../");
-  const resourceSection =
-    resourceButtons.childElementCount > 0
-      ? `
-    <section class="content-section reveal">
-      <p class="eyebrow">Files And Resources</p>
-      <h2>Direct links back to the source material</h2>
-      <p>Use these links to move from the polished case study back into available repositories, CAD folders, documentation, fabrication files, and media.</p>
-      <div id="main-resource-buttons"></div>
-    </section>
-  `
-      : "";
+function renderContent(activeProject, evidenceItems) {
+  if (!contentRoot) {
+    return;
+  }
 
+  contentRoot.className = "memo-content";
   contentRoot.innerHTML = `
-    <section class="content-section reveal">
-      <p class="eyebrow">Overview</p>
-      <h2>Project overview</h2>
-      ${activeProject.overview.map((paragraph) => `<p>${paragraph}</p>`).join("")}
-    </section>
+    ${renderMemoSection("01", "Brief", renderParagraphs(activeProject.overview, activeProject.summary))}
+    ${renderMemoSection("02", "Engineering Problem", renderParagraphs(activeProject.problem))}
+    ${renderMemoSection("03", "My Contribution", renderList(activeProject.role))}
+    ${renderMemoSection("04", "Design Process", renderProcessList(activeProject.process))}
+    ${renderMemoSection("05", "Technical Decisions", renderDecisionList(activeProject.technicalHighlights))}
+    ${renderMemoSection("06", "Build / Prototype Evidence", renderEvidenceGrid(activeProject, evidenceItems))}
+    ${renderMemoSection("07", "Outcome", renderParagraphs([activeProject.outcome, activeProject.relevance]))}
+    ${renderMemoSection(
+      "08",
+      "Lessons / Next Development",
+      `${renderList(activeProject.lessonsLearned)}${renderList(activeProject.futureWork, "Next development")}`
+    )}
+  `;
+}
 
-    <section class="content-section reveal">
-      <p class="eyebrow">Motivation / Problem</p>
-      <h2>What problem this project was trying to solve</h2>
-      ${activeProject.problem.map((paragraph) => `<p>${paragraph}</p>`).join("")}
-    </section>
+function renderMemoSection(number, title, bodyMarkup) {
+  if (!bodyMarkup?.trim()) {
+    return "";
+  }
 
-    <section class="content-section reveal">
-      <p class="eyebrow">Role And Contributions</p>
-      <h2>My role in the work</h2>
-      <ul class="content-list">
-        ${activeProject.role.map((item) => `<li>${item}</li>`).join("")}
-      </ul>
-    </section>
-
-    <section class="content-section reveal">
-      <p class="eyebrow">Engineering Process</p>
-      <h2>How the design evolved</h2>
-      <div class="process-grid">
-        ${activeProject.process
-          .map(
-            (step) => `
-              <article class="process-card">
-                <h3>${step.title}</h3>
-                <p>${step.body}</p>
-              </article>
-            `
-          )
-          .join("")}
+  return `
+    <section class="memo-section">
+      <div class="memo-section-heading">
+        <span>${number}</span>
+        <h2>${escapeHtml(title)}</h2>
       </div>
-    </section>
-
-    <section class="content-section reveal">
-      <p class="eyebrow">Technical Highlights</p>
-      <h2>Key technical challenges</h2>
-      <div class="highlight-grid">
-        ${activeProject.technicalHighlights
-          .map(
-            (highlight) => `
-              <article class="highlight-card">
-                <h3>${highlight.title}</h3>
-                <p>${highlight.body}</p>
-              </article>
-            `
-          )
-          .join("")}
+      <div class="memo-section-body">
+        ${bodyMarkup}
       </div>
-    </section>
-
-    ${resourceSection}
-
-    ${
-      activeProject.outcome
-        ? `
-    <section class="content-section reveal">
-      <p class="eyebrow">Outcome / Current Status</p>
-      <h2>What this work produced</h2>
-      <p>${activeProject.outcome}</p>
-    </section>
-  `
-        : ""
-    }
-
-    ${
-      activeProject.relevance
-        ? `
-    <section class="content-section reveal">
-      <p class="eyebrow">Engineering Relevance</p>
-      <h2>Why this project matters</h2>
-      <p>${activeProject.relevance}</p>
-    </section>
-  `
-        : ""
-    }
-
-    <section class="content-section reveal">
-      <p class="eyebrow">Lessons Learned</p>
-      <h2>What changed after iteration and review</h2>
-      <ul class="content-list">
-        ${activeProject.lessonsLearned.map((item) => `<li>${item}</li>`).join("")}
-      </ul>
-    </section>
-
-    <section class="content-section reveal">
-      <p class="eyebrow">Future Work</p>
-      <h2>Next directions</h2>
-      <ul class="content-list">
-        ${activeProject.futureWork.map((item) => `<li>${item}</li>`).join("")}
-      </ul>
     </section>
   `;
+}
 
-  const mainResourceButtons = document.getElementById("main-resource-buttons");
-  if (mainResourceButtons) {
-    mainResourceButtons.appendChild(resourceButtons);
+function renderParagraphs(items, fallback = "") {
+  const paragraphs = asArray(items).length ? asArray(items) : asArray([fallback]);
+
+  return paragraphs
+    .filter(Boolean)
+    .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
+    .join("");
+}
+
+function renderList(items, label = "") {
+  const values = asArray(items);
+
+  if (!values.length) {
+    return "";
   }
+
+  return `
+    ${label ? `<p class="memo-list-label">${escapeHtml(label)}</p>` : ""}
+    <ul class="memo-list">
+      ${values.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+    </ul>
+  `;
+}
+
+function renderProcessList(items) {
+  const steps = asArray(items);
+
+  if (!steps.length) {
+    return "";
+  }
+
+  return `
+    <ol class="memo-process-list">
+      ${steps
+        .map(
+          (step) => `
+            <li>
+              <div class="memo-process-step">
+                <h3>${escapeHtml(step.title || "Process step")}</h3>
+                <p>${escapeHtml(step.body || "")}</p>
+              </div>
+            </li>
+          `
+        )
+        .join("")}
+    </ol>
+  `;
+}
+
+function renderDecisionList(items) {
+  const decisions = asArray(items);
+
+  if (!decisions.length) {
+    return "";
+  }
+
+  return `
+    <div class="memo-decision-grid">
+      ${decisions
+        .map(
+          (decision) => `
+            <article>
+              <h3>${escapeHtml(decision.title || "Technical decision")}</h3>
+              <p>${escapeHtml(decision.body || "")}</p>
+            </article>
+          `
+        )
+        .join("")}
+    </div>
+  `;
+}
+
+function renderEvidenceGrid(activeProject, evidenceItems) {
+  if (!evidenceItems.length) {
+    return "<p>Selected visual evidence is not currently published for this project.</p>";
+  }
+
+  const maxVisiblePlates = 12;
+  const visibleEvidenceItems = evidenceItems.slice(0, maxVisiblePlates);
+  const hiddenEvidenceCount = evidenceItems.length - visibleEvidenceItems.length;
+
+  return `
+    <p class="memo-evidence-note">
+      Selected visual evidence from the public project record. Images are shown as figure plates so CAD screenshots, diagrams, drawings, and build photos remain inspectable.
+    </p>
+    <div class="evidence-plate-grid">
+      ${visibleEvidenceItems
+        .map((item, index) => renderEvidencePlate(activeProject, item, index))
+        .join("")}
+    </div>
+    ${
+      hiddenEvidenceCount > 0
+        ? `<p class="memo-evidence-archive-note">Additional project media is retained in the source archive.</p>`
+        : ""
+    }
+  `;
+}
+
+function renderEvidencePlate(activeProject, item, index) {
+  const plateNumber = String(index + 1).padStart(2, "0");
+  const fallbackCaption = `${activeProject.title} evidence ${plateNumber}`;
+  const caption = cleanupCaption(item.caption || item.alt, fallbackCaption);
+  const src = resolveProjectAsset(item.src);
+  const media =
+    item.type === "video"
+      ? `<video controls preload="metadata"><source src="${src}" type="video/mp4" />Your browser does not support embedded video.</video>`
+      : `<img src="${src}" alt="${escapeHtml(item.alt || caption)}" loading="lazy" />`;
+
+  return `
+    <figure class="evidence-plate">
+      <div class="evidence-media">
+        ${media}
+      </div>
+      <figcaption>
+        <span>Fig. ${plateNumber}</span>
+        ${escapeHtml(caption)}
+      </figcaption>
+    </figure>
+  `;
 }
 
 function renderSidebar(activeProject) {
-  const tools = activeProject.tools
-    .map((tool) => `<li class="tool-chip">${tool}</li>`)
-    .join("");
-  const githubProfileLink = siteProfile.links?.github
-    ? `<a class="text-link" data-profile-link="github" href="${siteProfile.links.github}">Open GitHub profile</a>`
-    : "";
+  if (!sidebarRoot) {
+    return;
+  }
+
+  const tools = createInlineList(asArray(activeProject.tools), "memo-tool-list");
+  const tags = createInlineList(asArray(activeProject.tags), "memo-tag-list compact");
 
   sidebarRoot.innerHTML = `
-    <div class="sidebar-stack reveal">
-      <section class="sidebar-card">
-        <p class="mono-label">Project Snapshot</p>
-        <dl class="meta-list">
+    <aside class="memo-sidebar">
+      <section class="memo-spec-card">
+        <p class="field-label">Project Facts</p>
+        <dl class="memo-spec-table">
           <div>
             <dt>Year</dt>
-            <dd>${activeProject.year}</dd>
+            <dd>${escapeHtml(activeProject.year || "Current")}</dd>
           </div>
           <div>
             <dt>Status</dt>
-            <dd>${activeProject.status}</dd>
+            <dd>${escapeHtml(activeProject.status || "Project work")}</dd>
+          </div>
+          <div>
+            <dt>Type</dt>
+            <dd>${escapeHtml(activeProject.projectType || "Project")}</dd>
           </div>
         </dl>
       </section>
 
-      <section class="sidebar-card">
-        <p class="mono-label">Tools And Software</p>
-        <ul class="tool-list">${tools}</ul>
-      </section>
+      ${
+        tools
+          ? `
+            <section class="memo-spec-card">
+              <p class="field-label">Tools</p>
+              ${tools}
+            </section>
+          `
+          : ""
+      }
 
-      <section class="sidebar-card">
-        <p class="mono-label">Archive Navigation</p>
-        <div class="sidebar-links">
-          <a class="text-link" href="../portfolio.html">Back to all projects</a>
-          ${githubProfileLink}
-          <a class="text-link" href="../experience.html">Open experience page</a>
+      ${
+        tags
+          ? `
+            <section class="memo-spec-card">
+              <p class="field-label">Tags</p>
+              ${tags}
+            </section>
+          `
+          : ""
+      }
+
+      <section class="memo-spec-card">
+        <p class="field-label">Archive Navigation</p>
+        <div class="memo-sidebar-links">
+          <a href="../portfolio.html">Build Index</a>
+          <a href="../experience.html">Experience</a>
+          <a href="../contact.html">Contact</a>
         </div>
       </section>
-    </div>
+    </aside>
   `;
 }
 
 function renderRelated(activeProject) {
-  const relatedProjects = activeProject.relatedProjects
+  if (!relatedRoot) {
+    return;
+  }
+
+  const relatedProjects = asArray(activeProject.relatedProjects)
     .map((relatedSlug) => projects.find((item) => item.slug === relatedSlug))
     .filter(Boolean);
 
+  if (!relatedProjects.length) {
+    relatedRoot.innerHTML = "";
+    return;
+  }
+
   relatedRoot.innerHTML = `
-    <div class="section-heading reveal">
-      <p class="eyebrow">Related Projects</p>
-      <h2>Other projects connected by mechanisms, testing, or robotics workflow.</h2>
+    <section class="memo-related-section">
+      <div class="memo-section-heading">
+        <span>REF</span>
+        <h2>Related Field Notes</h2>
+      </div>
+      <ul class="memo-related-list">
+        ${relatedProjects
+          .map(
+            (relatedProject) => `
+              <li>
+                <a href="../projects/${encodeURIComponent(relatedProject.slug)}.html">
+                  <span>${escapeHtml(relatedProject.year || "Project")}</span>
+                  <strong>${escapeHtml(relatedProject.title)}</strong>
+                  <em>${escapeHtml(asArray(relatedProject.tags).slice(0, 2).join(" / ") || relatedProject.projectType || "Project")}</em>
+                </a>
+              </li>
+            `
+          )
+          .join("")}
+      </ul>
+    </section>
+  `;
+}
+
+function createProjectLinks(links, options = {}) {
+  const { compact = true } = options;
+  const linkEntries = Object.entries(projectLinkLabels)
+    .map(([key, label]) => ({ key, label, href: links?.[key] }))
+    .filter((entry) => Boolean(entry.href));
+
+  if (!linkEntries.length) {
+    return "";
+  }
+
+  return `
+    <div class="${compact ? "memo-resource-links compact" : "memo-resource-links"}">
+      ${linkEntries
+        .map(
+          (entry) => `
+            <a href="${resolveProjectAsset(entry.href)}" target="_blank" rel="noreferrer">
+              ${escapeHtml(entry.label)}
+            </a>
+          `
+        )
+        .join("")}
     </div>
   `;
+}
 
-  const grid = document.createElement("div");
-  grid.className = "related-grid";
+function createInlineList(items, className) {
+  const values = asArray(items);
 
-  relatedProjects.forEach((relatedProject) => {
-    grid.appendChild(
-      createProjectCard(relatedProject, {
-        compact: true,
-        hrefPrefix: "../",
-        showSummary: false
-      })
-    );
-  });
+  if (!values.length) {
+    return "";
+  }
 
-  relatedRoot.appendChild(grid);
+  return `
+    <ul class="${className}">
+      ${values.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+    </ul>
+  `;
 }
