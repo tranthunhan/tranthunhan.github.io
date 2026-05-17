@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Contact page for Nhan Dang with Sydney location map."
+      content="Contact and collaboration note for Nhan Dang's mechanical engineering field notes portfolio."
     />
     <title>Contact | Nhan Dang</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,13 +19,13 @@
     <meta property="og:title" content="Nhan Dang | Contact" />
     <meta
       property="og:description"
-      content="Contact and profile links for Nhan Dang's robotics-focused mechanical engineering portfolio."
+      content="Contact register and collaboration context for Nhan Dang's mechanical engineering field notes portfolio."
     />
     <meta property="og:image" content="assets/images/profile/newthumbnail.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="assets/images/profile/newthumbnail.png" />
   </head>
-  <body class="contact-page">
+  <body class="contact-page contact-note-page">
     <a class="skip-link" href="#main-content">Skip to content</a>
 
     <header class="site-header">
@@ -51,73 +51,38 @@
     </header>
 
     <main id="main-content">
-      <section class="section">
-        <div class="container section-heading reveal">
-          <p class="eyebrow">Contact</p>
-          <h1 class="page-title">Sydney, Australia</h1>
-          <p class="page-subtitle" id="contact-subheading"></p>
-          <p class="page-subtitle" id="contact-location"></p>
-        </div>
-      </section>
+      <section class="section contact-note-section">
+        <div class="container collaboration-note-shell reveal">
+          <header class="collaboration-note-cover">
+            <p class="field-note-label">Contact Register</p>
+            <h1>Contact / Collaboration Note</h1>
+            <p id="contact-note-body">
+              This page keeps the public contact routes simple: portfolio review,
+              project discussion, research mentoring conversations, and
+              engineering collaboration context.
+            </p>
+            <p class="contact-location-line" id="contact-location"></p>
+          </header>
 
-      <section class="section section-tight-top">
-        <div class="container mapbox reveal">
-          <figure>
-            <iframe
-              id="contact-map"
-              src=""
-              width="400"
-              height="320"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Map of Sydney, Australia"
-            ></iframe>
-          </figure>
-        </div>
-      </section>
-
-      <section class="section section-tight-top">
-        <div class="container section-heading reveal">
-          <p class="eyebrow">Socials</p>
-          <h2>Connect with me across platforms.</h2>
-        </div>
-        <div class="container contact-grid" id="contact-social-grid"></div>
-      </section>
-
-      <section class="section section-tight-top">
-        <div class="container contact-form reveal">
-          <h2 class="h3 form-title">Contact Form</h2>
-
-          <form class="form" id="contact-form">
-            <div class="input-wrapper">
-              <input
-                type="text"
-                name="fullname"
-                class="form-input"
-                placeholder="Full name"
-                required
-              />
-              <input
-                type="email"
-                name="email"
-                class="form-input"
-                placeholder="Email address"
-                required
-              />
+          <section class="collaboration-register" aria-labelledby="contact-register-heading">
+            <div class="collaboration-section-label">
+              <span>01</span>
+              <h2 id="contact-register-heading">Contact Register</h2>
             </div>
+            <div class="contact-register-list" id="contact-register-list"></div>
+          </section>
 
-            <textarea
-              name="message"
-              class="form-input"
-              placeholder="Your message"
-              required
-            ></textarea>
-
-            <button class="form-btn" type="submit" id="contact-submit" disabled>
-              <span>Send Message</span>
-            </button>
-          </form>
-          <p class="form-help" id="contact-form-help"></p>
+          <section class="collaboration-register" aria-labelledby="contact-context-heading">
+            <div class="collaboration-section-label">
+              <span>02</span>
+              <h2 id="contact-context-heading">Useful Context Before Contacting</h2>
+            </div>
+            <ul class="contact-context-list">
+              <li>Mechanical engineering student at the University of Technology Sydney.</li>
+              <li>Focused on CAD, prototyping, robot hardware, sensing integration, and testing.</li>
+              <li>Project archive available through the portfolio Build Index.</li>
+            </ul>
+          </section>
         </div>
       </section>
     </main>
