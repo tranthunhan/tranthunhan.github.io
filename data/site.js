@@ -1,6 +1,7 @@
 export const siteProfile = {
   name: "Nhan Dang",
   initials: "ND",
+  siteSubtitle: "MECHANICAL RESEARCH LOGBOOK",
   role: "Mechanical Engineering Student",
   degree:
     "Bachelor of Engineering (Honours), Mechanical Engineering — University of Technology Sydney",

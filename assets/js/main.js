@@ -1,8 +1,8 @@
 import { siteProfile } from "../../data/site.js";
 import { projects } from "../../data/projects.js";
 import {
-  initRevealAnimations,
-  populateSharedProfile
+  mountSiteChrome,
+  runRevealPass
 } from "./shared.js";
 
 const buildIndexEntries = [
@@ -12,7 +12,7 @@ const buildIndexEntries = [
   { code: "FN-04", slug: "additive-manufacturing-plier-project" }
 ];
 
-populateSharedProfile(siteProfile);
+mountSiteChrome(siteProfile);
 
 const projectCount = document.getElementById("project-count");
 const buildIndexBody = document.getElementById("build-index-body");
@@ -78,4 +78,4 @@ function renderBuildIndex() {
 
 renderProjectCount();
 renderBuildIndex();
-initRevealAnimations();
+runRevealPass();

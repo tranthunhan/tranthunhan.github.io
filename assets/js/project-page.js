@@ -6,12 +6,12 @@ import {
 } from "../../data/projects.js";
 import { repoImages } from "../../data/repo-images.js";
 import {
-  initRevealAnimations,
-  populateSharedProfile,
-  resolveImagePath
+  mountSiteChrome,
+  runRevealPass,
+  sitePath
 } from "./shared.js";
 
-populateSharedProfile(siteProfile);
+mountSiteChrome(siteProfile);
 
 const slug = document.body.dataset.projectSlug;
 const project = getProjectBySlug(slug);
@@ -28,8 +28,8 @@ if (!project) {
 } else {
   document.title = `${project.title} | ${siteProfile.name}`;
   renderProjectPage(project);
-  populateSharedProfile(siteProfile);
-  initRevealAnimations();
+  mountSiteChrome(siteProfile);
+  runRevealPass();
 }
 
 function asArray(value) {
@@ -66,7 +66,7 @@ function cleanupCaption(rawText, fallback) {
 }
 
 function resolveProjectAsset(path) {
-  return resolveImagePath(path, "../");
+  return sitePath(path, "../");
 }
 
 function uniqueBySource(items) {

@@ -1,8 +1,8 @@
 import { projects } from "../../data/projects.js";
 import { siteProfile } from "../../data/site.js";
-import { initRevealAnimations, populateSharedProfile } from "./shared.js";
+import { mountSiteChrome, runRevealPass } from "./shared.js";
 
-populateSharedProfile(siteProfile);
+mountSiteChrome(siteProfile);
 
 const filterList = document.getElementById("register-filter-list");
 const filterSelect = document.getElementById("register-filter-select");
@@ -208,7 +208,7 @@ function renderRegister() {
     registerEmpty.hidden = filteredProjects.length > 0;
   }
 
-  initRevealAnimations();
+  runRevealPass();
 }
 
 function setActiveFilter(filterKey) {
