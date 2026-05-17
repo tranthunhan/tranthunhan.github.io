@@ -36,6 +36,10 @@ function renderAppliedExperience(items = []) {
     return;
   }
 
+  if (!Array.isArray(items) || !items.length) {
+    return;
+  }
+
   nodes.applied.innerHTML = items
     .map(
       (item, index) => `
@@ -54,6 +58,10 @@ function renderAppliedExperience(items = []) {
 
 function renderEducation(items = []) {
   if (!nodes.education) {
+    return;
+  }
+
+  if (!Array.isArray(items) || !items.length) {
     return;
   }
 
@@ -80,6 +88,10 @@ function renderToolkit(groups = []) {
   }
 
   if (!nodes.toolkitBody) {
+    return;
+  }
+
+  if (!Array.isArray(groups) || !groups.length) {
     return;
   }
 
@@ -120,12 +132,25 @@ function certificationActions(item) {
   return actions.join("");
 }
 
+function visibleCertifications(items = []) {
+  return items.filter((item) => {
+    const title = String(item?.title || "").toLowerCase();
+    return !item?.hidden && !title.includes("student leadership");
+  });
+}
+
 function renderCertifications(items = []) {
   if (!nodes.certifications) {
     return;
   }
 
-  nodes.certifications.innerHTML = items
+  const visibleItems = visibleCertifications(Array.isArray(items) ? items : []);
+
+  if (!visibleItems.length) {
+    return;
+  }
+
+  nodes.certifications.innerHTML = visibleItems
     .map((item, index) => {
       const imageSource = item.image ? sitePath(item.image) : "";
       const year = item.year ? `<span>${cleanText(item.year)}</span>` : "";

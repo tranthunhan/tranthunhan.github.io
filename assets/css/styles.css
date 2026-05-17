@@ -2378,7 +2378,9 @@ textarea.form-input {
 .field-table-wrap,
 .field-note,
 .method-entry,
-.home-evidence-shell {
+.review-lenses-shell,
+.review-lens,
+.featured-project-shell {
   border: 1px solid var(--border);
   border-radius: 0;
   background:
@@ -2492,11 +2494,17 @@ textarea.form-input {
 
 .field-cover-register {
   display: grid;
+  grid-template-columns: minmax(150px, 0.4fr) minmax(0, 0.6fr);
   align-content: stretch;
   gap: 0.85rem;
   padding: 0;
   border-top: 5px solid var(--field-orange);
   background: transparent;
+}
+
+.field-cover-register .field-profile-card {
+  align-self: start;
+  grid-row: span 2;
 }
 
 .field-profile-card,
@@ -2536,7 +2544,7 @@ textarea.form-input {
 
 .field-focus-card,
 .field-register-card {
-  padding: 0.95rem;
+  padding: 0.85rem;
 }
 
 .field-focus-card {
@@ -2546,14 +2554,14 @@ textarea.form-input {
 .field-focus-card h2 {
   margin: 0;
   color: var(--text);
-  font-size: clamp(1.08rem, 1.8vw, 1.35rem);
+  font-size: clamp(0.98rem, 1.35vw, 1.15rem);
   line-height: 1.2;
 }
 
 .field-focus-card ul {
   display: grid;
-  gap: 0.45rem;
-  margin: 0.85rem 0 0;
+  gap: 0.35rem;
+  margin: 0.65rem 0 0;
   padding: 0;
   list-style: none;
 }
@@ -2562,6 +2570,7 @@ textarea.form-input {
   position: relative;
   padding-left: 1rem;
   color: var(--muted-strong);
+  font-size: 0.9rem;
   line-height: 1.48;
 }
 
@@ -2589,7 +2598,7 @@ textarea.form-input {
 .field-register-card div {
   display: grid;
   gap: 0.28rem;
-  padding: 0.85rem 0;
+  padding: 0.62rem 0;
   border-bottom: 1px solid var(--border);
 }
 
@@ -2610,55 +2619,119 @@ textarea.form-input {
 .field-register-card #project-count {
   color: var(--field-orange);
   font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(3.6rem, 8vw, 5.8rem);
+  font-size: clamp(2.9rem, 4.4vw, 4.1rem);
   line-height: 0.9;
 }
 
-.home-evidence-section {
-  padding: 0 0 clamp(1.7rem, 4vw, 2.8rem);
+.review-lenses-section {
+  padding: 0 0 clamp(1.2rem, 3vw, 2rem);
 }
 
-.home-evidence-shell {
+.review-lenses-shell {
   display: grid;
-  grid-template-columns: minmax(180px, 0.28fr) minmax(0, 1fr);
+  grid-template-columns: minmax(190px, 0.28fr) minmax(0, 1fr);
   gap: 1rem;
-  padding: 0.9rem;
-  border-top: 4px solid var(--field-blue);
+  padding: 0.95rem;
+  border-top: 4px solid var(--field-orange);
 }
 
-.home-evidence-heading h2 {
+.review-lenses-heading h2,
+.featured-project-heading h2 {
   margin: 0;
   color: var(--text);
-  font-size: clamp(1.18rem, 2.1vw, 1.55rem);
+  font-size: clamp(1.18rem, 2.1vw, 1.65rem);
   line-height: 1.15;
 }
 
-.home-evidence-strip {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.65rem;
+.review-lenses-heading p:not(.field-label) {
+  margin: 0.65rem 0 0;
+  color: var(--muted-strong);
+  line-height: 1.5;
 }
 
-.home-evidence-item {
+.review-lens-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.review-lens {
+  display: grid;
+  align-content: start;
+  min-width: 0;
+  padding: 0.85rem;
+  border-left: 4px solid var(--field-blue);
+  background-color: rgba(255, 253, 247, 0.88);
+}
+
+.review-lens span {
+  color: var(--field-orange);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.review-lens h3 {
+  margin: 0.5rem 0 0.45rem;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.18;
+}
+
+.review-lens p {
+  margin: 0;
+  color: var(--muted-strong);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.featured-project-section {
+  padding: 0 0 clamp(2.2rem, 4vw, 3rem);
+}
+
+.featured-project-shell {
+  display: grid;
+  gap: 0.9rem;
+  padding: 0.95rem;
+  border-top: 4px solid var(--field-blue);
+}
+
+.featured-project-heading {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.28fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: end;
+}
+
+.featured-project-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.featured-project-card {
   display: block;
   min-width: 0;
   border: 1px solid var(--border);
-  background: rgba(255, 253, 247, 0.82);
+  background: rgba(255, 253, 247, 0.86);
+  color: var(--text);
+  text-decoration: none;
 }
 
-.home-evidence-item:hover,
-.home-evidence-item:focus-visible {
+.featured-project-card:hover,
+.featured-project-card:focus-visible {
   border-color: var(--field-orange);
   background: var(--field-band);
 }
 
-.home-evidence-item figure {
+.featured-project-card figure {
   display: grid;
-  margin: 0;
+  grid-template-rows: auto 1fr;
   height: 100%;
+  margin: 0;
 }
 
-.home-evidence-item img {
+.featured-project-card img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
@@ -2666,26 +2739,54 @@ textarea.form-input {
   background: var(--field-band);
 }
 
-.home-evidence-item figcaption {
+.featured-project-card figcaption {
   display: grid;
-  gap: 0.18rem;
-  padding: 0.62rem;
+  align-content: start;
+  gap: 0.28rem;
+  padding: 0.72rem;
 }
 
-.home-evidence-item span,
-.home-evidence-item em {
-  color: var(--muted);
+.featured-project-card span {
+  color: var(--field-blue);
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.68rem;
-  font-style: normal;
+  font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
-.home-evidence-item strong {
+.featured-project-card strong {
   color: var(--text);
-  font-size: 0.92rem;
+  font-size: 0.98rem;
   line-height: 1.16;
+}
+
+.featured-project-card em {
+  color: var(--muted-strong);
+  font-style: normal;
+  font-size: 0.86rem;
+  line-height: 1.42;
+}
+
+.featured-project-action {
+  width: fit-content;
+  margin-top: 0.18rem;
+  padding: 0.24rem 0.42rem;
+  border: 1px solid var(--border);
+  color: var(--field-blue);
+  background: var(--field-paper);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.featured-project-card:hover .featured-project-action,
+.featured-project-card:focus-visible .featured-project-action {
+  border-color: var(--field-orange);
+  color: var(--text);
+  background: rgba(255, 253, 247, 0.92);
 }
 
 .field-section {
@@ -2811,7 +2912,8 @@ textarea.form-input {
 @media (max-width: 1080px) {
   .field-cover-grid,
   .field-section-heading,
-  .home-evidence-shell {
+  .review-lenses-shell,
+  .featured-project-heading {
     grid-template-columns: 1fr;
   }
 
@@ -2824,7 +2926,7 @@ textarea.form-input {
     grid-row: span 2;
   }
 
-  .home-evidence-strip {
+  .featured-project-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -2855,7 +2957,8 @@ textarea.form-input {
   }
 
   .field-cover-register,
-  .home-evidence-strip {
+  .review-lens-grid,
+  .featured-project-strip {
     grid-template-columns: 1fr;
   }
 

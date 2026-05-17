@@ -12,18 +12,36 @@ const buildIndexEntries = [
   { code: "FN-04", slug: "additive-manufacturing-plier-project" }
 ];
 
-const evidenceStripSlugs = [
+const featuredProjectSlugs = [
   "kinematic-puppet-cobotics",
   "confined-space-inspection-robot",
-  "warman-challenge-robot",
-  "pcm-helmet-cooling-system"
+  "pcm-helmet-cooling-system",
+  "uts-motorsports-autonomous"
 ];
+
+const featuredProjectNotes = {
+  "kinematic-puppet-cobotics":
+    "Low-cost cobot prototyping notes with CAD iteration, modular end-effectors, and public build evidence.",
+  "confined-space-inspection-robot":
+    "Compact robot packaging around camera, controller, motor, battery, wiring, and service access constraints.",
+  "pcm-helmet-cooling-system":
+    "Thermal/mechanical packaging with CAD, mesh visuals, material evidence, and user-context constraints.",
+  "uts-motorsports-autonomous":
+    "Fabrication-aware sensor and electronics packaging with serviceability and vehicle-integration constraints."
+};
+
+const featuredProjectLabels = {
+  "kinematic-puppet-cobotics": "Robot hardware / HRI",
+  "confined-space-inspection-robot": "Mobile robot / sensing",
+  "pcm-helmet-cooling-system": "Thermal subsystem",
+  "uts-motorsports-autonomous": "Autonomous hardware CAD"
+};
 
 mountSiteChrome(siteProfile);
 
 const projectCount = document.getElementById("project-count");
 const buildIndexBody = document.getElementById("build-index-body");
-const evidenceStrip = document.getElementById("home-evidence-strip");
+const featuredProjectStrip = document.getElementById("featured-project-strip");
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -97,12 +115,12 @@ function projectImage(project) {
   return project.thumbnail || project.heroImage || project.gallery?.find((item) => item.src)?.src || "";
 }
 
-function renderEvidenceStrip() {
-  if (!evidenceStrip) {
+function renderFeaturedProjects() {
+  if (!featuredProjectStrip) {
     return;
   }
 
-  const evidenceItems = evidenceStripSlugs
+  const featuredItems = featuredProjectSlugs
     .map((slug) => projects.find((project) => project.slug === slug))
     .filter(Boolean)
     .map((project) => ({
@@ -111,16 +129,17 @@ function renderEvidenceStrip() {
     }))
     .filter((entry) => entry.image);
 
-  evidenceStrip.innerHTML = evidenceItems
+  featuredProjectStrip.innerHTML = featuredItems
     .map(
       ({ project, image }) => `
-        <a class="home-evidence-item" href="projects/${encodeURIComponent(project.slug)}.html">
+        <a class="featured-project-card" href="projects/${encodeURIComponent(project.slug)}.html">
           <figure>
             <img src="${escapeHtml(image)}" alt="${escapeHtml(project.title)} project evidence" loading="lazy" />
             <figcaption>
-              <span>${escapeHtml(project.year || "Project")}</span>
+              <span>${escapeHtml(featuredProjectLabels[project.slug] || formatDomain(project))}</span>
               <strong>${escapeHtml(project.title)}</strong>
-              <em>${escapeHtml(formatDomain(project))}</em>
+              <em>${escapeHtml(featuredProjectNotes[project.slug] || project.subtitle || formatDomain(project))}</em>
+              <small class="featured-project-action">Open field note</small>
             </figcaption>
           </figure>
         </a>
@@ -131,5 +150,5 @@ function renderEvidenceStrip() {
 
 renderProjectCount();
 renderBuildIndex();
-renderEvidenceStrip();
+renderFeaturedProjects();
 runRevealPass();

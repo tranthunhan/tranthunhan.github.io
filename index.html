@@ -62,9 +62,9 @@
             <p class="field-title-support">Mechanical Engineering Field Notes</p>
             <p class="field-degree">Mechanical Engineering Honours, UTS</p>
             <p class="field-intro">
-              I document mechanical design work through CAD models,
-              prototypes, test notes, and build records, with a focus on robot
-              hardware, sensing-enabled systems, and product-style mechanical
+              I use this site to keep build evidence inspectable: CAD models,
+              prototypes, test notes, and short engineering records across
+              robot hardware, sensing-enabled systems, and mechanical
               subsystems.
             </p>
             <div class="field-cover-actions" aria-label="Homepage quick links">
@@ -89,11 +89,11 @@
 
             <section class="field-focus-card" aria-labelledby="field-focus-heading">
               <p class="field-label">What I build</p>
-              <h2 id="field-focus-heading">Practical mechanical systems with enough evidence to review.</h2>
+              <h2 id="field-focus-heading">Mechanical work that can be checked, not just shown.</h2>
               <ul>
-                <li>Robot hardware that has to fit around sensors, wiring, power, and access.</li>
-                <li>CAD-led mechanisms and product-style parts that need to be made, adjusted, and tested.</li>
-                <li>Public notes that show how the design moved from idea to build record.</li>
+                <li>Robot hardware packaged around sensors, wiring, power, and access.</li>
+                <li>CAD-led parts and mechanisms that need to be made, adjusted, and tested.</li>
+                <li>Public notes that show enough of the design path to review the work.</li>
               </ul>
             </section>
 
@@ -118,14 +118,58 @@
         </div>
       </section>
 
-      <section class="home-evidence-section" aria-labelledby="home-evidence-heading">
-        <div class="container home-evidence-shell">
-          <div class="home-evidence-heading">
-            <p class="field-label">Visual evidence</p>
-            <h2 id="home-evidence-heading">A few build records from the archive.</h2>
+      <section class="review-lenses-section" aria-labelledby="review-lenses-heading">
+        <div class="container review-lenses-shell">
+          <div class="review-lenses-heading">
+            <p class="field-label">Review lenses</p>
+            <h2 id="review-lenses-heading">Three review lenses</h2>
+            <p>
+              I use these lenses to keep the portfolio useful for different
+              reviewers: robotics research, product-style mechanical design,
+              and future monitoring work.
+            </p>
           </div>
-          <div class="home-evidence-strip" id="home-evidence-strip">
-            <a class="home-evidence-item" href="projects/kinematic-puppet-cobotics.html">
+
+          <div class="review-lens-grid">
+            <article class="review-lens">
+              <span>01</span>
+              <h3>Robotics research readiness</h3>
+              <p>
+                Robot hardware, sensing packages, public build evidence, and
+                technical notes that make decisions reviewable rather than
+                hidden behind final renders.
+              </p>
+            </article>
+            <article class="review-lens">
+              <span>02</span>
+              <h3>Product-style mechanical engineering</h3>
+              <p>
+                CAD packaging, prototypes, manufacturability, service access,
+                testing plans, and user-aware constraints treated as part of
+                the design work.
+              </p>
+            </article>
+            <article class="review-lens">
+              <span>03</span>
+              <h3>Vibration and monitoring direction</h3>
+              <p>
+                Future research interest in linking measured behaviour,
+                vibration, system health, and operating state with validated
+                data before making stronger claims.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured-project-section" aria-labelledby="featured-project-heading">
+        <div class="container featured-project-shell">
+          <div class="featured-project-heading">
+            <p class="field-label">Featured build notes</p>
+            <h2 id="featured-project-heading">Image-led entries with public evidence attached.</h2>
+          </div>
+          <div class="featured-project-strip" id="featured-project-strip">
+            <a class="featured-project-card" href="projects/kinematic-puppet-cobotics.html">
               <figure>
                 <img
                   src="assets/images/projects/kinematic-puppet-cobotics/01-diagram.jpg"
@@ -133,13 +177,14 @@
                   loading="lazy"
                 />
                 <figcaption>
-                  <span>2025</span>
+                  <span>Robot hardware / HRI</span>
                   <strong>Kinematic Puppet / Cobot Prototyping</strong>
-                  <em>Cobotics / HRI / Robot Hardware</em>
+                  <em>Low-cost cobot prototyping notes with CAD iteration, modular end-effectors, and public build evidence.</em>
+                  <small class="featured-project-action">Open field note</small>
                 </figcaption>
               </figure>
             </a>
-            <a class="home-evidence-item" href="projects/confined-space-inspection-robot.html">
+            <a class="featured-project-card" href="projects/confined-space-inspection-robot.html">
               <figure>
                 <img
                   src="assets/images/projects/confined-space-inspection-robot/01-18650.jpg"
@@ -147,27 +192,14 @@
                   loading="lazy"
                 />
                 <figcaption>
-                  <span>2025</span>
+                  <span>Mobile robot / sensing</span>
                   <strong>Confined-Space Inspection Robot</strong>
-                  <em>Robotics / Mobile Robot / Robot Hardware</em>
+                  <em>Compact robot packaging around camera, controller, motor, battery, wiring, and service access constraints.</em>
+                  <small class="featured-project-action">Open field note</small>
                 </figcaption>
               </figure>
             </a>
-            <a class="home-evidence-item" href="projects/warman-challenge-robot.html">
-              <figure>
-                <img
-                  src="assets/images/projects/warman-challenge-robot/01-2025-warman-track-assembly-exploded.jpg"
-                  alt="Warman Challenge Robot project evidence"
-                  loading="lazy"
-                />
-                <figcaption>
-                  <span>2025</span>
-                  <strong>Warman Challenge Robot</strong>
-                  <em>Robotics / Mechanisms / CAD</em>
-                </figcaption>
-              </figure>
-            </a>
-            <a class="home-evidence-item" href="projects/pcm-helmet-cooling-system.html">
+            <a class="featured-project-card" href="projects/pcm-helmet-cooling-system.html">
               <figure>
                 <img
                   src="assets/images/projects/pcm-helmet-cooling-system/01-coarse-mesh-volume.jpg"
@@ -175,9 +207,25 @@
                   loading="lazy"
                 />
                 <figcaption>
-                  <span>2025</span>
+                  <span>Thermal subsystem</span>
                   <strong>PCM Helmet Cooling System</strong>
-                  <em>Thermal Design / PCM / ANSYS</em>
+                  <em>Thermal/mechanical packaging with CAD, mesh visuals, material evidence, and user-context constraints.</em>
+                  <small class="featured-project-action">Open field note</small>
+                </figcaption>
+              </figure>
+            </a>
+            <a class="featured-project-card" href="projects/uts-motorsports-autonomous.html">
+              <figure>
+                <img
+                  src="assets/images/projects/uts-motorsports-autonomous/01-image-1.jpg"
+                  alt="UTS Motorsports Autonomous Hardware CAD project evidence"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <span>Autonomous hardware CAD</span>
+                  <strong>UTS Motorsports Autonomous Hardware CAD</strong>
+                  <em>Fabrication-aware sensor and electronics packaging with serviceability and vehicle-integration constraints.</em>
+                  <small class="featured-project-action">Open field note</small>
                 </figcaption>
               </figure>
             </a>
@@ -270,7 +318,7 @@
           </article>
           <article class="field-note">
             <span>03</span>
-            <h3>Vibration and condition monitoring interest</h3>
+            <h3>Vibration and monitoring interest</h3>
             <p>
               A future research direction in using measured vibration and
               mechanical behaviour to understand health, performance, and
