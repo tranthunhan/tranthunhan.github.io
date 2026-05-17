@@ -6,7 +6,7 @@ export const siteProfile = {
     "Bachelor of Engineering (Honours), Mechanical Engineering — University of Technology Sydney",
   tagline:
     "Mechanical engineering portfolio focused on CAD-led design, robot hardware, prototyping, sensing integration, testing, and product-style mechanical systems.",
-  brandLogo: "assets/images/profile/thumbnail.png",
+  brandLogo: "assets/images/profile/newthumbnail.png",
   headshot: "assets/images/profile/nhan-profile.png",
   focusAreas: [
     {

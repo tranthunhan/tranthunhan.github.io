@@ -2,7 +2,7 @@
 
 Static GitHub Pages portfolio for Nhan Dang's mechanical engineering project work across CAD-led design, robot hardware, prototyping, sensing integration, testing, additive manufacturing, and product-style mechanical systems.
 
-This portfolio reuses an existing static portfolio structure with permission, while adapting the profile, project content, contact surfaces, and README for Nhan Dang.
+The site is being rebuilt as a public mechanical engineering portfolio for Nhan Dang, with project content, contact surfaces, and documentation reviewed for ownership and privacy.
 
 ## Tech Stack
 

@@ -15,17 +15,17 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <link rel="icon" type="image/png" href="assets/images/profile/thumbnail.png" />
+    <link rel="icon" type="image/png" href="assets/images/profile/newthumbnail.png" />
     <meta property="og:title" content="Nhan Dang | Portfolio" />
     <meta
       property="og:description"
       content="Selected mechanical engineering projects across robot hardware, CAD, prototyping, sensing integration, testing, additive manufacturing, and product-style subsystem design."
     />
-    <meta property="og:image" content="assets/images/profile/thumbnail.png" />
+    <meta property="og:image" content="assets/images/profile/newthumbnail.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="assets/images/profile/thumbnail.png" />
+    <meta name="twitter:image" content="assets/images/profile/newthumbnail.png" />
   </head>
-  <body class="portfolio-page">
+  <body class="portfolio-page field-notes-portfolio">
     <a class="skip-link" href="#main-content">Skip to content</a>
 
     <header class="site-header">
@@ -51,40 +51,341 @@
     </header>
 
     <main id="main-content">
-      <section class="section">
-        <div class="container section-heading reveal">
-          <p class="eyebrow">Portfolio</p>
-          <h1 class="page-title">Project Matrix</h1>
-          <p class="page-subtitle">
-            Selected mechanical engineering projects across robot hardware,
-            CAD, prototyping, sensing integration, testing, additive
-            manufacturing, and product-style subsystem design.
-          </p>
-        </div>
-      </section>
-
-      <section class="section section-tight-top">
-        <div class="container filter-shell reveal">
-          <ul class="filter-list" id="filter-list"></ul>
-
-          <div class="filter-select-box">
-            <button class="filter-select" id="filter-select" type="button">
-              <span id="filter-select-value">Project</span>
-              <span class="select-icon">&#9662;</span>
-            </button>
-            <ul class="select-list" id="select-list"></ul>
+      <section class="register-cover">
+        <div class="container register-cover-grid">
+          <div class="register-cover-title">
+            <p class="field-label">Build Index</p>
+            <h1>Engineering Project Register</h1>
+            <p>
+              A technical index of mechanical engineering builds across robot
+              hardware, CAD, prototyping, sensing integration, testing,
+              additive manufacturing, thermal systems, and product-style
+              subsystem design.
+            </p>
           </div>
 
-          <p class="archive-summary">
-            Showing <span id="visible-count">0</span> of <span id="total-count">0</span>
-            projects
-          </p>
+          <aside class="register-summary-panel" aria-label="Register summary">
+            <p class="field-label">Public Record</p>
+            <dl>
+              <div>
+                <dt>Total projects</dt>
+                <dd><span id="total-count">15</span></dd>
+              </div>
+              <div>
+                <dt>Visible rows</dt>
+                <dd><span id="visible-count">15</span></dd>
+              </div>
+              <div>
+                <dt>Format</dt>
+                <dd>Static GitHub Pages build register</dd>
+              </div>
+            </dl>
+          </aside>
         </div>
       </section>
 
-      <section class="section section-tight-top">
+      <section class="register-controls-section" aria-label="Project filters">
+        <div class="container register-controls">
+          <div>
+            <p class="field-label">Filter</p>
+            <ul class="register-filter-list" id="register-filter-list">
+              <li>
+                <button class="is-active" type="button" data-register-filter="all" aria-pressed="true">
+                  All
+                </button>
+              </li>
+              <li>
+                <button type="button" data-register-filter="robotics" aria-pressed="false">
+                  Robotics
+                </button>
+              </li>
+              <li>
+                <button type="button" data-register-filter="cad" aria-pressed="false">
+                  CAD
+                </button>
+              </li>
+              <li>
+                <button type="button" data-register-filter="manufacturing" aria-pressed="false">
+                  Manufacturing
+                </button>
+              </li>
+              <li>
+                <button type="button" data-register-filter="thermal" aria-pressed="false">
+                  Thermal
+                </button>
+              </li>
+              <li>
+                <button type="button" data-register-filter="personal" aria-pressed="false">
+                  Personal
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <label class="register-filter-select">
+            <span>Mobile filter</span>
+            <select id="register-filter-select">
+              <option value="all">All</option>
+              <option value="robotics">Robotics</option>
+              <option value="cad">CAD</option>
+              <option value="manufacturing">Manufacturing</option>
+              <option value="thermal">Thermal</option>
+              <option value="personal">Personal</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <section class="register-table-section">
         <div class="container">
-          <div class="project-grid portfolio-grid" id="portfolio-grid"></div>
+          <div class="register-table-wrap">
+            <table class="build-register-table">
+              <caption>
+                Engineering build index generated from project data.
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Code</th>
+                  <th scope="col">Year</th>
+                  <th scope="col">Project</th>
+                  <th scope="col">Domain</th>
+                  <th scope="col">Tools</th>
+                  <th scope="col">Evidence</th>
+                  <th scope="col">Open</th>
+                </tr>
+              </thead>
+              <tbody id="build-register-body">
+                <tr data-register-row data-register-groups="all robotics cad">
+                  <td data-label="Code">BR-01</td>
+                  <td data-label="Year">2025</td>
+                  <td data-label="Project">
+                    <a class="register-project-link" href="projects/kinematic-puppet-cobotics.html">
+                      Kinematic Puppet / Cobot Prototyping
+                    </a>
+                  </td>
+                  <td data-label="Domain">Cobotics / HRI / Robot Hardware</td>
+                  <td data-label="Tools">SolidWorks / CAD / Mechanical design</td>
+                  <td data-label="Evidence">Repo / Article</td>
+                  <td data-label="Open">
+                    <a class="register-open-link" href="projects/kinematic-puppet-cobotics.html">Open</a>
+                  </td>
+                </tr>
+                <tr data-register-row data-register-groups="all robotics cad manufacturing">
+                  <td data-label="Code">BR-02</td>
+                  <td data-label="Year">2025</td>
+                  <td data-label="Project">
+                    <a class="register-project-link" href="projects/confined-space-inspection-robot.html">
+                      Confined-Space Inspection Robot
+                    </a>
+                  </td>
+                  <td data-label="Domain">Robotics / Mobile Robot / Robot Hardware</td>
+                  <td data-label="Tools">SolidWorks / Raspberry Pi / Mechanical design</td>
+                  <td data-label="Evidence">Repo / Docs</td>
+                  <td data-label="Open">
+                    <a class="register-open-link" href="projects/confined-space-inspection-robot.html">Open</a>
+                  </td>
+                </tr>
+                <tr data-register-row data-register-groups="all robotics cad manufacturing">
+                  <td data-label="Code">BR-03</td>
+                  <td data-label="Year">2025</td>
+                  <td data-label="Project">
+                    <a class="register-project-link" href="projects/uts-motorsports-autonomous.html">
+                      UTS Motorsports Autonomous Hardware CAD
+                    </a>
+                  </td>
+                  <td data-label="Domain">Autonomous Systems / Motorsports / CAD</td>
+                  <td data-label="Tools">SolidWorks / DXF preparation / CAD</td>
+                  <td data-label="Evidence">Repo</td>
+                  <td data-label="Open">
+                    <a class="register-open-link" href="projects/uts-motorsports-autonomous.html">Open</a>
+                  </td>
+                </tr>
+                <tr data-register-row data-register-groups="all robotics cad manufacturing">
+                  <td data-label="Code">BR-04</td>
+                  <td data-label="Year">2025</td>
+                  <td data-label="Project">
+                    <a class="register-project-link" href="projects/warman-challenge-robot.html">
+                      Warman Challenge Robot
+                    </a>
+                  </td>
+                  <td data-label="Domain">Robotics / Mechanisms / CAD</td>
+                  <td data-label="Tools">SolidWorks / Mechanism design / Prototyping</td>
+                  <td data-label="Evidence">Repo</td>
+                  <td data-label="Open">
+                    <a class="register-open-link" href="projects/warman-challenge-robot.html">Open</a>
+                  </td>
+                </tr>
+                <tr data-register-row data-register-groups="all cad manufacturing">
+                  <td data-label="Code">BR-05</td>
+                  <td data-label="Year">2025</td>
+                  <td data-label="Project">
+                    <a class="register-project-link" href="projects/reverse-engineering-lego-brick.html">
+                      Reverse Engineering LEGO 4x2 Brick
+                    </a>
+                  </td>
+                  <td data-label="Domain">Reverse Engineering / Photogrammetry / Blender</td>
+                  <td data-label="Tools">Polycam / Blender / SolidWorks</td>
+                  <td data-label="Evidence">Repo</td>
+                  <td data-label="Open">
+                    <a class="register-open-link" href="projects/reverse-engineering-lego-brick.html">Open</a>
+                  </td>
+                </tr>
+                <tr data-register-row data-register-groups="all cad manufacturing">
+                  <td data-label="Code">BR-06</td>
+                  <td data-label="Year">2025</td>
+                  <td data-label="Project">
+                    <a class="register-project-link" href="projects/additive-manufacturing-plier-project.html">
+                      Additive Manufacturing Plier Project
+                    </a>
+                  </td>
+                  <td data-label="Domain">Additive Manufacturing / Topology Optimisation / CAD</td>
+                  <td data-label="Tools">SolidWorks / Topology optimisation / Bambu Studio</td>
+                  <td data-label="Evidence">Repo</td>
+                  <td data-label="Open">
+                    <a class="register-open-link" href="projects/additive-manufacturing-plier-project.html">Open</a>
+                  </td>
+                </tr>
+                <tr data-register-row data-register-groups="all cad thermal">
+                  <td data-label="Code">BR-07</td>
+                  <td data-label="Year">2025</td>
+                  <td data-label="Project">
+                    <a class="register-project-link" href="projects/solar-bbq.html">
+                      Collapsible Solar BBQ
+                    </a>
+                  </td>
+                  <td data-label="Domain">Mechanical Design / Solar Thermal / CAD</td>
+                  <td data-label="Tools">CAD / Mechanical systems design / Thermal considerations</td>
+                  <td data-label="Evidence">Repo / Drawings / Docs</td>
+                  <td data-label="Open">
+                    <a class="register-open-link" href="projects/solar-bbq.html">Open</a>
+                  </td>
+                </tr>
+                <tr data-register-row data-register-groups="all cad manufacturing thermal">
+                  <td data-label="Code">BR-08</td>
+                  <td data-label="Year">2025</td>
+                  <td data-label="Project">
+                    <a class="register-project-link" href="projects/pcm-helmet-cooling-system.html">
+                      PCM Helmet Cooling System
+                    </a>
+                  </td>
+                  <td data-label="Domain">Thermal Design / PCM / ANSYS</td>
+                  <td data-label="Tools">ANSYS / CAD / Mesh studies</td>
+                  <td data-label="Evidence">Repo</td>
+                  <td data-label="Open">
+                    <a class="register-open-link" href="projects/pcm-helmet-cooling-system.html">Open</a>
+                  </td>
+                </tr>
+                <tr data-register-row data-register-groups="all cad manufacturing thermal">
+                  <td data-label="Code">BR-09</td>
+                  <td data-label="Year">2024</td>
+                  <td data-label="Project">
+                    <a class="register-project-link" href="projects/space-mission-louver-system.html">
+                      Space Mission Louver System
+                    </a>
+                  </td>
+                  <td data-label="Domain">Space Systems / Thermal Control / Mechanisms</td>
+                  <td data-label="Tools">CAD / Mechanical design / Thermal design</td>
+                  <td data-label="Evidence">Repo / Docs</td>
+                  <td data-label="Open">
+                    <a class="register-open-link" href="projects/space-mission-louver-system.html">Open</a>
+                  </td>
+                </tr>
+                <tr data-register-row data-register-groups="all cad thermal">
+                  <td data-label="Code">BR-10</td>
+                  <td data-label="Year">2025</td>
+                  <td data-label="Project">
+                    <a class="register-project-link" href="projects/heat-exchanger-design.html">
+                      Heat Exchanger Design
+                    </a>
+                  </td>
+                  <td data-label="Domain">Thermofluids / Heat Exchanger / Excel</td>
+                  <td data-label="Tools">Excel / Thermofluids analysis / Mechanical design</td>
+                  <td data-label="Evidence">Repo / Docs</td>
+                  <td data-label="Open">
+                    <a class="register-open-link" href="projects/heat-exchanger-design.html">Open</a>
+                  </td>
+                </tr>
+                <tr data-register-row data-register-groups="all cad manufacturing">
+                  <td data-label="Code">BR-11</td>
+                  <td data-label="Year">2025</td>
+                  <td data-label="Project">
+                    <a class="register-project-link" href="projects/vertical-axis-wind-turbine.html">
+                      Vertical Axis Wind Turbine
+                    </a>
+                  </td>
+                  <td data-label="Domain">Wind Turbine / Fabrication / Testing</td>
+                  <td data-label="Tools">CAD / Fabrication / Testing</td>
+                  <td data-label="Evidence">Repo / Docs / Media</td>
+                  <td data-label="Open">
+                    <a class="register-open-link" href="projects/vertical-axis-wind-turbine.html">Open</a>
+                  </td>
+                </tr>
+                <tr data-register-row data-register-groups="all cad manufacturing">
+                  <td data-label="Code">BR-12</td>
+                  <td data-label="Year">2023</td>
+                  <td data-label="Project">
+                    <a class="register-project-link" href="projects/wind-powered-vehicle.html">
+                      Wind-Powered Vehicle
+                    </a>
+                  </td>
+                  <td data-label="Domain">Prototype / Wind Power / CAD</td>
+                  <td data-label="Tools">SolidWorks / Technical drawings / Prototyping</td>
+                  <td data-label="Evidence">Repo / Drawings</td>
+                  <td data-label="Open">
+                    <a class="register-open-link" href="projects/wind-powered-vehicle.html">Open</a>
+                  </td>
+                </tr>
+                <tr data-register-row data-register-groups="all cad personal">
+                  <td data-label="Code">BR-13</td>
+                  <td data-label="Year">Personal</td>
+                  <td data-label="Project">
+                    <a class="register-project-link" href="projects/mpr-rocket.html">
+                      MPR Rocket
+                    </a>
+                  </td>
+                  <td data-label="Domain">Rocket CAD / OpenRocket / SolidWorks</td>
+                  <td data-label="Tools">SolidWorks / OpenRocket / CAD</td>
+                  <td data-label="Evidence">Repo</td>
+                  <td data-label="Open">
+                    <a class="register-open-link" href="projects/mpr-rocket.html">Open</a>
+                  </td>
+                </tr>
+                <tr data-register-row data-register-groups="all cad manufacturing personal">
+                  <td data-label="Code">BR-14</td>
+                  <td data-label="Year">Personal</td>
+                  <td data-label="Project">
+                    <a class="register-project-link" href="projects/printed-pencil-case-servo-storage.html">
+                      3D Printed Pencil Case / Servo Storage Case
+                    </a>
+                  </td>
+                  <td data-label="Domain">3D Printing / Personal Project / CAD</td>
+                  <td data-label="Tools">SolidWorks / 3D printing / Bambu Studio</td>
+                  <td data-label="Evidence">Repo</td>
+                  <td data-label="Open">
+                    <a class="register-open-link" href="projects/printed-pencil-case-servo-storage.html">Open</a>
+                  </td>
+                </tr>
+                <tr data-register-row data-register-groups="all cad personal">
+                  <td data-label="Code">BR-15</td>
+                  <td data-label="Year">Personal</td>
+                  <td data-label="Project">
+                    <a class="register-project-link" href="projects/interlocking-mechanism-cad-design.html">
+                      Interlocking Mechanism CAD Design
+                    </a>
+                  </td>
+                  <td data-label="Domain">CAD / Mechanism Design / Personal Project</td>
+                  <td data-label="Tools">SolidWorks / CAD / Mechanical design</td>
+                  <td data-label="Evidence">Repo</td>
+                  <td data-label="Open">
+                    <a class="register-open-link" href="projects/interlocking-mechanism-cad-design.html">Open</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="register-empty" id="register-empty" hidden>
+              No projects match this filter.
+            </p>
+          </div>
         </div>
       </section>
     </main>
@@ -113,6 +414,7 @@
       </div>
     </footer>
 
+    <script src="assets/js/portfolio-filters.js"></script>
     <script type="module" src="assets/js/portfolio.js"></script>
   </body>
 </html>

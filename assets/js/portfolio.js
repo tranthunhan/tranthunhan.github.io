@@ -1,54 +1,145 @@
 import { projects } from "../../data/projects.js";
 import { siteProfile } from "../../data/site.js";
-import {
-  createProjectCard,
-  getProjectCardImages,
-  initRevealAnimations,
-  populateSharedProfile,
-  sortProjectsByType
-} from "./shared.js";
+import { initRevealAnimations, populateSharedProfile } from "./shared.js";
 
 populateSharedProfile(siteProfile);
 
-const filterList = document.getElementById("filter-list");
-const filterSelect = document.getElementById("filter-select");
-const filterSelectValue = document.getElementById("filter-select-value");
-const selectList = document.getElementById("select-list");
-const portfolioGrid = document.getElementById("portfolio-grid");
+const filterList = document.getElementById("register-filter-list");
+const filterSelect = document.getElementById("register-filter-select");
+const registerBody = document.getElementById("build-register-body");
+const registerEmpty = document.getElementById("register-empty");
 const visibleCount = document.getElementById("visible-count");
 const totalCount = document.getElementById("total-count");
 
-let activeFilter = "Project";
-const orderedProjects = sortProjectsByType(projects);
-const archiveCycleIntervalMs = 5000;
-const archiveFadeDurationMs = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-  ? 0
-  : 320;
-let archiveImageCycleId = 0;
+const filters = [
+  {
+    key: "all",
+    label: "All",
+    terms: []
+  },
+  {
+    key: "robotics",
+    label: "Robotics",
+    terms: ["robot", "robotics", "cobot", "cobotics", "hri", "autonomous", "mobile robot"]
+  },
+  {
+    key: "cad",
+    label: "CAD",
+    terms: ["cad", "solidworks", "mechanism", "mechanical design", "technical drawings"]
+  },
+  {
+    key: "manufacturing",
+    label: "Manufacturing",
+    terms: ["manufacturing", "fabrication", "additive", "3d printing", "bambu", "dxf", "prototype"]
+  },
+  {
+    key: "thermal",
+    label: "Thermal",
+    terms: ["thermal", "thermofluids", "heat exchanger", "pcm", "solar"]
+  },
+  {
+    key: "personal",
+    label: "Personal",
+    terms: ["personal"]
+  }
+];
 
-const allTags = [...new Set(orderedProjects.map((project) => project.projectType || "Project"))];
+let activeFilter = "all";
 
-function isVisibleForFilter(project, filter) {
-  return (project.projectType || "Solo") === filter;
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
 }
 
-function setActiveFilter(filter) {
-  activeFilter = filter;
-  filterSelectValue.textContent = filter;
-  filterSelect.classList.remove("active");
-  renderFilterControls();
-  renderProjects();
+function projectSearchText(project) {
+  return [
+    project.title,
+    project.subtitle,
+    project.year,
+    project.status,
+    project.projectType,
+    ...(project.tags || []),
+    ...(project.tools || [])
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
 }
 
-function renderFilterControls() {
+function matchesFilter(project, filterKey) {
+  const filter = filters.find((entry) => entry.key === filterKey) || filters[0];
+
+  if (filter.key === "all") {
+    return true;
+  }
+
+  if (filter.key === "personal" && project.year === "Personal") {
+    return true;
+  }
+
+  const haystack = projectSearchText(project);
+  return filter.terms.some((term) => haystack.includes(term));
+}
+
+function filterKeysForProject(project) {
+  return filters
+    .filter((filter) => matchesFilter(project, filter.key))
+    .map((filter) => filter.key);
+}
+
+function projectCode(index) {
+  return `BR-${String(index + 1).padStart(2, "0")}`;
+}
+
+function summarizeList(items, fallback, maxItems = 3) {
+  const values = (items || []).filter(Boolean).slice(0, maxItems);
+  return values.length ? values.join(" / ") : fallback;
+}
+
+function evidenceSummary(project) {
+  const linkLabels = {
+    repo: "Repo",
+    article: "Article",
+    cad: "CAD",
+    drawings: "Drawings",
+    print: "Print",
+    docs: "Docs",
+    media: "Media"
+  };
+
+  const linkEvidence = Object.entries(project.links || {})
+    .filter(([, href]) => Boolean(href))
+    .map(([key]) => linkLabels[key] || key)
+    .slice(0, 3);
+
+  if (linkEvidence.length) {
+    return linkEvidence.join(" / ");
+  }
+
+  if (project.gallery?.length || project.thumbnail || project.heroImage) {
+    return "Visual record";
+  }
+
+  return "Project page";
+}
+
+function renderFilters() {
   if (filterList) {
-    filterSelectValue.textContent = activeFilter;
-    filterList.innerHTML = allTags
+    filterList.innerHTML = filters
       .map(
-        (tag) => `
-          <li class="filter-item">
-            <button class="${tag === activeFilter ? "active" : ""}" type="button" data-filter="${tag}">
-              ${tag}
+        (filter) => `
+          <li>
+            <button
+              class="${filter.key === activeFilter ? "is-active" : ""}"
+              type="button"
+              data-register-filter="${escapeHtml(filter.key)}"
+              aria-pressed="${filter.key === activeFilter ? "true" : "false"}"
+            >
+              ${escapeHtml(filter.label)}
             </button>
           </li>
         `
@@ -56,156 +147,89 @@ function renderFilterControls() {
       .join("");
   }
 
-  if (selectList) {
-    selectList.innerHTML = allTags
+  if (filterSelect) {
+    filterSelect.innerHTML = filters
       .map(
-        (tag) => `
-          <li class="select-item">
-            <button type="button" data-select-item="${tag}">${tag}</button>
-          </li>
+        (filter) => `
+          <option value="${escapeHtml(filter.key)}" ${filter.key === activeFilter ? "selected" : ""}>
+            ${escapeHtml(filter.label)}
+          </option>
         `
       )
       .join("");
   }
 }
 
-function renderProjects() {
-  if (!portfolioGrid) {
+function renderRegister() {
+  if (!registerBody) {
     return;
   }
 
-  stopArchiveImageCycle();
-  portfolioGrid.innerHTML = "";
-  const filtered = orderedProjects.filter((project) =>
-    isVisibleForFilter(project, activeFilter)
-  );
-  const rotatingCards = [];
+  const filteredProjects = projects.filter((project) => matchesFilter(project, activeFilter));
 
-  filtered.forEach((project) => {
-    const card = createProjectCard(project, { compact: false, showSummary: false });
-    const cardImage = card.querySelector(".project-card-media img");
-    const cardImages = getProjectCardImages(project);
+  registerBody.innerHTML = filteredProjects
+    .map((project) => {
+      const sourceIndex = projects.findIndex((entry) => entry.slug === project.slug);
+      const projectHref = `projects/${encodeURIComponent(project.slug)}.html`;
+      const registerGroups = filterKeysForProject(project).join(" ");
 
-    if (cardImage && cardImages.length > 1) {
-      const currentIndex = Number.parseInt(cardImage.dataset.imageIndex || "0", 10);
-      rotatingCards.push({
-        cardImage,
-        cardImages,
-        imageIndex: Number.isNaN(currentIndex) ? 0 : currentIndex,
-        isTransitioning: false
-      });
-    }
-
-    portfolioGrid.appendChild(card);
-  });
+      return `
+        <tr data-register-row data-register-groups="${escapeHtml(registerGroups)}">
+          <td data-label="Code">${escapeHtml(projectCode(sourceIndex))}</td>
+          <td data-label="Year">${escapeHtml(project.year || "Current")}</td>
+          <td data-label="Project">
+            <a class="register-project-link" href="${projectHref}">
+              ${escapeHtml(project.title)}
+            </a>
+            <span>${escapeHtml(project.subtitle || project.status || "")}</span>
+          </td>
+          <td data-label="Domain">${escapeHtml(summarizeList(project.tags, project.projectType || "Project"))}</td>
+          <td data-label="Tools">${escapeHtml(summarizeList(project.tools, "Project tools"))}</td>
+          <td data-label="Evidence">${escapeHtml(evidenceSummary(project))}</td>
+          <td data-label="Open">
+            <a class="register-open-link" href="${projectHref}" aria-label="Open ${escapeHtml(project.title)}">
+              Open
+            </a>
+          </td>
+        </tr>
+      `;
+    })
+    .join("");
 
   if (visibleCount) {
-    visibleCount.textContent = String(filtered.length);
+    visibleCount.textContent = String(filteredProjects.length);
   }
+
   if (totalCount) {
     totalCount.textContent = String(projects.length);
   }
 
+  if (registerEmpty) {
+    registerEmpty.hidden = filteredProjects.length > 0;
+  }
+
   initRevealAnimations();
-  startArchiveImageCycle(rotatingCards);
 }
 
-function stopArchiveImageCycle() {
-  if (!archiveImageCycleId) {
-    return;
-  }
-
-  window.clearInterval(archiveImageCycleId);
-  archiveImageCycleId = 0;
-}
-
-function startArchiveImageCycle(rotatingCards) {
-  if (!rotatingCards.length) {
-    return;
-  }
-
-  archiveImageCycleId = window.setInterval(() => {
-    rotatingCards.forEach((entry) => {
-      if (!entry.cardImage.isConnected || entry.isTransitioning) {
-        return;
-      }
-
-      const nextImageIndex = (entry.imageIndex + 1) % entry.cardImages.length;
-      swapCardImage(entry, nextImageIndex);
-    });
-  }, archiveCycleIntervalMs);
-}
-
-function swapCardImage(entry, nextImageIndex) {
-  const nextImage = entry.cardImages[nextImageIndex];
-  if (!nextImage) {
-    return;
-  }
-
-  entry.isTransitioning = true;
-
-  const applySwap = () => {
-    if (!entry.cardImage.isConnected) {
-      entry.isTransitioning = false;
-      return;
-    }
-
-    if (!archiveFadeDurationMs) {
-      entry.cardImage.src = nextImage;
-      entry.cardImage.dataset.imageIndex = String(nextImageIndex);
-      entry.imageIndex = nextImageIndex;
-      entry.isTransitioning = false;
-      return;
-    }
-
-    entry.cardImage.classList.add("is-fading-out");
-    window.setTimeout(() => {
-      if (!entry.cardImage.isConnected) {
-        entry.isTransitioning = false;
-        return;
-      }
-
-      entry.cardImage.src = nextImage;
-      entry.cardImage.dataset.imageIndex = String(nextImageIndex);
-      entry.imageIndex = nextImageIndex;
-
-      window.requestAnimationFrame(() => {
-        entry.cardImage.classList.remove("is-fading-out");
-        entry.isTransitioning = false;
-      });
-    }, archiveFadeDurationMs);
-  };
-
-  const preload = new Image();
-  preload.addEventListener("load", applySwap, { once: true });
-  preload.addEventListener("error", applySwap, { once: true });
-  preload.src = nextImage;
+function setActiveFilter(filterKey) {
+  activeFilter = filters.some((filter) => filter.key === filterKey) ? filterKey : "all";
+  renderFilters();
+  renderRegister();
 }
 
 document.addEventListener("click", (event) => {
-  const filterButton = event.target.closest("[data-filter]");
+  const filterButton = event.target.closest("[data-register-filter]");
+
   if (filterButton) {
-    setActiveFilter(filterButton.dataset.filter);
-    return;
-  }
-
-  const selectItem = event.target.closest("[data-select-item]");
-  if (selectItem) {
-    setActiveFilter(selectItem.dataset.selectItem);
-    return;
-  }
-
-  if (event.target.closest("#filter-select")) {
-    filterSelect.classList.toggle("active");
-    return;
-  }
-
-  if (!event.target.closest(".filter-select-box")) {
-    filterSelect.classList.remove("active");
+    setActiveFilter(filterButton.dataset.registerFilter);
   }
 });
 
-renderFilterControls();
-renderProjects();
+if (filterSelect) {
+  filterSelect.addEventListener("change", (event) => {
+    setActiveFilter(event.target.value);
+  });
+}
 
-window.addEventListener("beforeunload", stopArchiveImageCycle);
+renderFilters();
+renderRegister();
