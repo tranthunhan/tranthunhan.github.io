@@ -12,10 +12,27 @@ const buildIndexEntries = [
   { code: "FN-04", slug: "additive-manufacturing-plier-project" }
 ];
 
+const evidenceStripSlugs = [
+  "kinematic-puppet-cobotics",
+  "confined-space-inspection-robot",
+  "warman-challenge-robot",
+  "pcm-helmet-cooling-system"
+];
+
 mountSiteChrome(siteProfile);
 
 const projectCount = document.getElementById("project-count");
 const buildIndexBody = document.getElementById("build-index-body");
+const evidenceStrip = document.getElementById("home-evidence-strip");
+
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
 
 function renderProjectCount() {
   if (!projectCount) {
@@ -76,6 +93,43 @@ function renderBuildIndex() {
     .join("");
 }
 
+function projectImage(project) {
+  return project.thumbnail || project.heroImage || project.gallery?.find((item) => item.src)?.src || "";
+}
+
+function renderEvidenceStrip() {
+  if (!evidenceStrip) {
+    return;
+  }
+
+  const evidenceItems = evidenceStripSlugs
+    .map((slug) => projects.find((project) => project.slug === slug))
+    .filter(Boolean)
+    .map((project) => ({
+      project,
+      image: projectImage(project)
+    }))
+    .filter((entry) => entry.image);
+
+  evidenceStrip.innerHTML = evidenceItems
+    .map(
+      ({ project, image }) => `
+        <a class="home-evidence-item" href="projects/${encodeURIComponent(project.slug)}.html">
+          <figure>
+            <img src="${escapeHtml(image)}" alt="${escapeHtml(project.title)} project evidence" loading="lazy" />
+            <figcaption>
+              <span>${escapeHtml(project.year || "Project")}</span>
+              <strong>${escapeHtml(project.title)}</strong>
+              <em>${escapeHtml(formatDomain(project))}</em>
+            </figcaption>
+          </figure>
+        </a>
+      `
+    )
+    .join("");
+}
+
 renderProjectCount();
 renderBuildIndex();
+renderEvidenceStrip();
 runRevealPass();

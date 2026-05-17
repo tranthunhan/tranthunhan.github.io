@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Nhan Dang Engineering Field Notes: research-ready mechanical engineering build evidence across robot hardware, sensing-enabled systems, CAD-led subsystem design, prototyping, testing, and public documentation."
+      content="Nhan Dang's mechanical engineering field notes: CAD models, prototypes, test notes, and build records across robot hardware, sensing-enabled systems, and product-style mechanical design."
     />
     <title>Nhan Dang | Engineering Field Notes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,7 +19,7 @@
     <meta property="og:title" content="Nhan Dang | Engineering Field Notes" />
     <meta
       property="og:description"
-      content="Research-ready mechanical engineering field notes across robot hardware, sensing-enabled systems, CAD-led subsystem design, prototyping, testing, and public documentation."
+      content="Mechanical engineering field notes documenting CAD models, prototypes, test notes, and build records across robot hardware, sensing-enabled systems, and product-style mechanical design."
     />
     <meta property="og:image" content="assets/images/profile/newthumbnail.png" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -31,17 +31,20 @@
     <header class="site-header field-notes-header">
       <nav class="nav container" aria-label="Primary">
         <a class="brand" href="index.html" aria-label="Home">
-          <span class="brand-mark" data-profile="initials">ND</span>
+          <span class="brand-mark" data-profile="initials" data-has-logo="true">
+            <img src="assets/images/profile/newthumbnail.png" alt="Nhan Dang logo" decoding="async" />
+          </span>
           <span class="brand-text">
             <span class="brand-title" data-profile="name">Nhan Dang</span>
             <span class="brand-subtitle">ENGINEERING FIELD NOTES</span>
           </span>
         </a>
 
-        <div class="nav-links" aria-label="Portfolio navigation">
-          <a href="portfolio.html">Portfolio</a>
-          <a href="experience.html">Experience</a>
-          <a href="contact.html">Contact</a>
+        <div class="nav-links" aria-label="Site navigation">
+          <a href="index.html">Home</a>
+          <a href="portfolio.html">Build Index</a>
+          <a href="experience.html">Capability Log</a>
+          <a href="contact.html">Contact Note</a>
           <a data-profile-link="github" href="https://github.com/tranthunhan">GitHub</a>
           <a data-profile-link="linkedin" href="https://www.linkedin.com/in/nhandang03"
             >LinkedIn</a
@@ -53,45 +56,142 @@
     <main id="main-content">
       <section class="field-cover">
         <div class="container field-cover-grid">
-          <div class="field-cover-title reveal">
+          <div class="field-cover-title">
             <p class="field-label">Field notebook / build archive</p>
-            <h1>Nhan Dang Engineering Field Notes</h1>
+            <h1>Nhan Dang</h1>
+            <p class="field-title-support">Mechanical Engineering Field Notes</p>
             <p class="field-degree">Mechanical Engineering Honours, UTS</p>
             <p class="field-intro">
-              Mechanical engineering research-readiness through CAD-led robot
-              hardware, sensing-enabled systems, product-style mechanical
-              subsystem design, prototyping, testing, and public build
-              evidence.
+              I document mechanical design work through CAD models,
+              prototypes, test notes, and build records, with a focus on robot
+              hardware, sensing-enabled systems, and product-style mechanical
+              subsystems.
             </p>
+            <div class="field-cover-actions" aria-label="Homepage quick links">
+              <a href="portfolio.html">Open Build Index</a>
+              <a href="experience.html">View Capability Log</a>
+            </div>
           </div>
 
-          <aside class="field-cover-register reveal" aria-label="Field notes register">
-            <p class="field-label">Register</p>
-            <dl>
-              <div>
-                <dt>Public projects</dt>
-                <dd><span id="project-count">00</span></dd>
-              </div>
-              <div>
-                <dt>Focus</dt>
-                <dd>Robot hardware / sensing-enabled systems / CAD / test records</dd>
-              </div>
-              <div>
-                <dt>Format</dt>
-                <dd>Public build notes, drawing evidence, prototype logs</dd>
-              </div>
-            </dl>
+          <aside class="field-cover-register" aria-label="Field notes register">
+            <figure class="field-profile-card">
+              <img
+                src="assets/images/profile/nhan-profile.png"
+                alt="Nhan Dang engineering profile portrait"
+                loading="eager"
+                decoding="async"
+              />
+              <figcaption>
+                Mechanical engineering honours student documenting build work
+                from Sydney.
+              </figcaption>
+            </figure>
+
+            <section class="field-focus-card" aria-labelledby="field-focus-heading">
+              <p class="field-label">What I build</p>
+              <h2 id="field-focus-heading">Practical mechanical systems with enough evidence to review.</h2>
+              <ul>
+                <li>Robot hardware that has to fit around sensors, wiring, power, and access.</li>
+                <li>CAD-led mechanisms and product-style parts that need to be made, adjusted, and tested.</li>
+                <li>Public notes that show how the design moved from idea to build record.</li>
+              </ul>
+            </section>
+
+            <section class="field-register-card" aria-label="Public project register">
+              <p class="field-label">Register</p>
+              <dl>
+                <div>
+                  <dt>Public projects</dt>
+                  <dd><span id="project-count">15</span></dd>
+                </div>
+                <div>
+                  <dt>Focus</dt>
+                  <dd>Robot hardware / CAD / sensing / test notes</dd>
+                </div>
+                <div>
+                  <dt>Format</dt>
+                  <dd>Build notes, drawing evidence, prototype logs</dd>
+                </div>
+              </dl>
+            </section>
           </aside>
         </div>
       </section>
 
+      <section class="home-evidence-section" aria-labelledby="home-evidence-heading">
+        <div class="container home-evidence-shell">
+          <div class="home-evidence-heading">
+            <p class="field-label">Visual evidence</p>
+            <h2 id="home-evidence-heading">A few build records from the archive.</h2>
+          </div>
+          <div class="home-evidence-strip" id="home-evidence-strip">
+            <a class="home-evidence-item" href="projects/kinematic-puppet-cobotics.html">
+              <figure>
+                <img
+                  src="assets/images/projects/kinematic-puppet-cobotics/01-diagram.jpg"
+                  alt="Kinematic Puppet / Cobot Prototyping project evidence"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <span>2025</span>
+                  <strong>Kinematic Puppet / Cobot Prototyping</strong>
+                  <em>Cobotics / HRI / Robot Hardware</em>
+                </figcaption>
+              </figure>
+            </a>
+            <a class="home-evidence-item" href="projects/confined-space-inspection-robot.html">
+              <figure>
+                <img
+                  src="assets/images/projects/confined-space-inspection-robot/01-18650.jpg"
+                  alt="Confined-Space Inspection Robot project evidence"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <span>2025</span>
+                  <strong>Confined-Space Inspection Robot</strong>
+                  <em>Robotics / Mobile Robot / Robot Hardware</em>
+                </figcaption>
+              </figure>
+            </a>
+            <a class="home-evidence-item" href="projects/warman-challenge-robot.html">
+              <figure>
+                <img
+                  src="assets/images/projects/warman-challenge-robot/01-2025-warman-track-assembly-exploded.jpg"
+                  alt="Warman Challenge Robot project evidence"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <span>2025</span>
+                  <strong>Warman Challenge Robot</strong>
+                  <em>Robotics / Mechanisms / CAD</em>
+                </figcaption>
+              </figure>
+            </a>
+            <a class="home-evidence-item" href="projects/pcm-helmet-cooling-system.html">
+              <figure>
+                <img
+                  src="assets/images/projects/pcm-helmet-cooling-system/01-coarse-mesh-volume.jpg"
+                  alt="PCM Helmet Cooling System project evidence"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <span>2025</span>
+                  <strong>PCM Helmet Cooling System</strong>
+                  <em>Thermal Design / PCM / ANSYS</em>
+                </figcaption>
+              </figure>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section class="field-section" id="build-index-preview">
-        <div class="container field-section-heading reveal">
+        <div class="container field-section-heading">
           <p class="field-label">Build Index Preview</p>
-          <h2>Selected entries with public build evidence.</h2>
+          <h2>Selected entries from the technical build register.</h2>
         </div>
 
-        <div class="container field-table-wrap reveal">
+        <div class="container field-table-wrap">
           <table class="field-index-table">
             <thead>
               <tr>
@@ -145,73 +245,72 @@
       </section>
 
       <section class="field-section" id="research-direction">
-        <div class="container field-section-heading reveal">
+        <div class="container field-section-heading">
           <p class="field-label">Current Research Direction</p>
-          <h2>Research-readiness themes carried through the build archive.</h2>
+          <h2>Mechanical systems questions I keep coming back to.</h2>
         </div>
 
         <div class="container field-note-list">
-          <article class="field-note reveal">
+          <article class="field-note">
             <span>01</span>
             <h3>Smart mechanical systems</h3>
             <p>
-              Mechanical platforms where geometry, sensing, test evidence, and
-              system behaviour can be connected through practical prototypes
-              and clear public records.
+              Mechanical platforms where geometry, sensing, and system
+              behaviour can be connected through practical prototypes and
+              honest test notes.
             </p>
           </article>
-          <article class="field-note reveal">
+          <article class="field-note">
             <span>02</span>
             <h3>Sensing-enabled robot hardware</h3>
             <p>
               Compact robot hardware designed around cameras, sensors,
-              controllers, power layout, wiring paths, service access, and
-              inspectable integration evidence.
+              controllers, power layout, wiring paths, and access for fixes.
             </p>
           </article>
-          <article class="field-note reveal">
+          <article class="field-note">
             <span>03</span>
             <h3>Vibration and condition monitoring interest</h3>
             <p>
               A future research direction in using measured vibration and
               mechanical behaviour to understand health, performance, and
-              operating state after validated data is available.
+              operating state when validated data is available.
             </p>
           </article>
-          <article class="field-note reveal">
+          <article class="field-note">
             <span>04</span>
             <h3>Cobotics, HRI, and product-style subsystems</h3>
             <p>
               Human-centred robot hardware and mechanical subsystem work shaped
               by modularity, manufacturability, safe interaction, testing, and
-              documentation that can support technical review.
+              clear documentation.
             </p>
           </article>
         </div>
       </section>
 
       <section class="field-section" id="engineering-methods">
-        <div class="container field-section-heading reveal">
+        <div class="container field-section-heading">
           <p class="field-label">Engineering Methods</p>
-          <h2>How project evidence is produced and recorded.</h2>
+          <h2>How I try to make the work inspectable.</h2>
         </div>
 
         <div class="container method-log">
-          <article class="method-entry reveal">
+          <article class="method-entry">
             <h3>CAD and packaging</h3>
-            <p>Mechanical layout, interface geometry, mounting, access, fit, and tolerancing awareness.</p>
+            <p>Mechanical layout, interface geometry, mounting, access, fit, and tolerancing notes.</p>
           </article>
-          <article class="method-entry reveal">
+          <article class="method-entry">
             <h3>Prototyping and fabrication</h3>
-            <p>Printed, fabricated, assembled, and revised hardware records with DFM constraints visible.</p>
+            <p>Printed, fabricated, assembled, and revised hardware records with makeability kept visible.</p>
           </article>
-          <article class="method-entry reveal">
+          <article class="method-entry">
             <h3>Sensing and mechatronic integration</h3>
             <p>Sensor, controller, wiring, power, and robot-hardware integration.</p>
           </article>
-          <article class="method-entry reveal">
+          <article class="method-entry">
             <h3>Testing and documentation</h3>
-            <p>Public-safe design notes, selected visuals, test-planning evidence, and quality-minded records.</p>
+            <p>Public-safe design notes, selected visuals, test planning, and records that explain decisions.</p>
           </article>
         </div>
       </section>
@@ -221,17 +320,17 @@
       <div class="container footer-layout">
         <div>
           <p class="footer-title" data-profile="name">Nhan Dang</p>
-          <p class="footer-copy" data-profile="tagline">
-            Mechanical engineering portfolio focused on CAD-led design, robot
-            hardware, sensing-enabled systems, prototyping, testing, public
-            build evidence, and product-style mechanical systems.
+          <p class="footer-copy">
+            Mechanical engineering field notes across CAD models, prototypes,
+            robot hardware, sensing-enabled systems, and build records.
           </p>
         </div>
 
         <div class="footer-links">
-          <a href="portfolio.html">Portfolio</a>
-          <a href="experience.html">Experience</a>
-          <a href="contact.html">Contact</a>
+          <a href="index.html">Home</a>
+          <a href="portfolio.html">Build Index</a>
+          <a href="experience.html">Capability Log</a>
+          <a href="contact.html">Contact Note</a>
           <a data-profile-link="github" href="https://github.com/tranthunhan">GitHub</a>
           <a data-profile-link="linkedin" href="https://www.linkedin.com/in/nhandang03">LinkedIn</a>
         </div>

@@ -2176,7 +2176,8 @@ textarea.form-input {
 }
 
 .nav-links a:hover,
-.nav-links a:focus-visible {
+.nav-links a:focus-visible,
+.nav-links a[aria-current="page"] {
   border-color: var(--border);
   background: var(--surface);
   color: var(--drawing-blue);
@@ -2362,21 +2363,22 @@ textarea.form-input {
 }
 
 .field-cover {
-  padding: clamp(3rem, 7vw, 5.5rem) 0 2.2rem;
+  padding: clamp(2.4rem, 6vw, 4.8rem) 0 1.2rem;
 }
 
 .field-cover-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.62fr);
-  gap: 1.1rem;
-  align-items: stretch;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.72fr);
+  gap: clamp(1rem, 2vw, 1.45rem);
+  align-items: start;
 }
 
 .field-cover-title,
 .field-cover-register,
 .field-table-wrap,
 .field-note,
-.method-entry {
+.method-entry,
+.home-evidence-shell {
   border: 1px solid var(--border);
   border-radius: 0;
   background:
@@ -2387,16 +2389,19 @@ textarea.form-input {
 }
 
 .field-cover-title {
-  min-height: clamp(360px, 42vw, 540px);
+  align-self: start;
+  min-height: 0;
   display: grid;
-  align-content: end;
-  padding: clamp(1.4rem, 4vw, 2.8rem);
+  align-content: start;
+  padding: clamp(2rem, 3vw, 2.5rem) clamp(1.35rem, 3vw, 2.25rem)
+    clamp(2.5rem, 4vw, 3.5rem);
   border-top: 5px solid var(--field-rule);
   position: relative;
+  overflow: hidden;
 }
 
 .field-cover-title::before {
-  content: "FIELD NOTES / MECHANICAL ENGINEERING";
+  content: "MECHANICAL FIELD NOTES / PUBLIC BUILD RECORD";
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -2419,51 +2424,176 @@ textarea.form-input {
 }
 
 .field-cover-title h1 {
-  max-width: 12ch;
+  max-width: 9ch;
   margin: 0;
   color: var(--text);
   font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(3rem, 8.4vw, 6.8rem);
-  line-height: 0.92;
+  font-size: clamp(3.4rem, 10vw, 8rem);
+  line-height: 0.88;
   letter-spacing: 0;
 }
 
+.field-title-support {
+  width: fit-content;
+  margin: 0.85rem 0 0;
+  padding: 0.28rem 0.48rem;
+  border: 1px solid var(--border);
+  background: rgba(239, 232, 216, 0.72);
+  color: var(--field-blue);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: clamp(0.82rem, 1.4vw, 1rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .field-degree {
-  margin: 1.2rem 0 0;
+  margin: 1rem 0 0;
   color: var(--field-orange);
   font-family: "IBM Plex Mono", monospace;
   font-size: clamp(0.95rem, 2vw, 1.1rem);
 }
 
 .field-intro {
-  max-width: 56rem;
+  max-width: 48rem;
   margin: 0.75rem 0 0;
   color: var(--muted-strong);
   font-size: clamp(1rem, 2vw, 1.2rem);
   line-height: 1.62;
 }
 
-.field-cover-register {
-  display: grid;
-  align-content: start;
-  padding: 1rem;
-  border-top: 5px solid var(--field-orange);
+.field-cover-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1.2rem;
 }
 
-.field-cover-register dl {
+.field-cover-actions a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
+  padding: 0.36rem 0.58rem;
+  border: 1px solid var(--text);
+  background: var(--surface);
+  color: var(--drawing-blue);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.field-cover-actions a:hover,
+.field-cover-actions a:focus-visible {
+  border-color: var(--field-orange);
+  background: var(--field-band);
+  color: var(--text);
+}
+
+.field-cover-register {
+  display: grid;
+  align-content: stretch;
+  gap: 0.85rem;
+  padding: 0;
+  border-top: 5px solid var(--field-orange);
+  background: transparent;
+}
+
+.field-profile-card,
+.field-focus-card,
+.field-register-card {
+  margin: 0;
+  border: 1px solid var(--border);
+  background:
+    linear-gradient(90deg, rgba(30, 106, 138, 0.035) 1px, transparent 1px),
+    linear-gradient(rgba(30, 106, 138, 0.035) 1px, transparent 1px),
+    var(--field-paper);
+  background-size: 20px 20px;
+}
+
+.field-profile-card {
+  display: grid;
+  gap: 0.62rem;
+  padding: 0.72rem;
+  border-top: 4px solid var(--field-blue);
+}
+
+.field-profile-card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid var(--field-rule);
+  background: var(--field-band);
+}
+
+.field-profile-card figcaption {
+  margin: 0;
+  color: var(--muted-strong);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.field-focus-card,
+.field-register-card {
+  padding: 0.95rem;
+}
+
+.field-focus-card {
+  border-left: 4px solid var(--field-blue);
+}
+
+.field-focus-card h2 {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(1.08rem, 1.8vw, 1.35rem);
+  line-height: 1.2;
+}
+
+.field-focus-card ul {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0.85rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.field-focus-card li {
+  position: relative;
+  padding-left: 1rem;
+  color: var(--muted-strong);
+  line-height: 1.48;
+}
+
+.field-focus-card li::before {
+  content: "";
+  position: absolute;
+  top: 0.58rem;
+  left: 0;
+  width: 0.42rem;
+  height: 0.42rem;
+  border: 1px solid var(--field-orange);
+  background: var(--safety-yellow);
+}
+
+.field-register-card {
+  border-top: 4px solid var(--field-orange);
+}
+
+.field-register-card dl {
   display: grid;
   margin: 0;
   border-top: 1px solid var(--border);
 }
 
-.field-cover-register div {
+.field-register-card div {
   display: grid;
   gap: 0.28rem;
   padding: 0.85rem 0;
   border-bottom: 1px solid var(--border);
 }
 
-.field-cover-register dt {
+.field-register-card dt {
   color: var(--muted);
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.72rem;
@@ -2471,21 +2601,95 @@ textarea.form-input {
   text-transform: uppercase;
 }
 
-.field-cover-register dd {
+.field-register-card dd {
   margin: 0;
   color: var(--text);
   line-height: 1.45;
 }
 
-.field-cover-register #project-count {
+.field-register-card #project-count {
   color: var(--field-orange);
   font-family: "Space Grotesk", sans-serif;
   font-size: clamp(3.6rem, 8vw, 5.8rem);
   line-height: 0.9;
 }
 
+.home-evidence-section {
+  padding: 0 0 clamp(1.7rem, 4vw, 2.8rem);
+}
+
+.home-evidence-shell {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.28fr) minmax(0, 1fr);
+  gap: 1rem;
+  padding: 0.9rem;
+  border-top: 4px solid var(--field-blue);
+}
+
+.home-evidence-heading h2 {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(1.18rem, 2.1vw, 1.55rem);
+  line-height: 1.15;
+}
+
+.home-evidence-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.home-evidence-item {
+  display: block;
+  min-width: 0;
+  border: 1px solid var(--border);
+  background: rgba(255, 253, 247, 0.82);
+}
+
+.home-evidence-item:hover,
+.home-evidence-item:focus-visible {
+  border-color: var(--field-orange);
+  background: var(--field-band);
+}
+
+.home-evidence-item figure {
+  display: grid;
+  margin: 0;
+  height: 100%;
+}
+
+.home-evidence-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border);
+  background: var(--field-band);
+}
+
+.home-evidence-item figcaption {
+  display: grid;
+  gap: 0.18rem;
+  padding: 0.62rem;
+}
+
+.home-evidence-item span,
+.home-evidence-item em {
+  color: var(--muted);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
+  font-style: normal;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.home-evidence-item strong {
+  color: var(--text);
+  font-size: 0.92rem;
+  line-height: 1.16;
+}
+
 .field-section {
-  padding: 2.7rem 0;
+  padding: clamp(2.4rem, 5vw, 3.5rem) 0;
 }
 
 .field-section-heading {
@@ -2606,8 +2810,22 @@ textarea.form-input {
 
 @media (max-width: 1080px) {
   .field-cover-grid,
-  .field-section-heading {
+  .field-section-heading,
+  .home-evidence-shell {
     grid-template-columns: 1fr;
+  }
+
+  .field-cover-register {
+    grid-template-columns: minmax(230px, 0.55fr) minmax(0, 1fr);
+    align-items: stretch;
+  }
+
+  .field-profile-card {
+    grid-row: span 2;
+  }
+
+  .home-evidence-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .field-note-list,
@@ -2623,12 +2841,26 @@ textarea.form-input {
 
   .field-cover-title {
     min-height: 0;
-    padding-top: 4.2rem;
+    padding-top: 3rem;
   }
 
   .field-cover-title h1 {
     max-width: none;
-    font-size: clamp(2.6rem, 16vw, 4.2rem);
+    font-size: clamp(3.15rem, 17vw, 4.8rem);
+  }
+
+  .field-title-support {
+    max-width: 100%;
+    font-size: 0.78rem;
+  }
+
+  .field-cover-register,
+  .home-evidence-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .field-profile-card {
+    grid-row: auto;
   }
 
   .field-note-list,
@@ -3317,7 +3549,7 @@ textarea.form-input {
   padding-left: 0;
   list-style: none;
   counter-reset: memo-process;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
 }
 
 .memo-process-list li {
@@ -3326,6 +3558,7 @@ textarea.form-input {
   grid-template-columns: 2.3rem minmax(0, 1fr);
   gap: 0.65rem;
   align-content: start;
+  min-width: 0;
   padding: 0.78rem;
   border: 1px solid rgba(207, 199, 182, 0.78);
   border-top: 3px solid var(--drawing-blue);
@@ -3365,15 +3598,22 @@ textarea.form-input {
 
 .memo-decision-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 0.75rem;
 }
 
 .memo-decision-grid article {
+  min-width: 0;
   border: 1px solid var(--border);
   border-top: 3px solid var(--accent);
   background: rgba(255, 253, 247, 0.72);
   padding: 0.8rem;
+}
+
+.memo-decision-grid p,
+.memo-process-step p {
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .memo-evidence-note {

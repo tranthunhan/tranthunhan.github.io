@@ -51,6 +51,10 @@ function fillBrandMarks(profile) {
     image.alt = `${profile.name || "Profile"} logo`;
     image.decoding = "async";
     image.loading = "lazy";
+    image.addEventListener("error", () => {
+      node.dataset.hasLogo = "false";
+      node.replaceChildren(profile.initials || "ND");
+    });
 
     node.dataset.hasLogo = "true";
     node.appendChild(image);
@@ -104,9 +108,64 @@ function fillYearStamps() {
   });
 }
 
+function localNavigationItems() {
+  return [
+    { label: "Home", href: "index.html" },
+    { label: "Build Index", href: "portfolio.html" },
+    { label: "Capability Log", href: "experience.html" },
+    { label: "Contact Note", href: "contact.html" }
+  ];
+}
+
+function socialNavigationItems(profile) {
+  return [
+    { label: "GitHub", profileLink: "github", href: profileHref(profile, "github") },
+    { label: "LinkedIn", profileLink: "linkedin", href: profileHref(profile, "linkedin") }
+  ].filter((item) => item.href);
+}
+
+function markCurrentPage(anchor, href) {
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  const targetPage = href.split("/").pop();
+
+  if (currentPage === targetPage) {
+    anchor.setAttribute("aria-current", "page");
+  }
+}
+
+function renderNavigation(profile) {
+  const navigationItems = [...localNavigationItems(), ...socialNavigationItems(profile)];
+
+  document.querySelectorAll(".nav-links, .footer-links").forEach((list) => {
+    list.replaceChildren(
+      ...navigationItems.map((item) => {
+        const anchor = document.createElement("a");
+        const href = item.href || "";
+
+        anchor.textContent = item.label;
+        anchor.href = applyPagePrefix(href);
+
+        if (item.profileLink) {
+          anchor.dataset.profileLink = item.profileLink;
+        } else {
+          markCurrentPage(anchor, href);
+        }
+
+        if (/^https?:\/\//i.test(href)) {
+          anchor.target = "_blank";
+          anchor.rel = "noreferrer";
+        }
+
+        return anchor;
+      })
+    );
+  });
+}
+
 export function mountSiteChrome(profile = {}) {
   fillTextSlots(profile);
   fillBrandMarks(profile);
+  renderNavigation(profile);
   fillProfileLinks(profile);
   fillYearStamps();
 }

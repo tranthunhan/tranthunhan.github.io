@@ -86,8 +86,8 @@ function renderContactRegister(rows) {
 if (contactIntro) {
   const context =
     siteProfile.contactSubheading ||
-    "Mechanical engineering student focused on project review, research context, and collaboration discussion.";
-  contactIntro.textContent = `This contact note is for portfolio review, project discussion, research mentoring context, and engineering collaboration. ${context}`;
+    "Mechanical engineering student focused on project review, design context, and collaboration discussion.";
+  contactIntro.textContent = `This contact note is for portfolio review, project discussion, mechanical design context, and engineering collaboration. ${context}`;
 }
 
 if (contactLocation) {
