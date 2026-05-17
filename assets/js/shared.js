@@ -151,31 +151,6 @@ export function initRevealAnimations() {
   revealItems.forEach((item) => observer.observe(item));
 }
 
-export function initRandomProjectLink(allProjects) {
-  const buttons = document.querySelectorAll("[data-random-project]");
-  if (!buttons.length || !allProjects?.length) {
-    return;
-  }
-
-  const currentSlug = document.body.dataset.projectSlug;
-  const pool = currentSlug
-    ? allProjects.filter((project) => project.slug !== currentSlug)
-    : allProjects;
-  const candidates = pool.length ? pool : allProjects;
-  const randomProject =
-    candidates[Math.floor(Math.random() * candidates.length)];
-  const prefix = document.body.classList.contains("project-page") ? "../" : "";
-  const href = `${prefix}projects/${randomProject.slug}.html`;
-
-  buttons.forEach((button) => {
-    button.setAttribute("href", href);
-    button.setAttribute(
-      "title",
-      `Go to random project: ${randomProject.title}`
-    );
-  });
-}
-
 export function createProjectCard(project, options = {}) {
   const {
     compact = false,

@@ -5,23 +5,15 @@ import {
   projects
 } from "../../data/projects.js";
 import { repoImages } from "../../data/repo-images.js";
-import { initClickSpark } from "./click-spark.js";
-import { initSiteDock } from "./dock.js";
-import { initLogoLoop } from "./logo-loop.js";
 import {
   createProjectCard,
   createResourceButtons,
-  initRandomProjectLink,
   initRevealAnimations,
   populateSharedProfile,
   resolveImagePath
 } from "./shared.js";
 
 populateSharedProfile(siteProfile);
-initSiteDock();
-initLogoLoop();
-initRandomProjectLink(projects);
-initClickSpark();
 
 const slug = document.body.dataset.projectSlug;
 const project = getProjectBySlug(slug);
@@ -75,19 +67,6 @@ function cleanupCaption(rawText, fallback) {
 function resolveProjectAsset(path) {
   const resolved = resolveImagePath(path, "../");
   return resolved;
-}
-
-function buildCaseStudyUrl(slug) {
-  const configuredBase = siteProfile.links?.website || "";
-  const liveOrigin =
-    window.location.origin && window.location.origin !== "null"
-      ? window.location.origin
-      : "";
-  const base = configuredBase || liveOrigin;
-  if (!base) {
-    return `projects/${slug}.html`;
-  }
-  return `${base.replace(/\/+$/, "")}/projects/${slug}.html`;
 }
 
 function uniqueBySource(items) {
@@ -403,7 +382,6 @@ function renderContent(activeProject) {
 }
 
 function renderSidebar(activeProject) {
-  const caseStudyUrl = buildCaseStudyUrl(activeProject.slug);
   const tools = activeProject.tools
     .map((tool) => `<li class="tool-chip">${tool}</li>`)
     .join("");
@@ -423,14 +401,6 @@ function renderSidebar(activeProject) {
           <div>
             <dt>Status</dt>
             <dd>${activeProject.status}</dd>
-          </div>
-          <div>
-            <dt>Case study URL</dt>
-            <dd>
-              <a class="text-link case-study-link" href="${caseStudyUrl}" target="_blank" rel="noreferrer">
-                ${caseStudyUrl}
-              </a>
-            </dd>
           </div>
         </dl>
       </section>

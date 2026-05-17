@@ -1,22 +1,14 @@
 import { projects } from "../../data/projects.js";
 import { siteProfile } from "../../data/site.js";
-import { initClickSpark } from "./click-spark.js";
-import { initSiteDock } from "./dock.js";
-import { initLogoLoop } from "./logo-loop.js";
 import {
   createProjectCard,
   getProjectCardImages,
-  initRandomProjectLink,
   initRevealAnimations,
   populateSharedProfile,
   sortProjectsByType
 } from "./shared.js";
 
 populateSharedProfile(siteProfile);
-initSiteDock();
-initLogoLoop();
-initRandomProjectLink(projects);
-initClickSpark();
 
 const filterList = document.getElementById("filter-list");
 const filterSelect = document.getElementById("filter-select");

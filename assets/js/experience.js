@@ -1,20 +1,11 @@
 import { siteProfile } from "../../data/site.js";
-import { projects } from "../../data/projects.js";
-import { initClickSpark } from "./click-spark.js";
-import { initSiteDock } from "./dock.js";
-import { initLogoLoop } from "./logo-loop.js";
 import {
-  initRandomProjectLink,
   initRevealAnimations,
   populateSharedProfile,
   resolveImagePath
 } from "./shared.js";
 
 populateSharedProfile(siteProfile);
-initSiteDock();
-initLogoLoop();
-initRandomProjectLink(projects);
-initClickSpark();
 
 const experienceList = document.getElementById("experience-list");
 const educationList = document.getElementById("education-list");
