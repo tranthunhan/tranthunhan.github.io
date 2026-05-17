@@ -1428,7 +1428,7 @@ export const projects = [
       "cad": null,
       "drawings": null,
       "print": null,
-      "docs": "assets/docs/projects/pcm-helmet-cooling-system/20-final-report-group-24.pdf",
+      "docs": null,
       "media": null
     },
     "gallery": [
