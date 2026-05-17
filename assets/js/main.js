@@ -1,23 +1,24 @@
 import { siteProfile } from "../../data/site.js";
 import { projects } from "../../data/projects.js";
-import { initClickSpark } from "./click-spark.js";
-import { initSiteDock } from "./dock.js";
-import { initLogoLoop } from "./logo-loop.js";
 import {
-  initRandomProjectLink,
+  createProjectCard,
   initRevealAnimations,
   populateSharedProfile
 } from "./shared.js";
 
 populateSharedProfile(siteProfile);
-initSiteDock();
-initLogoLoop();
-initRandomProjectLink(projects);
-initClickSpark();
 
 const focusAreas = document.getElementById("focus-areas");
 const projectCount = document.getElementById("project-count");
+const selectedBuilds = document.getElementById("selected-builds");
 const headshotSlot = document.querySelector(".headshot-slot");
+
+const selectedBuildSlugs = [
+  "kinematic-puppet-cobotics",
+  "confined-space-inspection-robot",
+  "uts-motorsports-autonomous",
+  "additive-manufacturing-plier-project"
+];
 
 function renderFocusAreas() {
   if (!focusAreas) {
@@ -42,6 +43,27 @@ function renderProjectCount() {
   }
 
   projectCount.textContent = String(projects.length).padStart(2, "0");
+}
+
+function renderSelectedBuilds() {
+  if (!selectedBuilds) {
+    return;
+  }
+
+  const buildCards = selectedBuildSlugs
+    .map((slug) => projects.find((project) => project.slug === slug))
+    .filter(Boolean);
+
+  selectedBuilds.innerHTML = "";
+  buildCards.forEach((project) => {
+    const card = createProjectCard(project, {
+      compact: true,
+      showSummary: false
+    });
+    card.classList.remove("reveal");
+    card.classList.add("selected-build-card", "is-visible");
+    selectedBuilds.appendChild(card);
+  });
 }
 
 function initProfileHoverIconReveal() {
@@ -83,5 +105,6 @@ function initProfileHoverIconReveal() {
 
 renderFocusAreas();
 renderProjectCount();
+renderSelectedBuilds();
 initProfileHoverIconReveal();
 initRevealAnimations();

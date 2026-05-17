@@ -2710,3 +2710,220 @@ textarea.form-input {
     min-height: 230px;
   }
 }
+
+/* Homepage/navigation structure pass */
+body.has-dock {
+  --container: min(1180px, calc(100vw - 2.4rem));
+  padding-bottom: 0;
+}
+
+.site-dock-wrap,
+.header-logo-loop,
+.random-project-link {
+  display: none !important;
+}
+
+.nav {
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-left: auto;
+}
+
+.nav-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.1rem;
+  padding: 0.38rem 0.56rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  color: var(--muted-strong);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  border-color: var(--border);
+  background: var(--surface);
+  color: var(--drawing-blue);
+}
+
+.dossier-cover {
+  position: relative;
+  overflow: hidden;
+}
+
+.dossier-cover::after {
+  content: "REV A / PUBLIC BUILD RECORD";
+  position: absolute;
+  right: 1.35rem;
+  bottom: 1.2rem;
+  padding: 0.24rem 0.42rem;
+  border: 1px solid rgba(207, 199, 182, 0.9);
+  color: var(--muted);
+  background: rgba(255, 253, 247, 0.82);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+}
+
+.dossier-panel {
+  align-content: start;
+  gap: 1rem;
+}
+
+.dossier-list {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.dossier-list div {
+  display: grid;
+  grid-template-columns: minmax(7rem, 0.38fr) 1fr;
+  gap: 0.75rem;
+  padding: 0.78rem 0.85rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.dossier-list div:last-child {
+  border-bottom: 0;
+}
+
+.dossier-list dt {
+  color: var(--drawing-blue);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.76rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.dossier-list dd {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.dossier-list #project-count {
+  color: var(--accent);
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+}
+
+.selected-build-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.selected-build-grid .project-card {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.selected-build-grid .project-card-media {
+  aspect-ratio: 16 / 11;
+}
+
+.selected-build-grid .project-card-body h3 {
+  font-size: 0.98rem;
+}
+
+.method-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.method-card {
+  min-height: 100%;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--accent);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(90deg, rgba(30, 106, 138, 0.03) 1px, transparent 1px),
+    linear-gradient(rgba(30, 106, 138, 0.03) 1px, transparent 1px),
+    var(--surface);
+  background-size: 24px 24px;
+}
+
+.method-card h3 {
+  margin: 0.45rem 0 0.55rem;
+  color: var(--text);
+  line-height: 1.22;
+}
+
+.method-card p {
+  margin: 0;
+  color: var(--muted-strong);
+  line-height: 1.58;
+}
+
+@media (max-width: 1080px) {
+  body.has-dock {
+    --container: min(1180px, calc(100vw - 2.4rem));
+  }
+
+  .selected-build-grid,
+  .method-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .nav {
+    align-items: flex-start;
+    gap: 0.65rem;
+    padding-block: 0.6rem;
+  }
+
+  .nav-links {
+    flex-basis: 100%;
+    justify-content: flex-start;
+    margin-left: 0;
+  }
+
+  .nav-links a {
+    min-height: 1.95rem;
+    padding: 0.32rem 0.46rem;
+    font-size: 0.68rem;
+  }
+
+  .dossier-cover::after {
+    position: static;
+    justify-self: start;
+    margin-top: 0.3rem;
+  }
+
+  .dossier-list div {
+    grid-template-columns: 1fr;
+    gap: 0.28rem;
+  }
+}
+
+@media (max-width: 680px) {
+  body.has-dock {
+    --container: min(1180px, calc(100vw - 2rem));
+    padding-bottom: 0;
+  }
+
+  .selected-build-grid,
+  .method-grid {
+    grid-template-columns: 1fr;
+  }
+}
