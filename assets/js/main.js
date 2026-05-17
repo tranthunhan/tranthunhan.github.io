@@ -1,41 +1,21 @@
 import { siteProfile } from "../../data/site.js";
 import { projects } from "../../data/projects.js";
 import {
-  createProjectCard,
   initRevealAnimations,
   populateSharedProfile
 } from "./shared.js";
 
-populateSharedProfile(siteProfile);
-
-const focusAreas = document.getElementById("focus-areas");
-const projectCount = document.getElementById("project-count");
-const selectedBuilds = document.getElementById("selected-builds");
-const headshotSlot = document.querySelector(".headshot-slot");
-
-const selectedBuildSlugs = [
-  "kinematic-puppet-cobotics",
-  "confined-space-inspection-robot",
-  "uts-motorsports-autonomous",
-  "additive-manufacturing-plier-project"
+const buildIndexEntries = [
+  { code: "FN-01", slug: "kinematic-puppet-cobotics" },
+  { code: "FN-02", slug: "confined-space-inspection-robot" },
+  { code: "FN-03", slug: "uts-motorsports-autonomous" },
+  { code: "FN-04", slug: "additive-manufacturing-plier-project" }
 ];
 
-function renderFocusAreas() {
-  if (!focusAreas) {
-    return;
-  }
+populateSharedProfile(siteProfile);
 
-  focusAreas.innerHTML = siteProfile.focusAreas
-    .map(
-      (item) => `
-        <article class="info-panel reveal">
-          <h3>${item.title}</h3>
-          <p>${item.body}</p>
-        </article>
-      `
-    )
-    .join("");
-}
+const projectCount = document.getElementById("project-count");
+const buildIndexBody = document.getElementById("build-index-body");
 
 function renderProjectCount() {
   if (!projectCount) {
@@ -45,66 +25,57 @@ function renderProjectCount() {
   projectCount.textContent = String(projects.length).padStart(2, "0");
 }
 
-function renderSelectedBuilds() {
-  if (!selectedBuilds) {
+function formatDomain(project) {
+  return project.tags.slice(0, 3).join(" / ");
+}
+
+function formatEvidence(project) {
+  const evidence = [];
+
+  if (project.links?.repo) {
+    evidence.push("repository");
+  }
+  if (project.links?.docs) {
+    evidence.push("documentation");
+  }
+  if (project.gallery?.length || project.thumbnail || project.heroImage) {
+    evidence.push("visual record");
+  }
+
+  return evidence.length ? evidence.join(" + ") : "field note";
+}
+
+function renderBuildIndex() {
+  if (!buildIndexBody) {
     return;
   }
 
-  const buildCards = selectedBuildSlugs
-    .map((slug) => projects.find((project) => project.slug === slug))
+  const rows = buildIndexEntries
+    .map((entry) => {
+      const project = projects.find((item) => item.slug === entry.slug);
+      return project ? { ...entry, project } : null;
+    })
     .filter(Boolean);
 
-  selectedBuilds.innerHTML = "";
-  buildCards.forEach((project) => {
-    const card = createProjectCard(project, {
-      compact: true,
-      showSummary: false
-    });
-    card.classList.remove("reveal");
-    card.classList.add("selected-build-card", "is-visible");
-    selectedBuilds.appendChild(card);
-  });
-}
-
-function initProfileHoverIconReveal() {
-  if (!headshotSlot) {
+  if (!rows.length) {
     return;
   }
 
-  const hoverImage = headshotSlot.querySelector(".headshot-github-hover");
-  if (!hoverImage || !siteProfile.links?.github) {
-    return;
-  }
-
-  let revealTimerId = null;
-
-  const clearTimer = () => {
-    if (revealTimerId) {
-      clearTimeout(revealTimerId);
-      revealTimerId = null;
-    }
-  };
-
-  const hideIcon = () => {
-    clearTimer();
-    headshotSlot.classList.remove("show-github-icon");
-  };
-
-  const scheduleReveal = () => {
-    clearTimer();
-    revealTimerId = setTimeout(() => {
-      headshotSlot.classList.add("show-github-icon");
-      revealTimerId = null;
-    }, 2000);
-  };
-
-  headshotSlot.addEventListener("pointerenter", scheduleReveal);
-  headshotSlot.addEventListener("pointerleave", hideIcon);
-  headshotSlot.addEventListener("pointercancel", hideIcon);
+  buildIndexBody.innerHTML = rows
+    .map(
+      ({ code, project }) => `
+        <tr>
+          <td>${code}</td>
+          <td>${project.title}</td>
+          <td>${formatDomain(project)}</td>
+          <td>${formatEvidence(project)}</td>
+          <td><a href="projects/${project.slug}.html">Open note</a></td>
+        </tr>
+      `
+    )
+    .join("");
 }
 
-renderFocusAreas();
 renderProjectCount();
-renderSelectedBuilds();
-initProfileHoverIconReveal();
+renderBuildIndex();
 initRevealAnimations();

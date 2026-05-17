@@ -2927,3 +2927,301 @@ body.has-dock {
     grid-template-columns: 1fr;
   }
 }
+
+/* Stage 1 rebuild: Nhan Dang Engineering Field Notes homepage */
+.field-notes-home {
+  --field-rule: #1e2428;
+  --field-paper: #fffdf7;
+  --field-band: #efe8d8;
+  --field-blue: #0f4c81;
+  --field-orange: #d96c16;
+}
+
+.field-notes-home .site-header {
+  border-bottom: 2px solid var(--field-rule);
+  background: rgba(255, 253, 247, 0.98);
+}
+
+.field-notes-home .brand-subtitle {
+  color: var(--field-blue);
+}
+
+.field-cover {
+  padding: clamp(3rem, 7vw, 5.5rem) 0 2.2rem;
+}
+
+.field-cover-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.62fr);
+  gap: 1.1rem;
+  align-items: stretch;
+}
+
+.field-cover-title,
+.field-cover-register,
+.field-table-wrap,
+.field-note,
+.method-entry {
+  border: 1px solid var(--border);
+  border-radius: 0;
+  background:
+    linear-gradient(90deg, rgba(30, 106, 138, 0.035) 1px, transparent 1px),
+    linear-gradient(rgba(30, 106, 138, 0.035) 1px, transparent 1px),
+    var(--field-paper);
+  background-size: 20px 20px;
+}
+
+.field-cover-title {
+  min-height: clamp(360px, 42vw, 540px);
+  display: grid;
+  align-content: end;
+  padding: clamp(1.4rem, 4vw, 2.8rem);
+  border-top: 5px solid var(--field-rule);
+  position: relative;
+}
+
+.field-cover-title::before {
+  content: "FIELD NOTES / MECHANICAL ENGINEERING";
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.24rem 0.42rem;
+  border: 1px solid var(--border);
+  background: var(--field-paper);
+  color: var(--muted);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+}
+
+.field-label {
+  margin: 0 0 0.55rem;
+  color: var(--field-blue);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.field-cover-title h1 {
+  max-width: 12ch;
+  margin: 0;
+  color: var(--text);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(3rem, 8.4vw, 6.8rem);
+  line-height: 0.92;
+  letter-spacing: 0;
+}
+
+.field-degree {
+  margin: 1.2rem 0 0;
+  color: var(--field-orange);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+}
+
+.field-intro {
+  max-width: 56rem;
+  margin: 0.75rem 0 0;
+  color: var(--muted-strong);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.62;
+}
+
+.field-cover-register {
+  display: grid;
+  align-content: start;
+  padding: 1rem;
+  border-top: 5px solid var(--field-orange);
+}
+
+.field-cover-register dl {
+  display: grid;
+  margin: 0;
+  border-top: 1px solid var(--border);
+}
+
+.field-cover-register div {
+  display: grid;
+  gap: 0.28rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.field-cover-register dt {
+  color: var(--muted);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.field-cover-register dd {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.45;
+}
+
+.field-cover-register #project-count {
+  color: var(--field-orange);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(3.6rem, 8vw, 5.8rem);
+  line-height: 0.9;
+}
+
+.field-section {
+  padding: 2.7rem 0;
+}
+
+.field-section-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.38fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: end;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 2px solid var(--field-rule);
+}
+
+.field-section-heading h2 {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(1.45rem, 3.2vw, 2.3rem);
+  line-height: 1.1;
+}
+
+.field-table-wrap {
+  overflow-x: auto;
+  border-top: 3px solid var(--field-blue);
+}
+
+.field-index-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+  color: var(--text);
+}
+
+.field-index-table th,
+.field-index-table td {
+  padding: 0.78rem 0.82rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.field-index-table th {
+  color: var(--muted);
+  background: var(--field-band);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.field-index-table td:first-child {
+  color: var(--field-orange);
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.field-index-table td:nth-child(2) {
+  font-weight: 700;
+}
+
+.field-index-table td:nth-child(3),
+.field-index-table td:nth-child(4) {
+  color: var(--muted-strong);
+}
+
+.field-index-table a {
+  color: var(--field-blue);
+  font-family: "IBM Plex Mono", monospace;
+  text-decoration: underline;
+  text-underline-offset: 0.18rem;
+  white-space: nowrap;
+}
+
+.field-index-table a:hover,
+.field-index-table a:focus-visible {
+  color: var(--field-orange);
+}
+
+.field-note-list,
+.method-log {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.field-note {
+  display: grid;
+  align-content: start;
+  min-height: 15rem;
+  padding: 1rem;
+  border-top: 3px solid var(--field-orange);
+}
+
+.field-note span {
+  color: var(--field-blue);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+}
+
+.field-note h3,
+.method-entry h3 {
+  margin: 0.55rem 0 0.55rem;
+  color: var(--text);
+  line-height: 1.18;
+}
+
+.field-note p,
+.method-entry p {
+  margin: 0;
+  color: var(--muted-strong);
+  line-height: 1.58;
+}
+
+.method-entry {
+  min-height: 10rem;
+  padding: 1rem;
+  border-left: 4px solid var(--field-blue);
+}
+
+@media (max-width: 1080px) {
+  .field-cover-grid,
+  .field-section-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .field-note-list,
+  .method-log {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .field-cover {
+    padding-top: 2.2rem;
+  }
+
+  .field-cover-title {
+    min-height: 0;
+    padding-top: 4.2rem;
+  }
+
+  .field-cover-title h1 {
+    max-width: none;
+    font-size: clamp(2.6rem, 16vw, 4.2rem);
+  }
+
+  .field-note-list,
+  .method-log {
+    grid-template-columns: 1fr;
+  }
+
+  .field-section {
+    padding: 2.2rem 0;
+  }
+}

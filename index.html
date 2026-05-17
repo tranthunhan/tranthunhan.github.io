@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Mechanical engineering portfolio focused on CAD-led design, robot hardware, prototyping, sensing integration, testing, and product-style mechanical systems."
+      content="Nhan Dang Engineering Field Notes: a mechanical engineering build archive for CAD-led design, robot hardware, prototyping, sensing integration, testing, and product-style mechanical systems."
     />
-    <title>Nhan Dang | Engineering Portfolio</title>
+    <title>Nhan Dang | Engineering Field Notes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,25 +16,25 @@
     />
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="icon" type="image/png" href="assets/images/profile/thumbnail.png" />
-    <meta property="og:title" content="Nhan Dang | Engineering Portfolio" />
+    <meta property="og:title" content="Nhan Dang | Engineering Field Notes" />
     <meta
       property="og:description"
-      content="Mechanical engineering portfolio focused on CAD-led design, robot hardware, prototyping, sensing integration, testing, and product-style mechanical systems."
+      content="Mechanical engineering field notes across CAD-led design, robot hardware, prototyping, sensing integration, testing, and product-style mechanical systems."
     />
     <meta property="og:image" content="assets/images/profile/thumbnail.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="assets/images/profile/thumbnail.png" />
   </head>
-  <body class="home-page">
+  <body class="home-page field-notes-home">
     <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <header class="site-header">
+    <header class="site-header field-notes-header">
       <nav class="nav container" aria-label="Primary">
         <a class="brand" href="index.html" aria-label="Home">
           <span class="brand-mark" data-profile="initials">ND</span>
           <span class="brand-text">
             <span class="brand-title" data-profile="name">Nhan Dang</span>
-            <span class="brand-subtitle">MECHANICAL RESEARCH LOGBOOK</span>
+            <span class="brand-subtitle">ENGINEERING FIELD NOTES</span>
           </span>
         </a>
 
@@ -51,229 +51,165 @@
     </header>
 
     <main id="main-content">
-      <section class="hero-section section">
-        <div class="container hero-layout">
-          <div class="hero-copy dossier-cover reveal">
-            <p class="eyebrow">Mechanical Research Logbook / Engineering Dossier</p>
-            <h1 data-profile="name">Nhan Dang</h1>
-            <p class="hero-degree" data-profile="degree">
-              Bachelor of Engineering (Honours), Mechanical Engineering — University of Technology Sydney
+      <section class="field-cover">
+        <div class="container field-cover-grid">
+          <div class="field-cover-title reveal">
+            <p class="field-label">Field notebook / build archive</p>
+            <h1>Nhan Dang Engineering Field Notes</h1>
+            <p class="field-degree">Mechanical Engineering Honours, UTS</p>
+            <p class="field-intro">
+              CAD-led mechanical design, robot hardware, sensing-enabled
+              systems, prototyping, testing, and product-style mechanical
+              subsystem work.
             </p>
-            <p class="hero-tagline" data-profile="tagline">
-              Mechanical engineering portfolio focused on CAD-led design, robot
-              hardware, prototyping, sensing integration, testing, and
-              product-style mechanical systems.
-            </p>
-            <div class="hero-actions">
-              <a class="button" href="portfolio.html">View Project Matrix</a>
-              <a class="button" href="experience.html">View Experience</a>
-              <a class="button button-ghost" data-profile-link="github" href="https://github.com/tranthunhan"
-                >GitHub</a
-              >
-            </div>
           </div>
 
-          <aside class="hero-panel dossier-panel reveal" aria-label="Engineering dossier summary">
-            <p class="panel-label">Engineering Dossier</p>
-            <dl class="dossier-list">
+          <aside class="field-cover-register reveal" aria-label="Field notes register">
+            <p class="field-label">Register</p>
+            <dl>
               <div>
-                <dt>Current</dt>
-                <dd>Mechanical Engineering Honours student</dd>
+                <dt>Public projects</dt>
+                <dd><span id="project-count">00</span></dd>
               </div>
               <div>
                 <dt>Focus</dt>
-                <dd>CAD-led mechanical design, robot hardware, sensing-enabled systems</dd>
+                <dd>Robot hardware / CAD / sensing / test records</dd>
               </div>
               <div>
-                <dt>Evidence</dt>
-                <dd><span id="project-count">00</span> project case studies</dd>
-              </div>
-              <div>
-                <dt>Direction</dt>
-                <dd>Smart mechanical systems, cobotics/HRI, product-style subsystem design</dd>
+                <dt>Format</dt>
+                <dd>Build notes, drawing evidence, prototype logs</dd>
               </div>
             </dl>
           </aside>
         </div>
       </section>
 
-      <section class="section section-tight-top" id="selected-builds-section">
-        <div class="container section-heading reveal">
-          <p class="eyebrow">Selected Builds</p>
-          <h2>Build records from robotics, CAD, prototyping, and mechanical subsystem work.</h2>
+      <section class="field-section" id="build-index-preview">
+        <div class="container field-section-heading reveal">
+          <p class="field-label">Build Index Preview</p>
+          <h2>Selected entries from the project matrix.</h2>
         </div>
 
-        <div class="container">
-          <div class="project-grid selected-build-grid" id="selected-builds">
-            <article class="project-card compact-card selected-build-card">
-              <a class="project-card-link" href="projects/kinematic-puppet-cobotics.html">
-                <div class="project-card-media">
-                  <img
-                    src="assets/images/projects/kinematic-puppet-cobotics/01-diagram.jpg"
-                    alt="Kinematic Puppet / Cobot Prototyping thumbnail"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="project-card-body">
-                  <div class="project-card-meta">
-                    <span>2025</span>
-                    <span>Project</span>
-                  </div>
-                  <h3>Kinematic Puppet / Cobot Prototyping</h3>
-                  <p class="project-card-subtitle">
-                    Low-cost physical cobot prototyping platform using a modular
-                    robot-skeleton concept, end-effector development, CAD
-                    iteration, and HRI-oriented design thinking.
-                  </p>
-                  <ul class="tag-list">
-                    <li>Cobotics</li>
-                    <li>HRI</li>
-                    <li>Robot Hardware</li>
-                  </ul>
-                </div>
-              </a>
-            </article>
-            <article class="project-card compact-card selected-build-card">
-              <a class="project-card-link" href="projects/confined-space-inspection-robot.html">
-                <div class="project-card-media">
-                  <img
-                    src="assets/images/projects/confined-space-inspection-robot/01-18650.jpg"
-                    alt="Confined-Space Inspection Robot thumbnail"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="project-card-body">
-                  <div class="project-card-meta">
-                    <span>2025</span>
-                    <span>Project</span>
-                  </div>
-                  <h3>Confined-Space Inspection Robot</h3>
-                  <p class="project-card-subtitle">
-                    Compact inspection-robot hardware project covering chassis
-                    and wheel packaging, electronics layout, camera/controller
-                    integration, service access, and prototype iteration.
-                  </p>
-                  <ul class="tag-list">
-                    <li>Robotics</li>
-                    <li>Mobile Robot</li>
-                    <li>Robot Hardware</li>
-                  </ul>
-                </div>
-              </a>
-            </article>
-            <article class="project-card compact-card selected-build-card">
-              <a class="project-card-link" href="projects/uts-motorsports-autonomous.html">
-                <div class="project-card-media">
-                  <img
-                    src="assets/images/projects/uts-motorsports-autonomous/01-image-1.jpg"
-                    alt="UTS Motorsports Autonomous Hardware CAD thumbnail"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="project-card-body">
-                  <div class="project-card-meta">
-                    <span>2025</span>
-                    <span>Project</span>
-                  </div>
-                  <h3>UTS Motorsports Autonomous Hardware CAD</h3>
-                  <p class="project-card-subtitle">
-                    Approved autonomous vehicle hardware CAD work covering
-                    sensor/electronics packaging, template/DXF workflow,
-                    fabrication-aware mounting, serviceability, and integration.
-                  </p>
-                  <ul class="tag-list">
-                    <li>Autonomous Systems</li>
-                    <li>Motorsports</li>
-                    <li>CAD</li>
-                  </ul>
-                </div>
-              </a>
-            </article>
-            <article class="project-card compact-card selected-build-card">
-              <a class="project-card-link" href="projects/additive-manufacturing-plier-project.html">
-                <div class="project-card-media">
-                  <img
-                    src="assets/images/projects/additive-manufacturing-plier-project/01-01-to-topologytopbodyresult.jpg"
-                    alt="Additive Manufacturing Plier Project thumbnail"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="project-card-body">
-                  <div class="project-card-meta">
-                    <span>2025</span>
-                    <span>Project</span>
-                  </div>
-                  <h3>Additive Manufacturing Plier Project</h3>
-                  <p class="project-card-subtitle">
-                    Topology-optimised plier design project with concept
-                    development, CAD, simulation/static study visuals, slicer
-                    setup, and DFM-for-additive-manufacturing thinking.
-                  </p>
-                  <ul class="tag-list">
-                    <li>Additive Manufacturing</li>
-                    <li>Topology Optimisation</li>
-                    <li>CAD</li>
-                  </ul>
-                </div>
-              </a>
-            </article>
-          </div>
+        <div class="container field-table-wrap reveal">
+          <table class="field-index-table">
+            <thead>
+              <tr>
+                <th scope="col">Code</th>
+                <th scope="col">Project</th>
+                <th scope="col">Domain</th>
+                <th scope="col">Evidence</th>
+                <th scope="col">Open</th>
+              </tr>
+            </thead>
+            <tbody id="build-index-body">
+              <tr>
+                <td>FN-01</td>
+                <td>Kinematic Puppet / Cobot Prototyping</td>
+                <td>Cobotics / HRI / Robot Hardware</td>
+                <td>Repository + visual record</td>
+                <td>
+                  <a href="projects/kinematic-puppet-cobotics.html">Open note</a>
+                </td>
+              </tr>
+              <tr>
+                <td>FN-02</td>
+                <td>Confined-Space Inspection Robot</td>
+                <td>Robotics / Mobile Robot / Robot Hardware</td>
+                <td>Documentation + visual record</td>
+                <td>
+                  <a href="projects/confined-space-inspection-robot.html">Open note</a>
+                </td>
+              </tr>
+              <tr>
+                <td>FN-03</td>
+                <td>UTS Motorsports Autonomous Hardware CAD</td>
+                <td>Autonomous Systems / Motorsports / CAD</td>
+                <td>Repository + visual record</td>
+                <td>
+                  <a href="projects/uts-motorsports-autonomous.html">Open note</a>
+                </td>
+              </tr>
+              <tr>
+                <td>FN-04</td>
+                <td>Additive Manufacturing Plier Project</td>
+                <td>Additive Manufacturing / Topology Optimisation / CAD</td>
+                <td>Repository + visual record</td>
+                <td>
+                  <a href="projects/additive-manufacturing-plier-project.html">Open note</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
 
-      <section class="section" id="about">
-        <div class="container section-heading reveal">
-          <p class="eyebrow">Research Direction</p>
-          <h2>Engineering directions connecting build work to future research.</h2>
+      <section class="field-section" id="research-direction">
+        <div class="container field-section-heading reveal">
+          <p class="field-label">Current Research Direction</p>
+          <h2>Research-readiness themes carried through the build archive.</h2>
         </div>
 
-        <div class="container">
-          <div class="about-panels focus-panels" id="focus-areas"></div>
-        </div>
-      </section>
-
-      <section class="section section-tight-top" id="engineering-methods">
-        <div class="container section-heading reveal">
-          <p class="eyebrow">Engineering Methods</p>
-          <h2>Methods I use to move from concept to build evidence.</h2>
-        </div>
-
-        <div class="container method-grid">
-          <article class="method-card reveal">
-            <p class="mono-label">01</p>
-            <h3>CAD and mechanical packaging</h3>
+        <div class="container field-note-list">
+          <article class="field-note reveal">
+            <span>01</span>
+            <h3>Smart mechanical systems</h3>
             <p>
-              Geometry, layout, interface constraints, service access, and
-              subsystem fit treated as design records.
+              Mechanical platforms where geometry, sensing, test evidence, and
+              system behaviour can be connected through practical prototypes.
             </p>
           </article>
-          <article class="method-card reveal">
-            <p class="mono-label">02</p>
+          <article class="field-note reveal">
+            <span>02</span>
+            <h3>Sensing-enabled robot hardware</h3>
+            <p>
+              Compact robot hardware designed around cameras, sensors,
+              controllers, power layout, wiring paths, and service access.
+            </p>
+          </article>
+          <article class="field-note reveal">
+            <span>03</span>
+            <h3>Vibration and condition monitoring interest</h3>
+            <p>
+              A developing direction in using measurements and mechanical
+              behaviour to understand health, performance, and operating state.
+            </p>
+          </article>
+          <article class="field-note reveal">
+            <span>04</span>
+            <h3>Cobotics, HRI, and product-style subsystems</h3>
+            <p>
+              Human-centred robot hardware and mechanical subsystem work shaped
+              by modularity, manufacturability, safe interaction, and testing.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="field-section" id="engineering-methods">
+        <div class="container field-section-heading reveal">
+          <p class="field-label">Engineering Methods</p>
+          <h2>How project evidence is produced and recorded.</h2>
+        </div>
+
+        <div class="container method-log">
+          <article class="method-entry reveal">
+            <h3>CAD and packaging</h3>
+            <p>Mechanical layout, interface geometry, mounting, access, and fit.</p>
+          </article>
+          <article class="method-entry reveal">
             <h3>Prototyping and fabrication</h3>
-            <p>
-              Printed, fabricated, and assembled prototypes used to check fit,
-              manufacturability, and build sequence.
-            </p>
+            <p>Printed, fabricated, assembled, and revised hardware records.</p>
           </article>
-          <article class="method-card reveal">
-            <p class="mono-label">03</p>
+          <article class="method-entry reveal">
             <h3>Sensing and mechatronic integration</h3>
-            <p>
-              Mechanical layouts developed around cameras, controllers, sensors,
-              wiring paths, power storage, and robot hardware.
-            </p>
+            <p>Sensor, controller, wiring, power, and robot-hardware integration.</p>
           </article>
-          <article class="method-card reveal">
-            <p class="mono-label">04</p>
-            <h3>Testing and design documentation</h3>
-            <p>
-              Public-safe visuals, design notes, and test-planning records used
-              to explain decisions without exposing private files.
-            </p>
+          <article class="method-entry reveal">
+            <h3>Testing and documentation</h3>
+            <p>Public-safe design notes, selected visuals, and test-planning evidence.</p>
           </article>
         </div>
       </section>
-
     </main>
 
     <footer class="site-footer">
@@ -296,7 +232,7 @@
         </div>
       </div>
       <div class="container footer-meta">
-        <p>Built for GitHub Pages using static HTML, CSS, and JavaScript.</p>
+        <p>Static field notes built for GitHub Pages.</p>
         <p>&copy; <span data-current-year></span> <span data-profile="name">Nhan Dang</span></p>
       </div>
     </footer>
