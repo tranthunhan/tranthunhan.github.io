@@ -79,3 +79,9 @@ If no image is configured, the page shows the existing empty media state.
 4. Branch: `main`, folder: `/ (root)`.
 
 No extra tooling is required.
+
+## Copyright
+
+Copyright © 2026 Nhan Dang. All rights reserved.
+
+Portfolio source and content are not licensed for reuse.
