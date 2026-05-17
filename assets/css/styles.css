@@ -3981,3 +3981,376 @@ body.has-dock {
     max-height: 240px;
   }
 }
+
+/* Engineering Capability Log */
+.field-log-experience .capability-log-page {
+  padding-block: clamp(2rem, 4vw, 3.6rem);
+}
+
+.capability-log-shell {
+  display: grid;
+  gap: 1rem;
+}
+
+.capability-cover,
+.capability-section {
+  border: 1px solid var(--border);
+  background:
+    linear-gradient(90deg, rgba(30, 106, 138, 0.045) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(30, 106, 138, 0.035) 1px, transparent 1px),
+    var(--surface);
+  background-size: 28px 28px;
+  box-shadow: 3px 3px 0 rgba(207, 199, 182, 0.62);
+}
+
+.capability-cover {
+  position: relative;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-top: 4px solid var(--text);
+}
+
+.capability-cover::after {
+  content: "FIELD NOTES";
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.25rem 0.45rem;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--drawing-blue);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+}
+
+.field-note-label,
+.capability-log-code,
+.cert-register-code,
+.capability-log-meta,
+.capability-log-period {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.field-note-label {
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.capability-cover h1 {
+  max-width: 58rem;
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(2.1rem, 6vw, 4.9rem);
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.capability-cover p:last-child {
+  max-width: 54rem;
+  margin: 1rem 0 0;
+  color: var(--muted-strong);
+  font-size: clamp(1rem, 2vw, 1.16rem);
+  line-height: 1.65;
+}
+
+.capability-section {
+  display: grid;
+  grid-template-columns: minmax(180px, 240px) minmax(0, 1fr);
+}
+
+.capability-section-label {
+  display: grid;
+  align-content: start;
+  gap: 0.45rem;
+  padding: 1rem;
+  border-right: 1px solid var(--border);
+  background: rgba(239, 232, 216, 0.72);
+}
+
+.capability-section-label span {
+  width: fit-content;
+  padding: 0.18rem 0.4rem;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.capability-section-label h2 {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(1.15rem, 2.5vw, 1.55rem);
+  line-height: 1.08;
+}
+
+.capability-log-list,
+.capability-section-body,
+.certification-register {
+  min-width: 0;
+  padding: 1rem;
+}
+
+.capability-log-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.capability-log-row {
+  display: grid;
+  grid-template-columns: 5.25rem minmax(0, 1fr);
+  gap: 0.85rem;
+  align-items: start;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(207, 199, 182, 0.72);
+}
+
+.capability-log-row:first-child {
+  padding-top: 0;
+}
+
+.capability-log-row:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.capability-log-code,
+.cert-register-code {
+  margin: 0;
+  color: var(--drawing-blue);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.capability-log-copy {
+  min-width: 0;
+}
+
+.capability-log-copy h3,
+.cert-register-copy h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.28;
+}
+
+.capability-log-copy p,
+.cert-register-copy p {
+  margin: 0.35rem 0 0;
+  color: var(--muted-strong);
+  line-height: 1.58;
+}
+
+.capability-log-meta,
+.capability-log-period {
+  color: var(--drawing-blue) !important;
+  font-size: 0.78rem;
+}
+
+.capability-log-period {
+  color: var(--muted) !important;
+}
+
+.capability-intro {
+  max-width: 62rem;
+  margin: 0 0 0.8rem;
+  color: var(--muted-strong);
+  line-height: 1.58;
+}
+
+.toolkit-register {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  background: rgba(255, 253, 247, 0.78);
+}
+
+.toolkit-register table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+}
+
+.toolkit-register th,
+.toolkit-register td {
+  padding: 0.72rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.toolkit-register thead th {
+  background: var(--bg-elevated);
+  color: var(--drawing-blue);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.toolkit-register tbody th {
+  width: 22%;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.toolkit-register td:nth-child(2) {
+  width: 18%;
+  color: var(--muted);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+}
+
+.toolkit-register tr:last-child th,
+.toolkit-register tr:last-child td {
+  border-bottom: 0;
+}
+
+.toolkit-token-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.toolkit-token {
+  padding: 0.22rem 0.42rem;
+  border: 1px solid rgba(207, 199, 182, 0.92);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.82rem;
+  line-height: 1.25;
+}
+
+.certification-register {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.cert-register-row {
+  display: grid;
+  grid-template-columns: 4.75rem 5.5rem minmax(0, 1fr) auto;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.65rem;
+  border: 1px solid rgba(207, 199, 182, 0.84);
+  background: rgba(255, 253, 247, 0.78);
+}
+
+.cert-register-image {
+  width: 5.5rem;
+  height: 3.65rem;
+  object-fit: contain;
+  border: 1px solid var(--border);
+  background:
+    linear-gradient(90deg, rgba(30, 106, 138, 0.05) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(30, 106, 138, 0.04) 1px, transparent 1px),
+    var(--surface);
+  background-size: 14px 14px;
+}
+
+.cert-register-image-empty {
+  display: block;
+}
+
+.cert-register-copy p {
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.cert-register-copy span {
+  color: var(--drawing-blue);
+}
+
+.cert-register-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.38rem;
+}
+
+.cert-register-actions a {
+  display: inline-flex;
+  min-height: 2rem;
+  align-items: center;
+  border: 1px solid var(--border);
+  padding: 0.34rem 0.52rem;
+  background: var(--surface);
+  color: var(--drawing-blue);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.cert-register-actions a:hover,
+.cert-register-actions a:focus-visible {
+  border-color: var(--accent);
+  background: var(--bg-elevated);
+  color: var(--text);
+}
+
+@media (max-width: 860px) {
+  .capability-section {
+    grid-template-columns: 1fr;
+  }
+
+  .capability-section-label {
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .cert-register-row {
+    grid-template-columns: 5rem minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .cert-register-code {
+    grid-column: 1 / -1;
+  }
+
+  .cert-register-image {
+    grid-column: 1;
+  }
+
+  .cert-register-actions {
+    grid-column: 2;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 620px) {
+  .capability-cover::after {
+    position: static;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+
+  .capability-log-row {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  .cert-register-row {
+    grid-template-columns: 1fr;
+  }
+
+  .cert-register-image {
+    grid-column: auto;
+    width: 100%;
+    max-width: 10rem;
+    height: 5.8rem;
+  }
+
+  .cert-register-code {
+    grid-column: auto;
+  }
+
+  .cert-register-actions {
+    grid-column: auto;
+  }
+}

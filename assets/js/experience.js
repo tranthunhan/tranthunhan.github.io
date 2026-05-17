@@ -1,104 +1,158 @@
 import { siteProfile } from "../../data/site.js";
-import {
-  initRevealAnimations,
-  populateSharedProfile,
-  resolveImagePath
-} from "./shared.js";
+import { mountSiteChrome, runRevealPass, sitePath } from "./shared.js";
 
-populateSharedProfile(siteProfile);
+mountSiteChrome(siteProfile);
 
-const experienceList = document.getElementById("experience-list");
-const educationList = document.getElementById("education-list");
-const certificationGrid = document.getElementById("certification-grid");
-const techStackIntro = document.getElementById("tech-stack-intro");
-const techStackGrid = document.getElementById("tech-stack-grid");
+const nodes = {
+  applied: document.getElementById("applied-experience-log"),
+  education: document.getElementById("education-log"),
+  toolkitIntro: document.getElementById("toolkit-intro"),
+  toolkitBody: document.getElementById("toolkit-register-body"),
+  certifications: document.getElementById("certification-register-body")
+};
 
-function createTimelineItems(items) {
-  return items
+const degreeLine = "Bachelor of Engineering (Honours), Mechanical Engineering";
+
+function cleanText(value) {
+  const text = value === undefined || value === null ? "" : String(value);
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function titleWithDash(title) {
+  return cleanText(title).replace(/\s-\s/g, " &mdash; ");
+}
+
+function numberedCode(prefix, index) {
+  return `${prefix}-${String(index + 1).padStart(2, "0")}`;
+}
+
+function renderAppliedExperience(items = []) {
+  if (!nodes.applied) {
+    return;
+  }
+
+  nodes.applied.innerHTML = items
     .map(
-      (item) => `
-        <li class="timeline-item">
-          <h3 class="h4 timeline-item-title">${item.title}</h3>
-          <span>${item.period}</span>
-          <p class="timeline-text">${item.detail}</p>
-        </li>
-      `
-    )
-    .join("");
-}
-
-if (experienceList) {
-  experienceList.innerHTML = createTimelineItems(siteProfile.experienceTimeline || []);
-}
-
-if (educationList) {
-  educationList.innerHTML = createTimelineItems(siteProfile.educationTimeline || []);
-}
-
-function createTechStackCards(groups) {
-  return groups
-    .map(
-      (group) => `
-        <article class="tech-stack-card">
-          <div class="tech-stack-card-heading">
-            <h3 class="h4">${group.category}</h3>
-            <span>${group.level}</span>
+      (item, index) => `
+        <article class="capability-log-row">
+          <p class="capability-log-code">${numberedCode("EXP", index)}</p>
+          <div class="capability-log-copy">
+            <h3>${titleWithDash(item.title)}</h3>
+            <p class="capability-log-meta">${cleanText(item.period)}</p>
+            <p>${cleanText(item.detail)}</p>
           </div>
-          <ul class="tech-stack-list">
-            ${group.items.map((item) => `<li>${item}</li>`).join("")}
-          </ul>
         </article>
       `
     )
     .join("");
 }
 
-if (techStackIntro) {
-  techStackIntro.textContent = siteProfile.techStackIntro || "";
+function renderEducation(items = []) {
+  if (!nodes.education) {
+    return;
+  }
+
+  nodes.education.innerHTML = items
+    .map(
+      (item, index) => `
+        <article class="capability-log-row">
+          <p class="capability-log-code">${numberedCode("EDU", index)}</p>
+          <div class="capability-log-copy">
+            <h3>${cleanText(item.title)}</h3>
+            <p class="capability-log-meta">${cleanText(degreeLine)}</p>
+            <p class="capability-log-period">${cleanText(item.period)}</p>
+            <p>${cleanText(item.detail)}</p>
+          </div>
+        </article>
+      `
+    )
+    .join("");
 }
 
-if (techStackGrid) {
-  techStackGrid.innerHTML = createTechStackCards(siteProfile.techStack || []);
+function renderToolkit(groups = []) {
+  if (nodes.toolkitIntro) {
+    nodes.toolkitIntro.textContent = siteProfile.techStackIntro || "";
+  }
+
+  if (!nodes.toolkitBody) {
+    return;
+  }
+
+  nodes.toolkitBody.innerHTML = groups
+    .map(
+      (group) => `
+        <tr>
+          <th scope="row">${cleanText(group.category)}</th>
+          <td>${cleanText(group.level)}</td>
+          <td>
+            <div class="toolkit-token-list">
+              ${(group.items || [])
+                .map((item) => `<span class="toolkit-token">${cleanText(item)}</span>`)
+                .join("")}
+            </div>
+          </td>
+        </tr>
+      `
+    )
+    .join("");
 }
 
-function createCertificationCards(items) {
-  return items
-    .map((item) => {
-      const imagePath = resolveImagePath(item.image);
-      const verification = item.verification ? encodeURI(item.verification) : "";
-      const document = item.document ? encodeURI(resolveImagePath(item.document)) : "";
+function certificationActions(item) {
+  const actions = [];
+
+  if (item.verification) {
+    actions.push(
+      `<a href="${encodeURI(item.verification)}" target="_blank" rel="noreferrer">Verify</a>`
+    );
+  }
+
+  if (item.document) {
+    actions.push(
+      `<a href="${sitePath(item.document)}" target="_blank" rel="noreferrer">Open PDF</a>`
+    );
+  }
+
+  return actions.join("");
+}
+
+function renderCertifications(items = []) {
+  if (!nodes.certifications) {
+    return;
+  }
+
+  nodes.certifications.innerHTML = items
+    .map((item, index) => {
+      const imageSource = item.image ? sitePath(item.image) : "";
+      const year = item.year ? `<span>${cleanText(item.year)}</span>` : "";
+
       return `
-        <article class="certification-card">
+        <article class="cert-register-row">
+          <p class="cert-register-code">${numberedCode("CERT", index)}</p>
           ${
-            imagePath
-              ? `<img class="certification-badge" src="${imagePath}" alt="${item.title} certificate thumbnail" loading="lazy" />`
-              : ""
+            imageSource
+              ? `<img class="cert-register-image" src="${imageSource}" alt="${cleanText(
+                  item.title
+                )} certificate thumbnail" loading="lazy" />`
+              : `<div class="cert-register-image cert-register-image-empty" aria-hidden="true"></div>`
           }
-          <div class="certification-copy">
-            <h3 class="h4 certification-title">${item.title}</h3>
-            <p class="certification-issuer">${item.issuer}</p>
-            ${item.year ? `<p class="certification-year">${item.year}</p>` : ""}
+          <div class="cert-register-copy">
+            <h3>${cleanText(item.title)}</h3>
+            <p>${cleanText(item.issuer)} ${year}</p>
           </div>
-          <div class="certification-actions">
-            ${
-              verification
-                ? `<a class="button button-resource" href="${verification}" target="_blank" rel="noreferrer">Verify Credential</a>`
-                : ""
-            }
-            ${
-              document
-                ? `<a class="button button-resource" href="${document}" target="_blank" rel="noreferrer">Open Certificate PDF</a>`
-                : ""
-            }
-          </div>
+          <div class="cert-register-actions">${certificationActions(item)}</div>
         </article>
       `;
     })
     .join("");
 }
 
-if (certificationGrid) {
-  certificationGrid.innerHTML = createCertificationCards(siteProfile.certifications || []);
-}
-
-initRevealAnimations();
+renderAppliedExperience(siteProfile.experienceTimeline || []);
+renderEducation(siteProfile.educationTimeline || []);
+renderToolkit(siteProfile.techStack || []);
+renderCertifications(siteProfile.certifications || []);
+runRevealPass();

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Experience page for Nhan Dang including engineering experience and education timeline."
+      content="Engineering capability log for Nhan Dang, covering applied experience, education, technical tools, and certifications."
     />
     <title>Experience | Nhan Dang</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,7 +25,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="assets/images/profile/newthumbnail.png" />
   </head>
-  <body class="experience-page">
+  <body class="experience-page field-log-experience">
     <a class="skip-link" href="#main-content">Skip to content</a>
 
     <header class="site-header">
@@ -51,50 +51,69 @@
     </header>
 
     <main id="main-content">
-      <section class="section">
-        <article class="container experience-shell reveal">
-          <header class="experience-header">
-            <h1 class="page-title">Experience</h1>
-            <p class="page-subtitle">
-              Timeline connecting mechanical design, robot hardware,
-              prototyping, sensing, testing, documentation, and research
-              direction.
+      <section class="section capability-log-page">
+        <div class="container capability-log-shell reveal">
+          <header class="capability-cover">
+            <p class="field-note-label">Field Log / Capability Register</p>
+            <h1>Engineering Capability Log</h1>
+            <p>
+              A compact record of applied mechanical engineering work,
+              education, technical tools, and certificates supporting CAD-led
+              design, robot hardware, prototyping, sensing integration, testing,
+              and documentation.
             </p>
           </header>
 
-          <section class="timeline">
-            <div class="title-wrapper">
-              <div class="icon-box icon-box-small" aria-hidden="true">&#128188;</div>
-              <h2 class="h3">Experience</h2>
+          <section class="capability-section" aria-labelledby="applied-experience-heading">
+            <div class="capability-section-label">
+              <span>01</span>
+              <h2 id="applied-experience-heading">Applied Experience</h2>
             </div>
-            <ol class="timeline-list" id="experience-list"></ol>
+            <div class="capability-log-list" id="applied-experience-log"></div>
           </section>
 
-          <section class="timeline">
-            <div class="title-wrapper">
-              <div class="icon-box icon-box-small" aria-hidden="true">&#127891;</div>
-              <h2 class="h3">Education</h2>
+          <section class="capability-section" aria-labelledby="education-heading">
+            <div class="capability-section-label">
+              <span>02</span>
+              <h2 id="education-heading">Education</h2>
             </div>
-            <ol class="timeline-list" id="education-list"></ol>
+            <div class="capability-log-list" id="education-log"></div>
           </section>
 
-          <section class="timeline tech-stack-section">
-            <div class="title-wrapper">
-              <div class="icon-box icon-box-small" aria-hidden="true">&#9881;</div>
-              <h2 class="h3">Technical Toolkit</h2>
+          <section class="capability-section" aria-labelledby="toolkit-heading">
+            <div class="capability-section-label">
+              <span>03</span>
+              <h2 id="toolkit-heading">Technical Toolkit</h2>
             </div>
-            <p class="timeline-text tech-stack-intro" id="tech-stack-intro"></p>
-            <div class="tech-stack-grid" id="tech-stack-grid"></div>
+            <div class="capability-section-body">
+              <p class="capability-intro" id="toolkit-intro"></p>
+              <div class="toolkit-register" role="region" aria-label="Technical toolkit register">
+                <table>
+                  <thead>
+                    <tr>
+                      <th scope="col">Group</th>
+                      <th scope="col">Level</th>
+                      <th scope="col">Tools / Methods</th>
+                    </tr>
+                  </thead>
+                  <tbody id="toolkit-register-body"></tbody>
+                </table>
+              </div>
+            </div>
           </section>
 
-          <section class="timeline">
-            <div class="title-wrapper">
-              <div class="icon-box icon-box-small" aria-hidden="true">&#127942;</div>
-              <h2 class="h3">Certifications</h2>
+          <section class="capability-section" aria-labelledby="certifications-heading">
+            <div class="capability-section-label">
+              <span>04</span>
+              <h2 id="certifications-heading">Certifications</h2>
             </div>
-            <div class="certification-grid" id="certification-grid"></div>
+            <div
+              class="certification-register"
+              id="certification-register-body"
+              aria-label="Certification register"
+            ></div>
           </section>
-        </article>
+        </div>
       </section>
     </main>
 
