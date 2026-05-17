@@ -157,15 +157,6 @@ export const siteProfile = {
         "assets/docs/certifications/study-australia-industry-experience-program-certificate.pdf"
     },
     {
-      title: "Student Leadership Recognition Badge / Appreciation Award",
-      issuer: "UTS College",
-      image: "assets/images/certifications/student-leadership-recognition-badge.png",
-      verification:
-        "https://www.credly.com/badges/3e570261-c15d-49ca-b2a3-5d7a365ba5d1/public_url",
-      document:
-        "assets/docs/certifications/student-leadership-recognition-badge-certificate.pdf"
-    },
-    {
       title: "WIL to Work Certificate of Completion",
       issuer: "University of Technology Sydney",
       image: "assets/images/certifications/wil-to-work-badge.png",
