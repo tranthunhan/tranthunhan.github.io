@@ -205,9 +205,9 @@ function summarizeList(items, fallback, maxItems = 3) {
   return values.length ? values.map((item) => labelCaseOverrides[item] || item).join(", ") : fallback;
 }
 
-function evidenceSummary(project) {
+function materialSummary(project) {
   const linkLabels = {
-    repo: "Public repo",
+    repo: "Repository",
     article: "Article",
     cad: "CAD",
     drawings: "Drawings",
@@ -216,27 +216,27 @@ function evidenceSummary(project) {
     media: "Media"
   };
 
-  const linkEvidence = Object.entries(project.links || {})
+  const linkMaterial = Object.entries(project.links || {})
     .filter(([, href]) => Boolean(href))
     .map(([key]) => linkLabels[key] || key)
     .slice(0, 3);
 
   const hasVisualEvidence = Boolean(project.gallery?.length || project.thumbnail || project.heroImage);
-  const evidence = [...linkEvidence];
+  const material = [...linkMaterial];
 
-  if (hasVisualEvidence && evidence.length < 3) {
-    evidence.push("Visual evidence");
+  if (hasVisualEvidence && material.length < 3) {
+    material.push("Project images");
   }
 
-  if (evidence.length) {
-    return evidence.slice(0, 3).join(", ");
+  if (material.length) {
+    return material.slice(0, 3).join(", ");
   }
 
   if (hasVisualEvidence) {
-    return "Visual evidence";
+    return "Project images";
   }
 
-  return "Project memo";
+  return "Project notes";
 }
 
 function projectImage(project) {
@@ -258,11 +258,11 @@ const reviewLensRules = [
     terms: ["cad", "solidworks", "packaging", "mechanism", "dxf", "openrocket"]
   },
   {
-    label: "Sensing integration",
+    label: "Sensor integration",
     terms: ["sensing", "sensor", "camera", "raspberry", "controller", "autonomous"]
   },
   {
-    label: "Prototype evidence",
+    label: "Prototype work",
     terms: ["prototype", "prototyping", "build evidence", "physical", "fabrication", "3d printing"]
   },
   {
@@ -394,7 +394,7 @@ function renderRegister() {
           </td>
           <td data-label="Domain">${escapeHtml(summarizeList(project.tags, project.projectType || "Project"))}</td>
           <td data-label="Tools">${escapeHtml(summarizeList(project.tools, "Project tools"))}</td>
-          <td data-label="Evidence">${escapeHtml(evidenceSummary(project))}</td>
+          <td data-label="Material">${escapeHtml(materialSummary(project))}</td>
           <td data-label="Open">
             <a class="register-open-link" href="${projectHref}" aria-label="Open ${escapeHtml(project.title)}">
               Open

@@ -6,12 +6,12 @@ export const siteProfile = {
   degree:
     "Bachelor of Engineering (Honours), Mechanical Engineering - University of Technology Sydney",
   tagline:
-    "Mechanical engineering portfolio covering CAD, robot hardware, prototyping, sensing integration, testing, and design documentation.",
+    "Mechanical engineering portfolio covering CAD, robot hardware, prototyping, sensor integration, testing, and design documentation.",
   brandLogo: "assets/images/profile/newthumbnail.png",
   headshot: "assets/images/profile/nhan-profile.png",
   focusAreas: [
     {
-      title: "Robot hardware and sensing systems",
+      title: "Robot hardware and sensor systems",
       body:
         "Building and documenting robot hardware, sensor packages, CAD layouts, prototypes, and test plans."
     },
@@ -27,7 +27,7 @@ export const siteProfile = {
     }
   ],
   techStackIntro:
-    "Tools and engineering practices I use for mechanical design, prototyping, robot hardware, sensing integration, testing, and documentation.",
+    "Tools and engineering practices I use for mechanical design, prototyping, robot hardware, sensor integration, testing, and documentation.",
   techStack: [
     {
       category: "Core Engineering",
@@ -56,7 +56,7 @@ export const siteProfile = {
         "Fabrication",
         "Mechatronics",
         "Prototyping",
-        "Sensing",
+        "Sensor integration",
         "Testing"
       ]
     },
@@ -107,7 +107,7 @@ export const siteProfile = {
   location: "Sydney, Australia",
   address: "Sydney, Australia",
   contactSubheading:
-    "Mechanical engineering student focused on CAD, robot hardware, prototyping, sensing integration, testing, and clear project documentation.",
+    "Mechanical engineering student focused on CAD, robot hardware, prototyping, sensor integration, testing, and clear project documentation.",
   contactEmail: "",
   mapEmbedUrl: "https://www.google.com/maps?q=Sydney+Australia&output=embed",
   experienceTimeline: [
@@ -129,7 +129,7 @@ export const siteProfile = {
       title: "University of Technology Sydney (UTS)",
       period: "Final semester",
       detail:
-        "Bachelor of Engineering (Honours) student in Mechanical Engineering, focused on CAD, mechanical design, fabrication, robot hardware, sensing, testing, mechatronic integration, manufacturability, and documentation."
+        "Bachelor of Engineering (Honours) student in Mechanical Engineering, focused on CAD, mechanical design, fabrication, robot hardware, sensor integration, testing, mechatronic integration, manufacturability, and documentation."
     }
   ],
   certifications: [

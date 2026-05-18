@@ -25,14 +25,14 @@ const featuredProjectNotes = {
   "confined-space-inspection-robot":
     "Compact robot packaging around camera, controller, motor, battery, wiring, and service access constraints.",
   "pcm-helmet-cooling-system":
-    "Thermal/mechanical packaging with CAD, mesh visuals, material evidence, and user-context constraints.",
+    "Thermal and mechanical packaging with CAD, mesh visuals, material photos, and comfort constraints.",
   "uts-motorsports-autonomous":
-    "Fabrication-aware sensor and electronics packaging with serviceability and vehicle-integration constraints."
+    "Fabrication-aware sensor and electronics packaging with serviceability and vehicle integration constraints."
 };
 
 const featuredProjectLabels = {
-  "kinematic-puppet-cobotics": "Robot hardware and HRI",
-  "confined-space-inspection-robot": "Mobile robot and sensing",
+  "kinematic-puppet-cobotics": "Robot hardware and cobotics",
+  "confined-space-inspection-robot": "Mobile robot hardware",
   "pcm-helmet-cooling-system": "Thermal subsystem",
   "uts-motorsports-autonomous": "Autonomous hardware CAD"
 };
@@ -71,20 +71,20 @@ function formatDomain(project) {
   return buildIndexDomainLabels[project.slug] || project.tags.slice(0, 3).join(", ");
 }
 
-function formatEvidence(project) {
-  const evidence = [];
+function formatMaterial(project) {
+  const material = [];
 
   if (project.links?.repo) {
-    evidence.push("repository");
+    material.push("repository");
   }
   if (project.links?.docs) {
-    evidence.push("documentation");
+    material.push("documentation");
   }
   if (project.gallery?.length || project.thumbnail || project.heroImage) {
-    evidence.push("images");
+    material.push("images");
   }
 
-  return evidence.length ? evidence.join(" + ") : "overview";
+  return material.length ? material.join(" + ") : "overview";
 }
 
 function renderBuildIndex() {
@@ -110,7 +110,7 @@ function renderBuildIndex() {
           <td>${code}</td>
           <td>${project.title}</td>
           <td>${formatDomain(project)}</td>
-          <td>${formatEvidence(project)}</td>
+          <td>${formatMaterial(project)}</td>
           <td><a href="projects/${project.slug}.html">Open project</a></td>
         </tr>
       `

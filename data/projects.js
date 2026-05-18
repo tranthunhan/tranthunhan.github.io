@@ -254,7 +254,7 @@ export const projects = [
       }
     ],
     "outcome": "A prototype-stage robot hardware record showing compact chassis packaging, wheel and drive layout, electronics and power integration, camera placement, prototype visuals, and test-planning notes.",
-    "relevance": "Relevant to mechanical and robot-hardware engineering because it connects CAD packaging, sensing integration, serviceability, low-centre-of-gravity layout, protection, and prototype iteration.",
+    "relevance": "Relevant to mechanical and robot-hardware engineering because it connects CAD packaging, sensor integration, serviceability, low-centre-of-gravity layout, protection, and prototype iteration.",
     "tools": [
       "SolidWorks",
       "Raspberry Pi",
@@ -494,8 +494,8 @@ export const projects = [
       "CAD views, prototype photos, and integration notes make serviceability, centre of gravity, protection, and assembly trade-offs easier to review."
     ],
     "futureWork": [
-      "Add annotated CAD views showing centre-of-gravity intent, maintenance access, wiring paths, and protected component zones if public-safe material is available.",
-      "Future sensing work could investigate vibration or condition-monitoring use cases only after validated measurement data and public-safe notes are available."
+      "Add annotated CAD views showing centre-of-gravity intent, maintenance access, wiring paths, and protected component zones if reviewed material is available.",
+      "Future sensor work could investigate vibration or condition-monitoring use cases only after validated measurement data and reviewed notes are available."
     ],
     "relatedProjects": [
       "kinematic-puppet-cobotics",
@@ -522,7 +522,7 @@ export const projects = [
     "heroImage": "assets/images/projects/uts-motorsports-autonomous/01-image-1.jpg",
     "summary": "UTS Motorsports Autonomous hardware record showing sensor and electronics packaging, CAD templates, DXF preparation, fabrication-aware mounting, serviceability, and vehicle integration constraints.",
     "overview": [
-      "This project documents public-safe CAD and fabrication context for autonomous vehicle hardware components.",
+      "This project documents approved CAD and fabrication context for autonomous vehicle hardware components.",
       "The page focuses on sensor and electronics packaging, mounting, service access, vibration exposure, and design records while keeping private team source files out of the site."
     ],
     "problem": [
@@ -533,7 +533,7 @@ export const projects = [
       "Prepared CAD and template work for sensor and electronics hardware",
       "Translated design intent into fabrication-aware mounting, templates, and DXF-related workflow",
       "Considered service access, vibration exposure, and packaging around the vehicle",
-      "Kept the page limited to public-safe visuals and mechanical integration context"
+      "Kept the page limited to approved visuals and mechanical integration context"
     ],
     "process": [
       {
@@ -545,7 +545,7 @@ export const projects = [
         "body": "CAD templates and DXF-related preparation connected the design intent to fabrication decisions and made mounting geometry easier to review."
       },
       {
-        "title": "Public-safe documentation",
+        "title": "Project documentation",
         "body": "The page keeps the explanation focused on approved visuals, mechanical packaging, serviceability, and design records rather than team source files."
       }
     ],
@@ -563,7 +563,7 @@ export const projects = [
         "body": "The hardware layout considered access for inspection, adjustment, wiring, and later maintenance."
       }
     ],
-    "outcome": "A public-safe hardware CAD case study showing template workflow, fabrication-aware packaging, and mechanical integration for autonomous vehicle hardware.",
+    "outcome": "A hardware CAD case study showing template workflow, fabrication-aware packaging, and mechanical integration for autonomous vehicle hardware.",
     "relevance": "Supports robot hardware and mechanical design by showing packaging, manufacturability, serviceability, and design records under real vehicle constraints.",
     "tools": [
       "SolidWorks",
@@ -597,10 +597,10 @@ export const projects = [
     ],
     "lessonsLearned": [
       "CAD is stronger when it visibly accounts for how hardware will be made, mounted, accessed, and maintained.",
-      "Public-safe visuals can communicate system integration without exposing private team files."
+      "Approved project images can communicate system integration without exposing private team files."
     ],
     "futureWork": [
-      "Add more clean CAD renders or annotated packaging views if public-safe material becomes available.",
+      "Add more clean CAD renders or annotated packaging views if reviewed material becomes available.",
       "Keep raw team files out of the public site unless ownership and privacy checks are complete."
     ],
     "relatedProjects": [
@@ -626,7 +626,7 @@ export const projects = [
     ],
     "thumbnail": "assets/images/projects/warman-challenge-robot/01-2025-warman-track-assembly-exploded.jpg",
     "heroImage": "assets/images/projects/warman-challenge-robot/01-2025-warman-track-assembly-exploded.jpg",
-    "summary": "Warman Challenge robot record showing mechanism design, CAD iteration, ball-retainer assemblies, servo-actuated release concepts, prototype visuals, and test-planning evidence.",
+    "summary": "Warman Challenge robot page showing mechanism design, CAD iteration, ball-retainer assemblies, servo-actuated release concepts, prototype visuals, and test-planning material.",
     "overview": [
       "This project is presented as robot mechanism and subsystem design work for a Warman Challenge robot.",
       "The page uses CAD screenshots and prototype visuals to show how the ball-retention and release mechanism evolved toward a testable competition subsystem."
@@ -1006,11 +1006,11 @@ export const projects = [
     ],
     "problem": [
       "The design challenge was to develop a printable plier geometry while accounting for additive manufacturing constraints.",
-      "The work connects material use, geometry reduction, static-study evidence, print orientation, support strategy, wall and infill settings, manufacturability, and design records without overstating mechanical performance."
+      "The work connects material use, geometry reduction, static-study outputs, print orientation, support strategy, wall and infill settings, manufacturability, and design records without overstating mechanical performance."
     ],
     "role": [
       "Developed concept and CAD geometry for a printable plier",
-      "Used topology optimisation and static-study screenshots as design evidence",
+      "Used topology optimisation and static-study screenshots as design material",
       "Prepared slicer and support-setting visuals to communicate print preparation and manufacturability decisions"
     ],
     "process": [
@@ -1020,7 +1020,7 @@ export const projects = [
       },
       {
         "title": "Optimisation and checking",
-        "body": "Topology optimisation and static-study visuals were used to reason about material placement and likely load paths, while keeping the evidence limited to supported static-study outputs."
+        "body": "Topology optimisation and static-study visuals were used to reason about material placement and likely load paths, while keeping the page limited to supported static-study outputs."
       },
       {
         "title": "Print preparation",
@@ -1038,7 +1038,7 @@ export const projects = [
       }
     ],
     "outcome": "A project page showing concept-to-CAD development, topology optimisation, static-study visuals, slicer setup, and print-preparation decisions.",
-    "relevance": "Supports mechanical design through DfAM, CAD iteration, manufacturability, print preparation, static-study evidence, and design records.",
+    "relevance": "Supports mechanical design through DfAM, CAD iteration, manufacturability, print preparation, static-study outputs, and design records.",
     "tools": [
       "SolidWorks",
       "Topology optimisation",
@@ -1381,7 +1381,7 @@ export const projects = [
     ],
     "lessonsLearned": [
       "Clean portfolio assets should be separated from raw working folders.",
-      "A project page reads better when visual evidence is paired with short engineering context."
+      "A project page reads better when images are paired with short engineering context."
     ],
     "futureWork": [
       "Add cleaner rendered screenshots where source CAD or simulation files still need manual export.",
@@ -1417,10 +1417,10 @@ export const projects = [
     ],
     "problem": [
       "Helmet cooling needs to manage heat while fitting safely and practically into helmet-related geometry.",
-      "The work combines thermal reasoning, PCM material choice, mechanical packaging, user comfort, manufacturability, and mesh-based design evidence at the concept stage."
+      "The work combines thermal reasoning, PCM material choice, mechanical packaging, user comfort, manufacturability, and mesh-based design material at the concept stage."
     ],
     "role": [
-      "Worked with CAD, mesh, prototype, material, and documentation evidence for the PCM concept",
+      "Worked with CAD, mesh, prototype, material, and documentation for the PCM concept",
       "Prepared public-facing visuals from images and report material",
       "Organised the project as an early-stage thermal and mechanical subsystem case study"
     ],
@@ -1430,12 +1430,12 @@ export const projects = [
         "body": "The design explored paraffin wax phase-change material as a way to absorb heat within helmet-related packaging, fit, and user-comfort constraints."
       },
       {
-        "title": "CAD and mesh evidence",
-        "body": "CAD and ANSYS-style mesh visuals show how geometry and simulation-style evidence were used to reason about the subsystem and communicate design trade-offs."
+        "title": "CAD and mesh material",
+        "body": "CAD and ANSYS-style mesh visuals show how geometry and simulation-style outputs were used to reason about the subsystem and communicate design trade-offs."
       },
       {
         "title": "Material and packaging review",
-        "body": "Prototype/material visuals and selected figures show how PCM selection, enclosure geometry, manufacturability, and user constraints were recorded with public-safe content."
+        "body": "Prototype/material visuals and selected figures show how PCM selection, enclosure geometry, manufacturability, and user constraints were recorded for the project page."
       }
     ],
     "technicalHighlights": [
@@ -1444,11 +1444,11 @@ export const projects = [
         "body": "The project connects heat-management intent, paraffin wax PCM, mechanical fit, containment, user context, and manufacturability."
       },
       {
-        "title": "Mesh-based design evidence",
+        "title": "Mesh-based design material",
         "body": "CAD, mesh, material, prototype, and report visuals are presented together so the subsystem can be reviewed as an early design concept."
       }
     ],
-    "outcome": "An early-stage thermal subsystem page showing CAD geometry, mesh visuals, PCM material evidence, prototype images, and packaging constraints.",
+    "outcome": "An early-stage thermal subsystem page showing CAD geometry, mesh visuals, PCM material photos, prototype images, and packaging constraints.",
     "relevance": "Supports mechanical design through thermal reasoning, CAD, simulation-style outputs, material packaging, manufacturability, and user-centred constraints.",
     "tools": [
       "ANSYS",
@@ -1513,7 +1513,7 @@ export const projects = [
         "type": "image",
         "src": "assets/images/projects/pcm-helmet-cooling-system/08-img-2481.jpg",
         "alt": "PCM Helmet Cooling System visual 8",
-        "caption": "Paraffin wax PCM and prototype material evidence"
+        "caption": "Paraffin wax PCM and prototype material photo"
       },
       {
         "type": "image",
@@ -1583,11 +1583,11 @@ export const projects = [
       }
     ],
     "lessonsLearned": [
-      "Thermal product concepts need evidence across geometry, material behaviour, packaging, and user context.",
+      "Thermal product concepts need clear material across geometry, material behaviour, packaging, and user context.",
       "Privacy-safe project pages can communicate engineering judgement without publishing sensitive reports."
     ],
     "futureWork": [
-      "Add concise annotations around the mesh, PCM material choice, enclosure geometry, and comfort constraints if public-safe notes are available.",
+      "Add concise annotations around the mesh, PCM material choice, enclosure geometry, and comfort constraints if reviewed notes are available.",
       "Use only redacted or privacy-reviewed documentation if a public report link is added later."
     ],
     "relatedProjects": [
@@ -1792,7 +1792,7 @@ export const projects = [
     ],
     "lessonsLearned": [
       "Clean portfolio assets should be separated from raw working folders.",
-      "A project page reads better when visual evidence is paired with short engineering context."
+      "A project page reads better when images are paired with short engineering context."
     ],
     "futureWork": [
       "Add cleaner rendered screenshots where source CAD or simulation files still need manual export.",
@@ -1826,7 +1826,7 @@ export const projects = [
       "The page uses selected report figures and a PDF to show the heat-exchanger design workflow and calculation context."
     ],
     "problem": [
-      "Heat exchanger design requires balancing thermal performance, geometry, constraints, and calculation evidence.",
+      "Heat exchanger design requires balancing thermal performance, geometry, constraints, and calculation outputs.",
       "The public page focuses on the documented design path and report figures rather than raw working files."
     ],
     "role": [
@@ -1859,7 +1859,7 @@ export const projects = [
       }
     ],
     "outcome": "A heat exchanger project page with selected report figures and supporting documentation.",
-    "relevance": "Relevant to thermofluids and mechanical design because it connects calculation evidence, design constraints, and documentation.",
+    "relevance": "Relevant to thermofluids and mechanical design because it connects calculation outputs, design constraints, and documentation.",
     "tools": [
       "Excel",
       "Thermofluids analysis",
@@ -1928,7 +1928,7 @@ export const projects = [
     ],
     "lessonsLearned": [
       "Clean portfolio assets should be separated from raw working folders.",
-      "A project page reads better when visual evidence is paired with short engineering context."
+      "A project page reads better when images are paired with short engineering context."
     ],
     "futureWork": [
       "Add cleaner rendered screenshots where source CAD or simulation files still need manual export.",
@@ -1943,7 +1943,7 @@ export const projects = [
     "slug": "vertical-axis-wind-turbine",
     "featured": false,
     "title": "Vertical Axis Wind Turbine",
-    "subtitle": "Materials and manufacturing project covering wind turbine design, fabrication evidence, prototype photos, testing media, and final documentation.",
+    "subtitle": "Materials and manufacturing project covering wind turbine design, fabrication photos, prototype photos, testing media, and final documentation.",
     "year": "2025",
     "status": "Manufacturing and testing project",
     "projectType": "Project",
@@ -2076,7 +2076,7 @@ export const projects = [
     ],
     "lessonsLearned": [
       "Clean portfolio assets should be separated from raw working folders.",
-      "A project page reads better when visual evidence is paired with short engineering context."
+      "A project page reads better when images are paired with short engineering context."
     ],
     "futureWork": [
       "Add cleaner rendered screenshots where source CAD or simulation files still need manual export.",
@@ -2091,7 +2091,7 @@ export const projects = [
     "slug": "wind-powered-vehicle",
     "featured": false,
     "title": "Wind-Powered Vehicle",
-    "subtitle": "Introductory mechanical engineering prototype project with CAD/drawing context, report figures, prototype photos, and testing evidence.",
+    "subtitle": "Introductory mechanical engineering prototype project with CAD/drawing context, report figures, prototype photos, and testing notes.",
     "year": "2023",
     "status": "Engineering prototyping project",
     "projectType": "Project",
@@ -2211,7 +2211,7 @@ export const projects = [
     ],
     "lessonsLearned": [
       "Clean portfolio assets should be separated from raw working folders.",
-      "A project page reads better when visual evidence is paired with short engineering context."
+      "A project page reads better when images are paired with short engineering context."
     ],
     "futureWork": [
       "Add cleaner rendered screenshots where source CAD or simulation files still need manual export.",
@@ -2407,7 +2407,7 @@ export const projects = [
     ],
     "lessonsLearned": [
       "Clean portfolio assets should be separated from raw working folders.",
-      "A project page reads better when visual evidence is paired with short engineering context."
+      "A project page reads better when images are paired with short engineering context."
     ],
     "futureWork": [
       "Add cleaner rendered screenshots where source CAD or simulation files still need manual export.",

@@ -63,7 +63,7 @@ function contactRows() {
     {
       code: "LINK-02",
       label: "GitHub",
-      purpose: "Public portfolio repository and engineering project source context.",
+      purpose: "GitHub profile and public project repositories.",
       href: socialUrl("GitHub")
     }
   ];

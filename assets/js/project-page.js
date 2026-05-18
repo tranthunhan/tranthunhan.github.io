@@ -105,11 +105,11 @@ const reviewLensRules = [
     terms: ["cad", "solidworks", "packaging", "mechanism", "dxf", "openrocket"]
   },
   {
-    label: "Sensing integration",
+    label: "Sensor integration",
     terms: ["sensing", "sensor", "camera", "raspberry", "controller", "autonomous"]
   },
   {
-    label: "Prototype evidence",
+    label: "Prototype work",
     terms: ["prototype", "prototyping", "build evidence", "physical", "fabrication", "3d printing"]
   },
   {
@@ -251,7 +251,7 @@ function renderHeroEvidencePlate(activeProject, item) {
     return "";
   }
 
-  const caption = cleanupCaption(item.caption || item.alt, `${activeProject.title} selected evidence`);
+  const caption = cleanupCaption(item.caption || item.alt, `${activeProject.title} selected material`);
 
   return `
     <figure class="memo-hero-plate">
@@ -276,7 +276,7 @@ function renderContent(activeProject, evidenceItems) {
     ${renderMemoSection("03", "My Role", renderList(activeProject.role))}
     ${renderMemoSection("04", "Process", renderProcessList(activeProject.process))}
     ${renderMemoSection("05", "Key Decisions", renderDecisionList(activeProject.technicalHighlights))}
-    ${renderMemoSection("06", "Evidence", renderEvidenceGrid(activeProject, evidenceItems))}
+    ${renderMemoSection("06", "Project Material", renderEvidenceGrid(activeProject, evidenceItems))}
     ${renderMemoSection("07", "Outcome", renderParagraphs([activeProject.outcome, activeProject.relevance]))}
     ${renderMemoSection(
       "08",
@@ -378,7 +378,7 @@ function renderDecisionList(items) {
 
 function renderEvidenceGrid(activeProject, evidenceItems) {
   if (!evidenceItems.length) {
-    return "<p>Selected visual evidence is not currently published for this project.</p>";
+    return "<p>Selected project images are not currently published for this project.</p>";
   }
 
   const maxVisiblePlates = 12;
@@ -396,7 +396,7 @@ function renderEvidenceGrid(activeProject, evidenceItems) {
     </div>
     ${
       hiddenEvidenceCount > 0
-        ? `<p class="memo-evidence-archive-note">Additional project media is retained in the source archive.</p>`
+        ? `<p class="memo-evidence-archive-note">Additional project media is kept with the project files.</p>`
         : ""
     }
   `;
@@ -404,7 +404,7 @@ function renderEvidenceGrid(activeProject, evidenceItems) {
 
 function renderEvidencePlate(activeProject, item, index) {
   const plateNumber = String(index + 1).padStart(2, "0");
-  const fallbackCaption = `${activeProject.title} evidence ${plateNumber}`;
+  const fallbackCaption = `${activeProject.title} material ${plateNumber}`;
   const caption = cleanupCaption(item.caption || item.alt, fallbackCaption);
   const src = resolveProjectAsset(item.src);
   const media =
