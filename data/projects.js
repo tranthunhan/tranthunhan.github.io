@@ -213,7 +213,7 @@ export const projects = [
     ],
     "problem": [
       "A confined-space inspection robot needs to carry drive hardware, power storage, controller electronics, camera/sensing hardware, and protective structure inside a small mobile platform.",
-      "The mechanical challenge was to balance mobility, robustness, low centre of gravity, serviceability, maintenance access, wiring paths, and component protection without making the chassis too bulky for inspection environments."
+      "The mechanical challenge was to balance mobility, structural protection, low centre of gravity, serviceability, maintenance access, wiring paths, and component protection without making the chassis too bulky for inspection environments."
     ],
     "role": [
       "Developed CAD and mechanical packaging concepts for the compact robot chassis",
@@ -250,11 +250,11 @@ export const projects = [
       },
       {
         "title": "Product-style subsystem thinking",
-        "body": "The robot hardware work connects CAD packaging, prototype iteration, test planning, robustness, service access, and integration records into a product-style mechanical subsystem design problem."
+        "body": "The robot hardware work connects CAD packaging, prototype iteration, test planning, service access, component protection, and integration records into a product-style mechanical subsystem design problem."
       }
     ],
     "outcome": "Public robot-hardware material showing compact chassis packaging, wheel and drive layout, electronics/power integration, camera/sensing placement, prototype visuals, and test-planning material.",
-    "relevance": "Relevant to mechanical and robot-hardware engineering because it connects CAD-led packaging, sensing integration, serviceability, low-centre-of-gravity layout, robustness, protection, and prototype iteration in a compact mechatronic system.",
+    "relevance": "Relevant to mechanical and robot-hardware engineering because it connects CAD-led packaging, sensing integration, serviceability, low-centre-of-gravity layout, component protection, and prototype iteration in a compact mechatronic system.",
     "tools": [
       "SolidWorks",
       "Raspberry Pi",
@@ -544,7 +544,7 @@ export const projects = [
         "body": "CAD and template/DXF-related visuals show the translation from digital geometry into fabrication-aware components and reviewable design records."
       },
       {
-        "title": "Serviceability and robustness",
+        "title": "Serviceability and protection",
         "body": "The design context emphasised practical concerns such as access, serviceability, vibration exposure, manufacturability, and competition requirements."
       }
     ],

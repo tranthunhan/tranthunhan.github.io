@@ -10,6 +10,31 @@ const registerBody = document.getElementById("build-register-body");
 const registerEmpty = document.getElementById("register-empty");
 const visibleCount = document.getElementById("visible-count");
 const totalCount = document.getElementById("total-count");
+const priorityRegisterGrid = document.getElementById("priority-register-grid");
+
+const priorityProjectSlugs = [
+  "kinematic-puppet-cobotics",
+  "confined-space-inspection-robot",
+  "uts-motorsports-autonomous",
+  "warman-challenge-robot",
+  "additive-manufacturing-plier-project",
+  "pcm-helmet-cooling-system"
+];
+
+const priorityProjectNotes = {
+  "kinematic-puppet-cobotics":
+    "Modular cobot platform notes with CAD iteration, end-effector options, and public build evidence.",
+  "confined-space-inspection-robot":
+    "Compact robot packaging around power, camera, controller, wiring, and service access.",
+  "uts-motorsports-autonomous":
+    "Sensor and electronics packaging with fabrication-aware CAD records and serviceability constraints.",
+  "warman-challenge-robot":
+    "Mechanism and release-system prototype records with CAD and test-facing build notes.",
+  "additive-manufacturing-plier-project":
+    "Topology and print-preparation record for a mechanical tool shaped by manufacturability.",
+  "pcm-helmet-cooling-system":
+    "Thermal subsystem evidence with CAD, mesh views, material notes, and user-comfort constraints."
+};
 
 const filters = [
   {
@@ -98,8 +123,14 @@ function projectSearchText(project) {
     project.year,
     project.status,
     project.projectType,
+    project.summary,
+    project.outcome,
+    project.relevance,
     ...(project.tags || []),
-    ...(project.tools || [])
+    ...(project.tools || []),
+    ...(project.role || []),
+    ...(project.process || []).map((step) => `${step.title || ""} ${step.body || ""}`),
+    ...(project.technicalHighlights || []).map((item) => `${item.title || ""} ${item.body || ""}`)
   ]
     .filter(Boolean)
     .join(" ")
@@ -168,6 +199,103 @@ function evidenceSummary(project) {
   }
 
   return "Project memo";
+}
+
+function projectImage(project) {
+  return (
+    project.gallery?.find((item) => item?.src)?.src ||
+    project.thumbnail ||
+    project.heroImage ||
+    ""
+  );
+}
+
+const reviewLensRules = [
+  {
+    label: "Robot hardware",
+    terms: ["robot", "cobot", "cobotics", "hri", "mobile robot", "mechatronic"]
+  },
+  {
+    label: "CAD packaging",
+    terms: ["cad", "solidworks", "packaging", "mechanism", "dxf", "openrocket"]
+  },
+  {
+    label: "Sensing integration",
+    terms: ["sensing", "sensor", "camera", "raspberry", "controller", "autonomous"]
+  },
+  {
+    label: "Prototype evidence",
+    terms: ["prototype", "prototyping", "build evidence", "physical", "fabrication", "3d printing"]
+  },
+  {
+    label: "Testing / serviceability",
+    terms: ["testing", "test", "serviceability", "service access", "maintenance", "access"]
+  },
+  {
+    label: "Product-style subsystem",
+    terms: ["product-style", "subsystem", "manufacturability", "dfm", "user", "comfort"]
+  }
+];
+
+function reviewLensLabels(project) {
+  const haystack = projectSearchText(project);
+  return reviewLensRules
+    .filter((rule) => rule.terms.some((term) => haystack.includes(term)))
+    .map((rule) => rule.label)
+    .slice(0, 3);
+}
+
+function renderReviewLensChips(project) {
+  const labels = reviewLensLabels(project);
+
+  if (!labels.length) {
+    return "";
+  }
+
+  return `
+    <ul class="project-review-chip-list" aria-label="Review lenses">
+      ${labels.map((label) => `<li>${escapeHtml(label)}</li>`).join("")}
+    </ul>
+  `;
+}
+
+function renderPriorityRegister() {
+  if (!priorityRegisterGrid) {
+    return;
+  }
+
+  const priorityProjects = priorityProjectSlugs
+    .map((slug) => projects.find((project) => project.slug === slug))
+    .filter(Boolean)
+    .filter((project) => matchesFilter(project, activeFilter));
+
+  priorityRegisterGrid.innerHTML = priorityProjects
+    .map((project) => {
+      const sourceIndex = projects.findIndex((entry) => entry.slug === project.slug);
+      const projectHref = `projects/${encodeURIComponent(project.slug)}.html`;
+      const image = projectImage(project);
+      const imageMarkup = image
+        ? `<img src="${escapeHtml(image)}" alt="${escapeHtml(project.title)} project evidence" loading="lazy" />`
+        : `<div class="priority-project-image-empty" aria-hidden="true">No public image</div>`;
+
+      return `
+        <article class="priority-project-card" data-register-card data-register-groups="${escapeHtml(filterKeysForProject(project).join(" "))}">
+          <a href="${projectHref}">
+            <figure>
+              ${imageMarkup}
+              <figcaption>
+                <span>${escapeHtml(`${projectCode(sourceIndex)} / ${summarizeList(project.tags, project.projectType || "Project", 2)}`)}</span>
+                <strong>${escapeHtml(project.title)}</strong>
+                <em>${escapeHtml(priorityProjectNotes[project.slug] || project.summary || project.subtitle || "")}</em>
+                ${renderReviewLensChips(project)}
+              </figcaption>
+            </figure>
+            <small>Open field note</small>
+          </a>
+        </article>
+      `;
+    })
+    .join("");
 }
 
 function renderFilters() {
@@ -257,6 +385,7 @@ function renderRegister() {
 function setActiveFilter(filterKey) {
   activeFilter = filters.some((filter) => filter.key === filterKey) ? filterKey : "all";
   renderFilters();
+  renderPriorityRegister();
   renderRegister();
 }
 
@@ -275,4 +404,5 @@ if (filterSelect) {
 }
 
 renderFilters();
+renderPriorityRegister();
 renderRegister();

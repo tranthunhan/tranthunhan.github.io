@@ -22,16 +22,6 @@ const contentRoot = document.getElementById("project-content");
 const sidebarRoot = document.getElementById("project-sidebar");
 const relatedRoot = document.getElementById("related-projects");
 
-if (!project) {
-  document.title = `Project Not Found | ${siteProfile.name}`;
-  renderMissingProject();
-} else {
-  document.title = `${project.title} | ${siteProfile.name}`;
-  renderProjectPage(project);
-  mountSiteChrome(siteProfile);
-  runRevealPass();
-}
-
 function asArray(value) {
   return Array.isArray(value) ? value.filter(Boolean) : [];
 }
@@ -84,6 +74,94 @@ function collectProjectGalleryItems(activeProject) {
   return uniqueBySource([...customGallery, ...importedGallery]);
 }
 
+function projectSearchText(activeProject) {
+  return [
+    activeProject.title,
+    activeProject.subtitle,
+    activeProject.year,
+    activeProject.status,
+    activeProject.projectType,
+    activeProject.summary,
+    activeProject.outcome,
+    activeProject.relevance,
+    ...(activeProject.tags || []),
+    ...(activeProject.tools || []),
+    ...(activeProject.role || []),
+    ...(activeProject.process || []).map((step) => `${step.title || ""} ${step.body || ""}`),
+    ...(activeProject.technicalHighlights || []).map((item) => `${item.title || ""} ${item.body || ""}`)
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+}
+
+const reviewLensRules = [
+  {
+    label: "Robot hardware",
+    terms: ["robot", "cobot", "cobotics", "hri", "mobile robot", "mechatronic"]
+  },
+  {
+    label: "CAD packaging",
+    terms: ["cad", "solidworks", "packaging", "mechanism", "dxf", "openrocket"]
+  },
+  {
+    label: "Sensing integration",
+    terms: ["sensing", "sensor", "camera", "raspberry", "controller", "autonomous"]
+  },
+  {
+    label: "Prototype evidence",
+    terms: ["prototype", "prototyping", "build evidence", "physical", "fabrication", "3d printing"]
+  },
+  {
+    label: "Testing / serviceability",
+    terms: ["testing", "test", "serviceability", "service access", "maintenance", "access"]
+  },
+  {
+    label: "Product-style subsystem",
+    terms: ["product-style", "subsystem", "manufacturability", "dfm", "user", "comfort"]
+  }
+];
+
+function reviewLensLabels(activeProject) {
+  const haystack = projectSearchText(activeProject);
+  return reviewLensRules
+    .filter((rule) => rule.terms.some((term) => haystack.includes(term)))
+    .map((rule) => rule.label)
+    .slice(0, 4);
+}
+
+function renderReviewLensChips(activeProject) {
+  const labels = reviewLensLabels(activeProject);
+
+  if (!labels.length) {
+    return "";
+  }
+
+  return `
+    <ul class="memo-review-chip-list" aria-label="Review lenses supported by this project record">
+      ${labels.map((label) => `<li>${escapeHtml(label)}</li>`).join("")}
+    </ul>
+  `;
+}
+
+function selectHeroEvidence(activeProject, evidenceItems) {
+  const imageEvidence = evidenceItems.find((item) => item?.src && item.type !== "video");
+
+  if (imageEvidence) {
+    return imageEvidence;
+  }
+
+  const fallbackSource = activeProject.heroImage || activeProject.thumbnail;
+
+  return fallbackSource
+    ? {
+        src: fallbackSource,
+        alt: `${activeProject.title} project evidence`,
+        caption: activeProject.title
+      }
+    : null;
+}
+
 function renderMissingProject() {
   if (!headerRoot) {
     return;
@@ -101,7 +179,7 @@ function renderMissingProject() {
 function renderProjectPage(activeProject) {
   const evidenceItems = collectProjectGalleryItems(activeProject);
   hideStandaloneGallerySlot();
-  renderHeader(activeProject);
+  renderHeader(activeProject, evidenceItems);
   renderContent(activeProject, evidenceItems);
   renderSidebar(activeProject);
   renderRelated(activeProject);
@@ -115,14 +193,17 @@ function hideStandaloneGallerySlot() {
   }
 }
 
-function renderHeader(activeProject) {
+function renderHeader(activeProject, evidenceItems) {
   if (!headerRoot) {
     return;
   }
 
   const topLinks = createProjectLinks(activeProject.links, { compact: false });
   const tagList = createInlineList(asArray(activeProject.tags), "memo-tag-list");
+  const reviewChips = renderReviewLensChips(activeProject);
   const toolSummary = asArray(activeProject.tools).slice(0, 4).join(" / ");
+  const heroEvidence = selectHeroEvidence(activeProject, evidenceItems);
+  const heroPlate = renderHeroEvidencePlate(activeProject, heroEvidence);
 
   headerRoot.innerHTML = `
     <article class="memo-title-block">
@@ -134,30 +215,52 @@ function renderHeader(activeProject) {
           <p class="memo-subtitle">${escapeHtml(activeProject.subtitle || "")}</p>
           <p class="memo-summary">${escapeHtml(activeProject.summary || "")}</p>
           ${tagList}
+          ${reviewChips}
         </div>
-        <aside class="memo-header-facts" aria-label="Project facts">
-          <dl>
-            <div>
-              <dt>Year</dt>
-              <dd>${escapeHtml(activeProject.year || "Current")}</dd>
-            </div>
-            <div>
-              <dt>Status</dt>
-              <dd>${escapeHtml(activeProject.status || "Project work")}</dd>
-            </div>
-            <div>
-              <dt>Domain</dt>
-              <dd>${escapeHtml(asArray(activeProject.tags).slice(0, 3).join(" / ") || activeProject.projectType || "Project")}</dd>
-            </div>
-            <div>
-              <dt>Tools</dt>
-              <dd>${escapeHtml(toolSummary || "Project tools")}</dd>
-            </div>
-          </dl>
-        </aside>
+        <div class="memo-title-side">
+          ${heroPlate}
+          <aside class="memo-header-facts" aria-label="Project facts">
+            <dl>
+              <div>
+                <dt>Year</dt>
+                <dd>${escapeHtml(activeProject.year || "Current")}</dd>
+              </div>
+              <div>
+                <dt>Status</dt>
+                <dd>${escapeHtml(activeProject.status || "Project work")}</dd>
+              </div>
+              <div>
+                <dt>Domain</dt>
+                <dd>${escapeHtml(asArray(activeProject.tags).slice(0, 3).join(" / ") || activeProject.projectType || "Project")}</dd>
+              </div>
+              <div>
+                <dt>Tools</dt>
+                <dd>${escapeHtml(toolSummary || "Project tools")}</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
       </div>
       ${topLinks}
     </article>
+  `;
+}
+
+function renderHeroEvidencePlate(activeProject, item) {
+  if (!item?.src) {
+    return "";
+  }
+
+  const caption = cleanupCaption(item.caption || item.alt, `${activeProject.title} selected evidence`);
+
+  return `
+    <figure class="memo-hero-plate">
+      <img src="${resolveProjectAsset(item.src)}" alt="${escapeHtml(item.alt || caption)}" loading="eager" />
+      <figcaption>
+        <span>Selected evidence</span>
+        ${escapeHtml(caption)}
+      </figcaption>
+    </figure>
   `;
 }
 
@@ -376,8 +479,8 @@ function renderSidebar(activeProject) {
         <p class="field-label">Archive Navigation</p>
         <div class="memo-sidebar-links">
           <a href="../portfolio.html">Build Index</a>
-          <a href="../experience.html">Experience</a>
-          <a href="../contact.html">Contact</a>
+          <a href="../experience.html">Capability Log</a>
+          <a href="../contact.html">Contact Note</a>
         </div>
       </section>
     </aside>
@@ -460,4 +563,14 @@ function createInlineList(items, className) {
       ${values.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
     </ul>
   `;
+}
+
+if (!project) {
+  document.title = `Project Not Found | ${siteProfile.name}`;
+  renderMissingProject();
+} else {
+  document.title = `${project.title} | ${siteProfile.name}`;
+  renderProjectPage(project);
+  mountSiteChrome(siteProfile);
+  runRevealPass();
 }

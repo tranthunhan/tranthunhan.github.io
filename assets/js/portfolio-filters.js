@@ -9,6 +9,10 @@
     return Array.from(document.querySelectorAll("[data-register-row]"));
   }
 
+  function getCards() {
+    return Array.from(document.querySelectorAll("[data-register-card]"));
+  }
+
   function normalizeFilter(filterKey) {
     return validFilters.includes(filterKey) ? filterKey : "all";
   }
@@ -39,6 +43,10 @@
       const shouldShow = rowMatchesFilter(row, activeFilter);
       row.hidden = !shouldShow;
       visibleRows += shouldShow ? 1 : 0;
+    });
+
+    getCards().forEach((card) => {
+      card.hidden = !rowMatchesFilter(card, activeFilter);
     });
 
     if (visibleCount) {
