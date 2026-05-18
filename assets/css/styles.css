@@ -3049,14 +3049,14 @@ textarea.form-input {
 }
 
 .register-cover {
-  padding: clamp(2.6rem, 6vw, 4.8rem) 0 1.4rem;
+  padding: clamp(2.2rem, 5vw, 3.6rem) 0 1.2rem;
 }
 
 .register-cover-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(260px, 0.34fr);
   gap: 1rem;
-  align-items: stretch;
+  align-items: start;
 }
 
 .register-cover-title,
@@ -3073,9 +3073,8 @@ textarea.form-input {
 }
 
 .register-cover-title {
-  min-height: clamp(300px, 32vw, 430px);
   display: grid;
-  align-content: end;
+  align-content: center;
   padding: clamp(1.3rem, 3vw, 2.3rem);
   border-top: 5px solid var(--register-rule);
   position: relative;
@@ -3117,6 +3116,7 @@ textarea.form-input {
 .register-summary-panel {
   display: grid;
   align-content: start;
+  min-height: 100%;
   padding: 1rem;
   border-top: 5px solid var(--register-orange);
 }
@@ -3261,7 +3261,7 @@ textarea.form-input {
 
 .priority-register-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.75rem;
 }
 
@@ -3528,12 +3528,12 @@ textarea.form-input {
     grid-template-columns: 1fr;
   }
 
-  .register-cover-title {
-    min-height: 280px;
-  }
-
   .priority-register-heading {
     grid-template-columns: 1fr;
+  }
+
+  .priority-register-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -3553,6 +3553,10 @@ textarea.form-input {
 
   .priority-register-shell {
     padding: 0.75rem;
+  }
+
+  .priority-register-grid {
+    grid-template-columns: 1fr;
   }
 
   .register-table-wrap {
@@ -3599,7 +3603,6 @@ textarea.form-input {
 
 @media (max-width: 560px) {
   .register-cover-title {
-    min-height: 0;
     padding-top: 4.2rem;
   }
 
