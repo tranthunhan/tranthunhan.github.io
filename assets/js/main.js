@@ -21,7 +21,7 @@ const featuredProjectSlugs = [
 
 const featuredProjectNotes = {
   "kinematic-puppet-cobotics":
-    "Low-cost cobot prototyping platform with CAD iteration, modular end-effectors, and public evidence.",
+    "Low-cost cobot prototyping platform with CAD iteration and modular end-effectors.",
   "confined-space-inspection-robot":
     "Compact robot packaging around camera, controller, motor, battery, wiring, and service access constraints.",
   "pcm-helmet-cooling-system":
@@ -75,16 +75,16 @@ function formatEvidence(project) {
   const evidence = [];
 
   if (project.links?.repo) {
-    evidence.push("public repo");
+    evidence.push("repository");
   }
   if (project.links?.docs) {
     evidence.push("documentation");
   }
   if (project.gallery?.length || project.thumbnail || project.heroImage) {
-    evidence.push("visual evidence");
+    evidence.push("images");
   }
 
-  return evidence.length ? evidence.join(" + ") : "project overview";
+  return evidence.length ? evidence.join(" + ") : "overview";
 }
 
 function renderBuildIndex() {
@@ -141,7 +141,7 @@ function renderFeaturedProjects() {
       ({ project, image }) => `
         <a class="featured-project-card" href="projects/${encodeURIComponent(project.slug)}.html">
           <figure>
-            <img src="${escapeHtml(image)}" alt="${escapeHtml(project.title)} project evidence" loading="lazy" />
+            <img src="${escapeHtml(image)}" alt="${escapeHtml(project.title)} project image" loading="lazy" />
             <figcaption>
               <span>${escapeHtml(featuredProjectLabels[project.slug] || formatDomain(project))}</span>
               <strong>${escapeHtml(project.title)}</strong>

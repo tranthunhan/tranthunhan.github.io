@@ -117,8 +117,8 @@ const reviewLensRules = [
     terms: ["testing", "test", "serviceability", "service access", "maintenance", "access"]
   },
   {
-    label: "Product-style subsystem",
-    terms: ["product-style", "subsystem", "manufacturability", "dfm", "user", "comfort"]
+    label: "Mechanical subsystem",
+    terms: ["subsystem", "manufacturability", "dfm", "user", "comfort"]
   }
 ];
 
@@ -156,7 +156,7 @@ function selectHeroEvidence(activeProject, evidenceItems) {
   return fallbackSource
     ? {
         src: fallbackSource,
-        alt: `${activeProject.title} project evidence`,
+        alt: `${activeProject.title} project image`,
         caption: activeProject.title
       }
     : null;
@@ -387,7 +387,7 @@ function renderEvidenceGrid(activeProject, evidenceItems) {
 
   return `
     <p class="memo-evidence-note">
-      Selected project evidence from the public page. Images are shown as figure plates so CAD screenshots, diagrams, drawings, and build photos remain inspectable.
+      Selected project material from the public page. Images are shown as figure plates so CAD screenshots, diagrams, drawings, and build photos remain inspectable.
     </p>
     <div class="evidence-plate-grid">
       ${visibleEvidenceItems

@@ -3,7 +3,7 @@ export const projects = [
     "slug": "kinematic-puppet-cobotics",
     "featured": true,
     "title": "Cobot Prototyping Platform",
-    "subtitle": "Low-cost physical cobot prototyping platform using a modular robot-skeleton concept, end-effector development, CAD iteration, public evidence, and HRI-oriented design thinking.",
+    "subtitle": "Low-cost cobot prototyping platform using a modular robot skeleton, end-effector concepts, CAD iteration, and HRI design thinking.",
     "year": "2025",
     "status": "Cobotics and HRI project work",
     "projectType": "Project",
@@ -18,55 +18,55 @@ export const projects = [
     ],
     "thumbnail": "assets/images/projects/kinematic-puppet-cobotics/01-diagram.jpg",
     "heroImage": "assets/images/projects/kinematic-puppet-cobotics/01-diagram.jpg",
-    "summary": "A UTS 43019 project connected to Australian Cobotics Centre work, exploring a low-cost modular kinematic puppet as a physical platform for cobot morphology, end-effector concept development, technical communication, and early HRI design discussion.",
+    "summary": "UTS 43019 project exploring a modular kinematic puppet as a physical platform for cobot morphology, end-effector concepts, and early HRI discussion.",
     "overview": [
-      "This project explored the Kinematic Puppet as a modular robot-skeleton for cobot prototyping, where physical parts can be reconfigured before a final robot morphology or end-effector is fixed.",
-      "The public case study focuses on the engineering process behind the platform: problem framing, concept generation, morphology exploration, modular connector thinking, iterative CAD, public build evidence, and physical prototype communication for human-centred robotics."
+      "This project explored the Kinematic Puppet as a modular robot skeleton for cobot prototyping. Physical parts could be rearranged before committing to a final robot form or end effector.",
+      "The page focuses on problem framing, concept generation, connector design, CAD iteration, and prototype communication for human-centred robotics."
     ],
     "problem": [
-      "Cobot and HRI ideas are easier to evaluate when designers can handle and rearrange physical robot forms instead of relying only on sketches or CAD renders.",
-      "The design challenge was to propose a low-cost platform that supported modularity, safe interaction, manufacturability, serviceable interfaces, and testable end-effector/morphology concepts at an early project stage."
+      "Cobot and HRI ideas are easier to discuss when designers can handle and rearrange physical robot forms instead of relying only on sketches or CAD renders.",
+      "The challenge was to propose a low-cost platform with modular parts, safe handling, manufacturable interfaces, and enough flexibility for early end-effector and morphology testing."
     ],
     "role": [
       "Developed CAD and physical prototyping concepts for modular cobot hardware",
       "Explored end-effector, connector, base, and morphology options through structured concept development",
-      "Used morph-table and weighted-decision-matrix thinking to compare design directions",
-      "Prepared public-facing visuals and design notes for HRI-oriented platform discussion and technical review"
+      "Used morphological tables and weighted decision matrices to compare design directions",
+      "Prepared visuals and design notes for HRI-oriented platform review"
     ],
     "process": [
       {
         "title": "Problem framing",
-        "body": "The project framed the kinematic puppet as a low-cost physical tool for exploring how cobot shape, reach, and end-effector choice can affect human-centred interaction scenarios."
+        "body": "The project treated the kinematic puppet as a low-cost physical tool for exploring cobot shape, reach, and end-effector options."
       },
       {
         "title": "Concept generation",
-        "body": "End-effector, connector, and base concepts were explored as modular building blocks, with morphology options treated as configurable combinations rather than one fixed robot layout."
+        "body": "End-effectors, connectors, and bases were explored as modular building blocks rather than one fixed robot layout."
       },
       {
         "title": "Concept selection",
-        "body": "Morphological tables and weighted decision-matrix reasoning helped compare concepts against modularity, manufacturability, safe interaction, and practical prototype constraints."
+        "body": "Morphological tables and weighted decision matrices helped compare modularity, manufacturability, safe handling, and prototype constraints."
       },
       {
-        "title": "Iterative CAD and prototyping",
-        "body": "CAD and prototype visuals translated selected ideas into tangible robot-hardware pieces, keeping the work grounded in fabrication, assembly, and future testability."
+        "title": "CAD and prototyping",
+        "body": "CAD and prototype visuals translated selected ideas into tangible robot-hardware pieces for review and later testing."
       }
     ],
     "technicalHighlights": [
       {
-        "title": "Modular robot-skeleton concept",
-        "body": "The kinematic puppet approach treats the robot body as a configurable skeleton, making morphology changes easier to discuss before committing to a final cobot form."
+        "title": "Modular robot skeleton",
+        "body": "The kinematic puppet approach makes robot-body changes easier to discuss before committing to a final cobot form."
       },
       {
-        "title": "End-effector and connector thinking",
-        "body": "The design work compares gripper, hook, claw, clamp, magnet, and base concepts as modular interface options for different interaction and manipulation scenarios."
+        "title": "End-effector interfaces",
+        "body": "Gripper, hook, claw, clamp, magnet, and base concepts were compared as modular options for different interaction and manipulation scenarios."
       },
       {
-        "title": "Design-for-prototype constraints",
-        "body": "The project balances safe interaction, manufacturability, modularity, serviceable interfaces, and testability so the platform can support early HRI discussion without overstating completed testing."
+        "title": "Prototype constraints",
+        "body": "The work kept safe handling, manufacturability, modularity, serviceable interfaces, and testability visible without overstating completed testing."
       }
     ],
-    "outcome": "A public engineering case study showing modular cobot prototyping, end-effector concept development, connector and morphology exploration, and CAD-to-prototype communication for a class project.",
-    "relevance": "Relevant to robot hardware and HRI because it connects human-centred robotics questions to practical mechanical design decisions: modular interfaces, safe physical interaction, manufacturable prototypes, public documentation, and testable platform concepts.",
+    "outcome": "A concise case study showing modular cobot prototyping, end-effector options, connector and base concepts, and CAD-to-prototype communication.",
+    "relevance": "Relevant to robot hardware and HRI because it connects interaction questions to mechanical choices: modular interfaces, safe handling, manufacturable parts, and testable concepts.",
     "tools": [
       "SolidWorks",
       "CAD",
@@ -177,11 +177,11 @@ export const projects = [
     ],
     "lessonsLearned": [
       "Physical prototypes make early HRI and cobotics concepts easier to discuss than abstract CAD alone.",
-      "Structured concept selection helps keep modularity, manufacturability, safe interaction, and testability visible during early robot-hardware design."
+      "Structured concept selection keeps modularity, manufacturability, safe handling, and testability visible during early robot-hardware design."
     ],
     "futureWork": [
-      "Add concise annotations showing how each end-effector or base option supports different HRI and manipulation scenarios.",
-      "Prepare any raw CAD or print files for public release only after privacy, ownership, and documentation checks."
+      "Add short annotations showing how each end-effector or base option supports different HRI and manipulation scenarios.",
+      "Prepare any raw CAD or print files for public release only after ownership, privacy, and documentation checks."
     ],
     "relatedProjects": [
       "confined-space-inspection-robot",
@@ -192,7 +192,7 @@ export const projects = [
     "slug": "confined-space-inspection-robot",
     "featured": true,
     "title": "Confined-Space Inspection Robot",
-    "subtitle": "Compact sensing-enabled inspection-robot hardware project covering chassis and wheel packaging, motor/driver/battery layout, camera/controller integration, service access, and prototype iteration.",
+    "subtitle": "Compact inspection-robot hardware project covering chassis packaging, drive layout, battery storage, camera/controller integration, wiring, service access, and prototype review.",
     "year": "2025",
     "status": "Capstone robot project",
     "projectType": "Project",
@@ -206,20 +206,20 @@ export const projects = [
     ],
     "thumbnail": "assets/images/projects/confined-space-inspection-robot/01-18650.jpg",
     "heroImage": "assets/images/projects/confined-space-inspection-robot/01-18650.jpg",
-    "summary": "Compact robot-hardware work showing how chassis geometry, wheel placement, motors, drivers, battery storage, camera/sensing hardware, wiring paths, and Raspberry Pi/controller layout were packaged into a confined-space inspection platform.",
+    "summary": "Compact robot hardware showing how chassis geometry, wheels, motors, drivers, battery storage, camera hardware, wiring, and Raspberry Pi layout fit into a small inspection platform.",
     "overview": [
-      "This capstone project developed a confined-space inspection robot concept around compact mechanical packaging, mobility, sensing/camera integration, power layout, service access, and inspection use.",
-      "The public page uses CAD screenshots, component visuals, selected notes, and prototype photos to communicate design decisions, integration evidence, and test-planning intent while intentionally excluding raw CAD files."
+      "This capstone project developed a confined-space inspection robot concept around compact mechanical packaging, mobility, camera integration, power layout, and service access.",
+      "The page uses CAD screenshots, component visuals, notes, and prototype photos to explain design decisions while keeping raw CAD files out of the public site."
     ],
     "problem": [
-      "A confined-space inspection robot needs to carry drive hardware, power storage, controller electronics, camera/sensing hardware, and protective structure inside a small mobile platform.",
-      "The mechanical challenge was to balance mobility, structural protection, low centre of gravity, serviceability, maintenance access, wiring paths, and component protection without making the chassis too bulky for inspection environments."
+      "A confined-space inspection robot needs to carry drive hardware, power storage, controller electronics, camera hardware, wiring, and protective structure inside a small mobile platform.",
+      "The mechanical challenge was to balance mobility, low centre of gravity, service access, cable routing, and component protection without making the chassis too bulky."
     ],
     "role": [
-      "Developed CAD and mechanical packaging concepts for the compact robot chassis",
-      "Worked through wheel, motor, motor-driver, battery, Raspberry Pi/controller, and camera/sensing layout decisions",
+      "Developed CAD and packaging concepts for the compact robot chassis",
+      "Worked through wheel, motor, motor-driver, battery, Raspberry Pi, and camera layout decisions",
       "Considered low-centre-of-gravity packaging, service access, protection, and maintenance constraints",
-      "Prepared prototype photos and CAD-related visuals to communicate subsystem integration, serviceability, and test-planning intent"
+      "Prepared prototype photos and CAD visuals to communicate subsystem integration and test-planning intent"
     ],
     "process": [
       {
@@ -246,15 +246,15 @@ export const projects = [
       },
       {
         "title": "Serviceability and protection",
-        "body": "Battery, driver, controller, and camera placement were framed around access, maintenance, cable routing, and protection rather than only fitting components into the smallest possible volume."
+        "body": "Battery, driver, controller, and camera placement were framed around access, cable routing, maintenance, and protection."
       },
       {
-        "title": "Product-style subsystem thinking",
-        "body": "The robot hardware work connects CAD packaging, prototype iteration, test planning, service access, component protection, and integration records into a product-style mechanical subsystem design problem."
+        "title": "Integrated subsystem packaging",
+        "body": "The robot hardware work connects CAD packaging, prototype iteration, test planning, service access, component protection, and integration records."
       }
     ],
-    "outcome": "Public robot-hardware material showing compact chassis packaging, wheel and drive layout, electronics/power integration, camera/sensing placement, prototype visuals, and test-planning material.",
-    "relevance": "Relevant to mechanical and robot-hardware engineering because it connects CAD-led packaging, sensing integration, serviceability, low-centre-of-gravity layout, component protection, and prototype iteration in a compact mechatronic system.",
+    "outcome": "Robot-hardware material showing compact chassis packaging, wheel and drive layout, electronics and power integration, camera placement, prototype visuals, and test-planning notes.",
+    "relevance": "Relevant to mechanical and robot-hardware engineering because it connects CAD packaging, sensing integration, serviceability, low-centre-of-gravity layout, protection, and prototype iteration.",
     "tools": [
       "SolidWorks",
       "Raspberry Pi",
@@ -506,7 +506,7 @@ export const projects = [
     "slug": "uts-motorsports-autonomous",
     "featured": true,
     "title": "UTS Motorsports Autonomous Hardware",
-    "subtitle": "Approved autonomous vehicle hardware CAD work covering sensor/electronics packaging, template/DXF workflow, fabrication-aware mounting, serviceability, vibration exposure, and vehicle integration.",
+    "subtitle": "Autonomous vehicle hardware CAD work covering sensor and electronics packaging, template/DXF workflow, fabrication-aware mounting, service access, vibration exposure, and vehicle integration.",
     "year": "2025",
     "status": "Approved public project work",
     "projectType": "Project",
@@ -520,46 +520,51 @@ export const projects = [
     ],
     "thumbnail": "assets/images/projects/uts-motorsports-autonomous/01-image-1.jpg",
     "heroImage": "assets/images/projects/uts-motorsports-autonomous/01-image-1.jpg",
-    "summary": "Approved public UTS Motorsports Autonomous work showing sensor/electronics hardware packaging, CAD/template preparation, DXF-related workflow, fabrication-aware vehicle integration, and serviceable design records.",
+    "summary": "UTS Motorsports Autonomous hardware work showing sensor and electronics packaging, CAD templates, DXF preparation, fabrication-aware mounting, and serviceable vehicle integration.",
     "overview": [
-      "This project presents approved public UTS Motorsports Autonomous hardware work.",
-      "The page frames the work as fabrication-aware mechanical design: CAD templates, mounting constraints, vehicle packaging, service access, and public visuals suitable for technical review."
+      "This project documents public CAD and fabrication context for autonomous vehicle hardware components.",
+      "The page focuses on packaging, mounting, service access, and design records rather than private team files or raw working data."
     ],
     "problem": [
-      "Autonomous vehicle hardware needs to fit around existing vehicle geometry, sensor/electronics requirements, vibration exposure, access constraints, and fabrication limits.",
-      "The project connects robot hardware work to product-design habits: design for manufacture, serviceability, installation, vibration-aware packaging, and clear design records."
+      "Autonomous vehicle hardware needs mounts and electronics packaging that fit the vehicle, survive vibration exposure, and remain serviceable.",
+      "The design work needed to connect CAD templates, DXF preparation, fabrication constraints, and vehicle integration without exposing private team material."
     ],
     "role": [
-      "Prepared CAD geometry and template visuals",
-      "Worked with DXF-related fabrication outputs and packaging constraints",
-      "Prepared public-facing visuals to explain approved hardware integration work without exposing team source files"
+      "Prepared CAD and template work for sensor and electronics hardware",
+      "Supported fabrication-aware mounting and DXF-related workflow",
+      "Considered service access, vibration exposure, and packaging around the vehicle",
+      "Kept the public page limited to approved project visuals and context"
     ],
     "process": [
       {
-        "title": "Vehicle packaging",
-        "body": "The work required hardware geometry to respect existing vehicle space, mounting, access, vibration exposure, and integration constraints."
+        "title": "Packaging review",
+        "body": "Sensor and electronics hardware were treated as vehicle-packaging problems with mounting, access, and vibration exposure considered together."
       },
       {
-        "title": "Fabrication outputs",
-        "body": "CAD and template/DXF-related visuals show the translation from digital geometry into fabrication-aware components and reviewable design records."
+        "title": "CAD and templates",
+        "body": "CAD templates and DXF-related preparation supported fabrication decisions and made the design intent easier to review."
       },
       {
-        "title": "Serviceability and protection",
-        "body": "The design context emphasised practical concerns such as access, serviceability, vibration exposure, manufacturability, and competition requirements."
+        "title": "Public documentation",
+        "body": "The page keeps the explanation focused on approved visuals, mechanical packaging, and design records."
       }
     ],
     "technicalHighlights": [
       {
-        "title": "Fabrication-aware CAD",
-        "body": "The project highlights CAD work that considers installation, manufacturing output, service access, and mechanical constraints rather than only final renders."
+        "title": "Vehicle packaging",
+        "body": "Sensor and electronics components had to fit around vehicle geometry, mounting locations, access, and vibration exposure."
       },
       {
-        "title": "Product-design relevance",
-        "body": "Packaging, DFM thinking, service access, and design records map well to mechanical product-design engineering expectations."
+        "title": "Fabrication-aware CAD",
+        "body": "Template and DXF work connected CAD decisions to fabrication and installation constraints."
+      },
+      {
+        "title": "Service access",
+        "body": "The hardware layout considered access for inspection, adjustment, and later maintenance."
       }
     ],
-    "outcome": "An approved public project page demonstrating CAD/template workflow, fabrication-aware packaging, and mechanical integration for autonomous vehicle hardware.",
-    "relevance": "Supports robot hardware and product design engineering by showing packaging, manufacturability, serviceability, and design records under real system constraints.",
+    "outcome": "A public project page showing CAD/template workflow, fabrication-aware packaging, and mechanical integration for autonomous vehicle hardware.",
+    "relevance": "Supports robot hardware and mechanical design by showing packaging, manufacturability, serviceability, and design records under real system constraints.",
     "tools": [
       "SolidWorks",
       "DXF preparation",
@@ -581,13 +586,13 @@ export const projects = [
         "type": "image",
         "src": "assets/images/projects/uts-motorsports-autonomous/01-image-1.jpg",
         "alt": "UTS Motorsports Autonomous Hardware visual 1",
-        "caption": "Image 1"
+        "caption": "Autonomous hardware mounting and fabrication reference"
       },
       {
         "type": "image",
         "src": "assets/images/projects/uts-motorsports-autonomous/02-image.jpg",
         "alt": "UTS Motorsports Autonomous Hardware visual 2",
-        "caption": "Image"
+        "caption": "Sensor and electronics packaging reference"
       }
     ],
     "lessonsLearned": [
@@ -607,7 +612,7 @@ export const projects = [
     "slug": "warman-challenge-robot",
     "featured": true,
     "title": "Warman Challenge Robot",
-    "subtitle": "Robot hardware and mechanism design project focused on ball retention, release, servo-actuated gates, CAD iteration, tolerance-sensitive fit, prototype photos, and testing visuals.",
+    "subtitle": "Robot mechanism project focused on ball retention, servo-actuated release gates, CAD iteration, tolerance-sensitive fit, prototype photos, and testing visuals.",
     "year": "2025",
     "status": "Mechanism design project",
     "projectType": "Project",
@@ -621,46 +626,50 @@ export const projects = [
     ],
     "thumbnail": "assets/images/projects/warman-challenge-robot/01-2025-warman-track-assembly-exploded.jpg",
     "heroImage": "assets/images/projects/warman-challenge-robot/01-2025-warman-track-assembly-exploded.jpg",
-    "summary": "A Warman Challenge robot project page showing mechanism design, CAD iteration, ball-retainer assemblies, servo-actuated release concepts, prototype visuals, and testing-oriented robot hardware records.",
+    "summary": "Warman Challenge robot work showing mechanism design, CAD iteration, ball-retainer assemblies, servo release concepts, prototype visuals, and testing-oriented build records.",
     "overview": [
       "This project is presented as robot mechanism and subsystem design work.",
-      "The page uses CAD screenshots and prototype visuals to show how mechanism concepts evolved toward a testable competition robot subsystem with public build evidence."
+      "The page uses CAD screenshots and prototype visuals to show how mechanism concepts evolved toward a testable competition robot subsystem."
     ],
     "problem": [
       "The robot needed a compact subsystem for retaining and releasing balls under competition-style constraints.",
-      "That made the project a useful exercise in mechanism packaging, actuation, iteration, tolerance-sensitive fit, manufacturability, and test-driven refinement."
+      "That made the work a useful exercise in mechanism packaging, actuation, iteration, tolerance-sensitive fit, manufacturability, and test-driven refinement."
     ],
     "role": [
-      "Designed and iterated ball retainer and gate geometry",
-      "Worked on servo-actuated flap/gate concepts",
-      "Prepared CAD screenshots and prototype visuals to communicate mechanism behaviour, fit constraints, and test intent"
+      "Worked through CAD and mechanism layout for the ball-retention and release subsystem",
+      "Prepared prototype and CAD visuals for review",
+      "Considered servo actuation, fit, fabrication, service access, and testing constraints"
     ],
     "process": [
       {
-        "title": "Mechanism concept",
-        "body": "The design centred on retaining payload balls securely and releasing them reliably within the robot's competition constraints."
+        "title": "Mechanism layout",
+        "body": "The work focused on ball-retainer geometry, release gates, servo actuation, and how the subsystem fit inside the wider robot."
       },
       {
         "title": "CAD iteration",
-        "body": "The CAD visuals show repeated geometry and assembly thinking around retainer shape, sheet-metal-style features, tolerance-sensitive fit, and gate motion."
+        "body": "CAD screenshots record changes to assemblies, sheet-metal style parts, and tolerance-sensitive interfaces."
       },
       {
-        "title": "Prototype and testing mindset",
-        "body": "Prototype and testing visuals ground the mechanism work in physical behaviour, fit, actuation, and iteration rather than only static modelling."
+        "title": "Prototype review",
+        "body": "Prototype and testing visuals helped check access, movement, fit, and likely adjustment points."
       }
     ],
     "technicalHighlights": [
       {
-        "title": "Actuated subsystem design",
-        "body": "The project demonstrates compact mechanical packaging around servo actuation, release behaviour, manufacturability, and competition-driven constraints."
+        "title": "Ball-retainer assembly",
+        "body": "The subsystem needed to hold payloads reliably while still allowing a controlled release."
       },
       {
-        "title": "Testing and design records",
-        "body": "The project highlights the need to record mechanism behaviour clearly enough for review, iteration, and future troubleshooting."
+        "title": "Servo release gates",
+        "body": "Servo-actuated release concepts were explored through CAD and prototype review."
+      },
+      {
+        "title": "Fit and service access",
+        "body": "The design work kept tolerances, assembly access, fabrication, and later testing in view."
       }
     ],
-    "outcome": "A robot mechanism project page demonstrating CAD iteration, actuation concepts, prototype visuals, and testing-oriented subsystem records.",
-    "relevance": "Supports practical robot hardware work and product-style engineering through mechanism packaging, tolerancing awareness, testing, serviceability, and manufacturability thinking.",
+    "outcome": "A robot mechanism page showing CAD iteration, actuation concepts, prototype visuals, and testing-oriented subsystem records.",
+    "relevance": "Supports practical robot hardware work through mechanism packaging, tolerancing awareness, testing, serviceability, and manufacturability thinking.",
     "tools": [
       "SolidWorks",
       "Mechanism design",
@@ -682,193 +691,193 @@ export const projects = [
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/01-2025-warman-track-assembly-exploded.jpg",
         "alt": "Warman Challenge Robot visual 1",
-        "caption": "2025 Warman Track Assembly Exploded"
+        "caption": "Warman robot CAD and prototype review 1"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/02-2025-warman-track-assembly-no-payloads.jpg",
         "alt": "Warman Challenge Robot visual 2",
-        "caption": "2025 Warman Track Assembly No Payloads"
+        "caption": "Warman robot CAD and prototype review 2"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/03-2025-warman-track-assembly-payload-final.jpg",
         "alt": "Warman Challenge Robot visual 3",
-        "caption": "2025 Warman Track Assembly Payload Final"
+        "caption": "Warman robot CAD and prototype review 3"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/04-2025-warman-track-assembly-payload-starting.jpg",
         "alt": "Warman Challenge Robot visual 4",
-        "caption": "2025 Warman Track Assembly Payload Starting"
+        "caption": "Warman robot CAD and prototype review 4"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/05-assem-robot-v2.jpg",
         "alt": "Warman Challenge Robot visual 5",
-        "caption": "Assem Robot V2"
+        "caption": "Warman robot CAD and prototype review 5"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/06-ball-retainer-system-left-side-assembly.jpg",
         "alt": "Warman Challenge Robot visual 6",
-        "caption": "Ball Retainer System Left Side Assembly"
+        "caption": "Warman robot CAD and prototype review 6"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/07-ball-retainer-system-right-side-assembly-isometric.jpg",
         "alt": "Warman Challenge Robot visual 7",
-        "caption": "Ball Retainer System Right Side Assembly Isometric"
+        "caption": "Warman robot CAD and prototype review 7"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/08-ball-retainer-system-right-side-assembly-with-sheetmetal.jpg",
         "alt": "Warman Challenge Robot visual 8",
-        "caption": "Ball Retainer System Right Side Assembly With Sheetmetal"
+        "caption": "Warman robot CAD and prototype review 8"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/09-assembly.jpg",
         "alt": "Warman Challenge Robot visual 9",
-        "caption": "Assembly"
+        "caption": "Warman robot CAD and prototype review 9"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/10-screenshot-2025-05-05-at-4-29-04-pm.jpg",
         "alt": "Warman Challenge Robot visual 10",
-        "caption": "Screenshot 2025 05 05 At 4 29 04 Pm"
+        "caption": "Warman robot CAD and prototype review 10"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/11-screenshot-2025-05-05-at-5-09-01-pm.jpg",
         "alt": "Warman Challenge Robot visual 11",
-        "caption": "Screenshot 2025 05 05 At 5 09 01 Pm"
+        "caption": "Warman robot CAD and prototype review 11"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/12-screenshot-2025-05-05-at-5-57-39-pm.jpg",
         "alt": "Warman Challenge Robot visual 12",
-        "caption": "Screenshot 2025 05 05 At 5 57 39 Pm"
+        "caption": "Warman robot CAD and prototype review 12"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/13-screenshot-2025-05-05-at-8-32-41-pm.jpg",
         "alt": "Warman Challenge Robot visual 13",
-        "caption": "Screenshot 2025 05 05 At 8 32 41 Pm"
+        "caption": "Warman robot CAD and prototype review 13"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/14-screenshot-2025-05-05-at-8-33-12-pm.jpg",
         "alt": "Warman Challenge Robot visual 14",
-        "caption": "Screenshot 2025 05 05 At 8 33 12 Pm"
+        "caption": "Warman robot CAD and prototype review 14"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/15-screenshot-2025-05-09-at-6-04-10-pm.jpg",
         "alt": "Warman Challenge Robot visual 15",
-        "caption": "Screenshot 2025 05 09 At 6 04 10 Pm"
+        "caption": "Warman robot CAD and prototype review 15"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/16-screenshot-2025-05-09-at-7-34-52-pm.jpg",
         "alt": "Warman Challenge Robot visual 16",
-        "caption": "Screenshot 2025 05 09 At 7 34 52 Pm"
+        "caption": "Warman robot CAD and prototype review 16"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/17-screenshot-2025-05-09-at-7-36-26-pm.jpg",
         "alt": "Warman Challenge Robot visual 17",
-        "caption": "Screenshot 2025 05 09 At 7 36 26 Pm"
+        "caption": "Warman robot CAD and prototype review 17"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/18-screenshot-2025-05-09-at-7-37-00-pm.jpg",
         "alt": "Warman Challenge Robot visual 18",
-        "caption": "Screenshot 2025 05 09 At 7 37 00 Pm"
+        "caption": "Warman robot CAD and prototype review 18"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/19-screenshot-2025-05-09-at-7-37-34-pm.jpg",
         "alt": "Warman Challenge Robot visual 19",
-        "caption": "Screenshot 2025 05 09 At 7 37 34 Pm"
+        "caption": "Warman robot CAD and prototype review 19"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/20-screenshot-2025-05-09-at-7-44-55-pm.jpg",
         "alt": "Warman Challenge Robot visual 20",
-        "caption": "Screenshot 2025 05 09 At 7 44 55 Pm"
+        "caption": "Warman robot CAD and prototype review 20"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/21-screenshot-2025-05-09-at-7-45-37-pm.jpg",
         "alt": "Warman Challenge Robot visual 21",
-        "caption": "Screenshot 2025 05 09 At 7 45 37 Pm"
+        "caption": "Warman robot CAD and prototype review 21"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/22-screenshot-2025-05-09-at-7-53-15-pm.jpg",
         "alt": "Warman Challenge Robot visual 22",
-        "caption": "Screenshot 2025 05 09 At 7 53 15 Pm"
+        "caption": "Warman robot CAD and prototype review 22"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/23-screenshot-2025-05-09-at-7-54-54-pm.jpg",
         "alt": "Warman Challenge Robot visual 23",
-        "caption": "Screenshot 2025 05 09 At 7 54 54 Pm"
+        "caption": "Warman robot CAD and prototype review 23"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/24-screenshot-2025-05-09-at-7-56-40-pm.jpg",
         "alt": "Warman Challenge Robot visual 24",
-        "caption": "Screenshot 2025 05 09 At 7 56 40 Pm"
+        "caption": "Warman robot CAD and prototype review 24"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/25-screenshot-2025-05-09-at-7-56-54-pm.jpg",
         "alt": "Warman Challenge Robot visual 25",
-        "caption": "Screenshot 2025 05 09 At 7 56 54 Pm"
+        "caption": "Warman robot CAD and prototype review 25"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/26-screenshot-2025-05-12-at-11-45-29-am.jpg",
         "alt": "Warman Challenge Robot visual 26",
-        "caption": "Screenshot 2025 05 12 At 11 45 29 Am"
+        "caption": "Warman robot CAD and prototype review 26"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/27-screenshot-2025-05-12-at-11-45-49-am.jpg",
         "alt": "Warman Challenge Robot visual 27",
-        "caption": "Screenshot 2025 05 12 At 11 45 49 Am"
+        "caption": "Warman robot CAD and prototype review 27"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/28-screenshot-2025-05-12-at-11-46-54-am.jpg",
         "alt": "Warman Challenge Robot visual 28",
-        "caption": "Screenshot 2025 05 12 At 11 46 54 Am"
+        "caption": "Warman robot CAD and prototype review 28"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/29-screenshot-2025-06-06-at-7-53-57-pm.jpg",
         "alt": "Warman Challenge Robot visual 29",
-        "caption": "Screenshot 2025 06 06 At 7 53 57 Pm"
+        "caption": "Warman robot CAD and prototype review 29"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/30-screenshot-2025-08-02-at-11-31-56-pm.jpg",
         "alt": "Warman Challenge Robot visual 30",
-        "caption": "Screenshot 2025 08 02 At 11 31 56 Pm"
+        "caption": "Warman robot CAD and prototype review 30"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/31-screenshot-2025-08-02-at-11-32-07-pm.jpg",
         "alt": "Warman Challenge Robot visual 31",
-        "caption": "Screenshot 2025 08 02 At 11 32 07 Pm"
+        "caption": "Warman robot CAD and prototype review 31"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/32-screenshot-2025-08-02-at-11-32-16-pm.jpg",
         "alt": "Warman Challenge Robot visual 32",
-        "caption": "Screenshot 2025 08 02 At 11 32 16 Pm"
+        "caption": "Warman robot CAD and prototype review 32"
       }
     ],
     "lessonsLearned": [
@@ -888,7 +897,7 @@ export const projects = [
     "slug": "reverse-engineering-lego-brick",
     "featured": true,
     "title": "Reverse Engineering LEGO 4x2 Brick",
-    "subtitle": "Scan-to-CAD additive manufacturing project using photogrammetry/Polycam, Blender mesh repair, SolidWorks reconstruction, Bambu Studio, and 3D printing.",
+    "subtitle": "Scan-to-CAD reverse engineering workflow using Polycam, Blender mesh repair, SolidWorks reconstruction, Bambu Studio, and 3D printing.",
     "year": "2025",
     "status": "Additive manufacturing project",
     "projectType": "Project",
@@ -901,14 +910,14 @@ export const projects = [
     ],
     "thumbnail": "",
     "heroImage": "",
-    "summary": "A reverse-engineering workflow for a LEGO 4x2 brick and print-ready puzzle geometry. Source scan/mesh/CAD files are recorded for manual screenshot/export.",
+    "summary": "Reverse-engineering workflow for a LEGO 4x2 brick and print-ready puzzle geometry, with scan, mesh, CAD, and print files prepared for later visual export.",
     "overview": [
       "This project is separated from the plier project so the scan-to-CAD workflow can stand on its own.",
-      "The website version uses web-ready images, extracted document figures, selected PDFs, and small video only where practical."
+      "The work covers scan capture, mesh repair, CAD reconstruction, and additive-manufacturing preparation."
     ],
     "problem": [
-      "The task was to move from scan data toward repaired mesh/CAD geometry suitable for additive manufacturing.",
-      "The public portfolio page is organised around visual evidence and concise engineering context rather than raw working files."
+      "The task was to move from scan data toward repaired mesh and CAD geometry suitable for additive manufacturing.",
+      "The current public page needs clean exported screenshots before the visual gallery can be filled."
     ],
     "role": [
       "Worked through photogrammetry/scan capture and mesh repair workflow",
@@ -917,30 +926,30 @@ export const projects = [
     ],
     "process": [
       {
-        "title": "Visual evidence",
-        "body": "No direct web-ready visuals were available, so source files are recorded for manual screenshot/render export."
+        "title": "Scan and mesh repair",
+        "body": "Polycam and Blender were used as part of the scan-to-mesh workflow before CAD reconstruction."
       },
       {
-        "title": "Website-ready assets",
-        "body": "Images were converted to web-friendly JPGs; large videos and raw source files were left out of the website repo."
+        "title": "CAD reconstruction",
+        "body": "SolidWorks was used to rebuild geometry in a cleaner engineering format."
       },
       {
-        "title": "Future repository path",
-        "body": "Raw CAD, print, simulation, and source files can be prepared later as dedicated GitHub project repositories."
+        "title": "Print preparation",
+        "body": "Bambu Studio and 3D printing context connect the reconstructed model to a practical manufacturing path."
       }
     ],
     "technicalHighlights": [
       {
-        "title": "Engineering workflow",
-        "body": "The page focuses on the design, build, analysis, documentation, or prototyping workflow visible in the available material."
+        "title": "Reverse-engineering workflow",
+        "body": "The project connects scan capture, mesh cleanup, CAD reconstruction, and print preparation."
       },
       {
-        "title": "Asset curation",
-        "body": "Web assets are separated from raw working files so the portfolio stays reviewable and lightweight."
+        "title": "Current asset gap",
+        "body": "Source files exist, but the public page still needs clean screenshots or renders before it is visually complete."
       }
     ],
-    "outcome": "A standalone project page prepared for manual screenshot/render export.",
-    "relevance": "A reverse-engineering workflow for a LEGO 4x2 brick and print-ready puzzle geometry. Source scan/mesh/CAD files are recorded for manual screenshot/export.",
+    "outcome": "A separate project page prepared for clean scan, mesh, CAD, and print-preparation visuals.",
+    "relevance": "Relevant to reverse engineering and additive manufacturing because it connects scan data to repaired geometry, CAD reconstruction, and print preparation.",
     "tools": [
       "Polycam",
       "Blender",
@@ -959,12 +968,12 @@ export const projects = [
     },
     "gallery": [],
     "lessonsLearned": [
-      "Clean portfolio assets should be separated from raw working folders.",
-      "A project page reads better when visual evidence is paired with short engineering context."
+      "Scan-to-CAD projects need clear exports at each step so the workflow is easy to review.",
+      "A public page should separate cleaned screenshots from raw working files."
     ],
     "futureWork": [
-      "Export clean screenshots/renders from the available CAD, mesh, OpenRocket, or project files.",
-      "Add those visuals to the gallery before treating this page as visually complete."
+      "Export clean screenshots from the scan, mesh, CAD, and slicing workflow.",
+      "Add those visuals before treating the page as visually complete."
     ],
     "relatedProjects": [
       "additive-manufacturing-plier-project",
@@ -975,7 +984,7 @@ export const projects = [
     "slug": "additive-manufacturing-plier-project",
     "featured": true,
     "title": "Additive Manufacturing Plier Project",
-    "subtitle": "Topology-optimised plier design project with concept development, CAD, simulation/static study visuals, slicer setup, printability trade-offs, and DFM-for-additive-manufacturing thinking.",
+    "subtitle": "Topology-optimised plier design project with concept development, CAD, static-study visuals, slicer setup, printability trade-offs, and DFM for additive manufacturing.",
     "year": "2025",
     "status": "Additive manufacturing project",
     "projectType": "Project",
@@ -989,14 +998,14 @@ export const projects = [
     ],
     "thumbnail": "assets/images/projects/additive-manufacturing-plier-project/01-01-to-topologytopbodyresult.jpg",
     "heroImage": "assets/images/projects/additive-manufacturing-plier-project/01-01-to-topologytopbodyresult.jpg",
-    "summary": "A detailed additive manufacturing project page showing concept development, topology optimisation, SolidWorks/static-study outputs, slicer preparation, printability decisions, and manufacturability trade-offs for a printed mechanical tool.",
+    "summary": "Additive manufacturing project showing concept development, topology optimisation, SolidWorks static-study outputs, slicer preparation, printability decisions, and manufacturability trade-offs for a printed tool.",
     "overview": [
-      "This project is presented as standalone additive manufacturing and mechanical design work.",
-      "The page uses concept, CAD, topology optimisation, simulation/static study, and slicer visuals to show how a printable mechanical tool was developed, checked, and prepared."
+      "This project is presented as additive manufacturing and mechanical design work.",
+      "The page uses concept, CAD, topology optimisation, static-study, and slicer visuals to show how a printable mechanical tool was developed and prepared."
     ],
     "problem": [
-      "The design challenge was to develop a printable plier geometry and evaluate/prepare it through CAD, optimisation, static-study outputs, and slicing steps.",
-      "The project connects product-design concerns such as material use, strength, printability, manufacturability, support strategy, and design records."
+      "The design challenge was to develop a printable plier geometry and prepare it through CAD, optimisation, static-study outputs, and slicing steps.",
+      "The work connects material use, strength checks, printability, support strategy, manufacturability, and design records."
     ],
     "role": [
       "Developed concept and CAD geometry",
@@ -1006,7 +1015,7 @@ export const projects = [
     "process": [
       {
         "title": "Concept to CAD",
-        "body": "The project moved from concept development into CAD geometry that could be evaluated and prepared for additive manufacturing."
+        "body": "The project moved from concept development into CAD geometry that could be checked and prepared for additive manufacturing."
       },
       {
         "title": "Optimisation and checking",
@@ -1014,21 +1023,21 @@ export const projects = [
       },
       {
         "title": "Print preparation",
-        "body": "Slicer and print-preparation visuals show the practical translation from CAD geometry into a manufacturable printed part with support and setup constraints visible."
+        "body": "Slicer visuals show how the CAD geometry moved toward a printable part with support and setup constraints visible."
       }
     ],
     "technicalHighlights": [
       {
         "title": "DFM for additive manufacturing",
-        "body": "The project highlights printability, material use, support settings, modifier choices, and geometry decisions rather than treating 3D printing as a push-button output."
+        "body": "The project highlights printability, material use, support settings, modifier choices, and geometry decisions."
       },
       {
-        "title": "Product-design relevance",
-        "body": "The workflow maps to product design engineering through CAD, static-study outputs, manufacturability trade-offs, print-preparation records, and design documentation."
+        "title": "Design record",
+        "body": "CAD, static-study outputs, print-preparation records, and manufacturability trade-offs are kept visible together."
       }
     ],
-    "outcome": "A standalone additive-manufacturing project page showing concept-to-CAD development, optimisation outputs, static-study visuals, and slicer preparation.",
-    "relevance": "Supports product design engineering through CAD, DFM, manufacturability, print-preparation evidence, simulation-supported judgement, design records, and practical mechanical subsystem thinking.",
+    "outcome": "A project page showing concept-to-CAD development, optimisation outputs, static-study visuals, and slicer preparation.",
+    "relevance": "Supports mechanical design through CAD, DFM, manufacturability, print preparation, simulation-informed judgement, and design records.",
     "tools": [
       "SolidWorks",
       "Topology optimisation",
@@ -1050,151 +1059,151 @@ export const projects = [
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/01-01-to-topologytopbodyresult.jpg",
         "alt": "Additive Manufacturing Plier Project visual 1",
-        "caption": "01 To Topologytopbodyresult"
+        "caption": "Topology-optimised top body result"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/02-02-to-topologybottombodyresult.jpg",
         "alt": "Additive Manufacturing Plier Project visual 2",
-        "caption": "02 To Topologybottombodyresult"
+        "caption": "Topology-optimised bottom body result"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/04-04-to-topologytopbodypercentageoforiginalmass.jpg",
         "alt": "Additive Manufacturing Plier Project visual 3",
-        "caption": "04 To Topologytopbodypercentageoforiginalmass"
+        "caption": "Top body mass-retention setting"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/05-05-to-pliermeshafterto.jpg",
         "alt": "Additive Manufacturing Plier Project visual 4",
-        "caption": "05 To Pliermeshafterto"
+        "caption": "Plier mesh after topology optimisation"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/06-07-to-pla-propertiesimportedsolidworks.jpg",
         "alt": "Additive Manufacturing Plier Project visual 5",
-        "caption": "07 To Pla Propertiesimportedsolidworks"
+        "caption": "PLA material properties imported into SolidWorks"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/07-08-to-wholepliermassbeforeto.jpg",
         "alt": "Additive Manufacturing Plier Project visual 6",
-        "caption": "08 To Wholepliermassbeforeto"
+        "caption": "Whole plier mass before topology optimisation"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/08-09-to-bottomplierbodymassbeforeto.jpg",
         "alt": "Additive Manufacturing Plier Project visual 7",
-        "caption": "09 To Bottomplierbodymassbeforeto"
+        "caption": "Bottom body mass before topology optimisation"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/09-10-to-topplierbodymassbeforeto.jpg",
         "alt": "Additive Manufacturing Plier Project visual 8",
-        "caption": "10 To Topplierbodymassbeforeto"
+        "caption": "Top body mass before topology optimisation"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/10-11-to-static-fullplier-60njaw-pla-stressresults.jpg",
         "alt": "Additive Manufacturing Plier Project visual 9",
-        "caption": "11 To Static Fullplier 60njaw Pla Stressresults"
+        "caption": "Static study stress result at 60 N jaw load"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/12-13-to-static-fullplier-60njaw-pla-strainresults.jpg",
         "alt": "Additive Manufacturing Plier Project visual 10",
-        "caption": "13 To Static Fullplier 60njaw Pla Strainresults"
+        "caption": "Static study strain result at 60 N jaw load"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/13-14-to-static-fullplier-40njaw-pla-stressresults.jpg",
         "alt": "Additive Manufacturing Plier Project visual 11",
-        "caption": "14 To Static Fullplier 40njaw Pla Stressresults"
+        "caption": "Static study stress result at 40 N jaw load"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/15-16-to-static-fullplier-40njaw-pla-strainresults.jpg",
         "alt": "Additive Manufacturing Plier Project visual 12",
-        "caption": "16 To Static Fullplier 40njaw Pla Strainresults"
+        "caption": "Static study strain result at 40 N jaw load"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/16-17-to-static-fullplier-20njaw-pla-stressresults.jpg",
         "alt": "Additive Manufacturing Plier Project visual 13",
-        "caption": "17 To Static Fullplier 20njaw Pla Stressresults"
+        "caption": "Static study stress result at 20 N jaw load"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/18-19-to-static-fullplier-20njaw-pla-strainresults.jpg",
         "alt": "Additive Manufacturing Plier Project visual 14",
-        "caption": "19 To Static Fullplier 20njaw Pla Strainresults"
+        "caption": "Static study strain result at 20 N jaw load"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/19-20-to-static-fullplier-16njaw-pla-stressresults.jpg",
         "alt": "Additive Manufacturing Plier Project visual 15",
-        "caption": "20 To Static Fullplier 16njaw Pla Stressresults"
+        "caption": "Static study stress result at 16 N jaw load"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/21-22-to-static-fullplier-16njaw-pla-strainresults.jpg",
         "alt": "Additive Manufacturing Plier Project visual 16",
-        "caption": "22 To Static Fullplier 16njaw Pla Strainresults"
+        "caption": "Static study strain result at 16 N jaw load"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/22-23-to-pliermeshbeforeto.jpg",
         "alt": "Additive Manufacturing Plier Project visual 17",
-        "caption": "23 To Pliermeshbeforeto"
+        "caption": "Plier mesh before topology optimisation"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/23-01-finalcad-pliermasspropertiesafterto.jpg",
         "alt": "Additive Manufacturing Plier Project visual 18",
-        "caption": "01 Finalcad Pliermasspropertiesafterto"
+        "caption": "Final CAD mass properties after optimisation"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/27-06-finalcad-isometricview.jpg",
         "alt": "Additive Manufacturing Plier Project visual 19",
-        "caption": "06 Finalcad Isometricview"
+        "caption": "Final CAD isometric view"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/29-01-individual-printplate-overview.jpg",
         "alt": "Additive Manufacturing Plier Project visual 20",
-        "caption": "01 Individual Printplate Overview"
+        "caption": "Individual print plate overview"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/30-02-individual-slicingresult-modelmass-24p80g.jpg",
         "alt": "Additive Manufacturing Plier Project visual 21",
-        "caption": "02 Individual Slicingresult Modelmass 24p80g"
+        "caption": "Slicing result and model mass"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/31-03-individual-strengthsettingswallloops.jpg",
         "alt": "Additive Manufacturing Plier Project visual 22",
-        "caption": "03 Individual Strengthsettingswallloops"
+        "caption": "Wall-loop strength settings"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/32-04-individual-strengthsettingstopandbottomshell.jpg",
         "alt": "Additive Manufacturing Plier Project visual 23",
-        "caption": "04 Individual Strengthsettingstopandbottomshell"
+        "caption": "Top and bottom shell strength settings"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/33-05-individual-strengthsettingsinfill.jpg",
         "alt": "Additive Manufacturing Plier Project visual 24",
-        "caption": "05 Individual Strengthsettingsinfill"
+        "caption": "Infill strength settings"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/34-06-individual-supportsettings-overview.jpg",
         "alt": "Additive Manufacturing Plier Project visual 25",
-        "caption": "06 Individual Supportsettings Overview"
+        "caption": "Support settings overview"
       }
     ],
     "lessonsLearned": [
@@ -1227,14 +1236,14 @@ export const projects = [
     ],
     "thumbnail": "assets/images/projects/solar-bbq/01-portfolio-extract-118f4a53-717f-4743-94ec-6bbbe1cfe2f4-1.jpg",
     "heroImage": "assets/images/projects/solar-bbq/01-portfolio-extract-118f4a53-717f-4743-94ec-6bbbe1cfe2f4-1.jpg",
-    "summary": "A collapsible solar BBQ concept presented with extracted report/presentation figures and downloadable design/drawing PDFs.",
+    "summary": "Collapsible solar BBQ concept shown with report and presentation figures plus downloadable design and drawing PDFs.",
     "overview": [
-      "This project page has been upgraded from text-only to include extracted figures from reports and presentations.",
-      "The website version uses web-ready images, extracted document figures, selected PDFs, and small video only where practical."
+      "This group project developed a portable solar BBQ concept around reflector support geometry, hot-plate support, portability, safe handling, and documentation.",
+      "The page uses selected report figures and PDFs to explain the mechanical system without publishing raw working files."
     ],
     "problem": [
-      "A portable solar BBQ needs to balance reflector geometry, hot plate support, glare/safety, weight, cleaning, and assembly.",
-      "The public portfolio page is organised around visual evidence and concise engineering context rather than raw working files."
+      "A portable solar BBQ needs to balance reflector geometry, hot-plate support, glare and safety, weight, cleaning, and assembly.",
+      "The work needed enough documentation to explain the design intent and practical constraints."
     ],
     "role": [
       "Contributed to mechanical concept development",
@@ -1243,30 +1252,30 @@ export const projects = [
     ],
     "process": [
       {
-        "title": "Visual evidence",
-        "body": "The gallery uses available screenshots, photos, extracted figures, and media from the organised project archive."
+        "title": "System concept",
+        "body": "The design considered reflector layout, hot-plate support, portability, safety, and handling as one mechanical system."
       },
       {
-        "title": "Website-ready assets",
-        "body": "Images were converted to web-friendly JPGs; large videos and raw source files were left out of the website repo."
+        "title": "Documentation review",
+        "body": "Report figures, presentation images, drawings, and design notes were selected to show the main engineering decisions."
       },
       {
-        "title": "Future repository path",
-        "body": "Raw CAD, print, simulation, and source files can be prepared later as dedicated GitHub project repositories."
+        "title": "Public page preparation",
+        "body": "Only web-ready figures and selected PDFs were included; raw working files remain outside the website."
       }
     ],
     "technicalHighlights": [
       {
-        "title": "Engineering workflow",
-        "body": "The page focuses on the design, build, analysis, documentation, or prototyping workflow visible in the available material."
+        "title": "Portable solar geometry",
+        "body": "The concept had to connect reflector support, hot-plate placement, handling, and safe use."
       },
       {
-        "title": "Asset curation",
-        "body": "Web assets are separated from raw working files so the portfolio stays reviewable and lightweight."
+        "title": "Drawing and report set",
+        "body": "Selected PDFs and figures provide enough context to understand the design without exposing raw files."
       }
     ],
-    "outcome": "A richer standalone project page with visual media and selected supporting resources.",
-    "relevance": "A collapsible solar BBQ concept presented with extracted report/presentation figures and downloadable design/drawing PDFs.",
+    "outcome": "A project page with selected figures, design context, drawings, and supporting documentation for the collapsible solar BBQ concept.",
+    "relevance": "Relevant to mechanical systems design because it connects solar-thermal context with portability, support geometry, safety, and documentation.",
     "tools": [
       "CAD",
       "Mechanical systems design",
@@ -1386,7 +1395,7 @@ export const projects = [
     "slug": "pcm-helmet-cooling-system",
     "featured": false,
     "title": "PCM Helmet Cooling System",
-    "subtitle": "Thermal/mechanical subsystem concept using paraffin wax PCM, CAD, ANSYS/mesh visuals, prototype/material evidence, user-context constraints, and testing documentation.",
+    "subtitle": "Thermal and mechanical subsystem concept using paraffin wax PCM, CAD, ANSYS mesh visuals, prototype/material images, user constraints, and testing documentation.",
     "year": "2025",
     "status": "Thermal/mechanical design project",
     "projectType": "Project",
@@ -1400,19 +1409,19 @@ export const projects = [
     ],
     "thumbnail": "assets/images/projects/pcm-helmet-cooling-system/01-coarse-mesh-volume.jpg",
     "heroImage": "assets/images/projects/pcm-helmet-cooling-system/01-coarse-mesh-volume.jpg",
-    "summary": "A thermal/mechanical product-style project using PCM cooling, CAD/mesh images, ANSYS-style simulation visuals, prototype photos, material visuals, user-comfort constraints, and testing records.",
+    "summary": "Thermal and mechanical project using PCM cooling, CAD and mesh images, simulation-style visuals, prototype photos, material visuals, user constraints, and testing records.",
     "overview": [
       "This project involved a helmet cooling concept using paraffin wax phase-change material.",
-      "The public page uses CAD, mesh, prototype, and selected visuals to discuss thermal/mechanical packaging, user context, and testing documentation with public-safe project material."
+      "The page uses CAD, mesh, prototype, and selected visuals to discuss thermal packaging, mechanical fit, user context, and testing documentation."
     ],
     "problem": [
       "Helmet cooling needs to manage heat while fitting safely and practically into helmet-related geometry.",
-      "That makes the project useful for product-design positioning because it combines thermal performance, mechanical packaging, user comfort, test evidence, manufacturability, and documentation discipline."
+      "The work combines thermal reasoning, mechanical packaging, user comfort, testing records, manufacturability, and documentation discipline."
     ],
     "role": [
-      "Worked with CAD/simulation evidence and design documentation",
-      "Prepared public-safe visuals from images and report material",
-      "Organised the project as a product-style thermal/mechanical subsystem case study with public-safe evidence"
+      "Worked with CAD, mesh, prototype, material, and documentation evidence",
+      "Prepared public-facing visuals from images and report material",
+      "Organised the project as a thermal and mechanical subsystem case study"
     ],
     "process": [
       {
@@ -1430,16 +1439,16 @@ export const projects = [
     ],
     "technicalHighlights": [
       {
-        "title": "Product-style subsystem thinking",
-        "body": "The project connects thermal performance, mechanical fit, material choice, user context, manufacturability, and verification evidence."
+        "title": "Thermal and mechanical packaging",
+        "body": "The project connects heat-management intent, mechanical fit, material choice, user context, manufacturability, and verification evidence."
       },
       {
-        "title": "Product-design relevance",
-        "body": "The project is relevant to product design engineering through thermal/mechanical packaging, testing, user-centred constraints, design records, and a quality mindset."
+        "title": "Design record",
+        "body": "CAD, mesh, material, prototype, and testing visuals are presented together so the subsystem can be reviewed without unsupported performance claims."
       }
     ],
-    "outcome": "A public-safe thermal/mechanical subsystem project page showing CAD, mesh, prototype, material, and testing records.",
-    "relevance": "Supports product design engineering through thermal/mechanical reasoning, CAD, simulation outputs, testing, product packaging, manufacturability, and user-centred design constraints.",
+    "outcome": "A thermal and mechanical subsystem page showing CAD, mesh, prototype, material, and testing records.",
+    "relevance": "Supports mechanical design through thermal reasoning, CAD, simulation outputs, testing, packaging, manufacturability, and user-centred constraints.",
     "tools": [
       "ANSYS",
       "CAD",
@@ -1461,55 +1470,55 @@ export const projects = [
         "type": "image",
         "src": "assets/images/projects/pcm-helmet-cooling-system/01-coarse-mesh-volume.jpg",
         "alt": "PCM Helmet Cooling System visual 1",
-        "caption": "Coarse Mesh Volume"
+        "caption": "Coarse mesh volume view"
       },
       {
         "type": "image",
         "src": "assets/images/projects/pcm-helmet-cooling-system/02-fine-mesh-volume.jpg",
         "alt": "PCM Helmet Cooling System visual 2",
-        "caption": "Fine Mesh Volume"
+        "caption": "Fine mesh volume view"
       },
       {
         "type": "image",
         "src": "assets/images/projects/pcm-helmet-cooling-system/03-fine-mesh.jpg",
         "alt": "PCM Helmet Cooling System visual 3",
-        "caption": "Fine Mesh"
+        "caption": "Fine mesh surface view"
       },
       {
         "type": "image",
         "src": "assets/images/projects/pcm-helmet-cooling-system/04-normal-mesh.jpg",
         "alt": "PCM Helmet Cooling System visual 4",
-        "caption": "Normal Mesh"
+        "caption": "Normal mesh surface view"
       },
       {
         "type": "image",
         "src": "assets/images/projects/pcm-helmet-cooling-system/05-super-fine-mesh.jpg",
         "alt": "PCM Helmet Cooling System visual 5",
-        "caption": "Super Fine Mesh"
+        "caption": "Super-fine mesh surface view"
       },
       {
         "type": "image",
         "src": "assets/images/projects/pcm-helmet-cooling-system/06-4th.jpg",
         "alt": "PCM Helmet Cooling System visual 6",
-        "caption": "4th"
+        "caption": "Helmet cooling concept geometry view"
       },
       {
         "type": "image",
         "src": "assets/images/projects/pcm-helmet-cooling-system/07-geometry.jpg",
         "alt": "PCM Helmet Cooling System visual 7",
-        "caption": "Geometry"
+        "caption": "PCM cooling geometry view"
       },
       {
         "type": "image",
         "src": "assets/images/projects/pcm-helmet-cooling-system/08-img-2481.jpg",
         "alt": "PCM Helmet Cooling System visual 8",
-        "caption": "Img 2481"
+        "caption": "Prototype and material evidence photo"
       },
       {
         "type": "image",
         "src": "assets/images/projects/pcm-helmet-cooling-system/09-geometry.jpg",
         "alt": "PCM Helmet Cooling System visual 9",
-        "caption": "Geometry"
+        "caption": "Helmet cooling geometry reference"
       },
       {
         "type": "image",
@@ -1602,14 +1611,14 @@ export const projects = [
     ],
     "thumbnail": "assets/images/projects/space-mission-louver-system/01-msds1-idea.jpg",
     "heroImage": "assets/images/projects/space-mission-louver-system/01-msds1-idea.jpg",
-    "summary": "A space mission louver system project presented with mechanism visuals, report/presentation figures, and selected PDFs.",
+    "summary": "Space mission louver system shown with mechanism visuals, report and presentation figures, and selected PDFs.",
     "overview": [
-      "This project involved a louver-style thermal/mechanical system concept for a space mission context.",
-      "The website version uses web-ready images, extracted document figures, selected PDFs, and small video only where practical."
+      "This project involved a louver-style thermal and mechanical system concept for a space mission context.",
+      "The page uses selected mechanism visuals, report figures, and PDFs to explain the design without publishing raw working files."
     ],
     "problem": [
-      "Thermal louver systems need controlled opening/closing behaviour while satisfying mechanical and thermal constraints.",
-      "The public portfolio page is organised around visual evidence and concise engineering context rather than raw working files."
+      "Thermal louver systems need controlled opening and closing behaviour while satisfying mechanical and thermal constraints.",
+      "The project required clear documentation of mechanism intent, thermal context, and design trade-offs."
     ],
     "role": [
       "Contributed to mechanical/thermal design documentation",
@@ -1618,30 +1627,30 @@ export const projects = [
     ],
     "process": [
       {
-        "title": "Visual evidence",
-        "body": "The gallery uses available screenshots, photos, extracted figures, and media from the organised project archive."
+        "title": "Mechanism concept",
+        "body": "The work focused on a louver-style mechanism and how controlled motion could support a thermal-control function."
       },
       {
-        "title": "Website-ready assets",
-        "body": "Images were converted to web-friendly JPGs; large videos and raw source files were left out of the website repo."
+        "title": "Thermal and mechanical context",
+        "body": "Report and presentation figures were used to communicate the thermal-control problem and mechanism layout."
       },
       {
-        "title": "Future repository path",
-        "body": "Raw CAD, print, simulation, and source files can be prepared later as dedicated GitHub project repositories."
+        "title": "Public page preparation",
+        "body": "Selected images and PDFs were included while raw working files and large media stayed outside the website."
       }
     ],
     "technicalHighlights": [
       {
-        "title": "Engineering workflow",
-        "body": "The page focuses on the design, build, analysis, documentation, or prototyping workflow visible in the available material."
+        "title": "Louver mechanism",
+        "body": "The concept connects controlled opening and closing with a thermal-control use case."
       },
       {
-        "title": "Asset curation",
-        "body": "Web assets are separated from raw working files so the portfolio stays reviewable and lightweight."
+        "title": "Documentation set",
+        "body": "The page keeps the mechanism visuals and report context together for review."
       }
     ],
-    "outcome": "A richer standalone project page with visual media and selected supporting resources.",
-    "relevance": "A space mission louver system project presented with mechanism visuals, report/presentation figures, and selected PDFs.",
+    "outcome": "A project page with selected mechanism visuals, thermal-control context, and supporting documentation.",
+    "relevance": "Relevant to mechanical systems design because it connects mechanism layout, thermal-control intent, and documentation.",
     "tools": [
       "CAD",
       "Mechanical design",
@@ -1663,121 +1672,121 @@ export const projects = [
         "type": "image",
         "src": "assets/images/projects/space-mission-louver-system/01-msds1-idea.jpg",
         "alt": "Space Mission Louver System visual 1",
-        "caption": "Msds1 Idea"
+        "caption": "Space louver mechanism and report figure 1"
       },
       {
         "type": "image",
         "src": "assets/images/projects/space-mission-louver-system/02-image-copy.jpg",
         "alt": "Space Mission Louver System visual 2",
-        "caption": "Image Copy"
+        "caption": "Space louver mechanism and report figure 2"
       },
       {
         "type": "image",
         "src": "assets/images/projects/space-mission-louver-system/03-image.jpg",
         "alt": "Space Mission Louver System visual 3",
-        "caption": "Image"
+        "caption": "Space louver mechanism and report figure 3"
       },
       {
         "type": "image",
         "src": "assets/images/projects/space-mission-louver-system/04-image-copy-2.jpg",
         "alt": "Space Mission Louver System visual 4",
-        "caption": "Image Copy 2"
+        "caption": "Space louver mechanism and report figure 4"
       },
       {
         "type": "image",
         "src": "assets/images/projects/space-mission-louver-system/05-image-copy.jpg",
         "alt": "Space Mission Louver System visual 5",
-        "caption": "Image Copy"
+        "caption": "Space louver mechanism and report figure 5"
       },
       {
         "type": "image",
         "src": "assets/images/projects/space-mission-louver-system/06-image.jpg",
         "alt": "Space Mission Louver System visual 6",
-        "caption": "Image"
+        "caption": "Space louver mechanism and report figure 6"
       },
       {
         "type": "image",
         "src": "assets/images/projects/space-mission-louver-system/07-msds1-idea.jpg",
         "alt": "Space Mission Louver System visual 7",
-        "caption": "Msds1 Idea"
+        "caption": "Space louver mechanism and report figure 7"
       },
       {
         "type": "image",
         "src": "assets/images/projects/space-mission-louver-system/08-msds1-idea.jpg",
         "alt": "Space Mission Louver System visual 8",
-        "caption": "Msds1 Idea"
+        "caption": "Space louver mechanism and report figure 8"
       },
       {
         "type": "image",
         "src": "assets/images/projects/space-mission-louver-system/09-portfolio-extract-ac9cd712-7706-4991-9df1-8988121e2c44-1.jpg",
         "alt": "Space Mission Louver System visual 9",
-        "caption": "Space louver report/presentation extracted figure"
+        "caption": "Space louver mechanism and report figure 9"
       },
       {
         "type": "image",
         "src": "assets/images/projects/space-mission-louver-system/10-portfolio-extract-26712916-a9c0-4f2b-a7fb-06a114f12367-2.jpg",
         "alt": "Space Mission Louver System visual 10",
-        "caption": "Space louver report/presentation extracted figure"
+        "caption": "Space louver mechanism and report figure 10"
       },
       {
         "type": "image",
         "src": "assets/images/projects/space-mission-louver-system/11-portfolio-extract-e25c688c-82a4-471e-afbb-f4126264085a-3.jpg",
         "alt": "Space Mission Louver System visual 11",
-        "caption": "Space louver report/presentation extracted figure"
+        "caption": "Space louver mechanism and report figure 11"
       },
       {
         "type": "image",
         "src": "assets/images/projects/space-mission-louver-system/12-portfolio-extract-0c79f3a3-6aec-46cc-8601-671ec30f54b5-4.jpg",
         "alt": "Space Mission Louver System visual 12",
-        "caption": "Space louver report/presentation extracted figure"
+        "caption": "Space louver mechanism and report figure 12"
       },
       {
         "type": "image",
         "src": "assets/images/projects/space-mission-louver-system/13-portfolio-extract-66caef7d-2bdd-46b5-a099-406b6373169d-5.jpg",
         "alt": "Space Mission Louver System visual 13",
-        "caption": "Space louver report/presentation extracted figure"
+        "caption": "Space louver mechanism and report figure 13"
       },
       {
         "type": "image",
         "src": "assets/images/projects/space-mission-louver-system/14-portfolio-extract-385b42a1-da84-4f21-89a4-9ccd0982f9ab-6.jpg",
         "alt": "Space Mission Louver System visual 14",
-        "caption": "Space louver report/presentation extracted figure"
+        "caption": "Space louver mechanism and report figure 14"
       },
       {
         "type": "image",
         "src": "assets/images/projects/space-mission-louver-system/15-portfolio-extract-2ef151e8-acd1-495f-a44d-a2c32c150890-7.jpg",
         "alt": "Space Mission Louver System visual 15",
-        "caption": "Space louver report/presentation extracted figure"
+        "caption": "Space louver mechanism and report figure 15"
       },
       {
         "type": "image",
         "src": "assets/images/projects/space-mission-louver-system/16-portfolio-extract-7591e05f-e21b-4122-8b24-a6516ba72c6f-8.jpg",
         "alt": "Space Mission Louver System visual 16",
-        "caption": "Space louver report/presentation extracted figure"
+        "caption": "Space louver mechanism and report figure 16"
       },
       {
         "type": "image",
         "src": "assets/images/projects/space-mission-louver-system/17-portfolio-extract-7400a652-a016-47fb-bb53-96170191126e-9.jpg",
         "alt": "Space Mission Louver System visual 17",
-        "caption": "Space louver report/presentation extracted figure"
+        "caption": "Space louver mechanism and report figure 17"
       },
       {
         "type": "image",
         "src": "assets/images/projects/space-mission-louver-system/18-portfolio-extract-f958e872-0e9c-4318-9a2d-42be024804bc-10.jpg",
         "alt": "Space Mission Louver System visual 18",
-        "caption": "Space louver report/presentation extracted figure"
+        "caption": "Space louver mechanism and report figure 18"
       },
       {
         "type": "image",
         "src": "assets/images/projects/space-mission-louver-system/19-portfolio-extract-4980627f-f204-4493-b184-003cca1e0257-11.jpg",
         "alt": "Space Mission Louver System visual 19",
-        "caption": "Space louver report/presentation extracted figure"
+        "caption": "Space louver mechanism and report figure 19"
       },
       {
         "type": "image",
         "src": "assets/images/projects/space-mission-louver-system/20-portfolio-extract-42b42eab-a3de-477b-a872-5123192e4cae-12.jpg",
         "alt": "Space Mission Louver System visual 20",
-        "caption": "Space louver report/presentation extracted figure"
+        "caption": "Space louver mechanism and report figure 20"
       }
     ],
     "lessonsLearned": [
@@ -1810,14 +1819,14 @@ export const projects = [
     ],
     "thumbnail": "assets/images/projects/heat-exchanger-design/01-portfolio-extract-478b6950-74f5-4e73-a758-779c56a276c2-1.jpg",
     "heroImage": "assets/images/projects/heat-exchanger-design/01-portfolio-extract-478b6950-74f5-4e73-a758-779c56a276c2-1.jpg",
-    "summary": "A heat exchanger design project presented with extracted report figures and a downloadable report PDF.",
+    "summary": "Heat exchanger design project shown with extracted report figures and a downloadable report PDF.",
     "overview": [
-      "This thermofluids project is now included as a separate portfolio page.",
-      "The website version uses web-ready images, extracted document figures, selected PDFs, and small video only where practical."
+      "This thermofluids project is included as a separate portfolio page.",
+      "The page uses selected report figures and a PDF to show the heat-exchanger design workflow and calculation context."
     ],
     "problem": [
       "Heat exchanger design requires balancing thermal performance, geometry, constraints, and calculation evidence.",
-      "The public portfolio page is organised around visual evidence and concise engineering context rather than raw working files."
+      "The public page focuses on the documented design path and report figures rather than raw working files."
     ],
     "role": [
       "Contributed to project documentation and design analysis",
@@ -1826,30 +1835,30 @@ export const projects = [
     ],
     "process": [
       {
-        "title": "Visual evidence",
-        "body": "The gallery uses available screenshots, photos, extracted figures, and media from the organised project archive."
+        "title": "Calculation workflow",
+        "body": "The project used thermofluids calculations and report documentation to support the design."
       },
       {
-        "title": "Website-ready assets",
-        "body": "Images were converted to web-friendly JPGs; large videos and raw source files were left out of the website repo."
+        "title": "Figure selection",
+        "body": "Extracted report figures were selected to make the design context easier to scan online."
       },
       {
-        "title": "Future repository path",
-        "body": "Raw CAD, print, simulation, and source files can be prepared later as dedicated GitHub project repositories."
+        "title": "Report access",
+        "body": "A selected PDF is linked so reviewers can inspect the supporting documentation."
       }
     ],
     "technicalHighlights": [
       {
-        "title": "Engineering workflow",
-        "body": "The page focuses on the design, build, analysis, documentation, or prototyping workflow visible in the available material."
+        "title": "Thermofluids design",
+        "body": "The work connects heat-transfer calculations, geometry choices, constraints, and documentation."
       },
       {
-        "title": "Asset curation",
-        "body": "Web assets are separated from raw working files so the portfolio stays reviewable and lightweight."
+        "title": "Report-backed context",
+        "body": "The project page gives enough context to understand the calculation and design record."
       }
     ],
-    "outcome": "A richer standalone project page with visual media and selected supporting resources.",
-    "relevance": "A heat exchanger design project presented with extracted report figures and a downloadable report PDF.",
+    "outcome": "A heat exchanger project page with selected report figures and supporting documentation.",
+    "relevance": "Relevant to thermofluids and mechanical design because it connects calculation evidence, design constraints, and documentation.",
     "tools": [
       "Excel",
       "Thermofluids analysis",
@@ -1946,46 +1955,46 @@ export const projects = [
     ],
     "thumbnail": "assets/images/projects/vertical-axis-wind-turbine/01-img-0912.jpg",
     "heroImage": "assets/images/projects/vertical-axis-wind-turbine/01-img-0912.jpg",
-    "summary": "A vertical-axis wind turbine project using converted build photos, a small MP4 testing video, and a downloadable report PDF.",
+    "summary": "Vertical-axis wind turbine project shown with build photos, a short testing video, and a downloadable report PDF.",
     "overview": [
       "This project involved design, fabrication, and testing of a vertical-axis wind turbine.",
-      "The website version uses web-ready images, extracted document figures, selected PDFs, and small video only where practical."
+      "The page uses build photos, a short video, and a report PDF to show the prototype and manufacturing context."
     ],
     "problem": [
-      "The turbine needed to be designed, fabricated, and tested within materials/manufacturing project constraints.",
-      "The public portfolio page is organised around visual evidence and concise engineering context rather than raw working files."
+      "The turbine needed to be designed, fabricated, and tested within materials and manufacturing project constraints.",
+      "The public page focuses on the visible build record, test media, and final documentation."
     ],
     "role": [
       "Prepared the turbine project as a public page",
       "Converted build photos into web-ready assets",
-      "Included the small testing video and report PDF"
+      "Included the short testing video and report PDF"
     ],
     "process": [
       {
-        "title": "Visual evidence",
-        "body": "The gallery uses available screenshots, photos, extracted figures, and media from the organised project archive."
+        "title": "Prototype build",
+        "body": "Build photos show the turbine prototype and fabrication context."
       },
       {
-        "title": "Website-ready assets",
-        "body": "Images were converted to web-friendly JPGs; large videos and raw source files were left out of the website repo."
+        "title": "Testing media",
+        "body": "A short video records testing activity without overstating performance claims."
       },
       {
-        "title": "Future repository path",
-        "body": "Raw CAD, print, simulation, and source files can be prepared later as dedicated GitHub project repositories."
+        "title": "Documentation",
+        "body": "The selected report PDF gives the supporting project context."
       }
     ],
     "technicalHighlights": [
       {
-        "title": "Engineering workflow",
-        "body": "The page focuses on the design, build, analysis, documentation, or prototyping workflow visible in the available material."
+        "title": "Fabricated turbine prototype",
+        "body": "The page shows a physical vertical-axis wind turbine prototype and related build material."
       },
       {
-        "title": "Asset curation",
-        "body": "Web assets are separated from raw working files so the portfolio stays reviewable and lightweight."
+        "title": "Testing record",
+        "body": "The linked media and report provide context for the prototype and test activity."
       }
     ],
-    "outcome": "A richer standalone project page with visual media and selected supporting resources.",
-    "relevance": "A vertical-axis wind turbine project using converted build photos, a small MP4 testing video, and a downloadable report PDF.",
+    "outcome": "A wind turbine project page with build photos, testing media, and supporting documentation.",
+    "relevance": "Relevant to manufacturing and mechanical prototyping because it connects fabrication, testing, documentation, and renewable-energy context.",
     "tools": [
       "CAD",
       "Fabrication",
@@ -2007,55 +2016,55 @@ export const projects = [
         "type": "image",
         "src": "assets/images/projects/vertical-axis-wind-turbine/01-img-0912.jpg",
         "alt": "Vertical Axis Wind Turbine visual 1",
-        "caption": "Img 0912"
+        "caption": "Vertical-axis wind turbine prototype photo 1"
       },
       {
         "type": "image",
         "src": "assets/images/projects/vertical-axis-wind-turbine/02-img-0913.jpg",
         "alt": "Vertical Axis Wind Turbine visual 2",
-        "caption": "Img 0913"
+        "caption": "Vertical-axis wind turbine prototype photo 2"
       },
       {
         "type": "image",
         "src": "assets/images/projects/vertical-axis-wind-turbine/03-img-0914.jpg",
         "alt": "Vertical Axis Wind Turbine visual 3",
-        "caption": "Img 0914"
+        "caption": "Vertical-axis wind turbine prototype photo 3"
       },
       {
         "type": "image",
         "src": "assets/images/projects/vertical-axis-wind-turbine/04-img-0915.jpg",
         "alt": "Vertical Axis Wind Turbine visual 4",
-        "caption": "Img 0915"
+        "caption": "Vertical-axis wind turbine prototype photo 4"
       },
       {
         "type": "image",
         "src": "assets/images/projects/vertical-axis-wind-turbine/05-img-0916.jpg",
         "alt": "Vertical Axis Wind Turbine visual 5",
-        "caption": "Img 0916"
+        "caption": "Vertical-axis wind turbine prototype photo 5"
       },
       {
         "type": "image",
         "src": "assets/images/projects/vertical-axis-wind-turbine/06-img-0917.jpg",
         "alt": "Vertical Axis Wind Turbine visual 6",
-        "caption": "Img 0917"
+        "caption": "Vertical-axis wind turbine prototype photo 6"
       },
       {
         "type": "image",
         "src": "assets/images/projects/vertical-axis-wind-turbine/07-img-0918.jpg",
         "alt": "Vertical Axis Wind Turbine visual 7",
-        "caption": "Img 0918"
+        "caption": "Vertical-axis wind turbine prototype photo 7"
       },
       {
         "type": "image",
         "src": "assets/images/projects/vertical-axis-wind-turbine/08-img-0919.jpg",
         "alt": "Vertical Axis Wind Turbine visual 8",
-        "caption": "Img 0919"
+        "caption": "Vertical-axis wind turbine prototype photo 8"
       },
       {
         "type": "image",
         "src": "assets/images/projects/vertical-axis-wind-turbine/09-img-0920.jpg",
         "alt": "Vertical Axis Wind Turbine visual 9",
-        "caption": "Img 0920"
+        "caption": "Vertical-axis wind turbine prototype photo 9"
       },
       {
         "type": "video",
@@ -2094,45 +2103,45 @@ export const projects = [
     ],
     "thumbnail": "assets/images/projects/wind-powered-vehicle/01-portfolio-extract-71f2956a-715a-4e0f-87f7-9178b359ecab-1.jpg",
     "heroImage": "assets/images/projects/wind-powered-vehicle/01-portfolio-extract-71f2956a-715a-4e0f-87f7-9178b359ecab-1.jpg",
-    "summary": "A wind-powered vehicle project presented with extracted report figures and a technical drawing PDF.",
+    "summary": "Wind-powered vehicle project shown with report figures and a technical drawing PDF.",
     "overview": [
-      "This introductory engineering project is now its own page.",
-      "The website version uses web-ready images, extracted document figures, selected PDFs, and small video only where practical."
+      "This introductory engineering project is presented as a separate page.",
+      "The page uses selected report figures and a technical drawing PDF to show the prototype and design context."
     ],
     "problem": [
-      "The project involved designing and testing a vehicle powered by wind within a prototype/design challenge context.",
-      "The public portfolio page is organised around visual evidence and concise engineering context rather than raw working files."
+      "The project involved designing and testing a wind-powered vehicle within a prototype challenge.",
+      "The public page focuses on selected visuals and documentation rather than raw working files."
     ],
     "role": [
-      "Worked on prototype and documentation evidence",
-      "Prepared extracted report images and selected drawing PDF"
+      "Worked on prototype and documentation material",
+      "Prepared extracted report images and the selected drawing PDF"
     ],
     "process": [
       {
-        "title": "Visual evidence",
-        "body": "The gallery uses available screenshots, photos, extracted figures, and media from the organised project archive."
+        "title": "Prototype context",
+        "body": "The project centred on a wind-powered vehicle design and test challenge."
       },
       {
-        "title": "Website-ready assets",
-        "body": "Images were converted to web-friendly JPGs; large videos and raw source files were left out of the website repo."
+        "title": "Report figures",
+        "body": "Selected figures were extracted so the design context can be reviewed online."
       },
       {
-        "title": "Future repository path",
-        "body": "Raw CAD, print, simulation, and source files can be prepared later as dedicated GitHub project repositories."
+        "title": "Drawing record",
+        "body": "A technical drawing PDF is linked as supporting documentation."
       }
     ],
     "technicalHighlights": [
       {
-        "title": "Engineering workflow",
-        "body": "The page focuses on the design, build, analysis, documentation, or prototyping workflow visible in the available material."
+        "title": "Introductory prototype work",
+        "body": "The page shows early mechanical prototyping, drawing, testing, and reporting practice."
       },
       {
-        "title": "Asset curation",
-        "body": "Web assets are separated from raw working files so the portfolio stays reviewable and lightweight."
+        "title": "Documentation set",
+        "body": "Report figures and a drawing PDF give the project enough context for review."
       }
     ],
-    "outcome": "A richer standalone project page with visual media and selected supporting resources.",
-    "relevance": "A wind-powered vehicle project presented with extracted report figures and a technical drawing PDF.",
+    "outcome": "A wind-powered vehicle page with selected report figures and a technical drawing PDF.",
+    "relevance": "Relevant to early mechanical prototyping because it connects CAD/drawing context, testing, and project documentation.",
     "tools": [
       "SolidWorks",
       "Technical drawings",
@@ -2216,7 +2225,7 @@ export const projects = [
     "slug": "mpr-rocket",
     "featured": false,
     "title": "MPR Rocket",
-    "subtitle": "Personal rocket CAD and OpenRocket design project prepared for future screenshots/renders from SolidWorks and OpenRocket source files.",
+    "subtitle": "Personal rocket CAD and OpenRocket project prepared for future screenshots or renders from SolidWorks and OpenRocket source files.",
     "year": "Personal",
     "status": "Personal CAD project",
     "projectType": "Project",
@@ -2228,14 +2237,14 @@ export const projects = [
     ],
     "thumbnail": "",
     "heroImage": "",
-    "summary": "A personal MPR rocket project currently represented as a source-file-backed page; CAD/OpenRocket screenshots need manual export before the gallery can be filled.",
+    "summary": "Personal MPR rocket CAD and OpenRocket project with source files recorded and clean visuals still to be exported.",
     "overview": [
       "The organised folder contains SolidWorks rocket parts and an OpenRocket file.",
-      "The website version uses web-ready images, extracted document figures, selected PDFs, and small video only where practical."
+      "The public page records the project and identifies the remaining need for clean CAD and OpenRocket screenshots."
     ],
     "problem": [
       "The project needs clean rendered images from SolidWorks and OpenRocket before it becomes visually strong online.",
-      "The public portfolio page is organised around visual evidence and concise engineering context rather than raw working files."
+      "The page should show the design clearly without publishing raw working files unnecessarily."
     ],
     "role": [
       "Created personal rocket CAD files and OpenRocket design material",
@@ -2243,30 +2252,30 @@ export const projects = [
     ],
     "process": [
       {
-        "title": "Visual evidence",
-        "body": "No direct web-ready visuals were available, so source files are recorded for manual screenshot/render export."
+        "title": "Source-file review",
+        "body": "The available SolidWorks and OpenRocket files are recorded as the basis for later visual export."
       },
       {
-        "title": "Website-ready assets",
-        "body": "Images were converted to web-friendly JPGs; large videos and raw source files were left out of the website repo."
+        "title": "Visual export gap",
+        "body": "Clean screenshots or renders still need to be produced before the gallery is useful."
       },
       {
-        "title": "Future repository path",
-        "body": "Raw CAD, print, simulation, and source files can be prepared later as dedicated GitHub project repositories."
+        "title": "Repository context",
+        "body": "The linked repository provides public project context while the website keeps the page lightweight."
       }
     ],
     "technicalHighlights": [
       {
-        "title": "Engineering workflow",
-        "body": "The page focuses on the design, build, analysis, documentation, or prototyping workflow visible in the available material."
+        "title": "Rocket CAD context",
+        "body": "The project records personal CAD and OpenRocket design material for later documentation."
       },
       {
-        "title": "Asset curation",
-        "body": "Web assets are separated from raw working files so the portfolio stays reviewable and lightweight."
+        "title": "Current asset gap",
+        "body": "The next useful step is visual export, not additional claims about performance."
       }
     ],
-    "outcome": "A standalone project page prepared for manual screenshot/render export.",
-    "relevance": "A personal MPR rocket project currently represented as a source-file-backed page; CAD/OpenRocket screenshots need manual export before the gallery can be filled.",
+    "outcome": "A personal rocket project page prepared for clean CAD and OpenRocket visual exports.",
+    "relevance": "Relevant to personal CAD development because it records SolidWorks and OpenRocket work while keeping the public page honest about missing visuals.",
     "tools": [
       "SolidWorks",
       "OpenRocket",
@@ -2284,12 +2293,12 @@ export const projects = [
     },
     "gallery": [],
     "lessonsLearned": [
-      "Clean portfolio assets should be separated from raw working folders.",
-      "A project page reads better when visual evidence is paired with short engineering context."
+      "Personal CAD projects need clean screenshots before they read well as portfolio pages.",
+      "A public page can record the work without exposing unnecessary raw files."
     ],
     "futureWork": [
-      "Export clean screenshots/renders from the available CAD, mesh, OpenRocket, or project files.",
-      "Add those visuals to the gallery before treating this page as visually complete."
+      "Export clean screenshots or renders from the available CAD and OpenRocket files.",
+      "Add those visuals before treating the page as visually complete."
     ],
     "relatedProjects": [
       "interlocking-mechanism-cad-design",
@@ -2313,15 +2322,14 @@ export const projects = [
     ],
     "thumbnail": "assets/images/projects/printed-pencil-case-servo-storage/01-img-3616.jpg",
     "heroImage": "assets/images/projects/printed-pencil-case-servo-storage/01-img-3616.jpg",
-    "summary": "A personal 3D printed pencil case that later became useful as a servo motor storage case, now shown with new converted photos.",
+    "summary": "Personal 3D printed storage case that started as a pencil case and later became useful for storing servo motors.",
     "overview": [
-      "This is now a standalone personal project page rather than part of a combined personal-projects page.",
-      "Acknowledgement: John Alfred Chen provided significant guidance and support throughout this project. His help was important to the project direction and completion.",
-      "The website version uses web-ready images, extracted document figures, selected PDFs, and small video only where practical."
+      "This is a standalone personal project page for a simple printed storage case.",
+      "Acknowledgement: John Alfred Chen provided guidance and support on this personal project."
     ],
     "problem": [
-      "The original need was practical: make a pencil case; later, the printed case became useful for storing servo motors.",
-      "The public portfolio page is organised around visual evidence and concise engineering context rather than raw working files."
+      "The original need was practical: make a pencil case. Later, the printed case became useful for storing servo motors.",
+      "The page focuses on the finished printed object and its practical reuse."
     ],
     "role": [
       "Designed and 3D printed the personal case",
@@ -2330,30 +2338,30 @@ export const projects = [
     ],
     "process": [
       {
-        "title": "Visual evidence",
-        "body": "The gallery uses available screenshots, photos, extracted figures, and media from the organised project archive."
+        "title": "Practical need",
+        "body": "The project started with a simple storage problem and a printable case geometry."
       },
       {
-        "title": "Website-ready assets",
-        "body": "Images were converted to web-friendly JPGs; large videos and raw source files were left out of the website repo."
+        "title": "3D printing",
+        "body": "The case was designed and printed, then reused for servo motor storage."
       },
       {
-        "title": "Future repository path",
-        "body": "Raw CAD, print, simulation, and source files can be prepared later as dedicated GitHub project repositories."
+        "title": "Photo record",
+        "body": "New photos were prepared so the finished object can be shown clearly on the portfolio."
       }
     ],
     "technicalHighlights": [
       {
-        "title": "Engineering workflow",
-        "body": "The page focuses on the design, build, analysis, documentation, or prototyping workflow visible in the available material."
+        "title": "Printed storage case",
+        "body": "The object shows a practical personal CAD and 3D printing workflow."
       },
       {
-        "title": "Asset curation",
-        "body": "Web assets are separated from raw working files so the portfolio stays reviewable and lightweight."
+        "title": "Reuse",
+        "body": "The finished case remained useful after the original pencil-case purpose changed."
       }
     ],
-    "outcome": "A richer standalone project page with visual media and selected supporting resources.",
-    "relevance": "A personal 3D printed pencil case that later became useful as a servo motor storage case, now shown with new converted photos.",
+    "outcome": "A personal 3D printing page showing the finished storage case and its reuse for servo motors.",
+    "relevance": "Relevant to personal prototyping because it shows a small CAD-to-print workflow with a practical outcome.",
     "tools": [
       "SolidWorks",
       "3D printing",
@@ -2375,25 +2383,25 @@ export const projects = [
         "type": "image",
         "src": "assets/images/projects/printed-pencil-case-servo-storage/01-img-3616.jpg",
         "alt": "3D Printed Pencil and Servo Storage Case visual 1",
-        "caption": "Img 3616"
+        "caption": "Printed storage case photo 1"
       },
       {
         "type": "image",
         "src": "assets/images/projects/printed-pencil-case-servo-storage/02-img-3617.jpg",
         "alt": "3D Printed Pencil and Servo Storage Case visual 2",
-        "caption": "Img 3617"
+        "caption": "Printed storage case photo 2"
       },
       {
         "type": "image",
         "src": "assets/images/projects/printed-pencil-case-servo-storage/03-img-3618.jpg",
         "alt": "3D Printed Pencil and Servo Storage Case visual 3",
-        "caption": "Img 3618"
+        "caption": "Printed storage case photo 3"
       },
       {
         "type": "image",
         "src": "assets/images/projects/printed-pencil-case-servo-storage/04-img-3619.jpg",
         "alt": "3D Printed Pencil and Servo Storage Case visual 4",
-        "caption": "Img 3619"
+        "caption": "Printed storage case photo 4"
       }
     ],
     "lessonsLearned": [
@@ -2425,14 +2433,14 @@ export const projects = [
     ],
     "thumbnail": "",
     "heroImage": "",
-    "summary": "A personal CAD exploration of an interlocking mechanism concept. The organised folder contains CAD source files, but clean screenshots/renders need manual export.",
+    "summary": "Personal CAD exploration of an interlocking mechanism concept, with source files recorded and clean visuals still to be exported.",
     "overview": [
-      "This is now a standalone page for the interlocking mechanism concept.",
-      "The website version uses web-ready images, extracted document figures, selected PDFs, and small video only where practical."
+      "This is a standalone page for the interlocking mechanism concept.",
+      "The project records the CAD work and identifies the remaining need for clean screenshots or renders."
     ],
     "problem": [
       "The concept needs clear CAD screenshots or renders before it can be shown visually on the website.",
-      "The public portfolio page is organised around visual evidence and concise engineering context rather than raw working files."
+      "The page should explain the mechanism work without exposing unnecessary raw files."
     ],
     "role": [
       "Created CAD files exploring the interlocking mechanism concept",
@@ -2440,30 +2448,30 @@ export const projects = [
     ],
     "process": [
       {
-        "title": "Visual evidence",
-        "body": "No direct web-ready visuals were available, so source files are recorded for manual screenshot/render export."
+        "title": "CAD concept",
+        "body": "The project explores an interlocking mechanism through SolidWorks CAD."
       },
       {
-        "title": "Website-ready assets",
-        "body": "Images were converted to web-friendly JPGs; large videos and raw source files were left out of the website repo."
+        "title": "Visual export gap",
+        "body": "Clean screenshots or renders still need to be produced before the gallery is useful."
       },
       {
-        "title": "Future repository path",
-        "body": "Raw CAD, print, simulation, and source files can be prepared later as dedicated GitHub project repositories."
+        "title": "Repository context",
+        "body": "The linked repository provides public context while the portfolio page stays concise."
       }
     ],
     "technicalHighlights": [
       {
-        "title": "Engineering workflow",
-        "body": "The page focuses on the design, build, analysis, documentation, or prototyping workflow visible in the available material."
+        "title": "Mechanism concept",
+        "body": "The project records a personal CAD exploration of interlocking mechanical geometry."
       },
       {
-        "title": "Asset curation",
-        "body": "Web assets are separated from raw working files so the portfolio stays reviewable and lightweight."
+        "title": "Current asset gap",
+        "body": "The next useful step is visual export from the CAD source files."
       }
     ],
-    "outcome": "A standalone project page prepared for manual screenshot/render export.",
-    "relevance": "A personal CAD exploration of an interlocking mechanism concept. The organised folder contains CAD source files, but clean screenshots/renders need manual export.",
+    "outcome": "A personal mechanism page prepared for clean CAD screenshots or renders.",
+    "relevance": "Relevant to personal CAD practice because it records mechanism exploration while staying clear about missing visuals.",
     "tools": [
       "SolidWorks",
       "CAD",
@@ -2481,12 +2489,12 @@ export const projects = [
     },
     "gallery": [],
     "lessonsLearned": [
-      "Clean portfolio assets should be separated from raw working folders.",
-      "A project page reads better when visual evidence is paired with short engineering context."
+      "A CAD concept needs clean renders or screenshots before it is easy to assess online.",
+      "A public page should separate reviewable visuals from raw working files."
     ],
     "futureWork": [
-      "Export clean screenshots/renders from the available CAD, mesh, OpenRocket, or project files.",
-      "Add those visuals to the gallery before treating this page as visually complete."
+      "Export clean screenshots or renders from the CAD files.",
+      "Add those visuals before treating the page as visually complete."
     ],
     "relatedProjects": [
       "mpr-rocket",

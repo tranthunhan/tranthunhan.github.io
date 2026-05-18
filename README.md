@@ -1,6 +1,6 @@
 # Nhan Dang Mechanical Engineering Portfolio
 
-Static GitHub Pages site for Nhan Dang's mechanical engineering portfolio: CAD-led design, robot hardware, prototyping, fabrication, sensing integration, testing, additive manufacturing, and product-style mechanical systems.
+Static GitHub Pages site for Nhan Dang's mechanical engineering portfolio: CAD, robot hardware, prototyping, fabrication, sensing integration, testing, additive manufacturing, and design documentation.
 
 The site is structured as a public mechanical engineering portfolio. Project content, contact surfaces, and linked documents are kept privacy-reviewed for public viewing.
 

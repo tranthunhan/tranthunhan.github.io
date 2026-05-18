@@ -4,30 +4,30 @@ export const siteProfile = {
   siteSubtitle: "Mechanical Engineering Portfolio",
   role: "Mechanical Engineering Honours Student",
   degree:
-    "Bachelor of Engineering (Honours), Mechanical Engineering — University of Technology Sydney",
+    "Bachelor of Engineering (Honours), Mechanical Engineering - University of Technology Sydney",
   tagline:
-    "Mechanical engineering portfolio focused on CAD-led design, robot hardware, prototyping, sensing integration, testing, documentation, and product-style mechanical systems.",
+    "Mechanical engineering portfolio covering CAD, robot hardware, prototyping, sensing integration, testing, and design documentation.",
   brandLogo: "assets/images/profile/newthumbnail.png",
   headshot: "assets/images/profile/nhan-profile.png",
   focusAreas: [
     {
-      title: "Robot hardware and sensing-enabled systems",
+      title: "Robot hardware and sensing systems",
       body:
-        "Exploring robot hardware, sensing-enabled mechanical systems, and practical vibration measurement questions through prototypes, CAD, test planning, and clear documentation."
+        "Building and documenting robot hardware, sensor packages, CAD layouts, prototypes, and test plans."
     },
     {
-      title: "Product-style mechanical subsystem design",
+      title: "Mechanical subsystem design",
       body:
-        "Applying CAD, mechanical design, DFM thinking, tolerancing awareness, prototyping, testing, manufacturability, serviceability, and design records to product-like mechanical subsystem work."
+        "Using CAD, DFM thinking, tolerancing awareness, prototyping, and service access to make mechanical subsystems easier to build and review."
     },
     {
       title: "Cobotics and human-centred robotics",
       body:
-        "Keeping cobotics and human-robot interaction connected to practical platforms, sensing, fabrication, mechatronic integration, public build evidence, and testable hardware."
+        "Connecting cobotics and HRI ideas to practical platforms, fabrication, mechatronic integration, and testable hardware."
     }
   ],
   techStackIntro:
-    "A compact snapshot of tools and engineering practices I use across mechanical design, prototyping, robot hardware, sensing integration, testing, documentation, and portfolio development.",
+    "Tools and engineering practices I use for mechanical design, prototyping, robot hardware, sensing integration, testing, and documentation.",
   techStack: [
     {
       category: "Core Engineering",
@@ -107,7 +107,7 @@ export const siteProfile = {
   location: "Sydney, Australia",
   address: "Sydney, Australia",
   contactSubheading:
-    "Mechanical Engineering student focused on CAD-led robot hardware, sensing-enabled systems, prototyping, testing, public build evidence, and product-style mechanical subsystem design.",
+    "Mechanical engineering student focused on CAD, robot hardware, prototyping, sensing integration, testing, and clear project documentation.",
   contactEmail: "",
   mapEmbedUrl: "https://www.google.com/maps?q=Sydney+Australia&output=embed",
   experienceTimeline: [
@@ -115,13 +115,13 @@ export const siteProfile = {
       title: "UTS Motorsports Autonomous - Mechanical Components",
       period: "Project work",
       detail:
-        "Designed and supported fabrication of autonomous vehicle sensor and electronics components under motorsport packaging constraints, with attention to vibration exposure, accessibility, serviceability, manufacturability, and clear design records."
+        "Designed and supported fabrication of autonomous vehicle sensor and electronics components under tight packaging constraints, with attention to vibration exposure, access, serviceability, manufacturability, and clear design records."
     },
     {
       title: "Cobotics End-Effector and Physical Test Platform",
       period: "UTS 43019 project",
       detail:
-        "Developed concepts for a low-cost cobotics prototyping platform and end-effector system, using CAD, modular connector thinking, structured concept selection, and prototype documentation to support human-centred mechatronic and HRI exploration."
+        "Developed concepts for a low-cost cobotics prototyping platform and end-effector system using CAD, modular connectors, structured concept selection, and prototype documentation."
     }
   ],
   educationTimeline: [
@@ -129,7 +129,7 @@ export const siteProfile = {
       title: "University of Technology Sydney (UTS)",
       period: "Final semester",
       detail:
-        "Bachelor of Engineering (Honours) student in Mechanical Engineering focused on CAD, mechanical design, prototyping, fabrication, robot hardware, sensing, testing, mechatronic integration, manufacturability, and design documentation."
+        "Bachelor of Engineering (Honours) student in Mechanical Engineering, focused on CAD, mechanical design, fabrication, robot hardware, sensing, testing, mechatronic integration, manufacturability, and documentation."
     }
   ],
   certifications: [

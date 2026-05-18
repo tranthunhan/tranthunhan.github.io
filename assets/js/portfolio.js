@@ -23,7 +23,7 @@ const priorityProjectSlugs = [
 
 const priorityProjectNotes = {
   "kinematic-puppet-cobotics":
-    "Modular cobot platform with CAD iteration, end-effector options, and public evidence.",
+    "Modular cobot platform with CAD iteration and end-effector options.",
   "confined-space-inspection-robot":
     "Compact robot packaging around power, camera, controller, wiring, and service access.",
   "uts-motorsports-autonomous":
@@ -265,8 +265,8 @@ const reviewLensRules = [
     terms: ["testing", "test", "serviceability", "service access", "maintenance", "access"]
   },
   {
-    label: "Product-style subsystem",
-    terms: ["product-style", "subsystem", "manufacturability", "dfm", "user", "comfort"]
+    label: "Mechanical subsystem",
+    terms: ["subsystem", "manufacturability", "dfm", "user", "comfort"]
   }
 ];
 
@@ -308,7 +308,7 @@ function renderPriorityRegister() {
       const projectHref = `projects/${encodeURIComponent(project.slug)}.html`;
       const image = projectImage(project);
       const imageMarkup = image
-        ? `<img src="${escapeHtml(image)}" alt="${escapeHtml(project.title)} project evidence" loading="lazy" />`
+        ? `<img src="${escapeHtml(image)}" alt="${escapeHtml(project.title)} project image" loading="lazy" />`
         : `<div class="priority-project-image-empty" aria-hidden="true">No public image</div>`;
 
       return `
