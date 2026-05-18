@@ -4777,3 +4777,482 @@ textarea.form-input {
     justify-self: start;
   }
 }
+
+/* Stage 6A: light visual polish for the current engineering portfolio */
+:root {
+  --polish-radius: 6px;
+  --polish-shadow: 0 10px 26px rgba(30, 36, 40, 0.08);
+  --polish-shadow-strong: 0 16px 34px rgba(30, 36, 40, 0.12);
+  --polish-border: rgba(30, 36, 40, 0.16);
+}
+
+.site-header {
+  box-shadow: 0 1px 0 rgba(30, 36, 40, 0.08);
+}
+
+.nav-links a,
+.footer-links a,
+.field-cover-actions a,
+.featured-project-action,
+.register-filter-list button,
+.register-filter-select select,
+.register-open-link,
+.memo-resource-links a,
+.cert-register-actions a,
+.contact-register-action {
+  border-radius: var(--polish-radius);
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition),
+    color var(--transition),
+    transform var(--transition);
+}
+
+.field-label,
+.field-note-label {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.field-register-card dt,
+.register-summary-panel dt,
+.register-filter-select span,
+.memo-header-facts dt,
+.memo-spec-table dt,
+.memo-list-label,
+.memo-evidence-archive-note,
+.project-review-chip-list li,
+.memo-review-chip-list li,
+.memo-tag-list li,
+.memo-tool-list li,
+.toolkit-token,
+.contact-location-line {
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.field-degree,
+.priority-project-card small {
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.register-cover-title::before {
+  content: "Projects";
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0;
+}
+
+.capability-cover::after {
+  content: "Experience";
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0;
+}
+
+.memo-title-block::after {
+  content: "Project";
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0;
+}
+
+.field-cover {
+  padding-bottom: clamp(0.25rem, 1vw, 0.7rem);
+}
+
+.field-cover-grid {
+  align-items: stretch;
+}
+
+.field-cover-title {
+  align-self: stretch;
+  align-content: center;
+  height: 100%;
+}
+
+.review-lenses-section {
+  padding-top: clamp(0.35rem, 1vw, 0.75rem);
+}
+
+.field-cover-title,
+.field-profile-card,
+.field-focus-card,
+.field-register-card,
+.review-lenses-shell,
+.review-lens,
+.featured-project-shell,
+.featured-project-card,
+.register-cover-title,
+.register-summary-panel,
+.register-controls,
+.priority-register-shell,
+.priority-project-card,
+.register-table-wrap,
+.memo-title-block,
+.memo-hero-plate,
+.memo-header-facts,
+.memo-section,
+.memo-spec-card,
+.memo-related-section,
+.evidence-plate,
+.memo-decision-grid article,
+.memo-process-list li,
+.capability-cover,
+.capability-section,
+.toolkit-register,
+.cert-register-row,
+.collaboration-note-cover,
+.collaboration-register,
+.contact-register-row,
+.contact-register-icon {
+  border-color: var(--polish-border);
+  border-radius: var(--polish-radius);
+  box-shadow: var(--polish-shadow);
+}
+
+.field-cover-title,
+.register-cover-title,
+.capability-cover,
+.collaboration-note-cover {
+  overflow: hidden;
+}
+
+.featured-project-card,
+.priority-project-card,
+.memo-hero-plate,
+.evidence-plate,
+.memo-related-list a,
+.capability-log-row,
+.cert-register-row,
+.contact-register-row {
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition),
+    transform var(--transition);
+}
+
+.featured-project-card,
+.priority-project-card,
+.memo-hero-plate,
+.evidence-plate,
+.memo-related-list a,
+.cert-register-row,
+.contact-register-row {
+  overflow: hidden;
+}
+
+.featured-project-card figure,
+.priority-project-card figure,
+.project-card-media,
+.memo-hero-plate,
+.evidence-media,
+.cert-register-image,
+.contact-register-icon {
+  border-radius: var(--polish-radius);
+}
+
+.featured-project-card img,
+.priority-project-card img,
+.project-card-media img,
+.memo-hero-plate img,
+.evidence-media img,
+.cert-register-image {
+  transition:
+    filter var(--transition),
+    transform 280ms ease;
+}
+
+.featured-project-card img,
+.priority-project-card img {
+  aspect-ratio: 16 / 10;
+  object-position: center;
+}
+
+.featured-project-card figcaption,
+.priority-project-card figcaption,
+.memo-hero-plate figcaption,
+.evidence-plate figcaption {
+  padding: 0.88rem;
+}
+
+.priority-project-card small,
+.featured-project-action,
+.register-open-link,
+.memo-resource-links a,
+.cert-register-actions a,
+.contact-register-action {
+  text-decoration: none;
+}
+
+.field-cover-actions a:hover,
+.field-cover-actions a:focus-visible,
+.register-open-link:hover,
+.register-open-link:focus-visible,
+.memo-resource-links a:hover,
+.memo-resource-links a:focus-visible,
+.cert-register-actions a:hover,
+.cert-register-actions a:focus-visible,
+.contact-register-row:hover .contact-register-action,
+.contact-register-row:focus-visible .contact-register-action {
+  box-shadow: inset 0 -2px 0 var(--accent);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .featured-project-card:hover,
+  .featured-project-card:focus-visible,
+  .priority-project-card:hover,
+  .priority-project-card:focus-within,
+  .memo-hero-plate:hover,
+  .memo-hero-plate:focus-within,
+  .evidence-plate:hover,
+  .evidence-plate:focus-within,
+  .memo-related-list a:hover,
+  .memo-related-list a:focus-visible,
+  .cert-register-row:hover,
+  .cert-register-row:focus-within,
+  .contact-register-row:hover,
+  .contact-register-row:focus-visible {
+    border-color: rgba(217, 108, 22, 0.46);
+    box-shadow: var(--polish-shadow-strong);
+    transform: translateY(-2px);
+  }
+
+  .featured-project-card:hover img,
+  .featured-project-card:focus-visible img,
+  .priority-project-card:hover img,
+  .priority-project-card:focus-within img,
+  .project-card:hover .project-card-media img,
+  .project-card:focus-within .project-card-media img,
+  .memo-hero-plate:hover img,
+  .memo-hero-plate:focus-within img,
+  .evidence-plate:hover .evidence-media img,
+  .evidence-plate:focus-within .evidence-media img {
+    transform: scale(1.025);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-links a,
+  .footer-links a,
+  .field-cover-actions a,
+  .featured-project-action,
+  .register-filter-list button,
+  .register-filter-select select,
+  .register-open-link,
+  .memo-resource-links a,
+  .cert-register-actions a,
+  .contact-register-action,
+  .featured-project-card,
+  .priority-project-card,
+  .memo-hero-plate,
+  .evidence-plate,
+  .memo-related-list a,
+  .capability-log-row,
+  .cert-register-row,
+  .contact-register-row,
+  .featured-project-card img,
+  .priority-project-card img,
+  .project-card-media img,
+  .memo-hero-plate img,
+  .evidence-media img,
+  .cert-register-image {
+    transition: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .nav {
+    flex-wrap: wrap;
+    overflow: visible;
+  }
+
+  .nav-links {
+    width: 100%;
+  }
+}
+
+@media (max-width: 680px) {
+  .field-cover-title::before,
+  .register-cover-title::before,
+  .memo-title-block::after,
+  .capability-cover::after {
+    display: none;
+  }
+
+  .field-cover-title,
+  .memo-title-block {
+    padding-top: clamp(1.45rem, 6vw, 2rem);
+  }
+
+  .register-cover-title,
+  .capability-cover {
+    padding-top: clamp(1.25rem, 6vw, 1.8rem);
+  }
+}
+
+/* Stage 6B: final visual refinement, CSS-only */
+@media (min-width: 981px) {
+  .project-page .case-study-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.27fr);
+    gap: clamp(1.05rem, 1.8vw, 1.45rem);
+  }
+
+  .memo-title-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.38fr);
+    gap: clamp(1.2rem, 2.2vw, 1.85rem);
+  }
+
+  .memo-title-block h1 {
+    max-width: 17ch;
+    font-size: clamp(2.35rem, 4.35vw, 3.75rem);
+    line-height: 0.98;
+  }
+}
+
+@media (min-width: 1121px) {
+  .memo-section {
+    grid-template-columns: minmax(11.5rem, 14rem) minmax(0, 1fr);
+  }
+}
+
+.project-page .project-hero-shell {
+  padding-top: clamp(2.15rem, 4.2vw, 3.7rem);
+}
+
+.memo-title-block {
+  padding: clamp(1.25rem, 2.6vw, 1.85rem);
+}
+
+.memo-section-body {
+  padding: clamp(1rem, 1.8vw, 1.24rem);
+}
+
+.memo-section-heading {
+  padding: clamp(0.9rem, 1.5vw, 1.05rem);
+}
+
+.memo-content {
+  gap: 0.82rem;
+}
+
+.register-table-section {
+  padding-bottom: clamp(2.2rem, 4vw, 2.8rem);
+}
+
+.build-register-table td {
+  background: rgba(255, 253, 247, 0.7);
+  font-size: 0.9rem;
+  line-height: 1.52;
+}
+
+.build-register-table td:nth-child(2),
+.build-register-table td:nth-child(6),
+.build-register-table td:nth-child(7) {
+  font-family: "Inter", sans-serif;
+  font-size: 0.88rem;
+}
+
+.build-register-table td:nth-child(1) {
+  font-size: 0.76rem;
+}
+
+.build-register-table td:nth-child(4),
+.build-register-table td:nth-child(5),
+.build-register-table td:nth-child(6) {
+  color: var(--muted-strong);
+}
+
+.build-register-table tr:hover td,
+.build-register-table tr:focus-within td {
+  background: rgba(239, 232, 216, 0.48);
+}
+
+.register-project-link {
+  text-decoration-thickness: 1px;
+}
+
+.field-cover {
+  padding-top: clamp(2rem, 4.4vw, 3.75rem);
+}
+
+.review-lenses-section {
+  padding-bottom: clamp(0.95rem, 2.2vw, 1.55rem);
+}
+
+.featured-project-section {
+  padding-bottom: clamp(1.75rem, 3.2vw, 2.35rem);
+}
+
+.field-section {
+  padding: clamp(1.85rem, 3.7vw, 2.75rem) 0;
+}
+
+.field-section-heading {
+  margin-bottom: 0.7rem;
+}
+
+.field-note {
+  min-height: 13.5rem;
+}
+
+.method-entry {
+  min-height: 9rem;
+}
+
+@media (max-width: 720px) {
+  .project-page .project-hero-shell .container,
+  .memo-title-block,
+  .memo-title-grid,
+  .memo-title-grid > *,
+  .memo-title-side,
+  .memo-hero-plate,
+  .memo-header-facts {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .memo-title-grid {
+    display: block;
+  }
+
+  .memo-title-side {
+    margin-top: 1rem;
+  }
+
+  .memo-title-block h1 {
+    max-width: 100%;
+    font-size: clamp(2rem, 10vw, 2.75rem);
+    line-height: 1;
+  }
+
+  .memo-subtitle,
+  .memo-summary {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 560px) {
+  .memo-title-grid > div:first-child,
+  .memo-title-side {
+    width: min(100%, calc(100vw - 4rem));
+  }
+
+  .memo-title-block h1 {
+    max-width: 10.5ch;
+    font-size: clamp(2rem, 8.8vw, 2.45rem);
+  }
+
+  .memo-subtitle,
+  .memo-summary {
+    max-width: 29ch;
+  }
+}
