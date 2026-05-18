@@ -3,9 +3,9 @@ export const projects = [
     "slug": "kinematic-puppet-cobotics",
     "featured": true,
     "title": "Cobot Prototyping Platform",
-    "subtitle": "Low-cost cobot prototyping platform using a modular robot skeleton, end-effector concepts, CAD iteration, and HRI design thinking.",
+    "subtitle": "Low-cost cobot test platform built around a modular kinematic puppet, with interchangeable end-effectors, connectors, bases, CAD iteration, and physical prototypes.",
     "year": "2025",
-    "status": "Cobotics and HRI project work",
+    "status": "Cobot test-platform concept",
     "projectType": "Project",
     "tags": [
       "Cobotics",
@@ -18,55 +18,55 @@ export const projects = [
     ],
     "thumbnail": "assets/images/projects/kinematic-puppet-cobotics/01-diagram.jpg",
     "heroImage": "assets/images/projects/kinematic-puppet-cobotics/01-diagram.jpg",
-    "summary": "UTS 43019 project exploring a modular kinematic puppet as a physical platform for cobot morphology, end-effector concepts, and early HRI discussion.",
+    "summary": "Modular robot-skeleton concept for low-cost cobot prototyping, using morphology tables, weighted decision matrices, CAD, and physical prototypes to compare end-effector, connector, and base options.",
     "overview": [
-      "This project explored the Kinematic Puppet as a modular robot skeleton for cobot prototyping. Physical parts could be rearranged before committing to a final robot form or end effector.",
-      "The page focuses on problem framing, concept generation, connector design, CAD iteration, and prototype communication for human-centred robotics."
+      "This project framed the Kinematic Puppet as a low-cost physical cobot test platform. The idea was to use a modular robot skeleton so forms, joints, bases, and end-effectors could be handled and rearranged early.",
+      "The page focuses on concept generation, connector and base design, morphology comparison, CAD iteration, and physical prototyping as a way to discuss early cobotics design."
     ],
     "problem": [
-      "Cobot and HRI ideas are easier to discuss when designers can handle and rearrange physical robot forms instead of relying only on sketches or CAD renders.",
-      "The challenge was to propose a low-cost platform with modular parts, safe handling, manufacturable interfaces, and enough flexibility for early end-effector and morphology testing."
+      "Early cobot concepts are hard to assess when the robot form exists only as sketches or CAD renders.",
+      "The design challenge was to propose a low-cost platform with modular parts, safe handling, manufacturable interfaces, and enough flexibility to compare end-effector and morphology options before any industrial-grade build."
     ],
     "role": [
-      "Developed CAD and physical prototyping concepts for modular cobot hardware",
-      "Explored end-effector, connector, base, and morphology options through structured concept development",
-      "Used morphological tables and weighted decision matrices to compare design directions",
-      "Prepared visuals and design notes for HRI-oriented platform review"
+      "Developed CAD and physical prototype concepts for a modular cobot test platform",
+      "Explored end-effector, connector, base, and robot-skeleton morphology options",
+      "Used morphology tables and weighted decision matrices to compare design directions",
+      "Prepared visuals and design notes for early cobotics and human-robot interaction review"
     ],
     "process": [
       {
         "title": "Problem framing",
-        "body": "The project treated the kinematic puppet as a low-cost physical tool for exploring cobot shape, reach, and end-effector options."
+        "body": "The project treated the kinematic puppet as a physical tool for exploring cobot shape, reach, modularity, and end-effector options at low cost."
       },
       {
-        "title": "Concept generation",
-        "body": "End-effectors, connectors, and bases were explored as modular building blocks rather than one fixed robot layout."
+        "title": "Morphology exploration",
+        "body": "End-effectors, connectors, bases, and body layouts were explored as interchangeable building blocks rather than one fixed robot arrangement."
       },
       {
         "title": "Concept selection",
-        "body": "Morphological tables and weighted decision matrices helped compare modularity, manufacturability, safe handling, and prototype constraints."
+        "body": "Morphology tables and weighted decision matrices helped compare modularity, manufacturability, safe handling, ease of assembly, and prototype constraints."
       },
       {
         "title": "CAD and prototyping",
-        "body": "CAD and prototype visuals translated selected ideas into tangible robot-hardware pieces for review and later testing."
+        "body": "CAD and physical prototype visuals translated selected ideas into tangible robot-hardware pieces for review and later testing."
       }
     ],
     "technicalHighlights": [
       {
         "title": "Modular robot skeleton",
-        "body": "The kinematic puppet approach makes robot-body changes easier to discuss before committing to a final cobot form."
+        "body": "The kinematic puppet approach keeps robot-body changes discussable before committing to a fixed cobot form."
       },
       {
-        "title": "End-effector interfaces",
-        "body": "Gripper, hook, claw, clamp, magnet, and base concepts were compared as modular options for different interaction and manipulation scenarios."
+        "title": "Interchangeable interfaces",
+        "body": "Gripper, hook, claw, clamp, magnet, connector, and base concepts were compared as modular options for different handling and interaction scenarios."
       },
       {
         "title": "Prototype constraints",
-        "body": "The work kept safe handling, manufacturability, modularity, serviceable interfaces, and testability visible without overstating completed testing."
+        "body": "The work kept safe handling, manufacturability, modularity, serviceable interfaces, and testability visible as prototype-stage constraints."
       }
     ],
-    "outcome": "A concise case study showing modular cobot prototyping, end-effector options, connector and base concepts, and CAD-to-prototype communication.",
-    "relevance": "Relevant to robot hardware and HRI because it connects interaction questions to mechanical choices: modular interfaces, safe handling, manufacturable parts, and testable concepts.",
+    "outcome": "A prototype-stage case study showing modular cobot prototyping, end-effector options, connector and base concepts, and CAD-to-prototype communication.",
+    "relevance": "Relevant to robot hardware because it connects early interaction questions to mechanical choices: modular interfaces, safe handling, manufacturable parts, and testable concepts.",
     "tools": [
       "SolidWorks",
       "CAD",
@@ -176,11 +176,11 @@ export const projects = [
       }
     ],
     "lessonsLearned": [
-      "Physical prototypes make early HRI and cobotics concepts easier to discuss than abstract CAD alone.",
+      "Physical robot forms make early cobotics concepts easier to discuss than abstract CAD alone.",
       "Structured concept selection keeps modularity, manufacturability, safe handling, and testability visible during early robot-hardware design."
     ],
     "futureWork": [
-      "Add short annotations showing how each end-effector or base option supports different HRI and manipulation scenarios.",
+      "Add short annotations showing how each end-effector, connector, and base option changes the robot morphology or interaction scenario.",
       "Prepare any raw CAD or print files for public release only after ownership, privacy, and documentation checks."
     ],
     "relatedProjects": [
@@ -192,9 +192,9 @@ export const projects = [
     "slug": "confined-space-inspection-robot",
     "featured": true,
     "title": "Confined-Space Inspection Robot",
-    "subtitle": "Compact inspection-robot hardware project covering chassis packaging, drive layout, battery storage, camera/controller integration, wiring, service access, and prototype review.",
+    "subtitle": "Prototype-stage compact mobile robot design covering wheel/chassis layout, camera and controller integration, motor-driver-battery packaging, wiring paths, protection, and service access.",
     "year": "2025",
-    "status": "Capstone robot project",
+    "status": "Prototype-stage robot design",
     "projectType": "Project",
     "tags": [
       "Robotics",
@@ -206,29 +206,29 @@ export const projects = [
     ],
     "thumbnail": "assets/images/projects/confined-space-inspection-robot/01-18650.jpg",
     "heroImage": "assets/images/projects/confined-space-inspection-robot/01-18650.jpg",
-    "summary": "Compact robot hardware showing how chassis geometry, wheels, motors, drivers, battery storage, camera hardware, wiring, and Raspberry Pi layout fit into a small inspection platform.",
+    "summary": "Compact inspection-robot packaging study showing how chassis geometry, wheels, motors, drivers, battery storage, camera hardware, wiring, and Raspberry Pi layout fit into a small mobile platform.",
     "overview": [
-      "This capstone project developed a confined-space inspection robot concept around compact mechanical packaging, mobility, camera integration, power layout, and service access.",
-      "The page uses CAD screenshots, component visuals, notes, and prototype photos to explain design decisions while keeping raw CAD files out of the public site."
+      "This capstone project developed a confined-space inspection robot concept around compact mechanical packaging, mobility, camera integration, controller placement, power layout, and service access.",
+      "The page uses CAD screenshots, component visuals, notes, and prototype photos to explain prototype-stage design decisions while keeping raw source files out of the public site."
     ],
     "problem": [
       "A confined-space inspection robot needs to carry drive hardware, power storage, controller electronics, camera hardware, wiring, and protective structure inside a small mobile platform.",
-      "The mechanical challenge was to balance mobility, low centre of gravity, service access, cable routing, and component protection without making the chassis too bulky."
+      "The mechanical challenge was to balance mobility, low centre of gravity, service access, cable routing, component protection, and maintenance needs without making the chassis too bulky."
     ],
     "role": [
       "Developed CAD and packaging concepts for the compact robot chassis",
-      "Worked through wheel, motor, motor-driver, battery, Raspberry Pi, and camera layout decisions",
+      "Worked through wheel/chassis, motor, motor-driver, battery, Raspberry Pi, and camera layout decisions",
       "Considered low-centre-of-gravity packaging, service access, protection, and maintenance constraints",
       "Prepared prototype photos and CAD visuals to communicate subsystem integration and test-planning intent"
     ],
     "process": [
       {
         "title": "Chassis packaging",
-        "body": "The design work centred on fitting the wheelbase, chassis envelope, motors, electronics, and power storage into a compact inspection-robot form factor."
+        "body": "The design work centred on fitting the wheelbase, chassis envelope, motors, electronics, camera hardware, and power storage into a compact inspection-robot form factor."
       },
       {
         "title": "Drive and power layout",
-        "body": "Motor, driver, battery, and wiring placement were treated as mechanical packaging problems, with attention to centre of gravity, protection, and access for assembly or maintenance."
+        "body": "Motor, driver, battery, and wiring placement were treated as mechanical packaging problems, with attention to centre of gravity, protection, cable paths, and access for assembly or maintenance."
       },
       {
         "title": "Sensing and controller integration",
@@ -236,30 +236,30 @@ export const projects = [
       },
       {
         "title": "Prototype review and test planning",
-        "body": "Prototype photos and CAD views support review of packaging choices, service access, and future test planning without claiming completed performance results."
+        "body": "Prototype photos and CAD views support review of packaging choices, service access, protection, maintenance points, and future test planning at prototype stage."
       }
     ],
     "technicalHighlights": [
       {
         "title": "Compact mechanical architecture",
-        "body": "The project shows trade-offs across chassis geometry, wheel placement, drive components, power storage, controller hardware, and inspection payload space."
+        "body": "The project shows trade-offs across chassis geometry, wheel placement, drive components, power storage, controller hardware, camera placement, and inspection payload space."
       },
       {
         "title": "Serviceability and protection",
-        "body": "Battery, driver, controller, and camera placement were framed around access, cable routing, maintenance, and protection."
+        "body": "Battery, driver, controller, and camera placement were framed around access, cable routing, maintenance, protection, and low-centre-of-gravity layout."
       },
       {
         "title": "Integrated subsystem packaging",
         "body": "The robot hardware work connects CAD packaging, prototype iteration, test planning, service access, component protection, and integration records."
       }
     ],
-    "outcome": "Robot-hardware material showing compact chassis packaging, wheel and drive layout, electronics and power integration, camera placement, prototype visuals, and test-planning notes.",
+    "outcome": "A prototype-stage robot hardware record showing compact chassis packaging, wheel and drive layout, electronics and power integration, camera placement, prototype visuals, and test-planning notes.",
     "relevance": "Relevant to mechanical and robot-hardware engineering because it connects CAD packaging, sensing integration, serviceability, low-centre-of-gravity layout, protection, and prototype iteration.",
     "tools": [
       "SolidWorks",
       "Raspberry Pi",
-      "Mechanical design",
-      "Robot hardware",
+      "Motor drivers",
+      "Mechanical packaging",
       "Mechatronic integration"
     ],
     "links": {
@@ -494,7 +494,7 @@ export const projects = [
       "CAD views, prototype photos, and integration notes make serviceability, centre of gravity, protection, and assembly trade-offs easier to review."
     ],
     "futureWork": [
-      "Add annotated CAD views showing centre-of-gravity intent, maintenance access, cable paths, and protected component zones if public-safe material is available.",
+      "Add annotated CAD views showing centre-of-gravity intent, maintenance access, wiring paths, and protected component zones if public-safe material is available.",
       "Future sensing work could investigate vibration or condition-monitoring use cases only after validated measurement data and public-safe notes are available."
     ],
     "relatedProjects": [
@@ -506,9 +506,9 @@ export const projects = [
     "slug": "uts-motorsports-autonomous",
     "featured": true,
     "title": "UTS Motorsports Autonomous Hardware",
-    "subtitle": "Autonomous vehicle hardware CAD work covering sensor and electronics packaging, template/DXF workflow, fabrication-aware mounting, service access, vibration exposure, and vehicle integration.",
+    "subtitle": "Autonomous vehicle hardware CAD for sensor and electronics mounting, packaging, fabrication templates, DXF preparation, service access, vibration exposure, and vehicle constraints.",
     "year": "2025",
-    "status": "Approved public project work",
+    "status": "Autonomous hardware CAD",
     "projectType": "Project",
     "tags": [
       "Autonomous Systems",
@@ -520,51 +520,51 @@ export const projects = [
     ],
     "thumbnail": "assets/images/projects/uts-motorsports-autonomous/01-image-1.jpg",
     "heroImage": "assets/images/projects/uts-motorsports-autonomous/01-image-1.jpg",
-    "summary": "UTS Motorsports Autonomous hardware work showing sensor and electronics packaging, CAD templates, DXF preparation, fabrication-aware mounting, and serviceable vehicle integration.",
+    "summary": "UTS Motorsports Autonomous hardware record showing sensor and electronics packaging, CAD templates, DXF preparation, fabrication-aware mounting, serviceability, and vehicle integration constraints.",
     "overview": [
-      "This project documents public CAD and fabrication context for autonomous vehicle hardware components.",
-      "The page focuses on packaging, mounting, service access, and design records rather than private team files or raw working data."
+      "This project documents public-safe CAD and fabrication context for autonomous vehicle hardware components.",
+      "The page focuses on sensor and electronics packaging, mounting, service access, vibration exposure, and design records while keeping private team source files out of the site."
     ],
     "problem": [
       "Autonomous vehicle hardware needs mounts and electronics packaging that fit the vehicle, survive vibration exposure, and remain serviceable.",
-      "The design work needed to connect CAD templates, DXF preparation, fabrication constraints, and vehicle integration without exposing private team material."
+      "The design work needed to connect CAD templates, DXF preparation, fabrication constraints, vehicle integration, and maintenance access without exposing private team material."
     ],
     "role": [
       "Prepared CAD and template work for sensor and electronics hardware",
-      "Supported fabrication-aware mounting and DXF-related workflow",
+      "Translated design intent into fabrication-aware mounting, templates, and DXF-related workflow",
       "Considered service access, vibration exposure, and packaging around the vehicle",
-      "Kept the public page limited to approved project visuals and context"
+      "Kept the page limited to public-safe visuals and mechanical integration context"
     ],
     "process": [
       {
         "title": "Packaging review",
-        "body": "Sensor and electronics hardware were treated as vehicle-packaging problems with mounting, access, and vibration exposure considered together."
+        "body": "Sensor and electronics hardware were treated as vehicle-packaging problems with mounting, envelope, service access, and vibration exposure considered together."
       },
       {
-        "title": "CAD and templates",
-        "body": "CAD templates and DXF-related preparation supported fabrication decisions and made the design intent easier to review."
+        "title": "CAD templates and DXF workflow",
+        "body": "CAD templates and DXF-related preparation connected the design intent to fabrication decisions and made mounting geometry easier to review."
       },
       {
-        "title": "Public documentation",
-        "body": "The page keeps the explanation focused on approved visuals, mechanical packaging, and design records."
+        "title": "Public-safe documentation",
+        "body": "The page keeps the explanation focused on approved visuals, mechanical packaging, serviceability, and design records rather than team source files."
       }
     ],
     "technicalHighlights": [
       {
-        "title": "Vehicle packaging",
-        "body": "Sensor and electronics components had to fit around vehicle geometry, mounting locations, access, and vibration exposure."
+        "title": "Vehicle-constrained packaging",
+        "body": "Sensor and electronics components had to fit around vehicle geometry, mounting locations, access paths, vibration exposure, and service needs."
       },
       {
         "title": "Fabrication-aware CAD",
-        "body": "Template and DXF work connected CAD decisions to fabrication and installation constraints."
+        "body": "Template and DXF work connected CAD decisions to fabrication, installation, and repeatable review constraints."
       },
       {
         "title": "Service access",
-        "body": "The hardware layout considered access for inspection, adjustment, and later maintenance."
+        "body": "The hardware layout considered access for inspection, adjustment, wiring, and later maintenance."
       }
     ],
-    "outcome": "A public project page showing CAD/template workflow, fabrication-aware packaging, and mechanical integration for autonomous vehicle hardware.",
-    "relevance": "Supports robot hardware and mechanical design by showing packaging, manufacturability, serviceability, and design records under real system constraints.",
+    "outcome": "A public-safe hardware CAD case study showing template workflow, fabrication-aware packaging, and mechanical integration for autonomous vehicle hardware.",
+    "relevance": "Supports robot hardware and mechanical design by showing packaging, manufacturability, serviceability, and design records under real vehicle constraints.",
     "tools": [
       "SolidWorks",
       "DXF preparation",
@@ -586,22 +586,22 @@ export const projects = [
         "type": "image",
         "src": "assets/images/projects/uts-motorsports-autonomous/01-image-1.jpg",
         "alt": "UTS Motorsports Autonomous Hardware visual 1",
-        "caption": "Autonomous hardware mounting and fabrication reference"
+        "caption": "Autonomous hardware mounting and fabrication context"
       },
       {
         "type": "image",
         "src": "assets/images/projects/uts-motorsports-autonomous/02-image.jpg",
         "alt": "UTS Motorsports Autonomous Hardware visual 2",
-        "caption": "Sensor and electronics packaging reference"
+        "caption": "Sensor and electronics packaging context"
       }
     ],
     "lessonsLearned": [
       "CAD is stronger when it visibly accounts for how hardware will be made, mounted, accessed, and maintained.",
-      "Approved public visuals can communicate system integration without exposing private team files."
+      "Public-safe visuals can communicate system integration without exposing private team files."
     ],
     "futureWork": [
-      "Add more clean CAD renders or annotated packaging views if approved public material becomes available.",
-      "Keep raw files out of the public site unless ownership and privacy checks are complete."
+      "Add more clean CAD renders or annotated packaging views if public-safe material becomes available.",
+      "Keep raw team files out of the public site unless ownership and privacy checks are complete."
     ],
     "relatedProjects": [
       "confined-space-inspection-robot",
@@ -612,69 +612,70 @@ export const projects = [
     "slug": "warman-challenge-robot",
     "featured": true,
     "title": "Warman Challenge Robot",
-    "subtitle": "Robot mechanism project focused on ball retention, servo-actuated release gates, CAD iteration, tolerance-sensitive fit, prototype photos, and testing visuals.",
+    "subtitle": "Robot mechanism design for a Warman subsystem, focused on ball retention, servo-actuated release gates and flaps, retainer geometry, tolerance-sensitive fit, CAD iteration, and prototype review.",
     "year": "2025",
-    "status": "Mechanism design project",
+    "status": "Robot mechanism design",
     "projectType": "Project",
     "tags": [
       "Robotics",
       "Mechanisms",
       "CAD",
       "Prototyping",
-      "Testing",
+      "Prototype Review",
       "Robot Hardware"
     ],
     "thumbnail": "assets/images/projects/warman-challenge-robot/01-2025-warman-track-assembly-exploded.jpg",
     "heroImage": "assets/images/projects/warman-challenge-robot/01-2025-warman-track-assembly-exploded.jpg",
-    "summary": "Warman Challenge robot work showing mechanism design, CAD iteration, ball-retainer assemblies, servo release concepts, prototype visuals, and testing-oriented build records.",
+    "summary": "Warman Challenge robot record showing mechanism design, CAD iteration, ball-retainer assemblies, servo-actuated release concepts, prototype visuals, and test-planning evidence.",
     "overview": [
-      "This project is presented as robot mechanism and subsystem design work.",
-      "The page uses CAD screenshots and prototype visuals to show how mechanism concepts evolved toward a testable competition robot subsystem."
+      "This project is presented as robot mechanism and subsystem design work for a Warman Challenge robot.",
+      "The page uses CAD screenshots and prototype visuals to show how the ball-retention and release mechanism evolved toward a testable competition subsystem."
     ],
     "problem": [
       "The robot needed a compact subsystem for retaining and releasing balls under competition-style constraints.",
-      "That made the work a useful exercise in mechanism packaging, actuation, iteration, tolerance-sensitive fit, manufacturability, and test-driven refinement."
+      "That made the work a useful exercise in retainer geometry, servo-actuated gates and flaps, mechanism packaging, tolerance-sensitive fit, manufacturability, and test-planning."
     ],
     "role": [
       "Worked through CAD and mechanism layout for the ball-retention and release subsystem",
+      "Developed retainer geometry and servo-actuated gate/flap concepts",
       "Prepared prototype and CAD visuals for review",
-      "Considered servo actuation, fit, fabrication, service access, and testing constraints"
+      "Considered tolerance-sensitive fit, fabrication, service access, and testing constraints"
     ],
     "process": [
       {
         "title": "Mechanism layout",
-        "body": "The work focused on ball-retainer geometry, release gates, servo actuation, and how the subsystem fit inside the wider robot."
+        "body": "The work focused on ball-retainer geometry, release gates and flaps, servo actuation, and how the subsystem fit inside the wider robot."
       },
       {
         "title": "CAD iteration",
-        "body": "CAD screenshots record changes to assemblies, sheet-metal style parts, and tolerance-sensitive interfaces."
+        "body": "CAD screenshots record changes to assemblies, sheet-metal style parts, gate geometry, and tolerance-sensitive interfaces."
       },
       {
         "title": "Prototype review",
-        "body": "Prototype and testing visuals helped check access, movement, fit, and likely adjustment points."
+        "body": "Prototype and testing-intent visuals helped review access, movement, fit, and likely adjustment points without claiming full mechanism validation."
       }
     ],
     "technicalHighlights": [
       {
-        "title": "Ball-retainer assembly",
-        "body": "The subsystem needed to hold payloads reliably while still allowing a controlled release."
+        "title": "Retainer geometry",
+        "body": "The subsystem needed retainer geometry that could hold balls in position while still allowing a controlled release path."
       },
       {
-        "title": "Servo release gates",
-        "body": "Servo-actuated release concepts were explored through CAD and prototype review."
+        "title": "Servo-actuated gates and flaps",
+        "body": "Servo-actuated release concepts were explored through CAD and prototype review, with attention to motion, clearance, and packaging."
       },
       {
-        "title": "Fit and service access",
-        "body": "The design work kept tolerances, assembly access, fabrication, and later testing in view."
+        "title": "Fit and access",
+        "body": "The design work kept tolerances, assembly access, fabrication, adjustment points, and later testing in view."
       }
     ],
-    "outcome": "A robot mechanism page showing CAD iteration, actuation concepts, prototype visuals, and testing-oriented subsystem records.",
-    "relevance": "Supports practical robot hardware work through mechanism packaging, tolerancing awareness, testing, serviceability, and manufacturability thinking.",
+    "outcome": "A robot mechanism page showing CAD iteration, retainer and gate concepts, prototype visuals, and testing-oriented subsystem records.",
+    "relevance": "Supports practical robot hardware work through mechanism packaging, tolerancing awareness, serviceability, manufacturability, and test-planning.",
     "tools": [
       "SolidWorks",
       "Mechanism design",
       "Prototyping",
-      "Testing",
+      "Prototype review",
       "Fabrication"
     ],
     "links": {
@@ -691,73 +692,73 @@ export const projects = [
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/01-2025-warman-track-assembly-exploded.jpg",
         "alt": "Warman Challenge Robot visual 1",
-        "caption": "Warman robot CAD and prototype review 1"
+        "caption": "Exploded track assembly and subsystem layout"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/02-2025-warman-track-assembly-no-payloads.jpg",
         "alt": "Warman Challenge Robot visual 2",
-        "caption": "Warman robot CAD and prototype review 2"
+        "caption": "Track assembly view without payloads"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/03-2025-warman-track-assembly-payload-final.jpg",
         "alt": "Warman Challenge Robot visual 3",
-        "caption": "Warman robot CAD and prototype review 3"
+        "caption": "Payload-retention layout in final position"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/04-2025-warman-track-assembly-payload-starting.jpg",
         "alt": "Warman Challenge Robot visual 4",
-        "caption": "Warman robot CAD and prototype review 4"
+        "caption": "Payload-retention layout in starting position"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/05-assem-robot-v2.jpg",
         "alt": "Warman Challenge Robot visual 5",
-        "caption": "Warman robot CAD and prototype review 5"
+        "caption": "Robot assembly iteration with mechanism packaging"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/06-ball-retainer-system-left-side-assembly.jpg",
         "alt": "Warman Challenge Robot visual 6",
-        "caption": "Warman robot CAD and prototype review 6"
+        "caption": "Ball-retainer subsystem left-side assembly"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/07-ball-retainer-system-right-side-assembly-isometric.jpg",
         "alt": "Warman Challenge Robot visual 7",
-        "caption": "Warman robot CAD and prototype review 7"
+        "caption": "Ball-retainer subsystem right-side isometric"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/08-ball-retainer-system-right-side-assembly-with-sheetmetal.jpg",
         "alt": "Warman Challenge Robot visual 8",
-        "caption": "Warman robot CAD and prototype review 8"
+        "caption": "Ball-retainer subsystem with sheet-metal style plate"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/09-assembly.jpg",
         "alt": "Warman Challenge Robot visual 9",
-        "caption": "Warman robot CAD and prototype review 9"
+        "caption": "Mechanism assembly overview"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/10-screenshot-2025-05-05-at-4-29-04-pm.jpg",
         "alt": "Warman Challenge Robot visual 10",
-        "caption": "Warman robot CAD and prototype review 10"
+        "caption": "Release-gate geometry review"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/11-screenshot-2025-05-05-at-5-09-01-pm.jpg",
         "alt": "Warman Challenge Robot visual 11",
-        "caption": "Warman robot CAD and prototype review 11"
+        "caption": "Retainer and gate clearance review"
       },
       {
         "type": "image",
         "src": "assets/images/projects/warman-challenge-robot/12-screenshot-2025-05-05-at-5-57-39-pm.jpg",
         "alt": "Warman Challenge Robot visual 12",
-        "caption": "Warman robot CAD and prototype review 12"
+        "caption": "Servo-actuated release concept iteration"
       },
       {
         "type": "image",
@@ -882,10 +883,10 @@ export const projects = [
     ],
     "lessonsLearned": [
       "Mechanism concepts need physical testing because release behaviour and fit are difficult to judge from CAD alone.",
-      "Clear CAD and prototype visuals make design iteration easier to explain to technical reviewers."
+      "Clear CAD and prototype visuals make tolerance, actuation, and adjustment decisions easier to discuss."
     ],
     "futureWork": [
-      "Add concise annotations around the retainer and gate behaviour if public images are expanded later.",
+      "Add concise annotations around retainer geometry, gate movement, and servo placement if public images are expanded later.",
       "Keep any raw CAD or source files private until ownership and release checks are complete."
     ],
     "relatedProjects": [
@@ -984,66 +985,66 @@ export const projects = [
     "slug": "additive-manufacturing-plier-project",
     "featured": true,
     "title": "Additive Manufacturing Plier Project",
-    "subtitle": "Topology-optimised plier design project with concept development, CAD, static-study visuals, slicer setup, printability trade-offs, and DFM for additive manufacturing.",
+    "subtitle": "DfAM plier project using topology optimisation, CAD iteration, static-study visuals, slicer setup, support settings, and manufacturability trade-offs for a printed mechanical tool.",
     "year": "2025",
-    "status": "Additive manufacturing project",
+    "status": "DfAM tool design",
     "projectType": "Project",
     "tags": [
       "Additive Manufacturing",
       "Topology Optimisation",
       "CAD",
-      "Simulation",
+      "Static Study",
       "Slicing",
-      "DFM"
+      "3D Printing"
     ],
     "thumbnail": "assets/images/projects/additive-manufacturing-plier-project/01-01-to-topologytopbodyresult.jpg",
     "heroImage": "assets/images/projects/additive-manufacturing-plier-project/01-01-to-topologytopbodyresult.jpg",
-    "summary": "Additive manufacturing project showing concept development, topology optimisation, SolidWorks static-study outputs, slicer preparation, printability decisions, and manufacturability trade-offs for a printed tool.",
+    "summary": "Mechanical tool design shaped by additive manufacturing constraints, showing concept development, topology optimisation, SolidWorks static-study visuals, slicer preparation, support settings, and manufacturability trade-offs.",
     "overview": [
-      "This project is presented as additive manufacturing and mechanical design work.",
-      "The page uses concept, CAD, topology optimisation, static-study, and slicer visuals to show how a printable mechanical tool was developed and prepared."
+      "This project is presented as design for additive manufacturing and mechanical tool design work.",
+      "The page uses concept, CAD, topology optimisation, static-study, and slicer visuals to show how a printable plier geometry was iterated and prepared."
     ],
     "problem": [
-      "The design challenge was to develop a printable plier geometry and prepare it through CAD, optimisation, static-study outputs, and slicing steps.",
-      "The work connects material use, strength checks, printability, support strategy, manufacturability, and design records."
+      "The design challenge was to develop a printable plier geometry while accounting for additive manufacturing constraints.",
+      "The work connects material use, geometry reduction, static-study evidence, print orientation, support strategy, wall and infill settings, manufacturability, and design records without overstating mechanical performance."
     ],
     "role": [
-      "Developed concept and CAD geometry",
-      "Used topology optimisation and static-study screenshots",
-      "Prepared slicer/modifier visuals to communicate print preparation, support settings, and manufacturability decisions"
+      "Developed concept and CAD geometry for a printable plier",
+      "Used topology optimisation and static-study screenshots as design evidence",
+      "Prepared slicer and support-setting visuals to communicate print preparation and manufacturability decisions"
     ],
     "process": [
       {
         "title": "Concept to CAD",
-        "body": "The project moved from concept development into CAD geometry that could be checked and prepared for additive manufacturing."
+        "body": "The project moved from concept development into CAD geometry that could be checked, iterated, and prepared for additive manufacturing."
       },
       {
         "title": "Optimisation and checking",
-        "body": "Topology optimisation and static-study visuals were used to reason about material placement, loading, and design confidence."
+        "body": "Topology optimisation and static-study visuals were used to reason about material placement and likely load paths, while keeping the evidence limited to supported static-study outputs."
       },
       {
         "title": "Print preparation",
-        "body": "Slicer visuals show how the CAD geometry moved toward a printable part with support and setup constraints visible."
+        "body": "Slicer visuals show how the CAD geometry moved toward a printable part with orientation, wall, infill, support, and setup constraints visible."
       }
     ],
     "technicalHighlights": [
       {
         "title": "DFM for additive manufacturing",
-        "body": "The project highlights printability, material use, support settings, modifier choices, and geometry decisions."
+        "body": "The project highlights printability, material use, support settings, wall and infill choices, and geometry decisions."
       },
       {
-        "title": "Design record",
-        "body": "CAD, static-study outputs, print-preparation records, and manufacturability trade-offs are kept visible together."
+        "title": "Static-study record",
+        "body": "CAD, topology optimisation, static-study outputs, print-preparation records, and manufacturability trade-offs are kept visible together."
       }
     ],
-    "outcome": "A project page showing concept-to-CAD development, optimisation outputs, static-study visuals, and slicer preparation.",
-    "relevance": "Supports mechanical design through CAD, DFM, manufacturability, print preparation, simulation-informed judgement, and design records.",
+    "outcome": "A project page showing concept-to-CAD development, topology optimisation, static-study visuals, slicer setup, and print-preparation decisions.",
+    "relevance": "Supports mechanical design through DfAM, CAD iteration, manufacturability, print preparation, static-study evidence, and design records.",
     "tools": [
       "SolidWorks",
       "Topology optimisation",
       "Bambu Studio",
       "Static study",
-      "3D printing"
+      "Slicer setup"
     ],
     "links": {
       "repo": "https://github.com/tranthunhan/additive-manufacturing-plier-project",
@@ -1107,49 +1108,49 @@ export const projects = [
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/10-11-to-static-fullplier-60njaw-pla-stressresults.jpg",
         "alt": "Additive Manufacturing Plier Project visual 9",
-        "caption": "Static study stress result at 60 N jaw load"
+        "caption": "Static-study stress plot at 60 N jaw load"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/12-13-to-static-fullplier-60njaw-pla-strainresults.jpg",
         "alt": "Additive Manufacturing Plier Project visual 10",
-        "caption": "Static study strain result at 60 N jaw load"
+        "caption": "Static-study strain plot at 60 N jaw load"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/13-14-to-static-fullplier-40njaw-pla-stressresults.jpg",
         "alt": "Additive Manufacturing Plier Project visual 11",
-        "caption": "Static study stress result at 40 N jaw load"
+        "caption": "Static-study stress plot at 40 N jaw load"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/15-16-to-static-fullplier-40njaw-pla-strainresults.jpg",
         "alt": "Additive Manufacturing Plier Project visual 12",
-        "caption": "Static study strain result at 40 N jaw load"
+        "caption": "Static-study strain plot at 40 N jaw load"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/16-17-to-static-fullplier-20njaw-pla-stressresults.jpg",
         "alt": "Additive Manufacturing Plier Project visual 13",
-        "caption": "Static study stress result at 20 N jaw load"
+        "caption": "Static-study stress plot at 20 N jaw load"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/18-19-to-static-fullplier-20njaw-pla-strainresults.jpg",
         "alt": "Additive Manufacturing Plier Project visual 14",
-        "caption": "Static study strain result at 20 N jaw load"
+        "caption": "Static-study strain plot at 20 N jaw load"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/19-20-to-static-fullplier-16njaw-pla-stressresults.jpg",
         "alt": "Additive Manufacturing Plier Project visual 15",
-        "caption": "Static study stress result at 16 N jaw load"
+        "caption": "Static-study stress plot at 16 N jaw load"
       },
       {
         "type": "image",
         "src": "assets/images/projects/additive-manufacturing-plier-project/21-22-to-static-fullplier-16njaw-pla-strainresults.jpg",
         "alt": "Additive Manufacturing Plier Project visual 16",
-        "caption": "Static study strain result at 16 N jaw load"
+        "caption": "Static-study strain plot at 16 N jaw load"
       },
       {
         "type": "image",
@@ -1208,10 +1209,10 @@ export const projects = [
     ],
     "lessonsLearned": [
       "Manufacturability decisions should be visible in the design record, not hidden after the final CAD image.",
-      "Simulation and slicer outputs make the design process more credible than a finished model alone."
+      "Static-study and slicer outputs make the design process clearer than a finished model alone."
     ],
     "futureWork": [
-      "Add concise annotations explaining the key topology, strength, and print-preparation decisions.",
+      "Add concise annotations explaining the key topology, static-study, support, and print-preparation decisions.",
       "Prepare source CAD or print files for public release only after cleanup and release notes."
     ],
     "relatedProjects": [
@@ -1395,33 +1396,33 @@ export const projects = [
     "slug": "pcm-helmet-cooling-system",
     "featured": false,
     "title": "PCM Helmet Cooling System",
-    "subtitle": "Thermal and mechanical subsystem concept using paraffin wax PCM, CAD, ANSYS mesh visuals, prototype/material images, user constraints, and testing documentation.",
+    "subtitle": "Early thermal and mechanical subsystem concept using paraffin wax PCM, CAD geometry, ANSYS-style mesh visuals, material packaging, and helmet comfort constraints.",
     "year": "2025",
-    "status": "Thermal/mechanical design project",
+    "status": "Thermal subsystem concept",
     "projectType": "Project",
     "tags": [
       "Thermal Design",
       "PCM",
-      "ANSYS",
       "CAD",
-      "Prototype",
-      "Testing"
+      "Mesh Studies",
+      "Material Packaging",
+      "User Comfort"
     ],
     "thumbnail": "assets/images/projects/pcm-helmet-cooling-system/01-coarse-mesh-volume.jpg",
     "heroImage": "assets/images/projects/pcm-helmet-cooling-system/01-coarse-mesh-volume.jpg",
-    "summary": "Thermal and mechanical project using PCM cooling, CAD and mesh images, simulation-style visuals, prototype photos, material visuals, user constraints, and testing records.",
+    "summary": "Early-stage helmet cooling concept using paraffin wax phase-change material, CAD geometry, mesh visuals, material/prototype images, packaging constraints, and user-comfort context.",
     "overview": [
-      "This project involved a helmet cooling concept using paraffin wax phase-change material.",
-      "The page uses CAD, mesh, prototype, and selected visuals to discuss thermal packaging, mechanical fit, user context, and testing documentation."
+      "This project explored a helmet cooling concept using paraffin wax phase-change material as a thermal subsystem.",
+      "The page uses CAD, mesh, material, prototype, and selected report visuals to discuss thermal packaging, mechanical fit, user comfort, and early-stage design reasoning."
     ],
     "problem": [
       "Helmet cooling needs to manage heat while fitting safely and practically into helmet-related geometry.",
-      "The work combines thermal reasoning, mechanical packaging, user comfort, testing records, manufacturability, and documentation discipline."
+      "The work combines thermal reasoning, PCM material choice, mechanical packaging, user comfort, manufacturability, and mesh-based design evidence at the concept stage."
     ],
     "role": [
-      "Worked with CAD, mesh, prototype, material, and documentation evidence",
+      "Worked with CAD, mesh, prototype, material, and documentation evidence for the PCM concept",
       "Prepared public-facing visuals from images and report material",
-      "Organised the project as a thermal and mechanical subsystem case study"
+      "Organised the project as an early-stage thermal and mechanical subsystem case study"
     ],
     "process": [
       {
@@ -1430,31 +1431,31 @@ export const projects = [
       },
       {
         "title": "CAD and mesh evidence",
-        "body": "CAD and ANSYS-style mesh visuals show how geometry and simulation evidence were used to reason about the subsystem and communicate design trade-offs."
+        "body": "CAD and ANSYS-style mesh visuals show how geometry and simulation-style evidence were used to reason about the subsystem and communicate design trade-offs."
       },
       {
-        "title": "Testing documentation",
-        "body": "Prototype/material visuals and selected figures show quality-minded record keeping with public-safe content."
+        "title": "Material and packaging review",
+        "body": "Prototype/material visuals and selected figures show how PCM selection, enclosure geometry, manufacturability, and user constraints were recorded with public-safe content."
       }
     ],
     "technicalHighlights": [
       {
-        "title": "Thermal and mechanical packaging",
-        "body": "The project connects heat-management intent, mechanical fit, material choice, user context, manufacturability, and verification evidence."
+        "title": "PCM packaging",
+        "body": "The project connects heat-management intent, paraffin wax PCM, mechanical fit, containment, user context, and manufacturability."
       },
       {
-        "title": "Design record",
-        "body": "CAD, mesh, material, prototype, and testing visuals are presented together so the subsystem can be reviewed without unsupported performance claims."
+        "title": "Mesh-based design evidence",
+        "body": "CAD, mesh, material, prototype, and report visuals are presented together so the subsystem can be reviewed as an early design concept."
       }
     ],
-    "outcome": "A thermal and mechanical subsystem page showing CAD, mesh, prototype, material, and testing records.",
-    "relevance": "Supports mechanical design through thermal reasoning, CAD, simulation outputs, testing, packaging, manufacturability, and user-centred constraints.",
+    "outcome": "An early-stage thermal subsystem page showing CAD geometry, mesh visuals, PCM material evidence, prototype images, and packaging constraints.",
+    "relevance": "Supports mechanical design through thermal reasoning, CAD, simulation-style outputs, material packaging, manufacturability, and user-centred constraints.",
     "tools": [
       "ANSYS",
       "CAD",
       "Mesh studies",
-      "Mechanical design",
-      "Testing documentation"
+      "Mechanical packaging",
+      "Thermal design"
     ],
     "links": {
       "repo": "https://github.com/tranthunhan/pcm-helmet-cooling-system",
@@ -1470,49 +1471,49 @@ export const projects = [
         "type": "image",
         "src": "assets/images/projects/pcm-helmet-cooling-system/01-coarse-mesh-volume.jpg",
         "alt": "PCM Helmet Cooling System visual 1",
-        "caption": "Coarse mesh volume view"
+        "caption": "Coarse mesh volume for PCM cooling geometry"
       },
       {
         "type": "image",
         "src": "assets/images/projects/pcm-helmet-cooling-system/02-fine-mesh-volume.jpg",
         "alt": "PCM Helmet Cooling System visual 2",
-        "caption": "Fine mesh volume view"
+        "caption": "Fine mesh volume for PCM cooling geometry"
       },
       {
         "type": "image",
         "src": "assets/images/projects/pcm-helmet-cooling-system/03-fine-mesh.jpg",
         "alt": "PCM Helmet Cooling System visual 3",
-        "caption": "Fine mesh surface view"
+        "caption": "Fine mesh surface view for geometry review"
       },
       {
         "type": "image",
         "src": "assets/images/projects/pcm-helmet-cooling-system/04-normal-mesh.jpg",
         "alt": "PCM Helmet Cooling System visual 4",
-        "caption": "Normal mesh surface view"
+        "caption": "Normal mesh surface view for comparison"
       },
       {
         "type": "image",
         "src": "assets/images/projects/pcm-helmet-cooling-system/05-super-fine-mesh.jpg",
         "alt": "PCM Helmet Cooling System visual 5",
-        "caption": "Super-fine mesh surface view"
+        "caption": "Super-fine mesh surface view for comparison"
       },
       {
         "type": "image",
         "src": "assets/images/projects/pcm-helmet-cooling-system/06-4th.jpg",
         "alt": "PCM Helmet Cooling System visual 6",
-        "caption": "Helmet cooling concept geometry view"
+        "caption": "Helmet cooling package geometry iteration"
       },
       {
         "type": "image",
         "src": "assets/images/projects/pcm-helmet-cooling-system/07-geometry.jpg",
         "alt": "PCM Helmet Cooling System visual 7",
-        "caption": "PCM cooling geometry view"
+        "caption": "PCM container geometry view"
       },
       {
         "type": "image",
         "src": "assets/images/projects/pcm-helmet-cooling-system/08-img-2481.jpg",
         "alt": "PCM Helmet Cooling System visual 8",
-        "caption": "Prototype and material evidence photo"
+        "caption": "Paraffin wax PCM and prototype material evidence"
       },
       {
         "type": "image",
@@ -1524,19 +1525,19 @@ export const projects = [
         "type": "image",
         "src": "assets/images/projects/pcm-helmet-cooling-system/10-portfolio-extract-82321209-911b-468a-9b75-97da8571fc2c-1.jpg",
         "alt": "PCM Helmet Cooling System visual 10",
-        "caption": "PCM helmet report/presentation extracted figure"
+        "caption": "Report extract on helmet cooling context"
       },
       {
         "type": "image",
         "src": "assets/images/projects/pcm-helmet-cooling-system/11-portfolio-extract-9130e8a1-b27b-42ae-a6d9-2482746ea6c9-2.jpg",
         "alt": "PCM Helmet Cooling System visual 11",
-        "caption": "PCM helmet report/presentation extracted figure"
+        "caption": "Report extract on PCM material and packaging context"
       },
       {
         "type": "image",
         "src": "assets/images/projects/pcm-helmet-cooling-system/12-portfolio-extract-bff76412-7262-4355-abb1-4abc58217503-3.jpg",
         "alt": "PCM Helmet Cooling System visual 12",
-        "caption": "PCM helmet report/presentation extracted figure"
+        "caption": "Report extract on subsystem geometry and constraints"
       },
       {
         "type": "image",
@@ -1582,11 +1583,11 @@ export const projects = [
       }
     ],
     "lessonsLearned": [
-      "Thermal/mechanical product concepts need evidence across geometry, material behaviour, packaging, and test documentation.",
-      "Privacy-safe project pages can still communicate engineering judgement without linking sensitive reports."
+      "Thermal product concepts need evidence across geometry, material behaviour, packaging, and user context.",
+      "Privacy-safe project pages can communicate engineering judgement without publishing sensitive reports."
     ],
     "futureWork": [
-      "Add concise annotations around the mesh, material, and testing visuals if public-safe notes are available.",
+      "Add concise annotations around the mesh, PCM material choice, enclosure geometry, and comfort constraints if public-safe notes are available.",
       "Use only redacted or privacy-reviewed documentation if a public report link is added later."
     ],
     "relatedProjects": [

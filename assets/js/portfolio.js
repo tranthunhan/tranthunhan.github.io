@@ -23,26 +23,26 @@ const priorityProjectSlugs = [
 
 const priorityProjectNotes = {
   "kinematic-puppet-cobotics":
-    "Modular cobot platform with CAD iteration and end-effector options.",
+    "Low-cost cobot test platform with modular morphology, CAD iteration, and physical prototypes.",
   "confined-space-inspection-robot":
-    "Compact robot packaging around power, camera, controller, wiring, and service access.",
+    "Compact mobile robot packaging around chassis layout, camera, controller, wiring, and service access.",
   "uts-motorsports-autonomous":
-    "Sensor and electronics packaging with fabrication-aware CAD records and serviceability constraints.",
+    "Sensor and electronics mounting shaped by fabrication-aware CAD, serviceability, and vehicle constraints.",
   "warman-challenge-robot":
-    "Mechanism and release-system prototype records with CAD and test-facing build notes.",
+    "Ball-retention and servo-release mechanism work with CAD iteration and prototype review.",
   "additive-manufacturing-plier-project":
-    "Topology and print-preparation record for a mechanical tool shaped by manufacturability.",
+    "DfAM plier design with topology optimisation, static-study visuals, and slicer setup.",
   "pcm-helmet-cooling-system":
-    "Thermal subsystem evidence with CAD, mesh views, material notes, and user-comfort constraints."
+    "PCM helmet cooling concept with CAD, mesh views, material packaging, and comfort constraints."
 };
 
 const priorityProjectLabels = {
-  "kinematic-puppet-cobotics": "Cobotics and HRI",
-  "confined-space-inspection-robot": "Mobile robotics",
+  "kinematic-puppet-cobotics": "Cobot test platform",
+  "confined-space-inspection-robot": "Compact mobile robot",
   "uts-motorsports-autonomous": "Autonomous hardware CAD",
-  "warman-challenge-robot": "Prototype mechanisms",
-  "additive-manufacturing-plier-project": "Additive manufacturing",
-  "pcm-helmet-cooling-system": "Thermal subsystem"
+  "warman-challenge-robot": "Robot mechanism design",
+  "additive-manufacturing-plier-project": "DfAM tool design",
+  "pcm-helmet-cooling-system": "PCM thermal concept"
 };
 
 const labelCaseOverrides = {
@@ -54,16 +54,21 @@ const labelCaseOverrides = {
   "Heat Exchanger": "Heat exchanger",
   "HRI": "HRI",
   "Human-Centred": "Human-centred",
+  "Material Packaging": "Material packaging",
   "Mechanical Design": "Mechanical design",
+  "Mesh Studies": "Mesh studies",
   "Mobile Robot": "Mobile robot",
   "OpenRocket": "OpenRocket",
   "PCM": "PCM",
   "Product Design": "Product design",
+  "Prototype Review": "Prototype review",
   "Robot Hardware": "Robot hardware",
   "Solar Thermal": "Solar thermal",
   "Space Systems": "Space systems",
+  "Static Study": "Static study",
   "Technical Drawing": "Technical drawing",
   "Thermal Control": "Thermal control",
+  "User Comfort": "User comfort",
   "UTS": "UTS",
   "Wind Power": "Wind power",
   "Wind Turbine": "Wind turbine"
@@ -317,7 +322,7 @@ function renderPriorityRegister() {
             <figure>
               ${imageMarkup}
               <figcaption>
-                <span>${escapeHtml(`${projectCode(sourceIndex)} · ${priorityProjectLabels[project.slug] || summarizeList(project.tags, project.projectType || "Project", 2)}`)}</span>
+                <span>${escapeHtml(`${projectCode(sourceIndex)} - ${priorityProjectLabels[project.slug] || summarizeList(project.tags, project.projectType || "Project", 2)}`)}</span>
                 <strong>${escapeHtml(project.title)}</strong>
                 <em>${escapeHtml(priorityProjectNotes[project.slug] || project.summary || project.subtitle || "")}</em>
                 ${renderReviewLensChips(project)}
