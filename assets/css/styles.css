@@ -2368,7 +2368,7 @@ textarea.form-input {
 
 .field-cover-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.72fr);
+  grid-template-columns: minmax(0, 1.04fr) minmax(340px, 0.64fr);
   gap: clamp(1rem, 2vw, 1.45rem);
   align-items: start;
 }
@@ -2494,9 +2494,9 @@ textarea.form-input {
 
 .field-cover-register {
   display: grid;
-  grid-template-columns: minmax(150px, 0.4fr) minmax(0, 0.6fr);
-  align-content: stretch;
-  gap: 0.85rem;
+  grid-template-columns: 1fr;
+  align-content: start;
+  gap: 0.78rem;
   padding: 0;
   border-top: 5px solid var(--field-orange);
   background: transparent;
@@ -2504,7 +2504,7 @@ textarea.form-input {
 
 .field-cover-register .field-profile-card {
   align-self: start;
-  grid-row: span 2;
+  grid-row: auto;
 }
 
 .field-profile-card,
@@ -2522,13 +2522,13 @@ textarea.form-input {
 .field-profile-card {
   display: grid;
   gap: 0.62rem;
-  padding: 0.72rem;
+  padding: clamp(0.72rem, 1.4vw, 0.9rem);
   border-top: 4px solid var(--field-blue);
 }
 
 .field-profile-card img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 5 / 6;
   object-fit: cover;
   object-position: center top;
   border: 1px solid var(--field-rule);
@@ -2538,8 +2538,8 @@ textarea.form-input {
 .field-profile-card figcaption {
   margin: 0;
   color: var(--muted-strong);
-  font-size: 0.9rem;
-  line-height: 1.45;
+  font-size: clamp(0.92rem, 1.1vw, 1rem);
+  line-height: 1.5;
 }
 
 .field-focus-card,
@@ -2918,12 +2918,11 @@ textarea.form-input {
   }
 
   .field-cover-register {
-    grid-template-columns: minmax(230px, 0.55fr) minmax(0, 1fr);
-    align-items: stretch;
+    grid-template-columns: 1fr;
   }
 
   .field-profile-card {
-    grid-row: span 2;
+    grid-row: auto;
   }
 
   .featured-project-strip {
