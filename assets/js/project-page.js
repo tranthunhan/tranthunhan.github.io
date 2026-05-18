@@ -113,7 +113,7 @@ const reviewLensRules = [
     terms: ["prototype", "prototyping", "build evidence", "physical", "fabrication", "3d printing"]
   },
   {
-    label: "Testing / serviceability",
+    label: "Testing and serviceability",
     terms: ["testing", "test", "serviceability", "service access", "maintenance", "access"]
   },
   {
@@ -138,7 +138,7 @@ function renderReviewLensChips(activeProject) {
   }
 
   return `
-    <ul class="memo-review-chip-list" aria-label="Review lenses supported by this project record">
+    <ul class="memo-review-chip-list" aria-label="Project focus areas">
       ${labels.map((label) => `<li>${escapeHtml(label)}</li>`).join("")}
     </ul>
   `;
@@ -171,7 +171,7 @@ function renderMissingProject() {
     <article class="empty-state">
       <h1>Project not found</h1>
       <p>This page is missing a matching entry in <code>data/projects.js</code>.</p>
-      <a class="button" href="../portfolio.html">Back to Build Index</a>
+      <a class="button" href="../portfolio.html">Back to Projects</a>
     </article>
   `;
 }
@@ -201,16 +201,16 @@ function renderHeader(activeProject, evidenceItems) {
   const topLinks = createProjectLinks(activeProject.links, { compact: false });
   const tagList = createInlineList(asArray(activeProject.tags), "memo-tag-list");
   const reviewChips = renderReviewLensChips(activeProject);
-  const toolSummary = asArray(activeProject.tools).slice(0, 4).join(" / ");
+  const toolSummary = asArray(activeProject.tools).slice(0, 4).join(", ");
   const heroEvidence = selectHeroEvidence(activeProject, evidenceItems);
   const heroPlate = renderHeroEvidencePlate(activeProject, heroEvidence);
 
   headerRoot.innerHTML = `
     <article class="memo-title-block">
-      <a class="breadcrumb-link" href="../portfolio.html">Back to Build Index</a>
+      <a class="breadcrumb-link" href="../portfolio.html">Back to Projects</a>
       <div class="memo-title-grid">
         <div>
-          <p class="field-label">Design Review Memo</p>
+          <p class="field-label">Project</p>
           <h1>${escapeHtml(activeProject.title)}</h1>
           <p class="memo-subtitle">${escapeHtml(activeProject.subtitle || "")}</p>
           <p class="memo-summary">${escapeHtml(activeProject.summary || "")}</p>
@@ -231,7 +231,7 @@ function renderHeader(activeProject, evidenceItems) {
               </div>
               <div>
                 <dt>Domain</dt>
-                <dd>${escapeHtml(asArray(activeProject.tags).slice(0, 3).join(" / ") || activeProject.projectType || "Project")}</dd>
+                <dd>${escapeHtml(asArray(activeProject.tags).slice(0, 3).join(", ") || activeProject.projectType || "Project")}</dd>
               </div>
               <div>
                 <dt>Tools</dt>
@@ -257,7 +257,7 @@ function renderHeroEvidencePlate(activeProject, item) {
     <figure class="memo-hero-plate">
       <img src="${resolveProjectAsset(item.src)}" alt="${escapeHtml(item.alt || caption)}" loading="eager" />
       <figcaption>
-        <span>Selected evidence</span>
+        <span>Project image</span>
         ${escapeHtml(caption)}
       </figcaption>
     </figure>
@@ -271,16 +271,16 @@ function renderContent(activeProject, evidenceItems) {
 
   contentRoot.className = "memo-content";
   contentRoot.innerHTML = `
-    ${renderMemoSection("01", "Brief", renderParagraphs(activeProject.overview, activeProject.summary))}
-    ${renderMemoSection("02", "Engineering Problem", renderParagraphs(activeProject.problem))}
-    ${renderMemoSection("03", "My Contribution", renderList(activeProject.role))}
-    ${renderMemoSection("04", "Design Process", renderProcessList(activeProject.process))}
-    ${renderMemoSection("05", "Technical Decisions", renderDecisionList(activeProject.technicalHighlights))}
-    ${renderMemoSection("06", "Public Build Evidence", renderEvidenceGrid(activeProject, evidenceItems))}
+    ${renderMemoSection("01", "Overview", renderParagraphs(activeProject.overview, activeProject.summary))}
+    ${renderMemoSection("02", "Problem", renderParagraphs(activeProject.problem))}
+    ${renderMemoSection("03", "My Role", renderList(activeProject.role))}
+    ${renderMemoSection("04", "Process", renderProcessList(activeProject.process))}
+    ${renderMemoSection("05", "Key Decisions", renderDecisionList(activeProject.technicalHighlights))}
+    ${renderMemoSection("06", "Evidence", renderEvidenceGrid(activeProject, evidenceItems))}
     ${renderMemoSection("07", "Outcome", renderParagraphs([activeProject.outcome, activeProject.relevance]))}
     ${renderMemoSection(
       "08",
-      "Lessons / Next Development",
+      "Next Steps",
       `${renderList(activeProject.lessonsLearned)}${renderList(activeProject.futureWork, "Next development")}`
     )}
   `;
@@ -387,7 +387,7 @@ function renderEvidenceGrid(activeProject, evidenceItems) {
 
   return `
     <p class="memo-evidence-note">
-      Selected public build evidence from the project record. Images are shown as figure plates so CAD screenshots, diagrams, drawings, and build photos remain inspectable.
+      Selected project evidence from the public page. Images are shown as figure plates so CAD screenshots, diagrams, drawings, and build photos remain inspectable.
     </p>
     <div class="evidence-plate-grid">
       ${visibleEvidenceItems
@@ -476,11 +476,11 @@ function renderSidebar(activeProject) {
       }
 
       <section class="memo-spec-card">
-        <p class="field-label">Archive Navigation</p>
+        <p class="field-label">Navigation</p>
         <div class="memo-sidebar-links">
-          <a href="../portfolio.html">Build Index</a>
-          <a href="../experience.html">Capability Log</a>
-          <a href="../contact.html">Contact Note</a>
+          <a href="../portfolio.html">Projects</a>
+          <a href="../experience.html">Experience</a>
+          <a href="../contact.html">Contact</a>
         </div>
       </section>
     </aside>
@@ -505,7 +505,7 @@ function renderRelated(activeProject) {
     <section class="memo-related-section">
       <div class="memo-section-heading">
         <span>REF</span>
-        <h2>Related Field Notes</h2>
+        <h2>Related Projects</h2>
       </div>
       <ul class="memo-related-list">
         ${relatedProjects
@@ -515,7 +515,7 @@ function renderRelated(activeProject) {
                 <a href="../projects/${encodeURIComponent(relatedProject.slug)}.html">
                   <span>${escapeHtml(relatedProject.year || "Project")}</span>
                   <strong>${escapeHtml(relatedProject.title)}</strong>
-                  <em>${escapeHtml(asArray(relatedProject.tags).slice(0, 2).join(" / ") || relatedProject.projectType || "Project")}</em>
+                  <em>${escapeHtml(asArray(relatedProject.tags).slice(0, 2).join(", ") || relatedProject.projectType || "Project")}</em>
                 </a>
               </li>
             `

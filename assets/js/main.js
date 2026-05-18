@@ -21,7 +21,7 @@ const featuredProjectSlugs = [
 
 const featuredProjectNotes = {
   "kinematic-puppet-cobotics":
-    "Low-cost cobot prototyping notes with CAD iteration, modular end-effectors, and public build evidence.",
+    "Low-cost cobot prototyping platform with CAD iteration, modular end-effectors, and public evidence.",
   "confined-space-inspection-robot":
     "Compact robot packaging around camera, controller, motor, battery, wiring, and service access constraints.",
   "pcm-helmet-cooling-system":
@@ -31,10 +31,17 @@ const featuredProjectNotes = {
 };
 
 const featuredProjectLabels = {
-  "kinematic-puppet-cobotics": "Robot hardware / HRI",
-  "confined-space-inspection-robot": "Mobile robot / sensing",
+  "kinematic-puppet-cobotics": "Robot hardware and HRI",
+  "confined-space-inspection-robot": "Mobile robot and sensing",
   "pcm-helmet-cooling-system": "Thermal subsystem",
   "uts-motorsports-autonomous": "Autonomous hardware CAD"
+};
+
+const buildIndexDomainLabels = {
+  "kinematic-puppet-cobotics": "Cobotics and HRI, robot hardware",
+  "confined-space-inspection-robot": "Mobile robotics and sensing",
+  "uts-motorsports-autonomous": "Autonomous hardware CAD",
+  "additive-manufacturing-plier-project": "Additive manufacturing and CAD"
 };
 
 mountSiteChrome(siteProfile);
@@ -61,7 +68,7 @@ function renderProjectCount() {
 }
 
 function formatDomain(project) {
-  return project.tags.slice(0, 3).join(" / ");
+  return buildIndexDomainLabels[project.slug] || project.tags.slice(0, 3).join(", ");
 }
 
 function formatEvidence(project) {
@@ -74,10 +81,10 @@ function formatEvidence(project) {
     evidence.push("documentation");
   }
   if (project.gallery?.length || project.thumbnail || project.heroImage) {
-    evidence.push("visual build record");
+    evidence.push("visual evidence");
   }
 
-  return evidence.length ? evidence.join(" + ") : "project memo";
+  return evidence.length ? evidence.join(" + ") : "project overview";
 }
 
 function renderBuildIndex() {
@@ -104,7 +111,7 @@ function renderBuildIndex() {
           <td>${project.title}</td>
           <td>${formatDomain(project)}</td>
           <td>${formatEvidence(project)}</td>
-          <td><a href="projects/${project.slug}.html">Open note</a></td>
+          <td><a href="projects/${project.slug}.html">Open project</a></td>
         </tr>
       `
     )
@@ -139,7 +146,7 @@ function renderFeaturedProjects() {
               <span>${escapeHtml(featuredProjectLabels[project.slug] || formatDomain(project))}</span>
               <strong>${escapeHtml(project.title)}</strong>
               <em>${escapeHtml(featuredProjectNotes[project.slug] || project.subtitle || formatDomain(project))}</em>
-              <small class="featured-project-action">Open field note</small>
+              <small class="featured-project-action">Open project</small>
             </figcaption>
           </figure>
         </a>

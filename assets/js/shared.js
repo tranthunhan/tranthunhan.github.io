@@ -30,7 +30,7 @@ function fillTextSlots(profile) {
       profile.siteSubtitle ||
       profile.archiveTitle ||
       node.textContent.trim() ||
-      "MECHANICAL RESEARCH LOGBOOK";
+      "Mechanical Engineering Portfolio";
   });
 }
 
@@ -111,9 +111,9 @@ function fillYearStamps() {
 function localNavigationItems() {
   return [
     { label: "Home", href: "index.html" },
-    { label: "Build Index", href: "portfolio.html" },
-    { label: "Capability Log", href: "experience.html" },
-    { label: "Contact Note", href: "contact.html" }
+    { label: "Projects", href: "portfolio.html" },
+    { label: "Experience", href: "experience.html" },
+    { label: "Contact", href: "contact.html" }
   ];
 }
 

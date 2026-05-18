@@ -2,10 +2,10 @@ export const projects = [
   {
     "slug": "kinematic-puppet-cobotics",
     "featured": true,
-    "title": "Kinematic Puppet / Cobot Prototyping",
-    "subtitle": "Low-cost physical cobot prototyping platform using a modular robot-skeleton concept, end-effector development, CAD iteration, public build evidence, and HRI-oriented design thinking.",
+    "title": "Cobot Prototyping Platform",
+    "subtitle": "Low-cost physical cobot prototyping platform using a modular robot-skeleton concept, end-effector development, CAD iteration, public evidence, and HRI-oriented design thinking.",
     "year": "2025",
-    "status": "Cobotics / HRI project work",
+    "status": "Cobotics and HRI project work",
     "projectType": "Project",
     "tags": [
       "Cobotics",
@@ -65,8 +65,8 @@ export const projects = [
         "body": "The project balances safe interaction, manufacturability, modularity, serviceable interfaces, and testability so the platform can support early HRI discussion without overstating completed testing."
       }
     ],
-    "outcome": "A public engineering case study showing modular cobot prototyping, end-effector concept development, connector/morphology exploration, and CAD-to-prototype communication for a research-oriented class project.",
-    "relevance": "Relevant to robotics research readiness because it connects human-centred robotics questions to practical mechanical design decisions: modular interfaces, safe physical interaction, manufacturable prototypes, public documentation, and testable platform concepts.",
+    "outcome": "A public engineering case study showing modular cobot prototyping, end-effector concept development, connector and morphology exploration, and CAD-to-prototype communication for a class project.",
+    "relevance": "Relevant to robot hardware and HRI because it connects human-centred robotics questions to practical mechanical design decisions: modular interfaces, safe physical interaction, manufacturable prototypes, public documentation, and testable platform concepts.",
     "tools": [
       "SolidWorks",
       "CAD",
@@ -87,91 +87,91 @@ export const projects = [
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/01-diagram.jpg",
-        "alt": "Kinematic Puppet / Cobot Prototyping visual 1",
+        "alt": "Cobot Prototyping Platform visual 1",
         "caption": "Kinematic puppet platform concept"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/02-helppp-me-diagram.jpg",
-        "alt": "Kinematic Puppet / Cobot Prototyping visual 2",
+        "alt": "Cobot Prototyping Platform visual 2",
         "caption": "Problem framing and interaction scenario"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/03-gantt-chart-revised.jpg",
-        "alt": "Kinematic Puppet / Cobot Prototyping visual 3",
+        "alt": "Cobot Prototyping Platform visual 3",
         "caption": "Project planning timeline"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/04-2-finger-gripper.jpg",
-        "alt": "Kinematic Puppet / Cobot Prototyping visual 4",
+        "alt": "Cobot Prototyping Platform visual 4",
         "caption": "Two-finger gripper concept"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/05-3-base-lattice.jpg",
-        "alt": "Kinematic Puppet / Cobot Prototyping visual 5",
+        "alt": "Cobot Prototyping Platform visual 5",
         "caption": "Lattice base concept"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/06-3-star-base.jpg",
-        "alt": "Kinematic Puppet / Cobot Prototyping visual 6",
+        "alt": "Cobot Prototyping Platform visual 6",
         "caption": "Star base concept"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/07-clamp.jpg",
-        "alt": "Kinematic Puppet / Cobot Prototyping visual 7",
+        "alt": "Cobot Prototyping Platform visual 7",
         "caption": "Clamp end-effector concept"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/08-claw.jpg",
-        "alt": "Kinematic Puppet / Cobot Prototyping visual 8",
+        "alt": "Cobot Prototyping Platform visual 8",
         "caption": "Claw end-effector concept"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/09-hex-base.jpg",
-        "alt": "Kinematic Puppet / Cobot Prototyping visual 9",
+        "alt": "Cobot Prototyping Platform visual 9",
         "caption": "Hexagonal base concept"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/10-hook.jpg",
-        "alt": "Kinematic Puppet / Cobot Prototyping visual 10",
+        "alt": "Cobot Prototyping Platform visual 10",
         "caption": "Hook end-effector concept"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/11-magnet.jpg",
-        "alt": "Kinematic Puppet / Cobot Prototyping visual 11",
+        "alt": "Cobot Prototyping Platform visual 11",
         "caption": "Magnetic end-effector concept"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/12-regtangle-base.jpg",
-        "alt": "Kinematic Puppet / Cobot Prototyping visual 12",
+        "alt": "Cobot Prototyping Platform visual 12",
         "caption": "Rectangular base concept"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/13-revolving-gear.jpg",
-        "alt": "Kinematic Puppet / Cobot Prototyping visual 13",
+        "alt": "Cobot Prototyping Platform visual 13",
         "caption": "Revolving gear concept"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/14-round-base.jpg",
-        "alt": "Kinematic Puppet / Cobot Prototyping visual 14",
+        "alt": "Cobot Prototyping Platform visual 14",
         "caption": "Round base concept"
       },
       {
         "type": "image",
         "src": "assets/images/projects/kinematic-puppet-cobotics/15-square-base.jpg",
-        "alt": "Kinematic Puppet / Cobot Prototyping visual 15",
+        "alt": "Cobot Prototyping Platform visual 15",
         "caption": "Square base concept"
       }
     ],
@@ -505,7 +505,7 @@ export const projects = [
   {
     "slug": "uts-motorsports-autonomous",
     "featured": true,
-    "title": "UTS Motorsports Autonomous Hardware CAD",
+    "title": "UTS Motorsports Autonomous Hardware",
     "subtitle": "Approved autonomous vehicle hardware CAD work covering sensor/electronics packaging, template/DXF workflow, fabrication-aware mounting, serviceability, vibration exposure, and vehicle integration.",
     "year": "2025",
     "status": "Approved public project work",
@@ -559,7 +559,7 @@ export const projects = [
       }
     ],
     "outcome": "An approved public project page demonstrating CAD/template workflow, fabrication-aware packaging, and mechanical integration for autonomous vehicle hardware.",
-    "relevance": "Supports both robot hardware research direction and product design engineering by showing packaging, manufacturability, serviceability, and design records under real system constraints.",
+    "relevance": "Supports robot hardware and product design engineering by showing packaging, manufacturability, serviceability, and design records under real system constraints.",
     "tools": [
       "SolidWorks",
       "DXF preparation",
@@ -580,13 +580,13 @@ export const projects = [
       {
         "type": "image",
         "src": "assets/images/projects/uts-motorsports-autonomous/01-image-1.jpg",
-        "alt": "UTS Motorsports Autonomous Hardware CAD visual 1",
+        "alt": "UTS Motorsports Autonomous Hardware visual 1",
         "caption": "Image 1"
       },
       {
         "type": "image",
         "src": "assets/images/projects/uts-motorsports-autonomous/02-image.jpg",
-        "alt": "UTS Motorsports Autonomous Hardware CAD visual 2",
+        "alt": "UTS Motorsports Autonomous Hardware visual 2",
         "caption": "Image"
       }
     ],
@@ -660,7 +660,7 @@ export const projects = [
       }
     ],
     "outcome": "A robot mechanism project page demonstrating CAD iteration, actuation concepts, prototype visuals, and testing-oriented subsystem records.",
-    "relevance": "Supports robotics research readiness through practical robot hardware evidence, and product-style engineering through mechanism packaging, tolerancing awareness, testing, serviceability, and manufacturability thinking.",
+    "relevance": "Supports practical robot hardware work and product-style engineering through mechanism packaging, tolerancing awareness, testing, serviceability, and manufacturability thinking.",
     "tools": [
       "SolidWorks",
       "Mechanism design",
@@ -2299,7 +2299,7 @@ export const projects = [
   {
     "slug": "printed-pencil-case-servo-storage",
     "featured": false,
-    "title": "3D Printed Pencil Case / Servo Storage Case",
+    "title": "3D Printed Pencil and Servo Storage Case",
     "subtitle": "Personal 3D printed storage project that started as a pencil case and later became a servo motor storage case, shown with new photos.",
     "year": "Personal",
     "status": "Personal 3D-printing project",
@@ -2374,25 +2374,25 @@ export const projects = [
       {
         "type": "image",
         "src": "assets/images/projects/printed-pencil-case-servo-storage/01-img-3616.jpg",
-        "alt": "3D Printed Pencil Case / Servo Storage Case visual 1",
+        "alt": "3D Printed Pencil and Servo Storage Case visual 1",
         "caption": "Img 3616"
       },
       {
         "type": "image",
         "src": "assets/images/projects/printed-pencil-case-servo-storage/02-img-3617.jpg",
-        "alt": "3D Printed Pencil Case / Servo Storage Case visual 2",
+        "alt": "3D Printed Pencil and Servo Storage Case visual 2",
         "caption": "Img 3617"
       },
       {
         "type": "image",
         "src": "assets/images/projects/printed-pencil-case-servo-storage/03-img-3618.jpg",
-        "alt": "3D Printed Pencil Case / Servo Storage Case visual 3",
+        "alt": "3D Printed Pencil and Servo Storage Case visual 3",
         "caption": "Img 3618"
       },
       {
         "type": "image",
         "src": "assets/images/projects/printed-pencil-case-servo-storage/04-img-3619.jpg",
-        "alt": "3D Printed Pencil Case / Servo Storage Case visual 4",
+        "alt": "3D Printed Pencil and Servo Storage Case visual 4",
         "caption": "Img 3619"
       }
     ],
@@ -2502,7 +2502,7 @@ export const projectLinkLabels = {
   drawings: "View Drawings",
   print: "View Print Files",
   docs: "View Documentation",
-  media: "View Demo / Video"
+  media: "View Demo or Video"
 };
 
 export function getProjectBySlug(slug) {

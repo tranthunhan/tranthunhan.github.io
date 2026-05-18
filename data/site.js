@@ -1,19 +1,19 @@
 export const siteProfile = {
   name: "Nhan Dang",
   initials: "ND",
-  siteSubtitle: "MECHANICAL RESEARCH LOGBOOK",
+  siteSubtitle: "Mechanical Engineering Portfolio",
   role: "Mechanical Engineering Honours Student",
   degree:
     "Bachelor of Engineering (Honours), Mechanical Engineering — University of Technology Sydney",
   tagline:
-    "Mechanical engineering portfolio focused on research-ready robot hardware, sensing-enabled systems, CAD-led subsystem design, prototyping, testing, public build evidence, and product-style mechanical systems.",
+    "Mechanical engineering portfolio focused on CAD-led design, robot hardware, prototyping, sensing integration, testing, documentation, and product-style mechanical systems.",
   brandLogo: "assets/images/profile/newthumbnail.png",
   headshot: "assets/images/profile/nhan-profile.png",
   focusAreas: [
     {
-      title: "Robot hardware and smart mechanical systems",
+      title: "Robot hardware and sensing-enabled systems",
       body:
-        "Developing a research direction around robot hardware, sensing-enabled mechanical systems, and future work in vibration, condition monitoring, and digital-twin-informed mechanical systems, grounded in human-centred mechatronic platforms."
+        "Exploring robot hardware, sensing-enabled mechanical systems, and practical vibration measurement questions through prototypes, CAD, test planning, and clear documentation."
     },
     {
       title: "Product-style mechanical subsystem design",
@@ -31,7 +31,7 @@ export const siteProfile = {
   techStack: [
     {
       category: "Core Engineering",
-      level: "Core / current",
+      level: "Core, current",
       items: [
         "SolidWorks",
         "Fusion 360",
@@ -46,7 +46,7 @@ export const siteProfile = {
     },
     {
       category: "Robotics & Prototyping",
-      level: "Current / hands-on",
+      level: "Current hands-on",
       items: [
         "Arduino",
         "Raspberry Pi",
@@ -90,7 +90,7 @@ export const siteProfile = {
     },
     {
       category: "Design, Documentation & Web",
-      level: "Documentation / publishing",
+      level: "Documentation and publishing",
       items: [
         "Blender",
         "Canva",
@@ -151,7 +151,7 @@ export const siteProfile = {
     },
     {
       title: "Study Australia Industry Experience Program Certificate of Completion",
-      issuer: "Study Australia / Practera",
+      issuer: "Study Australia and Practera",
       image: "assets/images/certifications/study-australia-industry-experience-thumbnail.jpg",
       document:
         "assets/docs/certifications/study-australia-industry-experience-program-certificate.pdf"
@@ -164,7 +164,7 @@ export const siteProfile = {
     },
     {
       title: "UTS Faculty of Engineering and Information Technology Dean's List",
-      issuer: "University of Technology Sydney / Faculty of Engineering and Information Technology",
+      issuer: "University of Technology Sydney, Faculty of Engineering and Information Technology",
       year: "2025",
       image: "assets/images/certifications/uts-feit-deans-list-2025-thumbnail.jpg",
       document: "assets/docs/certifications/uts-feit-deans-list-2025.pdf"

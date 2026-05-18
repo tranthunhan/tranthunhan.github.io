@@ -23,7 +23,7 @@ const priorityProjectSlugs = [
 
 const priorityProjectNotes = {
   "kinematic-puppet-cobotics":
-    "Modular cobot platform notes with CAD iteration, end-effector options, and public build evidence.",
+    "Modular cobot platform with CAD iteration, end-effector options, and public evidence.",
   "confined-space-inspection-robot":
     "Compact robot packaging around power, camera, controller, wiring, and service access.",
   "uts-motorsports-autonomous":
@@ -34,6 +34,39 @@ const priorityProjectNotes = {
     "Topology and print-preparation record for a mechanical tool shaped by manufacturability.",
   "pcm-helmet-cooling-system":
     "Thermal subsystem evidence with CAD, mesh views, material notes, and user-comfort constraints."
+};
+
+const priorityProjectLabels = {
+  "kinematic-puppet-cobotics": "Cobotics and HRI",
+  "confined-space-inspection-robot": "Mobile robotics",
+  "uts-motorsports-autonomous": "Autonomous hardware CAD",
+  "warman-challenge-robot": "Prototype mechanisms",
+  "additive-manufacturing-plier-project": "Additive manufacturing",
+  "pcm-helmet-cooling-system": "Thermal subsystem"
+};
+
+const labelCaseOverrides = {
+  "3D Printing": "3D printing",
+  "Additive Manufacturing": "Additive manufacturing",
+  "Autonomous Systems": "Autonomous systems",
+  "CAD": "CAD",
+  "DFM": "DFM",
+  "Heat Exchanger": "Heat exchanger",
+  "HRI": "HRI",
+  "Human-Centred": "Human-centred",
+  "Mechanical Design": "Mechanical design",
+  "Mobile Robot": "Mobile robot",
+  "OpenRocket": "OpenRocket",
+  "PCM": "PCM",
+  "Product Design": "Product design",
+  "Robot Hardware": "Robot hardware",
+  "Solar Thermal": "Solar thermal",
+  "Space Systems": "Space systems",
+  "Technical Drawing": "Technical drawing",
+  "Thermal Control": "Thermal control",
+  "UTS": "UTS",
+  "Wind Power": "Wind power",
+  "Wind Turbine": "Wind turbine"
 };
 
 const filters = [
@@ -164,7 +197,7 @@ function projectCode(index) {
 
 function summarizeList(items, fallback, maxItems = 3) {
   const values = (items || []).filter(Boolean).slice(0, maxItems);
-  return values.length ? values.join(" / ") : fallback;
+  return values.length ? values.map((item) => labelCaseOverrides[item] || item).join(", ") : fallback;
 }
 
 function evidenceSummary(project) {
@@ -187,15 +220,15 @@ function evidenceSummary(project) {
   const evidence = [...linkEvidence];
 
   if (hasVisualEvidence && evidence.length < 3) {
-    evidence.push("Visual build record");
+    evidence.push("Visual evidence");
   }
 
   if (evidence.length) {
-    return evidence.slice(0, 3).join(" / ");
+    return evidence.slice(0, 3).join(", ");
   }
 
   if (hasVisualEvidence) {
-    return "Visual build record";
+    return "Visual evidence";
   }
 
   return "Project memo";
@@ -228,7 +261,7 @@ const reviewLensRules = [
     terms: ["prototype", "prototyping", "build evidence", "physical", "fabrication", "3d printing"]
   },
   {
-    label: "Testing / serviceability",
+    label: "Testing and serviceability",
     terms: ["testing", "test", "serviceability", "service access", "maintenance", "access"]
   },
   {
@@ -253,7 +286,7 @@ function renderReviewLensChips(project) {
   }
 
   return `
-    <ul class="project-review-chip-list" aria-label="Review lenses">
+    <ul class="project-review-chip-list" aria-label="Project focus">
       ${labels.map((label) => `<li>${escapeHtml(label)}</li>`).join("")}
     </ul>
   `;
@@ -284,13 +317,13 @@ function renderPriorityRegister() {
             <figure>
               ${imageMarkup}
               <figcaption>
-                <span>${escapeHtml(`${projectCode(sourceIndex)} / ${summarizeList(project.tags, project.projectType || "Project", 2)}`)}</span>
+                <span>${escapeHtml(`${projectCode(sourceIndex)} · ${priorityProjectLabels[project.slug] || summarizeList(project.tags, project.projectType || "Project", 2)}`)}</span>
                 <strong>${escapeHtml(project.title)}</strong>
                 <em>${escapeHtml(priorityProjectNotes[project.slug] || project.summary || project.subtitle || "")}</em>
                 ${renderReviewLensChips(project)}
               </figcaption>
             </figure>
-            <small>Open field note</small>
+            <small>Open project</small>
           </a>
         </article>
       `;

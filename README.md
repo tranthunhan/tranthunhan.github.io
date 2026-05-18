@@ -1,8 +1,8 @@
-# Nhan Dang Engineering Field Notes
+# Nhan Dang Mechanical Engineering Portfolio
 
-Static GitHub Pages site for Nhan Dang's mechanical engineering field notes: CAD-led design, robot hardware, prototyping, fabrication, sensing integration, testing, additive manufacturing, and product-style mechanical systems.
+Static GitHub Pages site for Nhan Dang's mechanical engineering portfolio: CAD-led design, robot hardware, prototyping, fabrication, sensing integration, testing, additive manufacturing, and product-style mechanical systems.
 
-The site is structured as a public engineering build archive and research-readiness record. Project content, contact surfaces, and linked documents are kept privacy-reviewed for public viewing.
+The site is structured as a public mechanical engineering portfolio. Project content, contact surfaces, and linked documents are kept privacy-reviewed for public viewing.
 
 ## Tech Stack
 
@@ -14,12 +14,12 @@ The site is structured as a public engineering build archive and research-readin
 
 ## Site Structure
 
-- `index.html` - Field Notes homepage
-- `portfolio.html` - Build Index / Engineering Project Register
-- `experience.html` - Engineering Capability Log
-- `contact.html` - Contact / Collaboration Note
+- `index.html` - Homepage
+- `portfolio.html` - Projects
+- `experience.html` - Experience
+- `contact.html` - Contact
 - `projects/*.html` - Static project page shells
-- `assets/css/styles.css` - Global field-notes visual system
+- `assets/css/styles.css` - Global portfolio visual system
 - `assets/js/*.js` - Page rendering and shared site chrome
 - `data/site.js` - Profile, contact, education, experience, and focus-area content
 - `data/projects.js` - Public project records and page content
@@ -31,9 +31,9 @@ The public project register is data-driven from `data/projects.js` and currently
 
 Priority project records include:
 
-- Kinematic Puppet / Cobot Prototyping
+- Cobot Prototyping Platform
 - Confined-Space Inspection Robot
-- UTS Motorsports Autonomous Hardware CAD
+- UTS Motorsports Autonomous Hardware
 - Additive Manufacturing Plier Project
 - Warman Challenge Robot
 - PCM Helmet Cooling System
